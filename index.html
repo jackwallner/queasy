@@ -5,50 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="256x256" href="icon_256.png">
     <link rel="apple-touch-icon" href="icon_256.png">
-    <title>Queasy: Nausea Relief Band - Drug-Free Motion &amp; Morning Sickness Aid for Apple Watch</title>
-    <meta name="description" content="A drug-free nausea comfort aid for Apple Watch, inspired by P6 acupressure wristbands. Answer three questions and your wrist gets a calming vibration pattern for motion sickness, car and sea sickness, hangovers, and rough mornings. 100% private, no account.">
+    <title>Queasy: Wrist Comfort Aid - Drug-Free Comfort Sessions for Apple Watch</title>
+    <meta name="description" content="Calming wrist vibration sessions on Apple Watch for queasy moments, with an iPhone haptic fallback, live intensity control, and private history. Not a medical device.">
     <link rel="canonical" href="https://jackwallner.github.io/queasy/">
-    <meta name="keywords" content="nausea relief, anti nausea, motion sickness, car sickness, sea sickness, seasick, acupressure, wristband, sea band, vertigo, dizzy, hangover, Apple Watch, drug-free, private">
-    <meta property="og:title" content="Queasy: Nausea Relief Band - Drug-Free Comfort for Apple Watch">
-    <meta property="og:description" content="Answer three questions and your wrist gets a calming vibration pattern. A drug-free nausea comfort aid inspired by acupressure bands. Private, watch-first, coming soon.">
+    <meta name="apple-itunes-app" content="app-id=6786780495">
+    <meta name="keywords" content="queasy, wrist comfort, motion comfort, car travel, boat, Apple Watch vibration, haptics, P6 acupressure, drug-free, comfort aid, session history">
+    <meta property="og:title" content="Queasy: Wrist Comfort Aid">
+    <meta property="og:description" content="Calming wrist vibration on Apple Watch for queasy moments, with live intensity control and an iPhone fallback.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jackwallner.github.io/queasy/">
-    <meta property="og:image" content="https://jackwallner.github.io/queasy/screenshot-01.png">
+    <meta property="og:image" content="https://jackwallner.github.io/queasy/appstore-screenshot-01.png">
     <meta property="og:site_name" content="Queasy">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Queasy: Nausea Relief Band - Drug-Free Comfort for Apple Watch">
-    <meta name="twitter:description" content="A drug-free nausea comfort aid inspired by acupressure bands. Answer three questions, get a calming wrist vibration pattern. Private, watch-first.">
-    <meta name="twitter:image" content="https://jackwallner.github.io/queasy/screenshot-01.png">
+    <meta name="twitter:title" content="Queasy: Wrist Comfort Aid">
+    <meta name="twitter:description" content="Drug-free wrist comfort sessions on Apple Watch, plus an iPhone haptic fallback and private history.">
+    <meta name="twitter:image" content="https://jackwallner.github.io/queasy/appstore-screenshot-01.png">
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
-        "name": "Queasy: Nausea Relief Band",
-        "operatingSystem": "watchOS, iOS",
+        "name": "Queasy: Wrist Comfort Aid",
+        "operatingSystem": "iOS",
         "applicationCategory": "HealthApplication",
         "offers": [
             {
                 "@type": "Offer",
                 "price": "4.99",
                 "priceCurrency": "USD",
-                "description": "Queasy Pro Monthly — every comfort pattern, both devices, 7-day free trial"
+                "description": "Queasy Pro Monthly with a 1-week free trial"
             },
             {
                 "@type": "Offer",
                 "price": "29.99",
                 "priceCurrency": "USD",
-                "description": "Queasy Pro Yearly — same features, billed annually, 7-day free trial"
+                "description": "Queasy Pro Yearly with a 1-week free trial"
             },
             {
                 "@type": "Offer",
                 "price": "69.99",
                 "priceCurrency": "USD",
-                "description": "Queasy Pro Lifetime — one-time purchase, all patterns forever"
+                "description": "Queasy Pro Lifetime, one-time purchase"
             }
         ],
-        "description": "A drug-free nausea comfort aid for Apple Watch and iPhone, inspired by P6 acupressure wristbands. A short three-question chooser plays a calming haptic pattern for motion sickness, car and sea sickness, hangovers, vertigo, and rough mornings. Private and on-device, no account required.",
+        "description": "Queasy runs calming vibration sessions on Apple Watch for queasy moments, with an iPhone haptic fallback, an optional 100 Hz tone for phone sessions, live intensity control, and private session history. A drug-free comfort aid, not a medical device.",
         "url": "https://jackwallner.github.io/queasy/",
-        "screenshot": "https://jackwallner.github.io/queasy/screenshot-01.png",
+        "downloadUrl": "https://apps.apple.com/us/app/id6786780495",
+        "screenshot": "https://jackwallner.github.io/queasy/appstore-screenshot-01.png",
+        "softwareVersion": "1.0",
         "author": {
             "@type": "Person",
             "name": "Jack Wallner"
@@ -60,7 +63,7 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", sans-serif;
-            color: #24393E;
+            color: #1d1d1f;
             background: #fafafa;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
@@ -95,7 +98,7 @@
             align-items: center;
             gap: 10px;
             text-decoration: none;
-            color: #24393E;
+            color: #1d1d1f;
         }
 
         .nav-brand img {
@@ -109,14 +112,18 @@
             font-weight: 600;
         }
 
-        .nav-soon {
+        .nav-link {
             font-size: 14px;
-            background: #eef3f2;
-            color: #5C7378;
+            text-decoration: none;
+            background: #1d1d1f;
+            color: #fff;
             padding: 8px 18px;
             border-radius: 980px;
             font-weight: 500;
+            transition: opacity 0.15s;
         }
+
+        .nav-link:hover { opacity: 0.85; }
 
         /* Hero */
         .hero {
@@ -143,7 +150,7 @@
             font-size: 19px;
             color: #6e6e73;
             line-height: 1.5;
-            max-width: 460px;
+            max-width: 440px;
             margin: 0 auto 12px;
         }
 
@@ -156,7 +163,7 @@
 
         .download-btn {
             display: inline-block;
-            background: #24393E;
+            background: #1d1d1f;
             color: #fff;
             font-size: 15px;
             font-weight: 500;
@@ -167,14 +174,6 @@
         }
 
         .download-btn:hover { opacity: 0.85; }
-
-        .download-btn.soon {
-            background: #eef3f2;
-            color: #3E9A8E;
-            cursor: default;
-        }
-
-        .download-btn.soon:hover { opacity: 1; }
 
         /* Screenshot showcase */
         .showcase {
@@ -299,7 +298,7 @@
             width: 22px;
             height: 22px;
             fill: none;
-            stroke: #24393E;
+            stroke: #1d1d1f;
             stroke-width: 1.8;
             stroke-linecap: round;
             stroke-linejoin: round;
@@ -321,7 +320,7 @@
 
         .privacy a {
             font-size: 15px;
-            color: #3E9A8E;
+            color: #0066cc;
             text-decoration: none;
             font-weight: 500;
         }
@@ -373,7 +372,7 @@
         .more-info-section p {
             font-size: 15px;
             line-height: 1.6;
-            color: #24393E;
+            color: #1d1d1f;
             margin-bottom: 12px;
         }
 
@@ -456,7 +455,7 @@
             margin: 0 10px;
         }
 
-        footer a:hover { color: #24393E; }
+        footer a:hover { color: #1d1d1f; }
 
         footer .divider { margin: 4px 0; }
 
@@ -487,33 +486,36 @@
                 <img src="icon_256.png" alt="Queasy">
                 <span>Queasy</span>
             </a>
-            <span class="nav-soon">Coming soon</span>
+            <a class="nav-link" href="https://apps.apple.com/us/app/id6786780495">Download</a>
         </div>
     </nav>
 
     <section class="hero">
-        <h1>Calm your <span>queasy moments</span></h1>
-        <p class="tagline">A drug-free nausea comfort aid for Apple Watch. Answer three quick questions and your wrist gets a calming vibration pattern &mdash; inspired by the acupressure band you already know.</p>
+        <h1>Comfort on <span>your wrist</span></h1>
+        <p class="tagline">Calming vibration patterns on Apple Watch for queasy moments, with live intensity control and an iPhone fallback when the watch is at home.</p>
         <p class="platforms">Apple Watch &middot; iPhone &middot; Drug-free</p>
-        <span class="download-btn soon">Coming soon to the App Store</span>
+        <a class="download-btn" href="https://apps.apple.com/us/app/id6786780495">Download on the App Store</a>
     </section>
 
     <section class="showcase">
         <div class="showcase-scroll">
             <div class="showcase-card">
-                <img src="screenshot-01.png" alt="The band you already own. — Drug-free wrist comfort inspired by P6 acupressure bands">
+                <img src="appstore-screenshot-01.png" alt="On the wrist. &mdash; A comfort session running on Apple Watch with the screen off">
             </div>
             <div class="showcase-card">
-                <img src="screenshot-02.png" alt="Instant comfort. — Start a calming haptic pattern in seconds">
+                <img src="appstore-screenshot-02.png" alt="Start in a tap. &mdash; Quick Start using your last pattern">
             </div>
             <div class="showcase-card">
-                <img src="screenshot-04.png" alt="A pattern for the moment. — Three questions choose the right vibration">
+                <img src="appstore-screenshot-03.png" alt="Turn it up or down. &mdash; Live intensity control mid-session">
             </div>
             <div class="showcase-card">
-                <img src="screenshot-05.png" alt="One app, many modes. — Motion, car and sea sickness, hangover, vertigo, rough mornings">
+                <img src="appstore-screenshot-04.png" alt="Pick a rhythm. &mdash; Three-question check-in choosing intensity, rhythm, and duration">
             </div>
             <div class="showcase-card">
-                <img src="screenshot-06.png" alt="See what helped. — A private history of your sessions and how they felt">
+                <img src="appstore-screenshot-05.png" alt="Watch or phone. &mdash; Apple Watch vibration, iPhone haptics, and the optional 100 Hz tone">
+            </div>
+            <div class="showcase-card">
+                <img src="appstore-screenshot-06.png" alt="How it went. &mdash; After-session check-in and private history">
             </div>
         </div>
     </section>
@@ -521,50 +523,55 @@
     <section class="features">
         <div class="container">
             <div class="features-header">
-                <h2>Comfort on your wrist, in seconds</h2>
-                <p>No pills, no accounts. Just a calming pattern when you need one.</p>
+                <h2>Built for the moment it hits</h2>
+                <p>Sessions on the wrist, control in your hand, history kept private.</p>
             </div>
         </div>
         <div class="features-grid">
             <div class="feature-card">
-                <span class="label">Three questions</span>
-                <h3>The right pattern, fast</h3>
-                <p>A short chooser reads how you feel and picks a calming haptic pattern tuned to the moment.</p>
+                <span class="label">Apple Watch</span>
+                <h3>Screen-off sessions</h3>
+                <p>Vibration sessions keep running with the display off, using watchOS extended runtime.</p>
             </div>
             <div class="feature-card">
-                <span class="label">Watch-first</span>
-                <h3>Calming wrist vibration</h3>
-                <p>Built for Apple Watch, right where a nausea band sits. The pattern plays on your wrist, hands-free.</p>
+                <span class="label">Quick Start</span>
+                <h3>One tap to going</h3>
+                <p>Reuse your last pattern, or fall back to a steady default when you don't want to think.</p>
             </div>
             <div class="feature-card">
-                <span class="label">No watch? No problem</span>
-                <h3>iPhone works too</h3>
-                <p>Hold your iPhone against your inner wrist and Queasy plays the same pattern with the phone's haptics.</p>
+                <span class="label">Check-in</span>
+                <h3>Three questions</h3>
+                <p>Pick an intensity, a rhythm, and a duration in a few taps before a session starts.</p>
             </div>
             <div class="feature-card">
-                <span class="label">Many modes</span>
-                <h3>One app for all of it</h3>
-                <p>Motion sickness, car and sea sickness, hangovers, vertigo, and rough mornings &mdash; one app instead of five.</p>
+                <span class="label">Live control</span>
+                <h3>Adjust mid-session</h3>
+                <p>Turn the intensity up or down while it's running, without stopping and starting over.</p>
             </div>
             <div class="feature-card">
-                <span class="label">Drug-free</span>
-                <h3>Inspired by acupressure</h3>
-                <p>Modeled on the P6 pressure point that acupressure wristbands target. No medication, no side effects.</p>
+                <span class="label">iPhone fallback</span>
+                <h3>No watch needed</h3>
+                <p>Haptic sessions run on iPhone alone if you don't have an Apple Watch or aren't wearing it.</p>
             </div>
             <div class="feature-card">
-                <span class="label">History</span>
-                <h3>See what helped</h3>
-                <p>Rate a session afterward and Queasy keeps a private log, so you learn which patterns work for you.</p>
+                <span class="label">Phone tone</span>
+                <h3>Optional 100 Hz</h3>
+                <p>An optional 100 Hz tone for phone sessions, with headphones recommended.</p>
             </div>
             <div class="feature-card">
-                <span class="label pro">Every pattern · Queasy Pro</span>
-                <h3>The full library</h3>
-                <p>Unlock every comfort pattern and mode on both your watch and iPhone. Starts with a 7-day free trial.</p>
+                <span class="label pro">History &middot; Pro</span>
+                <h3>Compare afterward</h3>
+                <p>An after-session check-in and private history so you can see which patterns you preferred.</p>
+            </div>
+            <div class="feature-card">
+                <span class="label">Learn</span>
+                <h3>Sources, linked</h3>
+                <p>The Learn tab cites its sources, including P6 acupressure background and the 100 Hz motion-sickness study.</p>
             </div>
             <div class="feature-card">
                 <span class="label">Private</span>
-                <h3>On device, always</h3>
-                <p>No account, no ads, no tracking. Your sessions stay on your devices and go nowhere else.</p>
+                <h3>Stays on your devices</h3>
+                <p>Check-ins, sessions, and settings never leave your iPhone and Apple Watch. No account, no ads, no tracking.</p>
             </div>
         </div>
     </section>
@@ -575,7 +582,7 @@
                 <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
             </div>
             <h2>Private by design</h2>
-            <p>Queasy has no account, no ads, and no analytics SDKs. Your sessions and history live on your devices only &mdash; nothing about how you feel is uploaded anywhere.</p>
+            <p>Queasy has no account and no sign-up. Your check-ins, sessions, and settings stay on your iPhone and Apple Watch. There are no ads and no tracking. Apple processes purchases, and RevenueCat receives only the identifiers needed to unlock and restore Queasy Pro.</p>
             <a href="privacy-policy.html">Privacy Policy &rarr;</a>
         </div>
     </section>
@@ -589,36 +596,36 @@
             <div class="more-info-content">
                 <div class="more-info-section">
                     <h3>The Pitch</h3>
-                    <p>Acupressure wristbands for nausea have been sold in pharmacies for decades, and dedicated relief hardware runs $100 or more. The idea is simple: gentle, steady stimulation at the P6 point on your inner wrist. Your Apple Watch already sits exactly there.</p>
-                    <p>Queasy turns that hardware into an app. Answer three quick questions, and it plays a calming vibration pattern on your wrist &mdash; for a bumpy flight, a car ride, a rough morning, or a wave of dizziness. One app covers what a shelf of single-purpose bands and remedies would.</p>
+                    <p>Queasy moments arrive in the back seat, on a boat, or in a waiting room, and reaching for your phone is usually the last thing you want to do.</p>
+                    <p>Queasy lives on your wrist instead. Start a session in a tap, let the vibration pattern run with the screen off, and adjust the intensity without looking. If the watch is at home, the same session runs as iPhone haptics with an optional low tone.</p>
                 </div>
 
                 <div class="more-info-section">
                     <h3>Queasy Pro</h3>
-                    <p>Queasy is a focused tool, so it's a single upgrade rather than a maze of tiers. <strong>Every comfort pattern and mode, on both your watch and iPhone.</strong></p>
-                    <p><strong>Try it free.</strong> Every subscription starts with a 7-day free trial &mdash; everything is unlocked from day one, and nothing is charged until the trial ends.</p>
-                    <p><strong>Simple pricing.</strong> $4.99/month or $29.99/year, or a one-time $69.99 lifetime purchase if you'd rather never think about it again.</p>
-                    <p><strong>No lock-in.</strong> Manage or cancel anytime in your App Store settings. Subscriptions auto-renew unless cancelled at least 24 hours before the period ends.</p>
+                    <p>Queasy Pro unlocks the full session experience after onboarding: $4.99/month or $29.99/year, both with a 1-week free trial, or $69.99 once for lifetime access.</p>
+                    <p><strong>Pattern library.</strong> The full set of intensities, rhythms, and durations, rather than the default pattern alone.</p>
+                    <p><strong>Session history.</strong> After-session check-ins kept over time, so you can tell which patterns actually helped you.</p>
+                    <p>Subscriptions renew unless cancelled at least 24 hours before the current period ends. Manage or cancel in App Store settings.</p>
                 </div>
 
                 <div class="more-info-section">
                     <h3>Specs</h3>
                     <table class="specs-table">
-                        <tr><td>Platform</td><td>watchOS 10+, iOS 17+</td></tr>
+                        <tr><td>Platform</td><td>iOS 17+, watchOS 10+</td></tr>
                         <tr><td>Language</td><td>Swift 6 with strict concurrency</td></tr>
-                        <tr><td>Framework</td><td>SwiftUI · CoreHaptics · WatchConnectivity</td></tr>
-                        <tr><td>Data</td><td>SwiftData, local only, no account</td></tr>
-                        <tr><td>Comfort</td><td>Haptic patterns plus optional low-frequency tone</td></tr>
-                        <tr><td>Devices</td><td>Apple Watch primary, iPhone fallback haptics</td></tr>
+                        <tr><td>Framework</td><td>SwiftUI &middot; WatchKit &middot; Core Haptics &middot; SwiftData</td></tr>
+                        <tr><td>Data</td><td>No account; sessions stored on your devices</td></tr>
+                        <tr><td>Storage</td><td>SwiftData, shared between iPhone and Watch via WatchConnectivity</td></tr>
+                        <tr><td>Runtime</td><td>watchOS extended runtime for screen-off sessions</td></tr>
                     </table>
                 </div>
 
                 <div class="more-info-section">
                     <h3>What Mattered</h3>
-                    <p><strong>Wrist-first, not phone-first.</strong> A nausea band lives on your wrist, so the watch is the primary interface. The iPhone is a fallback for people without a watch, using the same pattern engine.</p>
-                    <p><strong>Zero fuss when you feel awful.</strong> Nobody wants to read a manual mid-nausea. Three taps to a running pattern is the whole flow, on purpose.</p>
-                    <p><strong>Honest about what it is.</strong> Queasy is a comfort aid, not a medical device. The copy makes no treatment claims, and the app says so plainly.</p>
-                    <p><strong>Private by default.</strong> How you feel is personal. No accounts, no analytics, no network calls for your data &mdash; it stays on your devices.</p>
+                    <p><strong>Screen-off first.</strong> A comfort session you have to stare at is useless in a moving car, so extended runtime and wrist-down operation came before any UI polish.</p>
+                    <p><strong>Three taps, maximum.</strong> Nobody wants a questionnaire when they feel awful. The check-in is three questions, and Quick Start skips even those.</p>
+                    <p><strong>Honest framing.</strong> The app is a comfort aid, not a treatment. The Learn tab links its sources and says where the evidence is mixed.</p>
+                    <p><strong>Watch and phone parity.</strong> Every session type works without an Apple Watch, because plenty of people who get queasy don't own one.</p>
                 </div>
             </div>
         </div>
@@ -626,14 +633,14 @@
 
     <section class="disclaimer">
         <div class="container">
-            <p>Queasy is a drug-free comfort aid based on acupressure techniques whose clinical evidence is mixed. It does not diagnose, treat, or cure any condition, and results vary from person to person. If nausea is severe or persistent, comes with other symptoms, or you can't keep fluids down, please see a doctor.</p>
+            <p>Queasy is a drug-free comfort aid, not a medical device. It does not diagnose, treat, cure, prevent, or promise relief from any condition, and evidence for wrist stimulation and sound-based comfort techniques is mixed and varies by person. If nausea is severe or persistent, comes with other symptoms, or you can't keep fluids down, talk to a doctor.</p>
         </div>
     </section>
 
     <section class="cta">
-        <h2>Coming soon</h2>
-        <p>Queasy is on its way to the App Store for Apple Watch and iPhone.</p>
-        <span class="download-btn soon">Coming soon to the App Store</span>
+        <h2>Keep it on your wrist</h2>
+        <p>On the App Store. Free trial on monthly and yearly plans.</p>
+        <a class="download-btn" href="https://apps.apple.com/us/app/id6786780495">Download on the App Store</a>
     </section>
 
     <footer>

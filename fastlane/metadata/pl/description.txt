@@ -1,0 +1,29 @@
+Queasy to cztery rzeczy bez leków, które możesz wypróbować, gdy źle się czujesz, na Apple Watch albo na iPhonie. Zacznij jedną jednym stuknięciem albo odpowiedz na trzy krótkie pytania i pozwól Queasy wybrać.
+
+CZTERY TRYBY
+- Pulse: spokojne, równe stukanie po wewnętrznej stronie nadgarstka. Coś, na czym można oprzeć uwagę, gdy przechodzi fala. Dziesięć poziomów, regulowanych w trakcie sesji.
+- Breathe: zegarek wystukuje długie narastanie na wdechu i dłuższe wygasanie na wydechu, żebyś mogła nadawać rytm oddechowi z zamkniętymi oczami i opuszczoną ręką.
+- Tone: czysty ton 100 Hz przez minutę, przez słuchawki, przy zwykłej głośności.
+- Press: pokazuje miejsce po wewnętrznej stronie nadgarstka, w którym siedzi opaska akupresurowa, a potem odmierza trzy minuty ucisku, gdy naciskasz kciukiem albo ustawiasz opaskę, którą już masz.
+
+NA TO, CO TO WYWOŁAŁO
+Samochód, łódź, samolot i pociąg. Mdłości w ciąży. Kac. Zawroty głowy i oszołomienie. Ściśnięty żołądek. Wybierz okazję, a Queasy zaproponuje tryb, za którym stoją najtrafniejsze opublikowane prace, i zejdzie z drogi.
+
+ZA DARMO, BEZ LIMITU, BEZ KONTA
+Każdy tryb działa za darmo, tyle razy, ile chcesz. Darmowe sesje Pulse i Breathe trwają dwie minuty; Tone i Press zawsze idą do końca. Queasy Pro dodaje sesje do 45 minut, które trwają na nadgarstku przy wygaszonym ekranie, całą historię i to, który tryb zwykle cię uspokaja, własny rytm i poziom oraz przypomnienia Press w ciągu dnia.
+
+ZE ŹRÓDŁAMI OBOK
+Każdy tryb mówi, na czym się opiera, słowami samego źródła, i linkuje do niego. Ton pochodzi z pracy Uniwersytetu w Nagoi z 2025 roku zatytułowanej "Just 1-min exposure to a pure tone at 100 Hz with daily exposable sound pressure levels may improve motion sickness". Punkt na nadgarstku, którego używa Press, to ten badany w próbach z opaskami akupresurowymi, gdzie przegląd Cochrane prób we wczesnej ciąży nazywa dowody ograniczonymi i niespójnymi. Wolimy ci to powiedzieć.
+
+Pulse to jedyny tryb, który nie ma czego cytować, i sam to mówi. Zegarek stukający w nadgarstek to nie akupresura ani stymulacja nerwu. To równe wrażenie, na którym łatwo się skupić, i tylko tyle Queasy o nim twierdzi.
+
+PRYWATNE Z ZAŁOŻENIA
+Twoje wpisy, sesje i ustawienia zostają na twoich urządzeniach. Bez konta, bez reklam, bez śledzenia, a dziennik możesz w każdej chwili wyeksportować dla lekarza.
+
+WAŻNE
+Queasy to zestaw technik poprawiających komfort, które wykonujesz samodzielnie. To nie jest wyrób medyczny, nie ma żadnego dopuszczenia i niczego nie diagnozuje, nie leczy, nie uzdrawia ani nie zapobiega. Może się zdarzyć, że nie zmieni tego, jak się czujesz. Opaski akupresurowe i urządzenia stymulujące nadgarstek sprzedawane na mdłości są dopuszczonymi wyrobami medycznymi; Queasy nie jest żadnym z nich i ich nie zastępuje. Jeśli mdłości są silne lub się utrzymują, idą z innymi objawami albo nie utrzymujesz płynów, porozmawiaj z lekarzem. W ciąży mdłości, przy których nie da się utrzymać płynów, to sprawa dla położnej lub lekarza, nie dla aplikacji.
+
+Queasy Pro to miesięczna lub roczna subskrypcja odnawiana automatycznie, każda z 1 tygodniem bezpłatnego okresu próbnego, albo osobny jednorazowy zakup na zawsze. Płatność jest pobierana z twojego konta Apple. Subskrypcje odnawiają się automatycznie, o ile nie zostaną anulowane co najmniej 24 godziny przed końcem bieżącego okresu. Zarządzaj lub anuluj w ustawieniach App Store.
+
+Terms of Use: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Privacy Policy: https://jackwallner.github.io/queasy/privacy-policy.html

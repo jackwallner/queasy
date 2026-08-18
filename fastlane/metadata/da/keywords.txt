@@ -1,0 +1,1 @@
+kvalme,køresyge,søsyge,bil,båd,fly,tog,bus,rejse,krydstogt,svimmel,100hz,ånde,tone

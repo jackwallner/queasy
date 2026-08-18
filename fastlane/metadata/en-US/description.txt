@@ -1,0 +1,29 @@
+Queasy is four drug-free things to try when you feel sick, on your Apple Watch or your iPhone. Start one in a tap, or answer three quick questions and let Queasy choose.
+
+FOUR MODES
+- Pulse: a steady, unhurried tap on the inside of your wrist. Something to rest your attention on while a wave passes. Ten levels, adjustable mid-session.
+- Breathe: your watch taps a long swell in and a longer fade out, so you can pace your breathing with your eyes shut and your arm down.
+- Tone: a pure 100 Hz tone for one minute, through headphones, at everyday volume.
+- Press: shows you the spot on the inside of your wrist that an acupressure band sits on, then times a three-minute hold while you press with your thumb or line up a band you already own.
+
+FOR WHATEVER SET IT OFF
+Car, boat, plane and train. Morning sickness. Hangovers. Vertigo and dizzy spells. A nervous stomach. Pick the occasion and Queasy suggests the mode with the most relevant published work behind it, then gets out of the way.
+
+FREE, UNLIMITED, NO ACCOUNT
+Every mode works free, as often as you like. Free Pulse and Breathe sessions run two minutes; Tone and Press always run their full length. Queasy Pro adds sessions up to 45 minutes that keep going on your wrist with the screen off, your whole history and which mode tends to settle you, your own rhythm and level, and Press reminders through the day.
+
+WITH THE SOURCES ATTACHED
+Each mode says what it leans on, in the source's own words, and links to it. The tone comes from a 2025 Nagoya University paper titled "Just 1-min exposure to a pure tone at 100 Hz with daily exposable sound pressure levels may improve motion sickness". The wrist spot Press uses is the one studied in acupressure-band trials, where the Cochrane review of early-pregnancy trials calls the evidence limited and inconsistent. We would rather tell you that than not.
+
+Pulse is the one mode with nothing to cite, and it says so. A watch tapping your wrist is not acupressure and not nerve stimulation. It is a regular sensation that is easy to focus on, which is the only thing Queasy claims for it.
+
+PRIVATE BY DESIGN
+Your check-ins, sessions and settings stay on your devices. No account, no ads, no tracking, and you can export the log for a doctor at any time.
+
+IMPORTANT
+Queasy is a set of comfort techniques you run yourself. It is not a medical device, it holds no clearance, and it does not diagnose, treat, cure or prevent anything. It may not change how you feel. Acupressure bands and wrist stimulation devices sold for nausea are cleared medical devices; Queasy is neither, and is not a substitute for one. If nausea is severe or persistent, comes with other symptoms, or you cannot keep fluids down, talk to a doctor. In pregnancy, sickness that stops you keeping fluids down needs your midwife or doctor, not an app.
+
+Queasy Pro is a monthly or yearly auto-renewing subscription, each with a 1-week free trial, or a separate one-time lifetime purchase. Payment is charged to your Apple Account. Subscriptions auto-renew unless cancelled at least 24 hours before the current period ends. Manage or cancel in App Store settings.
+
+Terms of Use: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Privacy Policy: https://jackwallner.github.io/queasy/privacy-policy.html

@@ -1,0 +1,105 @@
+name: Queasy
+options:
+  bundleIdPrefix: com.jackwallner
+  deploymentTarget:
+    iOS: "17.0"
+    watchOS: "10.0"
+  xcodeVersion: "16.0"
+  minimumXcodeGenVersion: "2.38"
+
+packages:
+  RevenueCat:
+    url: https://github.com/RevenueCat/purchases-ios-spm.git
+    from: "5.72.0"
+
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    DEVELOPMENT_TEAM: YXG4MP6W39
+    CODE_SIGN_STYLE: Automatic
+    MARKETING_VERSION: "1.1.0"
+    CURRENT_PROJECT_VERSION: "20"
+    GENERATE_INFOPLIST_FILE: NO
+
+schemes:
+  Queasy:
+    build:
+      targets:
+        Queasy: all
+        QueasyWatch: all
+    run:
+      config: Debug
+      storeKitConfiguration: Queasy.storekit
+    test:
+      config: Debug
+      storeKitConfiguration: Queasy.storekit
+      targets:
+        - QueasyTests
+  QueasyWatch:
+    build:
+      targets:
+        QueasyWatch: all
+    run:
+      config: Debug
+
+targets:
+  Queasy:
+    type: application
+    platform: iOS
+    sources:
+      - path: Queasy
+        excludes:
+          - PrivacyInfo.xcprivacy
+      - path: Shared
+      - path: Queasy/PrivacyInfo.xcprivacy
+        buildPhase: resources
+      - path: Queasy.storekit
+        buildPhase: resources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.jackwallner.queasy
+        INFOPLIST_FILE: Queasy/Info.plist
+        CODE_SIGN_ENTITLEMENTS: Queasy/Queasy.entitlements
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        TARGETED_DEVICE_FAMILY: "1"
+        SWIFT_ACTIVE_COMPILATION_CONDITIONS: "$(inherited) HAS_REVENUECAT"
+    dependencies:
+      - package: RevenueCat
+        product: RevenueCat
+      - target: QueasyWatch
+        embed: true
+
+  QueasyWatch:
+    type: application
+    platform: watchOS
+    sources:
+      - path: QueasyWatch
+        excludes:
+          - PrivacyInfo.xcprivacy
+      - path: QueasyWatch/PrivacyInfo.xcprivacy
+        buildPhase: resources
+      - path: Shared
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.jackwallner.queasy.watch
+        INFOPLIST_FILE: QueasyWatch/Info.plist
+        CODE_SIGN_ENTITLEMENTS: QueasyWatch/QueasyWatch.entitlements
+        WATCHOS_DEPLOYMENT_TARGET: "10.0"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        SWIFT_ACTIVE_COMPILATION_CONDITIONS: "$(inherited) HAS_REVENUECAT"
+    dependencies:
+      - package: RevenueCat
+        product: RevenueCat
+
+  QueasyTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: QueasyTests
+      - path: Shared
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        PRODUCT_BUNDLE_IDENTIFIER: com.jackwallner.queasy.tests
+    dependencies:
+      - target: Queasy

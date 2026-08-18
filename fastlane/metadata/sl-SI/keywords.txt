@@ -1,0 +1,1 @@
+avto,ladja,letalo,vlak,avtobus,križarjenje,vrtoglavica,omotica,100hz,dih,ton

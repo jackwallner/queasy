@@ -1,0 +1,1 @@
+nausea,mal di mare,aereo,treno,autobus,viaggio,crociera,vertigini,100hz,respiro,tono

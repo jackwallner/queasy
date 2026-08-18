@@ -1,0 +1,1 @@
+kvalme,bilsyke,sjøsyke,bil,båt,fly,tog,buss,cruise,svimmel,vertigo,100hz,pust,tone

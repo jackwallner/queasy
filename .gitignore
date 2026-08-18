@@ -1,0 +1,9 @@
+build/
+*.xcarchive
+*.ipa
+*.dSYM.zip
+DerivedData/
+*.xcodeproj/
+fastlane/report.xml
+fastlane/metadata.bak.*
+.DS_Store

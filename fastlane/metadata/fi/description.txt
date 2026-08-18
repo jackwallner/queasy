@@ -1,0 +1,29 @@
+Queasy on neljä lääkkeetöntä keinoa, joita voit kokeilla kun olo on huono, Apple Watchissa tai iPhonessa. Aloita yksi napautuksella tai vastaa kolmeen nopeaan kysymykseen ja anna Queasyn valita.
+
+NELJÄ TILAA
+- Pulse: rauhallinen, tasainen naputus ranteen sisäpuolella. Jotain, mihin nojata huomionsa sillä aikaa kun aalto menee ohi. Kymmenen tasoa, säädettävissä kesken jakson.
+- Breathe: kello naputtaa pitkän nousun sisäänhengityksellä ja pidemmän laskun uloshengityksellä, jotta voit tahdittaa hengityksesi silmät kiinni ja käsi alhaalla.
+- Tone: puhdas 100 Hz:n ääni yhden minuutin ajan, kuulokkeilla, tavallisella äänenvoimakkuudella.
+- Press: näyttää ranteen sisäpuolelta kohdan, jossa akupainantaranneke istuu, ja ottaa sitten aikaa kolmen minuutin painallukselle sillä aikaa kun painat peukalolla tai asetat rannekkeen, joka sinulla jo on.
+
+MIKÄ SEN SITTEN LAUKAISIKIN
+Auto, vene, lentokone ja juna. Raskausajan pahoinvointi. Krapula. Huimaus ja pyörrytys. Jännittynyt vatsa. Valitse tilanne, niin Queasy ehdottaa sitä tilaa, jonka takana on osuvin julkaistu tutkimus, ja jää sitten pois tieltä.
+
+ILMAINEN, RAJATON, ILMAN TILIÄ
+Jokainen tila toimii ilmaiseksi, niin usein kuin haluat. Ilmaiset Pulse- ja Breathe-jaksot kestävät kaksi minuuttia; Tone ja Press menevät aina loppuun asti. Queasy Pro lisää jopa 45 minuutin jaksot, jotka jatkuvat ranteessa näytön ollessa sammuksissa, koko historiasi ja sen mikä tila yleensä rauhoittaa sinua, oman rytmin ja tason sekä Press-muistutukset pitkin päivää.
+
+LÄHTEET MUKANA
+Jokainen tila kertoo mihin se nojaa, lähteen omin sanoin, ja linkittää siihen. Ääni tulee Nagoyan yliopiston vuoden 2025 artikkelista, jonka otsikko on "Just 1-min exposure to a pure tone at 100 Hz with daily exposable sound pressure levels may improve motion sickness". Ranteen kohta, jota Press käyttää, on sama jota akupainantarannekkeiden kokeissa on tutkittu, ja alkuraskauden kokeita koskeva Cochrane-katsaus kutsuu näyttöä rajalliseksi ja epäyhtenäiseksi. Kerromme sen mieluummin.
+
+Pulse on ainoa tila, jolla ei ole mitään siteerattavaa, ja se sanoo sen itse. Ranteeseen naputtava kello ei ole akupainantaa eikä hermostimulaatiota. Se on tasainen tuntemus, johon on helppo keskittyä, eikä Queasy väitä siitä sen enempää.
+
+YKSITYINEN LÄHTÖKOHDAKSEEN
+Kirjauksesi, jaksosi ja asetuksesi pysyvät omilla laitteillasi. Ei tiliä, ei mainoksia, ei seurantaa, ja voit viedä lokin lääkärille milloin tahansa.
+
+TÄRKEÄÄ
+Queasy on kokoelma oloa helpottavia tekniikoita, jotka teet itse. Se ei ole lääkinnällinen laite, sillä ei ole mitään hyväksyntää, eikä se diagnosoi, hoida, paranna tai ehkäise mitään. Se ei välttämättä muuta sitä miltä sinusta tuntuu. Pahoinvointiin myytävät akupainantarannekkeet ja ranteen stimulaatiolaitteet ovat hyväksyttyjä lääkinnällisiä laitteita; Queasy ei ole kumpikaan eikä korvaa niitä. Jos pahoinvointi on voimakasta tai jatkuvaa, siihen liittyy muita oireita, tai et pysty pitämään nesteitä sisälläsi, keskustele lääkärin kanssa. Raskauden aikana pahoinvointi, jonka takia et pysty pitämään nesteitä, kuuluu kätilölle tai lääkärille, ei sovellukselle.
+
+Queasy Pro on kuukausittain tai vuosittain automaattisesti uusiutuva tilaus, molemmissa viikon ilmainen kokeilujakso, tai erillinen kertaostos ikuisesti. Maksu veloitetaan Apple-tililtäsi. Tilaukset uusiutuvat automaattisesti, ellei niitä peruta vähintään 24 tuntia ennen kuluvan jakson loppua. Hallinnoi tai peru App Storen asetuksissa.
+
+Terms of Use: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Privacy Policy: https://jackwallner.github.io/queasy/privacy-policy.html

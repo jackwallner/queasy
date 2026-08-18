@@ -1,0 +1,69 @@
+WHAT CHANGED IN THIS VERSION
+
+Queasy 1.0 was rejected twice under 1.1.6, for copy saying calming vibration
+pulses relieve nausea in pregnancy. We took the point: a disclaimer cannot fix
+a feature that claims to do something it cannot be shown to do, so this version
+changes the product, not the wording. Queasy is now four separate things the
+user does, each described by what it literally is and each showing its own
+source in the app.
+
+1. PULSE. The watch taps the inside of the wrist on a regular beat, 10 levels,
+adjustable mid-session. This is the feature once described as acupressure. It
+no longer is. The app states plainly, in Learn and in the description, that a
+watch tapping your wrist is NOT acupressure and NOT nerve stimulation, that
+those are different things done by bands that apply pressure and by cleared
+devices that deliver current, and that no trial has tested a watch buzz in
+their place. It is offered only as a regular sensation to focus on, and is the
+one mode with no citation, which the app says outright.
+
+2. BREATHE. A paced-breathing timer delivered as haptics: a swell on the in-
+breath and a longer fall on the out-breath, so the user can pace their
+breathing with their eyes shut. Source in app: trials of slow diaphragmatic
+breathing on chemotherapy-induced and postoperative nausea, described in app as
+small.
+
+3. TONE. A generated 100 Hz sine tone for one minute at low volume. Source in
+app with a link: Gu, Ohgami, Kagawa et al., "Just 1-min exposure to a pure tone
+at 100 Hz with daily exposable sound pressure levels may improve motion
+sickness", Environmental Health and Preventive Medicine, 2025-03-25, DOI
+10.1265/ehpm.24-00247. The app quotes the paper's own "may improve" hedge
+rather than restating it as a result.
+
+4. PRESS. Instruction plus a timer. It shows how to locate the point on the
+inner forearm that acupressure wristbands sit on, then times a three-minute
+hold while the user presses with their own thumb or positions a band they
+already own. The app does not claim to apply pressure, because it cannot.
+Source in app with a link: the Cochrane review of interventions for nausea and
+vomiting in early pregnancy, quoted as calling this evidence limited and
+inconsistent.
+
+WHAT THE APP SAYS IT IS NOT
+
+Onboarding, every mode screen, Learn, Settings and the description state that
+Queasy is a set of comfort techniques the user runs themselves, is not a
+medical device, holds no clearance, does not diagnose, treat, cure or prevent
+anything, and may not change how the user feels. They also state that
+acupressure bands and wrist stimulation devices sold for nausea are cleared
+medical devices, and Queasy is neither and no substitute for one. The Regulated
+Medical Device declaration on this app is No and this version matches it.
+
+MORNING SICKNESS is one occasion in the check-in alongside travel, hangover,
+vertigo and a nervous stomach; the description lists it the same way. No
+outcome is promised for it or any other occasion. Choosing it caps the pulse
+intensity lower, lengthens the session and shows self-care guidance from NHS
+and ACOG patient information, with a prominent note that sickness which stops
+someone keeping fluids down needs a midwife or doctor, not an app.
+
+All four modes are free and unlimited, with no account and no trial, so nothing
+needs to be bought to review the app.
+
+HARDWARE NOTE FOR TESTING
+
+Two earlier reviews were performed on an iPad Air. Queasy is an iPhone-only
+binary (TARGETED_DEVICE_FAMILY = 1). On iPad it runs in iPhone compatibility
+mode, with no Core Haptics engine and no paired Apple Watch, so nothing can be
+felt at all. Please use an iPhone, where Pulse and Breathe play through Core
+Haptics, Tone through the speaker or headphones and Press runs as a timer; or
+an iPhone with a paired Apple Watch, where the same patterns play on the wrist
+and keep running with the screen off (WKExtendedRuntimeSession, physical-
+therapy background mode, no HealthKit).

@@ -1,0 +1,1 @@
+morska bolest,auto,brod,avion,vlak,autobus,putovanje,krstarenje,vrtoglavica,100hz,ton

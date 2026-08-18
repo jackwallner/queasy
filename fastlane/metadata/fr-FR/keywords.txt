@@ -1,0 +1,1 @@
+nausée,voiture,bateau,avion,train,bus,voyage,croisière,vertige,100hz,souffle,son

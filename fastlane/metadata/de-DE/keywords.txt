@@ -1,0 +1,1 @@
+übelkeit,seekrank,auto,boot,flug,zug,bus,kreuzfahrt,schwindel,100hz,atmung,ton

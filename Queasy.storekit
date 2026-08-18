@@ -1,0 +1,92 @@
+{
+  "identifier": "Queasy",
+  "nonRenewingSubscriptions": [],
+  "products": [
+    {
+      "displayPrice": "29.99",
+      "familyShareable": false,
+      "internalID": "Q-LIFETIME",
+      "localizations": [
+        {
+          "description": "All Queasy Pro features forever.",
+          "displayName": "Queasy Pro Lifetime",
+          "locale": "en_US"
+        }
+      ],
+      "productID": "com.jackwallner.queasy.pro.lifetime",
+      "referenceName": "Queasy Pro Lifetime",
+      "type": "NonConsumable"
+    }
+  ],
+  "settings": {
+    "_applicationInternalID": "0",
+    "_developerTeamID": "YXG4MP6W39",
+    "_failTransactionsEnabled": false,
+    "_locale": "en_US",
+    "_storeKitErrors": [],
+    "_storefront": "USA"
+  },
+  "subscriptionGroups": [
+    {
+      "id": "QG-PRO",
+      "localizations": [],
+      "name": "Queasy Pro",
+      "subscriptions": [
+        {
+          "adHocOffers": [],
+          "codeOffers": [],
+          "displayPrice": "2.99",
+          "familyShareable": false,
+          "groupNumber": 1,
+          "internalID": "Q-MONTHLY",
+          "introductoryOffer": {
+            "internalID": "Q-MONTHLY-FT",
+            "paymentMode": "free",
+            "subscriptionPeriod": "P1W"
+          },
+          "localizations": [
+            {
+              "description": "All Queasy Pro features, billed monthly.",
+              "displayName": "Queasy Pro Monthly",
+              "locale": "en_US"
+            }
+          ],
+          "productID": "com.jackwallner.queasy.pro.monthly",
+          "recurringSubscriptionPeriod": "P1M",
+          "referenceName": "Queasy Pro Monthly",
+          "subscriptionGroupID": "QG-PRO",
+          "type": "RecurringSubscription"
+        },
+        {
+          "adHocOffers": [],
+          "codeOffers": [],
+          "displayPrice": "14.99",
+          "familyShareable": false,
+          "groupNumber": 2,
+          "internalID": "Q-YEARLY",
+          "introductoryOffer": {
+            "internalID": "Q-YEARLY-FT",
+            "paymentMode": "free",
+            "subscriptionPeriod": "P1W"
+          },
+          "localizations": [
+            {
+              "description": "All Queasy Pro features, billed yearly.",
+              "displayName": "Queasy Pro Yearly",
+              "locale": "en_US"
+            }
+          ],
+          "productID": "com.jackwallner.queasy.pro.yearly",
+          "recurringSubscriptionPeriod": "P1Y",
+          "referenceName": "Queasy Pro Yearly",
+          "subscriptionGroupID": "QG-PRO",
+          "type": "RecurringSubscription"
+        }
+      ]
+    }
+  ],
+  "version": {
+    "major": 4,
+    "minor": 0
+  }
+}

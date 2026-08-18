@@ -1,0 +1,29 @@
+Queasy är fyra saker utan läkemedel att prova när du mår illa, på din Apple Watch eller din iPhone. Starta en med en knackning, eller svara på tre snabba frågor och låt Queasy välja.
+
+FYRA LÄGEN
+- Pulse: en lugn, jämn knackning på insidan av handleden. Något att vila uppmärksamheten på medan en våg går över. Tio nivåer, justerbara mitt i passet.
+- Breathe: klockan knackar en lång stigning på inandningen och en längre nedtoning på utandningen, så att du kan hålla takten på andningen med slutna ögon och armen nere.
+- Tone: en ren ton på 100 Hz i en minut, i hörlurar, på vanlig volym.
+- Press: visar stället på insidan av handleden där ett akupressurband sitter, och tar sedan tid på ett tryck i tre minuter medan du trycker med tummen eller lägger ett band du redan har.
+
+FÖR VAD DET NU VAR SOM UTLÖSTE DET
+Bil, båt, flyg och tåg. Illamående i graviditet. Baksmälla. Yrsel och ostadighet. En nervös mage. Välj tillfället, så föreslår Queasy det läge som har det mest relevanta publicerade underlaget bakom sig, och håller sig sedan undan.
+
+GRATIS, OBEGRÄNSAT, UTAN KONTO
+Alla lägen fungerar gratis, hur ofta du vill. Gratis Pulse- och Breathe-pass är två minuter; Tone och Press går alltid hela vägen. Queasy Pro lägger till pass upp till 45 minuter som fortsätter på handleden med skärmen släckt, hela din historik och vilket läge som brukar lugna dig, din egen rytm och nivå, och Press-påminnelser under dagen.
+
+MED KÄLLORNA BIFOGADE
+Varje läge säger vad det lutar sig mot, med källans egna ord, och länkar dit. Tonen kommer från en artikel från Nagoya universitet 2025 med titeln "Just 1-min exposure to a pure tone at 100 Hz with daily exposable sound pressure levels may improve motion sickness". Punkten på handleden som Press använder är den som studerats i försök med akupressurband, där Cochrane-översikten av försök i tidig graviditet kallar underlaget begränsat och ojämnt. Vi berättar hellre det.
+
+Pulse är det enda läget som inte har något att citera, och det säger det själv. En klocka som knackar på handleden är inte akupressur och inte nervstimulering. Det är en jämn förnimmelse som är lätt att fästa blicken vid, och mer än så påstår Queasy inte om den.
+
+PRIVAT FRÅN BÖRJAN
+Dina incheckningar, pass och inställningar stannar på dina enheter. Inget konto, inga annonser, ingen spårning, och du kan när som helst exportera loggen till en läkare.
+
+VIKTIGT
+Queasy är en samling tekniker för välbefinnande som du utför själv. Det är ingen medicinteknisk produkt, det har inget godkännande, och det diagnostiserar, behandlar, botar eller förebygger ingenting. Det kanske inte ändrar hur du mår. Akupressurband och handledsstimulatorer som säljs mot illamående är godkända medicintekniska produkter; Queasy är ingetdera och ersätter dem inte. Om illamåendet är svårt eller inte går över, kommer med andra symtom, eller om du inte får i dig vätska, tala med läkare. Under graviditet hör illamående som gör att du inte behåller vätska hemma hos barnmorska eller läkare, inte i en app.
+
+Queasy Pro är en månads- eller årsprenumeration med automatisk förnyelse, var och en med en veckas gratis provperiod, eller ett separat engångsköp för alltid. Betalningen dras från ditt Apple-konto. Prenumerationer förnyas automatiskt om de inte sägs upp minst 24 timmar före den pågående periodens slut. Hantera eller säg upp i App Store-inställningarna.
+
+Terms of Use: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Privacy Policy: https://jackwallner.github.io/queasy/privacy-policy.html

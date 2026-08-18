@@ -1,0 +1,1 @@
+pahoinvointi,merisairaus,auto,vene,lentokone,juna,bussi,risteily,huimaus,100hz,ääni

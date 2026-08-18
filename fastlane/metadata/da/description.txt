@@ -1,0 +1,29 @@
+Queasy er fire ting uden medicin, du kan prøve, når du har det skidt, på dit Apple Watch eller din iPhone. Start en med et tryk, eller svar på tre hurtige spørgsmål og lad Queasy vælge.
+
+FIRE TILSTANDE
+- Pulse: et roligt, jævnt bank på indersiden af håndleddet. Noget at hvile opmærksomheden på, mens en bølge går over. Ti niveauer, kan justeres midt i en session.
+- Breathe: uret banker en lang stigning på indåndingen og en længere udtoning på udåndingen, så du kan holde takten i din vejrtrækning med lukkede øjne og armen nede.
+- Tone: en ren tone på 100 Hz i et minut, i hovedtelefoner, ved almindelig lydstyrke.
+- Press: viser dig stedet på indersiden af håndleddet, hvor et akupressurarmbånd sidder, og tager derefter tid på et tryk i tre minutter, mens du trykker med tommelfingeren eller lægger et armbånd, du allerede har.
+
+UANSET HVAD DER SATTE DET I GANG
+Bil, båd, fly og tog. Kvalme i graviditeten. Tømmermænd. Svimmelhed og uklarhed. En nervøs mave. Vælg anledningen, og Queasy foreslår den tilstand, der har det mest relevante offentliggjorte arbejde bag sig, og går så af vejen.
+
+GRATIS, UBEGRÆNSET, UDEN KONTO
+Alle tilstande virker gratis, så tit du vil. Gratis Pulse- og Breathe-sessioner varer to minutter; Tone og Press kører altid hele vejen. Queasy Pro tilføjer sessioner op til 45 minutter, der fortsætter på håndleddet med slukket skærm, hele din historik og hvilken tilstand der plejer at falde dig til ro, din egen rytme og dit eget niveau, og Press-påmindelser i løbet af dagen.
+
+MED KILDERNE VEDLAGT
+Hver tilstand siger, hvad den læner sig op ad, med kildens egne ord, og linker til den. Tonen kommer fra en artikel fra Nagoya Universitet fra 2025 med titlen "Just 1-min exposure to a pure tone at 100 Hz with daily exposable sound pressure levels may improve motion sickness". Punktet på håndleddet, som Press bruger, er det, der er undersøgt i forsøg med akupressurarmbånd, hvor Cochrane-oversigten over forsøg i den tidlige graviditet kalder grundlaget begrænset og uensartet. Det fortæller vi hellere.
+
+Pulse er den ene tilstand, der ikke har noget at citere, og den siger det selv. Et ur, der banker på dit håndled, er ikke akupressur og ikke nervestimulation. Det er en jævn fornemmelse, der er nem at holde fast i, og mere påstår Queasy ikke om den.
+
+PRIVAT FRA BUNDEN
+Dine tjek-ind, sessioner og indstillinger bliver på dine enheder. Ingen konto, ingen reklamer, ingen sporing, og du kan altid eksportere loggen til en læge.
+
+VIGTIGT
+Queasy er en samling teknikker til velvære, som du selv udfører. Det er ikke medicinsk udstyr, det har ingen godkendelse, og det diagnosticerer, behandler, helbreder eller forebygger ingenting. Det ændrer måske ikke, hvordan du har det. Akupressurarmbånd og håndledsstimulatorer, der sælges mod kvalme, er godkendt medicinsk udstyr; Queasy er ingen af delene og erstatter dem ikke. Hvis kvalmen er kraftig eller vedvarende, følges af andre symptomer, eller du ikke kan holde på væske, så tal med en læge. I graviditeten hører kvalme, hvor du ikke kan holde på væske, til hos din jordemoder eller læge, ikke i en app.
+
+Queasy Pro er et månedligt eller årligt abonnement med automatisk fornyelse, hver med en uges gratis prøveperiode, eller et separat engangskøb for altid. Betalingen trækkes fra din Apple-konto. Abonnementer fornyes automatisk, medmindre de opsiges mindst 24 timer før den aktuelle periodes udløb. Administrer eller opsig i App Store-indstillingerne.
+
+Terms of Use: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Privacy Policy: https://jackwallner.github.io/queasy/privacy-policy.html

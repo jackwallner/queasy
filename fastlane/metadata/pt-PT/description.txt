@@ -1,0 +1,29 @@
+Queasy são quatro coisas sem medicamentos para tentar quando não se sente bem, no seu Apple Watch ou no seu iPhone. Comece uma com um toque, ou responda a três perguntas rápidas e deixe o Queasy escolher.
+
+QUATRO MODOS
+- Pulse: um toque calmo e constante na parte de dentro do pulso. Algo em que apoiar a atenção enquanto passa uma onda. Dez níveis, ajustáveis durante a sessão.
+- Breathe: o relógio marca uma subida longa na inspiração e uma descida mais longa na expiração, para poder acompanhar a respiração de olhos fechados e braço descaído.
+- Tone: um som puro de 100 Hz durante um minuto, com auscultadores, a volume normal.
+- Press: mostra o ponto na parte de dentro do pulso onde assenta uma pulseira de acupressão e cronometra três minutos enquanto pressiona com o polegar ou alinha uma pulseira que já tem.
+
+PARA O QUE QUER QUE O TENHA DESENCADEADO
+Carro, barco, avião e comboio. Náuseas na gravidez. Ressaca. Vertigens e tonturas. Estômago apertado. Escolha a ocasião e o Queasy sugere o modo com os trabalhos publicados mais relevantes por trás, e depois sai da frente.
+
+GRÁTIS, ILIMITADO, SEM CONTA
+Todos os modos funcionam grátis, tantas vezes quantas quiser. As sessões gratuitas de Pulse e Breathe duram dois minutos; Tone e Press vão sempre até ao fim. O Queasy Pro acrescenta sessões até 45 minutos que continuam no pulso com o ecrã apagado, todo o seu histórico e que modo costuma acalmá-lo, o seu próprio ritmo e nível, e lembretes de Press ao longo do dia.
+
+COM AS FONTES AO LADO
+Cada modo diz em que se apoia, nas palavras da própria fonte, e liga a ela. O som vem de um artigo da Universidade de Nagoya de 2025 intitulado "Just 1-min exposure to a pure tone at 100 Hz with daily exposable sound pressure levels may improve motion sickness". O ponto do pulso que o Press usa é o estudado nos ensaios com pulseiras de acupressão, onde a revisão Cochrane dos ensaios de início de gravidez chama à evidência limitada e inconsistente. Preferimos dizer-lho.
+
+Pulse é o único modo sem nada para citar, e di-lo. Um relógio a tocar no seu pulso não é acupressão nem estimulação nervosa. É uma sensação regular, fácil de acompanhar, e é só isso que o Queasy afirma sobre ela.
+
+PRIVADO POR CONCEÇÃO
+Os seus registos, sessões e definições ficam nos seus dispositivos. Sem conta, sem publicidade, sem rastreio, e pode exportar o registo para um médico quando quiser.
+
+IMPORTANTE
+O Queasy é um conjunto de técnicas de conforto que aplica você mesmo. Não é um dispositivo médico, não tem qualquer autorização, e não diagnostica, trata, cura nem previne nada. Pode não mudar como se sente. As pulseiras de acupressão e os aparelhos de estimulação do pulso vendidos para náuseas são dispositivos médicos autorizados; o Queasy não é nenhum deles e não os substitui. Se a náusea for forte ou persistente, vier com outros sintomas, ou se não conseguir reter líquidos, fale com um médico. Na gravidez, enjoos que impedem reter líquidos são assunto da sua parteira ou do seu médico, não de uma aplicação.
+
+O Queasy Pro é uma subscrição mensal ou anual com renovação automática, cada uma com uma semana de teste grátis, ou uma compra única vitalícia à parte. O pagamento é cobrado na sua conta Apple. As subscrições renovam automaticamente, a menos que sejam canceladas pelo menos 24 horas antes do fim do período em curso. Faça a gestão ou cancele nas definições da App Store.
+
+Terms of Use: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Privacy Policy: https://jackwallner.github.io/queasy/privacy-policy.html

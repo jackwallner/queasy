@@ -1,0 +1,29 @@
+Queasy là bốn cách không dùng thuốc để bạn thử khi thấy khó chịu trong người, trên Apple Watch hoặc iPhone. Bắt đầu một cách chỉ với một chạm, hoặc trả lời ba câu hỏi nhanh và để Queasy chọn giúp.
+
+BỐN CHẾ ĐỘ
+- Pulse: một nhịp gõ đều và điềm tĩnh ở mặt trong cổ tay. Một chỗ để bạn đặt sự chú ý vào trong lúc cơn khó chịu đi qua. Mười mức, chỉnh được ngay giữa buổi.
+- Breathe: đồng hồ gõ một nhịp dâng dài khi hít vào và một nhịp lắng dài hơn khi thở ra, để bạn giữ nhịp thở với mắt nhắm và tay buông xuống.
+- Tone: một âm thuần 100 Hz trong một phút, qua tai nghe, ở âm lượng thường ngày.
+- Press: chỉ cho bạn điểm ở mặt trong cổ tay nơi vòng bấm huyệt nằm, rồi bấm giờ ba phút trong lúc bạn ấn bằng ngón cái hoặc chỉnh lại chiếc vòng bạn đã có.
+
+DÙ ĐIỀU GÌ GÂY RA
+Ô tô, tàu thuyền, máy bay và tàu hỏa. Ốm nghén. Say rượu hôm trước. Chóng mặt và choáng váng. Bụng dạ bồn chồn. Chọn hoàn cảnh, Queasy sẽ gợi ý chế độ có công bố khoa học liên quan nhất đứng sau, rồi lui ra.
+
+MIỄN PHÍ, KHÔNG GIỚI HẠN, KHÔNG CẦN TÀI KHOẢN
+Mọi chế độ đều miễn phí, dùng bao nhiêu lần cũng được. Buổi Pulse và Breathe miễn phí kéo dài hai phút; Tone và Press luôn chạy hết độ dài. Queasy Pro thêm các buổi tới 45 phút vẫn chạy trên cổ tay khi tắt màn hình, toàn bộ lịch sử và chế độ nào thường làm bạn dịu lại, nhịp và mức của riêng bạn, cùng lời nhắc Press trong ngày.
+
+KÈM THEO NGUỒN
+Mỗi chế độ đều nói nó dựa vào đâu, bằng chính lời của nguồn, và dẫn tới nguồn đó. Âm thanh đến từ một bài báo năm 2025 của Đại học Nagoya, nhan đề "Just 1-min exposure to a pure tone at 100 Hz with daily exposable sound pressure levels may improve motion sickness". Điểm trên cổ tay mà Press dùng chính là điểm được nghiên cứu trong các thử nghiệm vòng bấm huyệt, nơi tổng quan Cochrane về các thử nghiệm ở đầu thai kỳ gọi bằng chứng là hạn chế và không nhất quán. Chúng tôi thà nói với bạn điều đó.
+
+Pulse là chế độ duy nhất không có gì để trích dẫn, và ứng dụng nói thẳng như vậy. Một chiếc đồng hồ gõ lên cổ tay không phải là bấm huyệt và không phải là kích thích thần kinh. Đó là một cảm giác đều đặn, dễ tập trung vào, và Queasy không tuyên bố gì hơn thế về nó.
+
+RIÊNG TƯ TỪ THIẾT KẾ
+Các lần ghi nhận, buổi tập và cài đặt của bạn ở lại trên thiết bị của bạn. Không tài khoản, không quảng cáo, không theo dõi, và bạn có thể xuất nhật ký cho bác sĩ bất cứ lúc nào.
+
+QUAN TRỌNG
+Queasy là một tập hợp kỹ thuật giúp dễ chịu hơn mà chính bạn thực hiện. Nó không phải thiết bị y tế, không có bất kỳ chứng nhận nào, và không chẩn đoán, điều trị, chữa khỏi hay phòng ngừa điều gì. Có thể nó không thay đổi cảm giác của bạn. Vòng bấm huyệt và thiết bị kích thích cổ tay bán cho chứng buồn nôn là thiết bị y tế đã được cấp phép; Queasy không phải là thứ nào trong số đó và không thay thế chúng. Nếu buồn nôn nặng hoặc kéo dài, đi kèm triệu chứng khác, hoặc bạn không giữ được nước, hãy trao đổi với bác sĩ. Trong thai kỳ, tình trạng nôn khiến bạn không giữ được nước là việc của hộ sinh hoặc bác sĩ, không phải của một ứng dụng.
+
+Queasy Pro là gói đăng ký tự động gia hạn theo tháng hoặc theo năm, mỗi gói có 1 tuần dùng thử miễn phí, hoặc một lần mua trọn đời riêng biệt. Khoản thanh toán sẽ tính vào tài khoản Apple của bạn. Gói đăng ký tự động gia hạn trừ khi được hủy ít nhất 24 giờ trước khi kỳ hiện tại kết thúc. Quản lý hoặc hủy trong cài đặt App Store.
+
+Terms of Use: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Privacy Policy: https://jackwallner.github.io/queasy/privacy-policy.html

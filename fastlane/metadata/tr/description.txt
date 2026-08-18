@@ -1,0 +1,29 @@
+Queasy, midem bulanıyor dediğinde deneyebileceğin ilaçsız dört şeydir; Apple Watch'ta ya da iPhone'da. Birine tek dokunuşla başla ya da üç kısa soruyu yanıtla ve seçimi Queasy yapsın.
+
+DÖRT MOD
+- Pulse: bileğin iç yüzüne sakin ve düzenli bir dokunuş. Dalga geçerken dikkatini yaslayabileceğin bir şey. On kademe, seans sırasında ayarlanabilir.
+- Breathe: saatin nefes alırken uzun bir yükseliş, verirken daha uzun bir sönüş vurur; böylece gözlerin kapalı ve kolun aşağıdayken nefesinin temposunu tutabilirsin.
+- Tone: kulaklıkla, olağan sesle, bir dakika boyunca saf 100 Hz ton.
+- Press: akupresür bilekliğinin oturduğu, bileğin iç yüzündeki noktayı gösterir; sonra sen başparmağınla bastırırken ya da elindeki bilekliği hizalarken üç dakikayı tutar.
+
+NEYİN TETİKLEDİĞİ FARK ETMEZ
+Araba, tekne, uçak ve tren. Gebelikte bulantı. Akşamdan kalmalık. Baş dönmesi ve sersemlik. Gergin bir mide. Durumu seç, Queasy arkasında en ilgili yayımlanmış çalışmalar olan modu önersin ve sonra çekilsin.
+
+ÜCRETSİZ, SINIRSIZ, HESAPSIZ
+Her mod ücretsiz çalışır, istediğin kadar. Ücretsiz Pulse ve Breathe seansları iki dakika sürer; Tone ve Press her zaman tam uzunluğunda gider. Queasy Pro, ekran kapalıyken bilekte devam eden 45 dakikaya kadar seansları, tüm geçmişini ve hangi modun seni daha çok yatıştırdığını, kendi ritmini ve kademeni, bir de gün boyu Press hatırlatmalarını ekler.
+
+KAYNAKLARI YANINDA
+Her mod neye dayandığını kaynağın kendi sözleriyle söyler ve ona bağlantı verir. Ton, 2025 tarihli bir Nagoya Üniversitesi makalesinden gelir: "Just 1-min exposure to a pure tone at 100 Hz with daily exposable sound pressure levels may improve motion sickness". Press'in kullandığı bilek noktası, akupresür bilekliği denemelerinde incelenen noktadır; gebeliğin erken dönemine ilişkin Cochrane derlemesi bu kanıtı sınırlı ve tutarsız olarak niteler. Bunu söylememeyi tercih etmeyiz.
+
+Pulse, alıntılayacak hiçbir şeyi olmayan tek moddur ve bunu kendisi söyler. Bileğine dokunan bir saat akupresür değildir, sinir uyarımı da değildir. Odaklanması kolay, düzenli bir histir; Queasy onun için başka bir iddiada bulunmaz.
+
+TASARIMI GEREĞİ ÖZEL
+Kayıtların, seansların ve ayarların cihazlarında kalır. Hesap yok, reklam yok, izleme yok; günlüğü istediğin zaman bir hekim için dışa aktarabilirsin.
+
+ÖNEMLİ
+Queasy, kendin uyguladığın bir rahatlatma teknikleri derlemesidir. Tıbbi cihaz değildir, hiçbir onayı yoktur ve hiçbir şeyi teşhis etmez, tedavi etmez, iyileştirmez ya da önlemez. Nasıl hissettiğini değiştirmeyebilir. Bulantı için satılan akupresür bileklikleri ve bilek uyarım cihazları onaylı tıbbi cihazlardır; Queasy bunlardan biri değildir ve onların yerini tutmaz. Bulantı şiddetliyse ya da geçmiyorsa, başka belirtilerle geliyorsa veya sıvı alamıyorsan bir hekime danış. Gebelikte sıvı almanı engelleyen bulantı bir uygulamanın değil, ebenin ya da hekiminin işidir.
+
+Queasy Pro, her biri 1 hafta ücretsiz denemeli aylık veya yıllık otomatik yenilenen bir abonelik ya da ayrı bir tek seferlik ömür boyu satın alımdır. Ödeme Apple hesabından tahsil edilir. Mevcut dönem bitmeden en az 24 saat önce iptal edilmezse abonelikler otomatik yenilenir. App Store ayarlarından yönetebilir ya da iptal edebilirsin.
+
+Terms of Use: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Privacy Policy: https://jackwallner.github.io/queasy/privacy-policy.html

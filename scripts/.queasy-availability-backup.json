@@ -1,0 +1,4381 @@
+{
+ "available_territories": [
+  "USA",
+  "FRA",
+  "DEU",
+  "GBR",
+  "AUT",
+  "BEL",
+  "FIN",
+  "GRC",
+  "IRL",
+  "ITA",
+  "LUX",
+  "NLD",
+  "PRT",
+  "ESP",
+  "CAN",
+  "SWE",
+  "NOR",
+  "DNK",
+  "CHE",
+  "AUS",
+  "NZL",
+  "JPN",
+  "HKG",
+  "SGP",
+  "CHN",
+  "KOR",
+  "IND",
+  "MEX",
+  "RUS",
+  "TWN",
+  "VNM",
+  "ZAF",
+  "MYS",
+  "PHL",
+  "THA",
+  "IDN",
+  "PAK",
+  "POL",
+  "SAU",
+  "TUR",
+  "ARE",
+  "HUN",
+  "CHL",
+  "NPL",
+  "PAN",
+  "LKA",
+  "ROU",
+  "MDV",
+  "CZE",
+  "ISR",
+  "UKR",
+  "KWT",
+  "HRV",
+  "CRI",
+  "SVK",
+  "LBN",
+  "QAT",
+  "SVN",
+  "SRB",
+  "COL",
+  "VEN",
+  "BRA",
+  "GTM",
+  "ARG",
+  "SLV",
+  "PER",
+  "DOM",
+  "ECU",
+  "HND",
+  "JAM",
+  "NIC",
+  "PRY",
+  "URY",
+  "MAC",
+  "EGY",
+  "KAZ",
+  "EST",
+  "LVA",
+  "LTU",
+  "MLT",
+  "MDA",
+  "ARM",
+  "BWA",
+  "BGR",
+  "CIV",
+  "JOR",
+  "KEN",
+  "MKD",
+  "MDG",
+  "MLI",
+  "MUS",
+  "NER",
+  "SEN",
+  "TUN",
+  "UGA",
+  "AIA",
+  "BHS",
+  "ATG",
+  "BRB",
+  "BMU",
+  "VGB",
+  "CYM",
+  "DMA",
+  "GRD",
+  "MSR",
+  "KNA",
+  "LCA",
+  "VCT",
+  "TTO",
+  "TCA",
+  "GUY",
+  "SUR",
+  "BLZ",
+  "BOL",
+  "CYP",
+  "ISL",
+  "BHR",
+  "BRN",
+  "NGA",
+  "OMN",
+  "DZA",
+  "AGO",
+  "BLR",
+  "UZB",
+  "LBY",
+  "AZE",
+  "MMR",
+  "YEM",
+  "TZA",
+  "GHA",
+  "CMR",
+  "ALB",
+  "BEN",
+  "BTN",
+  "BFA",
+  "KHM",
+  "CPV",
+  "TCD",
+  "COG",
+  "FJI",
+  "GMB",
+  "GNB",
+  "KGZ",
+  "LAO",
+  "LBR",
+  "MWI",
+  "MRT",
+  "FSM",
+  "MNG",
+  "MOZ",
+  "NAM",
+  "PLW",
+  "PNG",
+  "STP",
+  "SYC",
+  "SLE",
+  "SLB",
+  "SWZ",
+  "TJK",
+  "TKM",
+  "ZWE",
+  "NRU",
+  "TON",
+  "VUT",
+  "AFG",
+  "BIH",
+  "COD",
+  "GAB",
+  "GEO",
+  "IRQ",
+  "MNE",
+  "MAR",
+  "RWA",
+  "ZMB",
+  "XKS"
+ ],
+ "rows": [
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJVU0EifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "USA"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJVU0EifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJGUkEifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "FRA"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJGUkEifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJERVUifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "DEU"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJERVUifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJHQlIifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "GBR"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJHQlIifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJBVVQifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "AUT"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJBVVQifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJCRUwifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "BEL"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJCRUwifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJGSU4ifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "FIN"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJGSU4ifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJHUkMifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "GRC"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJHUkMifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJJUkwifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "IRL"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJJUkwifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJJVEEifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "ITA"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJJVEEifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJMVVgifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "LUX"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJMVVgifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJOTEQifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "NLD"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJOTEQifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJQUlQifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "PRT"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJQUlQifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJFU1AifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "ESP"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJFU1AifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJDQU4ifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "CAN"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJDQU4ifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJTV0UifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "SWE"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJTV0UifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJOT1IifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "NOR"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJOT1IifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJETksifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "DNK"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJETksifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJDSEUifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "CHE"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJDSEUifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJBVVMifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "AUS"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJBVVMifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJOWkwifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "NZL"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJOWkwifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJKUE4ifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "JPN"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJKUE4ifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJIS0cifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "HKG"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJIS0cifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJTR1AifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "SGP"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJTR1AifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJDSE4ifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "CHN"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJDSE4ifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJLT1IifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "KOR"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJLT1IifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJJTkQifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "IND"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJJTkQifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJNRVgifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "MEX"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJNRVgifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJSVVMifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "RUS"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJSVVMifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJUV04ifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "TWN"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJUV04ifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJWTk0ifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "VNM"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJWTk0ifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJaQUYifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "ZAF"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJaQUYifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJNWVMifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "MYS"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJNWVMifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJQSEwifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "PHL"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJQSEwifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJUSEEifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "THA"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJUSEEifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJJRE4ifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "IDN"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJJRE4ifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJQQUsifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "PAK"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJQQUsifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJQT0wifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "POL"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJQT0wifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJTQVUifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "SAU"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJTQVUifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJUVVIifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "TUR"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJUVVIifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJBUkUifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "ARE"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJBUkUifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJIVU4ifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "HUN"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJIVU4ifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJDSEwifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "CHL"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJDSEwifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJOUEwifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "NPL"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJOUEwifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJQQU4ifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "PAN"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJQQU4ifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJMS0EifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "LKA"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJMS0EifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJST1UifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "ROU"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJST1UifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJNRFYifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "MDV"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJNRFYifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJDWkUifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "CZE"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJDWkUifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJJU1IifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "ISR"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJJU1IifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJVS1IifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "UKR"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJVS1IifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJLV1QifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "KWT"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJLV1QifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJIUlYifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "HRV"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJIUlYifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJDUkkifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "CRI"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJDUkkifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJTVksifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "SVK"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJTVksifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJMQk4ifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "LBN"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJMQk4ifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJRQVQifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "QAT"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJRQVQifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJTVk4ifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "SVN"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJTVk4ifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJTUkIifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "SRB"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJTUkIifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJDT0wifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "COL"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJDT0wifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJWRU4ifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "VEN"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJWRU4ifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJCUkEifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "BRA"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJCUkEifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJHVE0ifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "GTM"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJHVE0ifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJBUkcifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "ARG"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJBUkcifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJTTFYifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "SLV"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJTTFYifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJQRVIifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "PER"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJQRVIifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJET00ifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "DOM"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJET00ifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJFQ1UifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "ECU"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJFQ1UifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJITkQifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "HND"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJITkQifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJKQU0ifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "JAM"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJKQU0ifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJOSUMifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "NIC"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJOSUMifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJQUlkifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "PRY"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJQUlkifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJVUlkifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "URY"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJVUlkifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJNQUMifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "MAC"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJNQUMifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJFR1kifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "EGY"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJFR1kifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJLQVoifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "KAZ"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJLQVoifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJFU1QifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "EST"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJFU1QifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJMVkEifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "LVA"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJMVkEifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJMVFUifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "LTU"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJMVFUifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJNTFQifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "MLT"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJNTFQifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJNREEifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "MDA"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJNREEifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJBUk0ifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "ARM"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJBUk0ifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJCV0EifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "BWA"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJCV0EifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJCR1IifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "BGR"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJCR1IifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJDSVYifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "CIV"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJDSVYifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJKT1IifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "JOR"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJKT1IifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJLRU4ifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "KEN"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJLRU4ifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJNS0QifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "MKD"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJNS0QifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJNREcifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "MDG"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJNREcifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJNTEkifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "MLI"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJNTEkifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJNVVMifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "MUS"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJNVVMifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJORVIifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "NER"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJORVIifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJTRU4ifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "SEN"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJTRU4ifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJUVU4ifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "TUN"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJUVU4ifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJVR0EifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "UGA"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJVR0EifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJBSUEifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "AIA"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJBSUEifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJCSFMifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "BHS"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJCSFMifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJBVEcifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "ATG"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJBVEcifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJCUkIifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "BRB"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJCUkIifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJCTVUifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "BMU"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJCTVUifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJWR0IifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "VGB"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJWR0IifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJDWU0ifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "CYM"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJDWU0ifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJETUEifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "DMA"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJETUEifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJHUkQifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "GRD"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJHUkQifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJNU1IifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "MSR"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJNU1IifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJLTkEifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "KNA"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJLTkEifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJMQ0EifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "LCA"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJMQ0EifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJWQ1QifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "VCT"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJWQ1QifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJUVE8ifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "TTO"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJUVE8ifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJUQ0EifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "TCA"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJUQ0EifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJHVVkifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "GUY"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJHVVkifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJTVVIifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "SUR"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJTVVIifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJCTFoifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "BLZ"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJCTFoifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJCT0wifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "BOL"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJCT0wifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJDWVAifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "CYP"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJDWVAifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJJU0wifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "ISL"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJJU0wifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJCSFIifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "BHR"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJCSFIifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJCUk4ifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "BRN"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJCUk4ifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJOR0EifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "NGA"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJOR0EifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJPTU4ifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "OMN"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJPTU4ifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJEWkEifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "DZA"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJEWkEifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJBR08ifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "AGO"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJBR08ifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJCTFIifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "BLR"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJCTFIifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJVWkIifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "UZB"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJVWkIifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJMQlkifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "LBY"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJMQlkifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJBWkUifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "AZE"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJBWkUifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJNTVIifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "MMR"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJNTVIifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJZRU0ifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "YEM"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJZRU0ifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJUWkEifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "TZA"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJUWkEifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJHSEEifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "GHA"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJHSEEifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJDTVIifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "CMR"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJDTVIifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJBTEIifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "ALB"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJBTEIifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJCRU4ifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "BEN"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJCRU4ifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJCVE4ifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "BTN"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJCVE4ifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJCRkEifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "BFA"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJCRkEifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJLSE0ifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "KHM"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJLSE0ifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJDUFYifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "CPV"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJDUFYifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJUQ0QifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "TCD"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJUQ0QifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJDT0cifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "COG"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJDT0cifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJGSkkifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "FJI"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJGSkkifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJHTUIifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "GMB"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJHTUIifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJHTkIifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "GNB"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJHTkIifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJLR1oifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "KGZ"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJLR1oifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJMQU8ifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "LAO"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJMQU8ifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJMQlIifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "LBR"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJMQlIifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJNV0kifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "MWI"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJNV0kifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJNUlQifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "MRT"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJNUlQifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJGU00ifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "FSM"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJGU00ifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJNTkcifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "MNG"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJNTkcifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJNT1oifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "MOZ"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJNT1oifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJOQU0ifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "NAM"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJOQU0ifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJQTFcifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "PLW"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJQTFcifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJQTkcifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "PNG"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJQTkcifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJTVFAifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "STP"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJTVFAifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJTWUMifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "SYC"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJTWUMifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJTTEUifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "SLE"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJTTEUifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJTTEIifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "SLB"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJTTEIifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJTV1oifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "SWZ"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJTV1oifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJUSksifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "TJK"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJUSksifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJUS00ifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "TKM"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJUS00ifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJaV0UifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "ZWE"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJaV0UifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJOUlUifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "NRU"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJOUlUifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJUT04ifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "TON"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJUT04ifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJWVVQifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "VUT"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJWVVQifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJBRkcifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "AFG"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJBRkcifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJCSUgifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "BIH"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJCSUgifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJDT0QifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "COD"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJDT0QifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJHQUIifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "GAB"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJHQUIifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJHRU8ifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "GEO"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJHRU8ifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJJUlEifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "IRQ"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJJUlEifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJNTkUifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "MNE"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJNTkUifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJNQVIifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "MAR"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJNQVIifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJSV0EifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "RWA"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJSV0EifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJaTUIifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "ZMB"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJaTUIifQ"
+   }
+  },
+  {
+   "type": "territoryAvailabilities",
+   "id": "eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJYS1MifQ",
+   "attributes": {
+    "available": true,
+    "releaseDate": "2026-07-30",
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+     "AVAILABLE"
+    ]
+   },
+   "relationships": {
+    "territory": {
+     "data": {
+      "type": "territories",
+      "id": "XKS"
+     }
+    }
+   },
+   "links": {
+    "self": "https://api.appstoreconnect.apple.com/v1/territoryAvailabilities/eyJzIjoiNjc4Njc4MDQ5NSIsInQiOiJYS1MifQ"
+   }
+  }
+ ]
+}

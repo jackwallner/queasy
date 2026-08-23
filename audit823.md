@@ -794,3 +794,44 @@ Primary local evidence reviewed:
 - Shared/Utilities/AppStoreReviewLinks.swift
 
 The most important missing evidence is live, per-version data. Before choosing an A/B winner or declaring the release healthy, obtain ASC metrics and crash data, Queasy-specific RevenueCat funnel data, storefront product and offer state, rating history, and a paired-device watch test. The repository currently supports a careful implementation, but it cannot by itself prove download conversion, trial conversion, revenue, crash rate, or live-user experience.
+
+## Activity and success context, 2026-08-23
+
+Classification: **traffic without monetization**. Confidence: **low**. Trend: **no ASC comparison displayed**.
+
+ASC release state: `iOS 1.1.0 Ready for Distribution`. ASC evidence: [Analytics Overview](https://appstoreconnect.apple.com/apps/6786780495/analytics/overview?dateSpec=d90), selected range `dateSpec=d90`.
+RevenueCat evidence: [Project Overview](https://app.revenuecat.com/projects/2744fe37/overview), production mode, selected range `Last 28 days, 2026-07-27 through 2026-08-23`.
+
+### Observed activity
+
+| Source | Metric | Value | Window or comparison |
+| --- | --- | ---: | --- |
+| ASC | First-time downloads | 7 | 90-day Analytics Overview |
+| ASC | Redownloads | 2 | 90-day Analytics Overview |
+| ASC | Conversion rate | 2.56% | comparison not displayed |
+| ASC | Proceeds | not available | 90-day Analytics Overview |
+| ASC | In-app purchases | not available | 90-day Analytics Overview |
+| RevenueCat | New customers | 14 | last 28 days |
+| RevenueCat | Active customers | 27 | last 28 days |
+| RevenueCat | Active trials | 0 | current total |
+| RevenueCat | Active subscriptions | 0 | current total |
+| RevenueCat | MRR | $0 | current total |
+| RevenueCat | Revenue | $0 | last 28 days |
+
+A missing value above means the source did not expose that metric in this read-only snapshot. It is not a zero.
+
+### Interpretation and implementation focus
+
+Queasy shows only 7 ASC first-time downloads and 14 RevenueCat new customers, with no current paid signal. This is a low-sample activation problem, not enough evidence for a pricing verdict. Verify the watch and phone first-use path, denied or unavailable motion state, paywall load, and support route before testing screenshots or offers.
+
+The deterministic classifier recommends: Treat this as an activation and offer problem until a mature paid cohort appears. Verify the free-to-trial path and product loading.
+
+- Join ASC first-time download, first launch, first value, paywall shown, offer loaded, trial started, trial canceled, trial converted, entitlement active, restore, and purchase failure events with the app version and build.
+- Keep ASC's 90-day acquisition and proceeds window separate from RevenueCat's 28-day customer and revenue window. Do not calculate a conversion rate by dividing values from different windows.
+- Use a mature trial cohort and a minimum sample before choosing a native paywall or onboarding A/B winner. Record the offering identifier, package, placement, experiment variant, and build.
+- Put the app's classification and the next baseline date in the release handoff so Cursor, Claude, and Codex do not optimize from an old qualitative audit.
+
+### Boundary on success or death
+
+This snapshot supports the label **traffic without monetization**, not a lifetime verdict. The app has downloads or new customers, but no current paid signal was supplied. A later decision should include a clean 28-day RevenueCat trend, ASC acquisition and conversion trend, ratings and review count, crash and hang evidence, and a release-specific cohort.
+This dated section supersedes earlier statements in this file that per-app ASC or RevenueCat activity was unavailable as of 2026-08-23. Earlier statements remain historical evidence boundaries for their original audit pass.

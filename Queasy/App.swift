@@ -25,6 +25,15 @@ struct QueasyApp: App {
             Self.seedDemoData()
         }
         #endif
+        ConversionDiagnostics.recordAppOpen()
+        #if DEBUG && HAS_REVENUECAT
+        if RevenueCatProbe.isEnabled {
+            SubscriptionService.shared.configure()
+            // Same entry point the real paywall screens call, so what this
+            // proves is the actual path and not a parallel one.
+            SubscriptionService.shared.trackPaywallImpression(id: RevenueCatProbe.impressionID)
+        }
+        #endif
     }
 
     #if DEBUG

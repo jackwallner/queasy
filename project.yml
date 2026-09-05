@@ -22,6 +22,18 @@ settings:
     GENERATE_INFOPLIST_FILE: NO
 
 schemes:
+  QueasyUITests:
+    build:
+      targets:
+        Queasy: all
+        QueasyUITests: [test]
+    test:
+      config: Debug
+      targets:
+        - QueasyUITests
+    run:
+      config: Debug
+
   Queasy:
     build:
       targets:
@@ -103,3 +115,20 @@ targets:
         PRODUCT_BUNDLE_IDENTIFIER: com.jackwallner.queasy.tests
     dependencies:
       - target: Queasy
+
+  # The paywall purchase probe. Its own target and scheme: the app's own test
+  # action activates StoreKit Testing, and this has to reach RevenueCat's Test
+  # Store instead.
+  QueasyUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - path: QueasyUITests
+    dependencies:
+      - target: Queasy
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        PRODUCT_BUNDLE_IDENTIFIER: com.jackwallner.queasy.uitests
+        TEST_TARGET_NAME: Queasy
+

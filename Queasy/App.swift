@@ -32,6 +32,22 @@ struct QueasyApp: App {
             // Same entry point the real paywall screens call, so what this
             // proves is the actual path and not a parallel one.
             SubscriptionService.shared.trackPaywallImpression(id: RevenueCatProbe.impressionID)
+            if RevenueCatProbe.wantsPurchase {
+                Task {
+                    await SubscriptionService.shared.fetchProducts()
+                    // Logged rather than asserted: when the Test Store sheet
+                    // never appears, this separates "no packages came back"
+                    // from "purchase threw".
+                    NSLog("RCPROBE packages=%d", SubscriptionService.shared.products.count)
+                    guard let package = SubscriptionService.shared.products.first else { return }
+                    do {
+                        let outcome = try await SubscriptionService.shared.purchase(package)
+                        NSLog("RCPROBE purchase outcome=%@", String(describing: outcome))
+                    } catch {
+                        NSLog("RCPROBE purchase error=%@", String(describing: error))
+                    }
+                }
+            }
         }
         #endif
     }

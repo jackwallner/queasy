@@ -3,17 +3,11 @@ A Queasy négy gyógyszer nélküli dolog, amit kipróbálhatsz, ha rosszul vagy
 NÉGY MÓD
 - Pulse: nyugodt, egyenletes koppintás a csukló belső oldalán. Valami, amin megpihenhet a figyelmed, amíg egy hullám elmegy. Tíz fokozat, menet közben is állítható.
 - Breathe: az óra hosszú felfutást koppint belégzésre és hosszabb elhalkulást kilégzésre, így csukott szemmel, leengedett karral is tarthatod a légzésed ütemét.
-- Tone: tiszta 100 Hz-es hang egy percen át, fülhallgatóval, hétköznapi hangerőn.
+- Tone (iPhone): tiszta 100 Hz-es hang egy percen át, fülhallgatóval, hétköznapi hangerőn.
 - Press: megmutatja a csukló belső oldalán azt a pontot, ahol az akupresszúrás karkötő ül, majd három percet mér, amíg a hüvelykujjaddal nyomod, vagy beigazítod a már meglévő karkötődet.
-
-BÁRMI IS VÁLTOTTA KI
-Autó, hajó, repülő és vonat. Terhességi hányinger. Másnaposság. Szédülés és kábultság. Ideges gyomor. Válaszd ki az alkalmat, és a Queasy azt a módot ajánlja, amely mögött a legrelevánsabb publikált munka áll, aztán félreáll.
 
 INGYENES, KORLÁTLAN, FIÓK NÉLKÜL
 Minden mód ingyenes, annyiszor, ahányszor csak akarod. Az ingyenes Pulse és Breathe alkalmak két percig tartanak; a Tone és a Press mindig végigmegy. A Queasy Pro hozzáad akár 45 perces alkalmakat, amelyek sötét képernyővel is folytatódnak a csuklódon, a teljes előzményedet és azt, melyik mód szokott megnyugtatni, a saját ritmusodat és fokozatodat, valamint a Press emlékeztetőket a nap során.
-
-A FORRÁSOKKAL EGYÜTT
-Minden mód megmondja, mire támaszkodik, a forrás saját szavaival, és hivatkozik rá. A hang egy 2025-ös nagojai egyetemi cikkből származik, amelynek címe "Just 1-min exposure to a pure tone at 100 Hz with daily exposable sound pressure levels may improve motion sickness". A csuklópont, amit a Press használ, ugyanaz, amit az akupresszúrás karkötők vizsgálataiban néztek, ahol a korai terhességi vizsgálatokról szóló Cochrane-áttekintés a bizonyítékot korlátozottnak és következetlennek nevezi. Inkább elmondjuk.
 
 A Pulse az egyetlen mód, amelynek nincs mit idéznie, és ezt ki is mondja. Egy óra, amely a csuklódon koppint, nem akupresszúra és nem idegstimuláció. Egyenletes érzet, amire könnyű figyelni, és a Queasy ennél többet nem állít róla.
 
@@ -21,9 +15,9 @@ ALAPBÓL PRIVÁT
 A bejelentkezéseid, alkalmaid és beállításaid a saját eszközeiden maradnak. Nincs fiók, nincs hirdetés, nincs követés, és a naplót bármikor exportálhatod orvosnak.
 
 FONTOS
-A Queasy olyan kényelmi technikák gyűjteménye, amelyeket te magad végzel. Nem orvostechnikai eszköz, nincs semmilyen engedélye, és semmit nem diagnosztizál, kezel, gyógyít vagy előz meg. Lehet, hogy nem változtat azon, hogyan érzed magad. A hányinger ellen árult akupresszúrás karkötők és csuklóstimulátorok engedélyezett orvostechnikai eszközök; a Queasy egyik sem, és nem helyettesíti őket. Ha a hányinger erős vagy nem múlik, más tünetekkel jár, vagy nem tudsz folyadékot bent tartani, beszélj orvossal. Terhesség alatt az a hányinger, amely mellett nem tudsz folyadékot bent tartani, a szülésznődre vagy az orvosodra tartozik, nem egy alkalmazásra.
+A Queasy olyan kényelmi technikák gyűjteménye, amelyeket te magad végzel. Nem orvostechnikai eszköz, nincs semmilyen engedélye, és semmit nem diagnosztizál, kezel, gyógyít vagy előz meg. Lehet, hogy nem változtat azon, hogyan érzed magad. Ha a hányinger erős vagy nem múlik, más tünetekkel jár, vagy nem tudsz folyadékot bent tartani, beszélj orvossal. Terhesség alatt az a hányinger, amely mellett nem tudsz folyadékot bent tartani, a szülésznődre vagy az orvosodra tartozik, nem egy alkalmazásra.
 
-A Queasy Pro havi vagy éves, automatikusan megújuló előfizetés, mindkettő 1 hét ingyenes próbaidőszakkal, vagy külön egyszeri, örökre szóló vásárlás. A fizetés az Apple-fiókodat terheli. Az előfizetések automatikusan megújulnak, hacsak legalább 24 órával az aktuális időszak vége előtt nem mondod le. Kezelés vagy lemondás az App Store beállításaiban.
-
-Terms of Use: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
-Privacy Policy: https://jackwallner.github.io/queasy/privacy-policy.html
+A havi csomag ára US$2.99, az évesé US$14.99. Mindkettő automatikusan megújul, és jogosultság esetén 7 napos ingyenes próba jár hozzá. Az Apple a vásárlás megerősítésekor vagy jogosult próba után terheli meg az Apple-fiókodat. Jogosultság nélkül a terhelés megerősítéskor történik. A megújítási díjat az időszak vége előtti 24 órán belül számítjuk fel. Kezeld vagy mondd le a Beállítások › Apple-fiók › Előfizetések menüben, legalább 24 órával a vége előtt. Az árak régiónként eltérnek, és vásárlás előtt láthatók.
+Egyszeri, élethosszig tartó feloldás is elérhető. (US$29.99)
+Adatvédelmi szabályzat: https://jackwallner.github.io/queasy/privacy-policy.html
+Felhasználási feltételek (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/

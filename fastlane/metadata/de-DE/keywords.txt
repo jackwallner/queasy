@@ -1,1 +1,1 @@
-übelkeit,seekrank,auto,boot,flug,zug,bus,kreuzfahrt,schwindel,100hz,atmung,ton
+reisekrankheit,seekrankheit,autokrankheit,flugzeug,kreuzfahrt,boot,entspannung,watch,ruhe,timer

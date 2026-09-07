@@ -1,1 +1,1 @@
-hányinger,autó,hajó,repülő,vonat,busz,tengeribetegség,szédülés,100hz,légzés,hang
+utazasi-rosszullet,tengeribetegseg,autos-rosszullet,hajo,repulo,kikapcsolodas,watch,nyugalom,idozito

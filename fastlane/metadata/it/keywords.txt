@@ -1,1 +1,1 @@
-nausea,mal di mare,aereo,treno,autobus,viaggio,crociera,vertigini,100hz,respiro,tono
+chinetosi,mal-d-auto,mal-di-mare,crociera,barca,aereo,relax,watch,calma,timer,rilassante

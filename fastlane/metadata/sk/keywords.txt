@@ -1,1 +1,1 @@
-auto,loď,lietadlo,vlak,autobus,cestovanie,plavba,závrat,točenie hlavy,100hz,dych,tón
+cestovna-nevolnost,morska-choroba,auto,plavba,lod,lietadlo,uvolnenie,watch,pokoj,casovac

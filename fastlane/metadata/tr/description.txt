@@ -1,21 +1,17 @@
-Queasy, midem bulanıyor dediğinde deneyebileceğin ilaçsız dört şeydir; Apple Watch'ta ya da iPhone'da. Birine tek dokunuşla başla ya da üç kısa soruyu yanıtla ve seçimi Queasy yapsın.
+Araba, gemi ya da başka bir yolculuk seni rahatsız ettiğinde, kendin uygulayacağın basit bir konfor yöntemi seç. Bir modu doğrudan başlat veya bir öneri için üç kısa soruyu yanıtla.
 
-DÖRT MOD
-- Pulse: bileğin iç yüzüne sakin ve düzenli bir dokunuş. Dalga geçerken dikkatini yaslayabileceğin bir şey. On kademe, seans sırasında ayarlanabilir.
-- Breathe: saatin nefes alırken uzun bir yükseliş, verirken daha uzun bir sönüş vurur; böylece gözlerin kapalı ve kolun aşağıdayken nefesinin temposunu tutabilirsin.
-- Tone (iPhone): kulaklıkla, olağan sesle, bir dakika boyunca saf 100 Hz ton.
-- Press: akupresür bilekliğinin oturduğu, bileğin iç yüzündeki noktayı gösterir; sonra sen başparmağınla bastırırken ya da elindeki bilekliği hizalarken üç dakikayı tutar.
+DURAKLAMAK İÇİN DÖRT YOL
+- Nefes: yumuşak titreşimlerle ayarlanan bir nefes ritmini takip et
+- Nabız: bileğindeki düzenli bir vuruş desenine dikkatini ver
+- Ton: iPhone'da kulaklıkla, normal ses seviyesinde bir dakikalık 100 Hz'lik bir tonu dinle
+- Basınç: bilekteki bir noktaya yönelik kılavuzu ve üç dakikalık zamanlayıcıyı takip ederken kendi başparmağınla veya sahip olduğun bir bantla basınç uygula
 
-ÜCRETSİZ, SINIRSIZ, HESAPSIZ
-Her mod ücretsiz çalışır, istediğin kadar. Ücretsiz Pulse ve Breathe seansları iki dakika sürer; Tone ve Press her zaman tam uzunluğunda gider. Queasy Pro, ekran kapalıyken bilekte devam eden 45 dakikaya kadar seansları, tüm geçmişini ve hangi modun seni daha çok yatıştırdığını, kendi ritmini ve kademeni, bir de gün boyu Press hatırlatmalarını ekler.
+TÜM ARAÇ SETİNİ ÜCRETSİZ DENE
+Dört mod da ücretsiz ve sınırsızdır. Ücretsiz Nabız ve Nefes oturumları iki dakika sürer; Ton ve Basınç tam süresince çalışır. Denemek için hesap veya deneme süresi gerekmez. Apple Watch, Nabız ve Nefes'i bileğine taşır; iPhone bu yöntemleri saatsiz de sunar.
 
-Pulse, alıntılayacak hiçbir şeyi olmayan tek moddur ve bunu kendisi söyler. Bileğine dokunan bir saat akupresür değildir, sinir uyarımı da değildir. Odaklanması kolay, düzenli bir histir; Queasy onun için başka bir iddiada bulunmaz.
+Ücretli yükseltme daha uzun oturumlar, tam geçmiş, kişiye özel ritim ve seviye ile Basınç için hatırlatmalar ekler. Ücretsiz başla, ardından daha fazla süre mi yoksa daha fazla ayrıntı mı istediğine karar ver.
 
-TASARIMI GEREĞİ ÖZEL
-Kayıtların, seansların ve ayarların cihazlarında kalır. Hesap yok, reklam yok, izleme yok; günlüğü istediğin zaman bir hekim için dışa aktarabilirsin.
-
-ÖNEMLİ
-Queasy, kendin uyguladığın bir rahatlatma teknikleri derlemesidir. Tıbbi cihaz değildir, hiçbir onayı yoktur ve hiçbir şeyi teşhis etmez, tedavi etmez, iyileştirmez ya da önlemez. Nasıl hissettiğini değiştirmeyebilir. Bulantı şiddetliyse ya da geçmiyorsa, başka belirtilerle geliyorsa veya sıvı alamıyorsan bir hekime danış. Gebelikte sıvı almanı engelleyen bulantı bir uygulamanın değil, ebenin ya da hekiminin işidir.
+Bunlar ilaçsız konfor teknikleridir, hareket hastalığı için bir tedavi değildir. Bilek vuruşları akupresür veya elektriksel sinir uyarımı değildir. Bu, kendin uyguladığın bir rahatlatma teknikleri derlemesidir. Tıbbi cihaz değildir, hiçbir onayı yoktur ve hiçbir şeyi teşhis etmez, tedavi etmez, iyileştirmez ya da önlemez. Nasıl hissettiğini değiştirmeyebilir. Bulantı şiddetliyse ya da geçmiyorsa, başka belirtilerle geliyorsa veya sıvı alamıyorsan bir hekime danış. Gebelikte sıvı almanı engelleyen bulantı bir uygulamanın değil, ebenin ya da hekiminin işidir.
 
 Aylık plan US$2.99, yıllık plan US$14.99 tutarındadır. İkisi de otomatik yenilenir ve uygunsanız 7 günlük ücretsiz deneme sunar. Apple, satın almayı onayladığınızda veya uygun bir denemeden sonra Apple Hesabınızdan ücret alır. Uygun değilseniz ücret onay sırasında alınır. Yenileme ücreti mevcut dönemin bitiminden önceki 24 saat içinde alınır. Dönem bitmeden en az 24 saat önce Ayarlar › Apple Hesabı › Abonelikler bölümünden yönetin veya iptal edin. Fiyatlar bölgeye göre değişir ve satın almadan önce gösterilir.
 Tek seferlik ödemeyle ömür boyu kilit açma da kullanılabilir. (US$29.99)

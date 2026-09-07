@@ -1,1 +1,1 @@
-mual,mobil,kapal,pesawat,kereta,bus,pelayaran,vertigo,pusing,100hz,napas,nada
+mabuk-perjalanan,mabuk-laut,mabuk-darat,kapal-pesiar,kapal,pesawat,relaksasi,watch,tenang,timer

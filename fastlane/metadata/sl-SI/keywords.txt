@@ -1,1 +1,1 @@
-avto,ladja,letalo,vlak,avtobus,križarjenje,vrtoglavica,omotica,100hz,dih,ton
+kinetoza,morska-bolezen,slabost-v-avtu,avto,krizarjenje,ladja,letalo,sprostitev,watch,mir,casovnik

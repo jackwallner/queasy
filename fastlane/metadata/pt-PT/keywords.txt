@@ -1,1 +1,1 @@
-náuseas,carro,barco,avião,comboio,autocarro,viagem,cruzeiro,tonturas,100hz,tom
+enjoo,cinetose,enjoo-do-mar,carro,cruzeiro,barco,aviao,relaxamento,watch,calma,temporizador

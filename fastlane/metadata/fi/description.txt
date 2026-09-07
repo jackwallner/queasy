@@ -1,21 +1,17 @@
-Queasy on neljä lääkkeetöntä keinoa, joita voit kokeilla kun olo on huono, Apple Watchissa tai iPhonessa. Aloita yksi napautuksella tai vastaa kolmeen nopeaan kysymykseen ja anna Queasyn valita.
+Kun automatka, laivamatka tai muu reissu tekee olosi levottomaksi, valitse yksinkertainen mukavuustekniikka, jonka teet itse. Aloita tila suoraan tai vastaa kolmeen nopeaan kysymykseen ehdotusta varten.
 
-NELJÄ TILAA
-- Pulse: rauhallinen, tasainen naputus ranteen sisäpuolella. Jotain, mihin nojata huomionsa sillä aikaa kun aalto menee ohi. Kymmenen tasoa, säädettävissä kesken jakson.
-- Breathe: kello naputtaa pitkän nousun sisäänhengityksellä ja pidemmän laskun uloshengityksellä, jotta voit tahdittaa hengityksesi silmät kiinni ja käsi alhaalla.
-- Tone (iPhone): puhdas 100 Hz:n ääni yhden minuutin ajan, kuulokkeilla, tavallisella äänenvoimakkuudella.
-- Press: näyttää ranteen sisäpuolelta kohdan, jossa akupainantaranneke istuu, ja ottaa sitten aikaa kolmen minuutin painallukselle sillä aikaa kun painat peukalolla tai asetat rannekkeen, joka sinulla jo on.
+NELJÄ TAPAA PITÄÄ TAUKO
+- Hengitys: seuraa tahdistettua hengitysrytmiä pehmeiden värähdysten avulla
+- Pulssi: keskitä huomiosi rannekkeen säännölliseen naputuskuvioon
+- Sävel: kuuntele iPhonella minuutin mittainen 100 Hz:n sävel kuulokkeiden kautta normaalilla äänenvoimakkuudella
+- Paine: seuraa opastusta ranteen kohtaan ja kolmen minuutin ajastinta samalla kun painat itse peukalolla tai olemassa olevalla rannekkeella
 
-ILMAINEN, RAJATON, ILMAN TILIÄ
-Jokainen tila toimii ilmaiseksi, niin usein kuin haluat. Ilmaiset Pulse- ja Breathe-jaksot kestävät kaksi minuuttia; Tone ja Press menevät aina loppuun asti. Queasy Pro lisää jopa 45 minuutin jaksot, jotka jatkuvat ranteessa näytön ollessa sammuksissa, koko historiasi ja sen mikä tila yleensä rauhoittaa sinua, oman rytmin ja tason sekä Press-muistutukset pitkin päivää.
+KOKEILE KOKO VALIKOIMAA ILMAISEKSI
+Kaikki neljä tilaa ovat ilmaisia ja rajattomia. Ilmaiset Pulssi- ja Hengitys-istunnot kestävät kaksi minuuttia; Sävel ja Paine kestävät koko keston. Niiden kokeiluun ei tarvita tiliä eikä koejaksoa. Apple Watch tuo Pulssin ja Hengityksen ranteeseen; iPhone tarjoaa tekniikat myös ilman kelloa.
 
-Pulse on ainoa tila, jolla ei ole mitään siteerattavaa, ja se sanoo sen itse. Ranteeseen naputtava kello ei ole akupainantaa eikä hermostimulaatiota. Se on tasainen tuntemus, johon on helppo keskittyä, eikä Queasy väitä siitä sen enempää.
+Maksullinen päivitys tuo pidemmät istunnot, koko historian, mukautetun rytmin ja tason sekä muistutukset Paineelle. Aloita ilmaiseksi ja päätä sitten, haluatko lisää aikaa vai lisää yksityiskohtia.
 
-YKSITYINEN LÄHTÖKOHDAKSEEN
-Kirjauksesi, jaksosi ja asetuksesi pysyvät omilla laitteillasi. Ei tiliä, ei mainoksia, ei seurantaa, ja voit viedä lokin lääkärille milloin tahansa.
-
-TÄRKEÄÄ
-Queasy on kokoelma oloa helpottavia tekniikoita, jotka teet itse. Se ei ole lääkinnällinen laite, sillä ei ole mitään hyväksyntää, eikä se diagnosoi, hoida, paranna tai ehkäise mitään. Se ei välttämättä muuta sitä miltä sinusta tuntuu. Jos pahoinvointi on voimakasta tai jatkuvaa, siihen liittyy muita oireita, tai et pysty pitämään nesteitä sisälläsi, keskustele lääkärin kanssa. Raskauden aikana pahoinvointi, jonka takia et pysty pitämään nesteitä, kuuluu kätilölle tai lääkärille, ei sovellukselle.
+Nämä ovat lääkkeettömiä mukavuustekniikoita, ei hoito matkapahoinvointiin. Rannenaputukset eivät ole akupressuuria eivätkä sähköistä hermostimulaatiota. Tämä on kokoelma oloa helpottavia tekniikoita, jotka teet itse. Se ei ole lääkinnällinen laite, sillä ei ole mitään hyväksyntää, eikä se diagnosoi, hoida, paranna tai ehkäise mitään. Se ei välttämättä muuta sitä miltä sinusta tuntuu. Jos pahoinvointi on voimakasta tai jatkuvaa, siihen liittyy muita oireita, tai et pysty pitämään nesteitä sisälläsi, keskustele lääkärin kanssa. Raskauden aikana pahoinvointi, jonka takia et pysty pitämään nesteitä, kuuluu kätilölle tai lääkärille, ei sovellukselle.
 
 Kuukausitilaus maksaa US$2.99 ja vuositilaus US$14.99. Molemmat uusiutuvat automaattisesti, ja kumpaankin kuuluu 7 päivän ilmainen kokeilu, jos olet siihen oikeutettu. Apple veloittaa Apple-tiliäsi oston vahvistamisen yhteydessä tai oikeutetun kokeilun jälkeen. Jos et ole oikeutettu, veloitus tehdään vahvistettaessa. Uusimisveloitus tehdään 24 tunnin kuluessa ennen nykyisen kauden päättymistä. Hallitse tai peruuta vähintään 24 tuntia ennen kauden päättymistä kohdassa Asetukset › Apple-tili › Tilaukset. Hinnat vaihtelevat alueittain ja näkyvät ennen ostoa.
 Saatavilla on myös kertamaksullinen elinikäinen avaus. (US$29.99)

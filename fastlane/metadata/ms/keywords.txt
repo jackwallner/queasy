@@ -1,1 +1,1 @@
-loya,kereta,kapal,kapal terbang,tren,bas,pelayaran,vertigo,pening,100hz,nafas,nada
+mabuk-perjalanan,mabuk-laut,mabuk-darat,pelayaran,kapal,kapal-terbang,relaksasi,watch,tenang,pemasa

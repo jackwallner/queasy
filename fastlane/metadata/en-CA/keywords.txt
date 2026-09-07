@@ -1,1 +1,1 @@
-sick,carsick,seasick,car,sea,boat,plane,cruise,train,travel,nausea,breathing,relaxation,calm,tone
+motion,sickness,nausea,seasick,carsick,travel,cruise,car,boat,plane,watch,relax,haptic,timer,calm

@@ -1,21 +1,17 @@
-A Queasy négy gyógyszer nélküli dolog, amit kipróbálhatsz, ha rosszul vagy, Apple Watchon vagy iPhone-on. Indíts el egyet egy koppintással, vagy válaszolj három gyors kérdésre, és hagyd, hogy a Queasy válasszon.
+Amikor egy autós út, hajóút vagy más utazás felkavarja a gyomrodat, válassz egy egyszerű komfortrutint, amelyet magad hajtasz végre. Indíts el egy módot közvetlenül, vagy válaszolj három rövid kérdésre egy javaslatért.
 
-NÉGY MÓD
-- Pulse: nyugodt, egyenletes koppintás a csukló belső oldalán. Valami, amin megpihenhet a figyelmed, amíg egy hullám elmegy. Tíz fokozat, menet közben is állítható.
-- Breathe: az óra hosszú felfutást koppint belégzésre és hosszabb elhalkulást kilégzésre, így csukott szemmel, leengedett karral is tarthatod a légzésed ütemét.
-- Tone (iPhone): tiszta 100 Hz-es hang egy percen át, fülhallgatóval, hétköznapi hangerőn.
-- Press: megmutatja a csukló belső oldalán azt a pontot, ahol az akupresszúrás karkötő ül, majd három percet mér, amíg a hüvelykujjaddal nyomod, vagy beigazítod a már meglévő karkötődet.
+NÉGY MÓD EGY SZÜNETRE
+- Légzés: kövess egy ütemezett légzésritmust finom vibráció segítségével
+- Pulzus: figyelj egy rendszeres kopogási mintára a csuklódon
+- Hang: hallgass meg egy egyperces 100 Hz-es hangot iPhone-on fülhallgatón, szokásos hangerőn
+- Nyomás: kövess egy útmutatót a csukló egy pontjához és egy háromperces időzítőt, míg saját hüvelykujjaddal vagy egy már meglévő szíjjal nyomást gyakorolsz
 
-INGYENES, KORLÁTLAN, FIÓK NÉLKÜL
-Minden mód ingyenes, annyiszor, ahányszor csak akarod. Az ingyenes Pulse és Breathe alkalmak két percig tartanak; a Tone és a Press mindig végigmegy. A Queasy Pro hozzáad akár 45 perces alkalmakat, amelyek sötét képernyővel is folytatódnak a csuklódon, a teljes előzményedet és azt, melyik mód szokott megnyugtatni, a saját ritmusodat és fokozatodat, valamint a Press emlékeztetőket a nap során.
+PRÓBÁLD KI AZ EGÉSZ KÉSZLETET INGYEN
+Mind a négy mód ingyenes és korlátlan. Az ingyenes Pulzus- és Légzés-menetek két percig tartanak; a Hang és a Nyomás teljes hosszban lefut. Kipróbálásukhoz nincs szükség fiókra vagy próbaidőszakra. Az Apple Watch a csuklódra hozza a Pulzust és a Légzést; az iPhone óra nélkül is kínálja a rutinokat.
 
-A Pulse az egyetlen mód, amelynek nincs mit idéznie, és ezt ki is mondja. Egy óra, amely a csuklódon koppint, nem akupresszúra és nem idegstimuláció. Egyenletes érzet, amire könnyű figyelni, és a Queasy ennél többet nem állít róla.
+A fizetős frissítés hosszabb meneteket, teljes előzményt, egyéni ritmust és szintet, valamint Nyomás-emlékeztetőket ad. Kezdd ingyen, majd döntsd el, több időt vagy több részletet szeretnél.
 
-ALAPBÓL PRIVÁT
-A bejelentkezéseid, alkalmaid és beállításaid a saját eszközeiden maradnak. Nincs fiók, nincs hirdetés, nincs követés, és a naplót bármikor exportálhatod orvosnak.
-
-FONTOS
-A Queasy olyan kényelmi technikák gyűjteménye, amelyeket te magad végzel. Nem orvostechnikai eszköz, nincs semmilyen engedélye, és semmit nem diagnosztizál, kezel, gyógyít vagy előz meg. Lehet, hogy nem változtat azon, hogyan érzed magad. Ha a hányinger erős vagy nem múlik, más tünetekkel jár, vagy nem tudsz folyadékot bent tartani, beszélj orvossal. Terhesség alatt az a hányinger, amely mellett nem tudsz folyadékot bent tartani, a szülésznődre vagy az orvosodra tartozik, nem egy alkalmazásra.
+Ezek gyógyszer nélküli komforttechnikák, nem az utazási rosszullét kezelése. A csuklókopogások nem akupresszúra és nem elektromos idegstimuláció. Ez olyan kényelmi technikák gyűjteménye, amelyeket te magad végzel. Nem orvostechnikai eszköz, nincs semmilyen engedélye, és semmit nem diagnosztizál, kezel, gyógyít vagy előz meg. Lehet, hogy nem változtat azon, hogyan érzed magad. Ha a hányinger erős vagy nem múlik, más tünetekkel jár, vagy nem tudsz folyadékot bent tartani, beszélj orvossal. Terhesség alatt az a hányinger, amely mellett nem tudsz folyadékot bent tartani, a szülésznődre vagy az orvosodra tartozik, nem egy alkalmazásra.
 
 A havi csomag ára US$2.99, az évesé US$14.99. Mindkettő automatikusan megújul, és jogosultság esetén 7 napos ingyenes próba jár hozzá. Az Apple a vásárlás megerősítésekor vagy jogosult próba után terheli meg az Apple-fiókodat. Jogosultság nélkül a terhelés megerősítéskor történik. A megújítási díjat az időszak vége előtti 24 órán belül számítjuk fel. Kezeld vagy mondd le a Beállítások › Apple-fiók › Előfizetések menüben, legalább 24 órával a vége előtt. Az árak régiónként eltérnek, és vásárlás előtt láthatók.
 Egyszeri, élethosszig tartó feloldás is elérhető. (US$29.99)

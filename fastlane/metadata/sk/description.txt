@@ -1,21 +1,17 @@
-Queasy sú štyri veci bez liekov, ktoré môžete skúsiť, keď vám je zle, na Apple Watch alebo na iPhone. Jednu spustíte klepnutím, alebo odpoviete na tri rýchle otázky a necháte Queasy vybrať.
+Keď vás cesta autom, loďou alebo iná cesta rozhodí, zvoľte si jednoduchú komfortnú rutinu, ktorú vykonávate sami. Spustite režim priamo alebo odpovedzte na tri rýchle otázky pre odporúčanie.
 
-ŠTYRI REŽIMY
-- Pulse: pokojné, pravidelné poklopkanie na vnútornú stranu zápästia. Niečo, na čom môže spočinúť pozornosť, kým vlna prejde. Desať úrovní, meniteľných aj uprostred sedenia.
-- Breathe: hodinky vyklopkajú dlhý nádych a dlhší doznievajúci výdych, takže môžete držať rytmus dychu so zavretými očami a rukou dole.
-- Tone (iPhone): čistý tón 100 Hz po dobu jednej minúty, v slúchadlách, pri bežnej hlasitosti.
-- Press: ukáže vám miesto na vnútornej strane zápästia, kde sedí akupresúrny náramok, a potom meria tri minúty, kým tlačíte palcom alebo si zarovnáte náramok, ktorý už máte.
+ŠTYRI SPÔSOBY, AKO SI DAŤ PAUZU
+- Dych: sledujte odmeraný dychový rytmus prostredníctvom jemných vibrácií
+- Pulz: zamerajte pozornosť na pravidelný vzor klopkania na zápästí
+- Tón: vypočujte si na iPhone minútový tón 100 Hz cez slúchadlá, pri bežnej hlasitosti
+- Tlak: sledujte návod na bod na zápästí a trojminútový časovač, kým sami vyvíjate tlak palcom alebo už vlastneným pásikom
 
-ZADARMO, BEZ LIMITU, BEZ ÚČTU
-Každý režim funguje zadarmo, akokoľvek často chcete. Bezplatné sedenia Pulse a Breathe trvajú dve minúty; Tone a Press idú vždy až do konca. Queasy Pro pridáva sedenia až 45 minút, ktoré pokračujú na zápästí aj so zhasnutou obrazovkou, celú históriu a to, ktorý režim vás zvyčajne upokojí, vlastný rytmus a úroveň a pripomienky Press počas dňa.
+VYSKÚŠAJTE CELÚ SADU ZDARMA
+Všetky štyri režimy sú zdarma a bez obmedzenia. Bezplatné sedenia Pulzu a Dychu trvajú dve minúty; Tón a Tlak prebehnú celé. Na vyskúšanie nie je potrebný účet ani skúšobná doba. Apple Watch prináša Pulz a Dych na zápästie; iPhone ponúka tieto rutiny aj bez hodiniek.
 
-Pulse je jediný režim, ktorý nemá čo citovať, a sám to hovorí. Hodinky poklopkávajúce na zápästie nie sú akupresúra ani stimulácia nervu. Je to pravidelný vnem, na ktorý sa dá ľahko sústrediť, a viac si o ňom Queasy netvrdí.
+Platené rozšírenie pridáva dlhšie sedenia, kompletnú históriu, prispôsobený rytmus a úroveň a pripomienky pre Tlak. Začnite zdarma a potom sa rozhodnite, či chcete viac času, alebo viac podrobností.
 
-SÚKROMNÉ OD ZÁKLADU
-Vaše zápisy, sedenia aj nastavenia zostávajú na vašich zariadeniach. Žiadny účet, žiadne reklamy, žiadne sledovanie, a záznam môžete kedykoľvek exportovať pre lekára.
-
-DÔLEŽITÉ
-Queasy je súbor techník na úľavu, ktoré vykonávate sami. Nie je to zdravotnícka pomôcka, nemá žiadne schválenie a nič nediagnostikuje, nelieči, neuzdravuje ani nepredchádza. Je možné, že to, ako sa cítite, nezmení. Ak je nevoľnosť silná alebo neustupuje, prichádza s ďalšími príznakmi, alebo v sebe neudržíte tekutiny, poraďte sa s lekárom. V tehotenstve nevoľnosť, pri ktorej neudržíte tekutiny, patrí k pôrodnej asistentke alebo lekárovi, nie do aplikácie.
+Sú to komfortné techniky bez liekov, nie liečba cestovnej nevoľnosti. Klopkanie na zápästí nie je akupresúra ani elektrická stimulácia nervov. Toto je súbor techník na úľavu, ktoré vykonávate sami. Nie je to zdravotnícka pomôcka, nemá žiadne schválenie a nič nediagnostikuje, nelieči, neuzdravuje ani nepredchádza. Je možné, že to, ako sa cítite, nezmení. Ak je nevoľnosť silná alebo neustupuje, prichádza s ďalšími príznakmi, alebo v sebe neudržíte tekutiny, poraďte sa s lekárom. V tehotenstve nevoľnosť, pri ktorej neudržíte tekutiny, patrí k pôrodnej asistentke alebo lekárovi, nie do aplikácie.
 
 Mesačný plán stojí US$2.99 a ročný US$14.99. Obe predplatné sa automaticky obnovujú a pri nároku ponúkajú 7-dňovú bezplatnú skúšku. Apple zaúčtuje platbu na tvoj účet Apple pri potvrdení nákupu alebo po oprávnenej skúške. Ak nárok nemáš, platba sa zaúčtuje pri potvrdení. Poplatok za obnovenie sa účtuje do 24 hodín pred koncom aktuálneho obdobia. Spravuj alebo zruš v Nastavenia › Účet Apple › Predplatné aspoň 24 hodín pred koncom. Ceny sa líšia podľa regiónu a zobrazia sa pred nákupom.
 K dispozícii je aj jednorazové doživotné odomknutie. (US$29.99)

@@ -1,21 +1,17 @@
-Queasy jsou čtyři věci bez léků, které můžete zkusit, když je vám špatně, na Apple Watch nebo na iPhonu. Jednu spustíte klepnutím, nebo odpovíte na tři rychlé otázky a necháte Queasy vybrat.
+Když vás cesta autem, lodí nebo jiná cesta rozhodí, zvolte jednoduchou komfortní rutinu, kterou provádíte sami. Spusťte režim přímo nebo odpovězte na tři rychlé otázky pro doporučení.
 
-ČTYŘI REŽIMY
-- Pulse: klidné, pravidelné poklepání na vnitřní stranu zápěstí. Něco, na čem může spočinout pozornost, než vlna přejde. Deset úrovní, měnitelných i uprostřed sezení.
-- Breathe: hodinky vyklepou dlouhý nádech a delší doznívající výdech, takže můžete držet rytmus dechu se zavřenýma očima a rukou dole.
-- Tone (iPhone): čistý tón 100 Hz po dobu jedné minuty, ve sluchátkách, při běžné hlasitosti.
-- Press: ukáže vám místo na vnitřní straně zápěstí, kde sedí akupresurní náramek, a pak měří tři minuty, zatímco tlačíte palcem nebo si srovnáte náramek, který už máte.
+ČTYŘI ZPŮSOBY, JAK SI DÁT PAUZU
+- Dech: sledujte odměřený dechový rytmus prostřednictvím jemných vibrací
+- Puls: zaměřte pozornost na pravidelný vzor poklepávání na zápěstí
+- Tón: poslechněte si na iPhonu minutový tón 100 Hz přes sluchátka, při běžné hlasitosti
+- Tlak: sledujte návod na bod na zápěstí a tříminutový časovač, zatímco sami vyvíjíte tlak palcem nebo již vlastněným páskem
 
-ZDARMA, BEZ LIMITU, BEZ ÚČTU
-Každý režim funguje zdarma, jakkoli často chcete. Bezplatná sezení Pulse a Breathe trvají dvě minuty; Tone a Press jdou vždy až do konce. Queasy Pro přidává sezení až 45 minut, která pokračují na zápěstí i se zhasnutou obrazovkou, celou historii a to, který režim vás obvykle uklidní, vlastní rytmus a úroveň a připomenutí Press během dne.
+VYZKOUŠEJTE CELOU SADU ZDARMA
+Všechny čtyři režimy jsou zdarma a bez omezení. Bezplatné sezení Pulsu a Dechu trvá dvě minuty; Tón a Tlak proběhnou celé. K vyzkoušení není potřeba účet ani zkušební období. Apple Watch přináší Puls a Dech na zápěstí; iPhone nabízí tyto rutiny i bez hodinek.
 
-Pulse je jediný režim, který nemá co citovat, a sám to říká. Hodinky poklepávající na zápěstí nejsou akupresura ani stimulace nervu. Je to pravidelný vjem, na který se dá snadno soustředit, a víc si o něm Queasy netvrdí.
+Placené rozšíření přidává delší sezení, kompletní historii, přizpůsobený rytmus a úroveň a připomínky pro Tlak. Začněte zdarma a poté se rozhodněte, zda chcete více času, nebo více podrobností.
 
-SOUKROMÉ OD ZÁKLADU
-Vaše zápisy, sezení i nastavení zůstávají na vašich zařízeních. Žádný účet, žádné reklamy, žádné sledování, a záznam můžete kdykoli exportovat pro lékaře.
-
-DŮLEŽITÉ
-Queasy je soubor technik pro úlevu, které provádíte sami. Není to zdravotnický prostředek, nemá žádné schválení a nic nediagnostikuje, neléčí, neuzdravuje ani nepředchází. Je možné, že to, jak se cítíte, nezmění. Pokud je nevolnost silná nebo neustupuje, přichází s dalšími příznaky, nebo v sobě neudržíte tekutiny, poraďte se s lékařem. V těhotenství nevolnost, při které neudržíte tekutiny, patří k porodní asistentce nebo lékaři, ne do aplikace.
+Jsou to komfortní techniky bez léků, ne léčba cestovní nemoci. Poklepávání na zápěstí není akupresura ani elektrická stimulace nervů. Toto je soubor technik pro úlevu, které provádíte sami. Není to zdravotnický prostředek, nemá žádné schválení a nic nediagnostikuje, neléčí, neuzdravuje ani nepředchází. Je možné, že to, jak se cítíte, nezmění. Pokud je nevolnost silná nebo neustupuje, přichází s dalšími příznaky, nebo v sobě neudržíte tekutiny, poraďte se s lékařem. V těhotenství nevolnost, při které neudržíte tekutiny, patří k porodní asistentce nebo lékaři, ne do aplikace.
 
 Měsíční plán stojí US$2.99 a roční US$14.99. Oba se automaticky obnovují a při nároku zahrnují 7denní zkušební verzi. Apple strhne platbu z účtu Apple při potvrzení nákupu nebo po oprávněné zkoušce. Bez nároku strhne platbu při potvrzení. Poplatek za obnovení se účtuje během 24 hodin před koncem období. Spravuj nebo zruš v Nastavení › Účet Apple › Předplatná, nejméně 24 hodin před koncem. Ceny se liší podle regionu a zobrazí se před nákupem.
 K dispozici je také jednorázové doživotní odemčení. (US$29.99)

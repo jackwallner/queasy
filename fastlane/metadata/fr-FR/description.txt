@@ -1,21 +1,17 @@
-Queasy, ce sont quatre gestes sans médicament à essayer quand le cœur vous lève, sur votre Apple Watch ou votre iPhone. Lancez-en un d'une touche, ou répondez à trois questions rapides et laissez Queasy choisir.
+Quand un trajet en voiture, en bateau ou un autre voyage vous met mal à l'aise, choisissez une routine de confort simple que vous appliquez vous-même. Lancez un mode directement ou répondez à trois questions rapides pour obtenir une suggestion.
 
-QUATRE MODES
-- Pulse : une tape calme et régulière sur l'intérieur de votre poignet. Quelque chose sur quoi poser votre attention pendant qu'une vague passe. Dix niveaux, réglables en cours de séance.
-- Breathe : votre montre tape une longue montée à l'inspiration et une descente plus longue à l'expiration, pour que vous puissiez cadencer votre souffle les yeux fermés, le bras le long du corps.
-- Tone (iPhone) : un son pur à 100 Hz pendant une minute, au casque, à un volume ordinaire.
-- Press : vous montre le point, sur l'intérieur du poignet, où se place un bracelet d'acupression, puis minute un appui de trois minutes pendant que vous pressez avec le pouce ou que vous alignez un bracelet que vous avez déjà.
+QUATRE FAÇONS DE PRENDRE UNE PAUSE
+- Respiration : suivez un rythme respiratoire cadencé grâce à des vibrations douces
+- Pulsations : concentrez votre attention sur un tapotement régulier au poignet
+- Tonalité : écoutez une tonalité de 100 Hz d'une minute sur iPhone, au casque, à volume normal
+- Pression : suivez un guide de point du poignet et un minuteur de trois minutes en appliquant vous-même une pression avec le pouce ou un bracelet existant
 
-GRATUIT, ILLIMITÉ, SANS COMPTE
-Chaque mode fonctionne gratuitement, aussi souvent que vous voulez. Les séances gratuites Pulse et Breathe durent deux minutes ; Tone et Press vont toujours au bout. Queasy Pro ajoute des séances jusqu'à 45 minutes qui continuent au poignet écran éteint, tout votre historique et le mode qui a tendance à vous apaiser, votre propre rythme et votre propre niveau, et des rappels Press au fil de la journée.
+TOUT LE KIT GRATUITEMENT
+Les quatre modes sont gratuits et illimités. Les séances gratuites de Pulsations et de Respiration durent deux minutes ; Tonalité et Pression vont jusqu'au bout de leur durée. Aucun compte ni essai n'est requis pour les essayer. L'Apple Watch place Pulsations et Respiration au poignet ; l'iPhone propose les routines sans montre.
 
-Pulse est le seul mode qui n'a rien à citer, et il le dit. Une montre qui tape votre poignet, ce n'est pas de l'acupression et ce n'est pas de la stimulation nerveuse. C'est une sensation régulière, facile à suivre, et Queasy n'en revendique rien de plus.
+La mise à niveau payante ajoute des séances plus longues, un historique complet, un rythme et un niveau personnalisés, ainsi que des rappels pour Pression. Commencez gratuitement, puis décidez si vous voulez plus de temps ou plus de détails.
 
-PRIVÉ PAR CONCEPTION
-Vos bilans, vos séances et vos réglages restent sur vos appareils. Pas de compte, pas de publicité, pas de pistage, et vous pouvez exporter le journal pour un médecin quand vous voulez.
-
-IMPORTANT
-Queasy est un ensemble de techniques de confort que vous appliquez vous-même. Ce n'est pas un dispositif médical, il ne détient aucune autorisation, et il ne diagnostique, ne traite, ne guérit ni ne prévient quoi que ce soit. Il se peut qu'il ne change rien à ce que vous ressentez. Si la nausée est forte ou persistante, s'accompagne d'autres symptômes, ou si vous ne gardez plus les liquides, parlez-en à un médecin. Pendant la grossesse, des nausées qui empêchent de garder les liquides relèvent de votre sage-femme ou de votre médecin, pas d'une application.
+Ce sont des techniques de confort sans médicament, pas un traitement contre le mal des transports. Les tapotements au poignet ne sont ni de l'acupression ni une stimulation nerveuse électrique. Ceci est un ensemble de techniques de confort que vous appliquez vous-même. Ce n'est pas un dispositif médical, il ne détient aucune autorisation, et il ne diagnostique, ne traite, ne guérit ni ne prévient quoi que ce soit. Il se peut qu'il ne change rien à ce que vous ressentez. Si la nausée est forte ou persistante, s'accompagne d'autres symptômes, ou si vous ne gardez plus les liquides, parlez-en à un médecin. Pendant la grossesse, des nausées qui empêchent de garder les liquides relèvent de votre sage-femme ou de votre médecin, pas d'une application.
 
 Le forfait mensuel coûte US$2.99 et l’annuel US$14.99. Tous deux se renouvellent automatiquement et proposent un essai gratuit de 7 jours si vous êtes éligible. Apple facture votre compte Apple lors de la confirmation de l’achat ou après un essai éligible. Si vous n’êtes pas éligible, le débit est effectué à la confirmation. Le renouvellement est facturé dans les 24 heures précédant la fin de la période en cours. Gérez ou annulez dans Réglages › Compte Apple › Abonnements, au moins 24 heures avant la fin. Les prix varient selon la région et sont affichés avant l’achat.
 Un déverrouillage à vie en un seul paiement est également disponible. (US$29.99)

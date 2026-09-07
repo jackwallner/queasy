@@ -1,1 +1,1 @@
-kvalme,køresyge,søsyge,bil,båd,fly,tog,bus,rejse,krydstogt,svimmel,100hz,ånde,tone
+koeresyge,soesyge,rejsesyge,bil,fly,baad,watch,ro,timer,krydstogt,faerge,tog,akupressur,afslapning

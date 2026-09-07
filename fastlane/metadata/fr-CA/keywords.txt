@@ -1,1 +1,1 @@
-nausée,auto,bateau,avion,train,autobus,voyage,croisière,vertige,100hz,souffle,son
+mal-des-transports,mal-de-mer,voiture,croisiere,bateau,avion,relaxation,watch,calme,minuteur

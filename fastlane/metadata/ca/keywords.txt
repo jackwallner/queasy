@@ -1,1 +1,1 @@
-nàusees,cotxe,vaixell,avió,tren,autobús,viatge,creuer,vertigen,100hz,respiració,to
+mareig,cinetosi,mareig-de-mar,cotxe,creuer,vaixell,avio,relaxacio,watch,calma,temporitzador

@@ -1,21 +1,17 @@
-Queasy är fyra saker utan läkemedel att prova när du mår illa, på din Apple Watch eller din iPhone. Starta en med en knackning, eller svara på tre snabba frågor och låt Queasy välja.
+När en bilresa, båttur eller annan resa gör dig lite illamående, välj en enkel komfortrutin som du utför själv. Starta ett läge direkt eller svara på tre korta frågor för ett förslag.
 
-FYRA LÄGEN
-- Pulse: en lugn, jämn knackning på insidan av handleden. Något att vila uppmärksamheten på medan en våg går över. Tio nivåer, justerbara mitt i passet.
-- Breathe: klockan knackar en lång stigning på inandningen och en längre nedtoning på utandningen, så att du kan hålla takten på andningen med slutna ögon och armen nere.
-- Tone (iPhone): en ren ton på 100 Hz i en minut, i hörlurar, på vanlig volym.
-- Press: visar stället på insidan av handleden där ett akupressurband sitter, och tar sedan tid på ett tryck i tre minuter medan du trycker med tummen eller lägger ett band du redan har.
+FYRA SÄTT ATT TA EN PAUS
+- Andning: följ ett taktfast andningsmönster via milda vibrationer
+- Puls: rikta din uppmärksamhet mot ett regelbundet knackmönster på handleden
+- Ton: lyssna på en enminuts 100 Hz-ton på iPhone via hörlurar, på vanlig volym
+- Tryck: följ en guide till en punkt på handleden och en timer på tre minuter medan du själv lägger tryck med tummen eller ett band du redan har
 
-GRATIS, OBEGRÄNSAT, UTAN KONTO
-Alla lägen fungerar gratis, hur ofta du vill. Gratis Pulse- och Breathe-pass är två minuter; Tone och Press går alltid hela vägen. Queasy Pro lägger till pass upp till 45 minuter som fortsätter på handleden med skärmen släckt, hela din historik och vilket läge som brukar lugna dig, din egen rytm och nivå, och Press-påminnelser under dagen.
+PROVA HELA VERKTYGSLÅDAN GRATIS
+Alla fyra lägen är gratis och obegränsade. Gratis Puls- och Andningspass varar två minuter; Ton och Tryck går hela vägen. Inget konto eller provperiod krävs för att prova dem. Apple Watch tar Puls och Andning till handleden; iPhone erbjuder rutinerna även utan klocka.
 
-Pulse är det enda läget som inte har något att citera, och det säger det själv. En klocka som knackar på handleden är inte akupressur och inte nervstimulering. Det är en jämn förnimmelse som är lätt att fästa blicken vid, och mer än så påstår Queasy inte om den.
+Den betalda uppgraderingen lägger till längre pass, full historik, anpassad rytm och nivå samt påminnelser för Tryck. Börja gratis och avgör sedan om du vill ha mer tid eller mer detalj.
 
-PRIVAT FRÅN BÖRJAN
-Dina incheckningar, pass och inställningar stannar på dina enheter. Inget konto, inga annonser, ingen spårning, och du kan när som helst exportera loggen till en läkare.
-
-VIKTIGT
-Queasy är en samling tekniker för välbefinnande som du utför själv. Det är ingen medicinteknisk produkt, det har inget godkännande, och det diagnostiserar, behandlar, botar eller förebygger ingenting. Det kanske inte ändrar hur du mår. Om illamåendet är svårt eller inte går över, kommer med andra symtom, eller om du inte får i dig vätska, tala med läkare. Under graviditet hör illamående som gör att du inte behåller vätska hemma hos barnmorska eller läkare, inte i en app.
+Det här är komforttekniker utan mediciner, ingen behandling mot resesjuka. Knackningarna på handleden är varken akupressur eller elektrisk nervstimulering. Detta är en samling tekniker för välbefinnande som du utför själv. Det är ingen medicinteknisk produkt, det har inget godkännande, och det diagnostiserar, behandlar, botar eller förebygger ingenting. Det kanske inte ändrar hur du mår. Om illamåendet är svårt eller inte går över, kommer med andra symtom, eller om du inte får i dig vätska, tala med läkare. Under graviditet hör illamående som gör att du inte behåller vätska hemma hos barnmorska eller läkare, inte i en app.
 
 Månadsplanen kostar US$2.99 och årsplanen US$14.99. Båda förnyas automatiskt och erbjuder 7 dagars kostnadsfri provperiod om du är berättigad. Apple debiterar ditt Apple-konto när du bekräftar köpet eller efter en berättigad provperiod. Om du inte är berättigad debiteras du vid bekräftelsen. Förnyelseavgiften debiteras inom 24 timmar före den aktuella periodens slut. Hantera eller avsluta i Inställningar › Apple-konto › Abonnemang minst 24 timmar före periodens slut. Priserna varierar beroende på region och visas före köp.
 En livstidsupplåsning mot en engångsbetalning finns också. (US$29.99)

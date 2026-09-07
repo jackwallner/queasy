@@ -1,1 +1,1 @@
-misselijk,wagenziek,zeeziek,auto,boot,vliegtuig,trein,bus,cruise,duizelig,100hz,toon
+wagenziekte,zeeziekte,reisziekte,auto,vliegtuig,boot,watch,rust,timer,cruise,onwel,ontspanning

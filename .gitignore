@@ -6,4 +6,5 @@ DerivedData/
 *.xcodeproj/
 fastlane/report.xml
 fastlane/metadata.bak.*
+fastlane/metadata/review_information/
 .DS_Store

@@ -61,25 +61,14 @@ the watch UDID, install, launch with the argument, `simctl io screenshot` at
 416x496). Give the app a couple of seconds after `simctl launch` before
 capturing, or you photograph the previous screen.
 
-## Watch background haptics: the load-bearing decision
+## Watch background haptics
 
-Dual backing, chosen by how the session starts (`WatchHapticEngine.Backing`):
-
-- **Watch-initiated**: `WKExtendedRuntimeSession` with
-  `WKBackgroundModes = ["physical-therapy"]`. Exists precisely to play haptics
-  in the background (up to 1 hour). Sessions cap at 45 min. No HealthKit.
-- **Phone-initiated remote launch**: `WatchLauncher` (iOS) calls
-  `HKHealthStore.startWatchApp(with:)` with a mind-and-body
-  `HKWorkoutConfiguration`; the watch wakes in the background (where extended
-  runtime sessions can't start) and runs an `HKWorkoutSession` instead. No
-  workout builder is attached, so nothing is saved to Health/Fitness. Requires
-  the HealthKit entitlement + workout-share auth on both targets; falls back
-  to the queued WatchConnectivity handoff ("open Queasy on your watch") when
-  auth is denied.
-
-Plans travel via `QueasySyncService` with an `autoStart` flag (10-min
-freshness guard); a remote launch starts immediately with the last/default
-plan and adopts the fresh plan mid-session when WC delivers it.
+Dual backing, chosen by how the session starts: `WKExtendedRuntimeSession` when
+the Watch starts it, `HKWorkoutSession` when the phone remote-launches it. This is
+the load-bearing decision for the Watch app. Read
+`.claude/rules/watch-background-haptics.md` before touching `WatchHapticEngine`,
+`WatchLauncher` or `QueasySyncService`; it loads automatically when you read those
+files, and AGENTS.md readers should open it directly.
 
 ## Products
 
@@ -135,6 +124,3 @@ gentler intensity cap, a longer session, and a call-your-midwife note.
 ---
 Shared iOS conventions (build, simulator, release/TestFlight, ASC key, signing, review funnel, gotchas):
 always-loaded global CLAUDE.md + the `ios-dev` skill. (TestFlight needs the ASC app record to exist first.)
-
-## Subagent delegation
-Follow the global CLAUDE.md subagent rules: ask Jack for the model before spawning, spawn at most one at a time unless Jack explicitly approves more, and never allow a subagent to spawn another subagent.

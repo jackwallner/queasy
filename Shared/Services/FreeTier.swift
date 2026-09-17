@@ -68,7 +68,7 @@ enum ProFeature: String, CaseIterable, Identifiable {
         case .ownRhythm:
             return "Set the breathing rhythm and the pulse level yourself, and save the one that suits you as your default."
         case .pressReminders:
-            return "A nudge to run a hold a few times a day, the way the wristband trials spaced them."
+            return "A nudge to run a short hold a few times a day, at the times you choose."
         }
     }
 

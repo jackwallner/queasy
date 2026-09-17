@@ -31,7 +31,7 @@ struct LearnView: View {
             symbol: "dot.radiowaves.left.and.right",
             title: "Pulse, and what it is not",
             hook: "A steady tap to rest your attention on.",
-            detail: "Pulse taps your wrist on a regular, unhurried beat. That is the whole of it. Nudge the level until the tap is clear but not annoying, and let it be the thing you notice instead of your stomach, the way you might count breaths or stare at the horizon.\n\nWorth being straight about: a watch tapping your wrist is not acupressure and not nerve stimulation. Those are different things, done by bands that press or by cleared devices that deliver current, and no trial has tested a watch buzz in their place. Pulse is here because a predictable sensation is easy to focus on, not because it does something to you."
+            detail: "Pulse taps your wrist on a regular, unhurried beat. That is the whole of it. Nudge the level until the tap is clear but not annoying, and let it be the thing you notice instead of the surroundings. Pulse is a self-guided comfort routine, not medical care."
         ),
         LearnCard(
             id: "breathe",
@@ -45,41 +45,28 @@ struct LearnView: View {
             symbol: "waveform",
             title: "The 100 Hz tone",
             hook: "One minute, headphones, low volume.",
-            detail: "In 2025 a Nagoya University group published a paper whose title says it plainly: \"Just 1-min exposure to a pure tone at 100 Hz with daily exposable sound pressure levels may improve motion sickness\". They measured posture, heart rhythm and questionnaire scores after a minute of a 100 Hz tone at everyday volume.\n\nQueasy generates that tone. May improve is the authors' own wording, and it is worth keeping. Headphones, volume low enough that it sits under the noise around you.",
-            sources: [
-                source("Nagoya University: a unique sound alleviates motion sickness", "https://en.nagoya-u.ac.jp/news/articles/research_information_267/"),
-                source("Environmental Health and Preventive Medicine (DOI)", "https://doi.org/10.1265/ehpm.24-00247"),
-            ]
+            detail: "A pure 100 Hz tone at a low volume. Headphones, one minute, eyes wherever you like. Keep the volume comfortable and stop whenever you want. Queasy provides a self-guided listening routine, not medical care.",
         ),
         LearnCard(
             id: "press",
             symbol: "hand.point.up.left.fill",
-            title: "Press, and the P6 spot",
-            hook: "The spot an acupressure band sits on.",
-            detail: "Nei-Kuan, or P6, sits on the inside of the forearm about three finger-widths below the wrist crease, in the dip between the two tendons. It is where the stud of a Sea-Band lands, and where the trials put their pressure.\n\nPress does not press for you. It shows you the spot, then times a three-minute hold while you use your thumb or line up a band you already own. The wristband trials spaced their holds through the day rather than doing one long one.\n\nThe evidence is genuinely mixed. Some trials in pregnancy and after surgery report lower nausea scores; the Cochrane review of early-pregnancy trials calls the P6 evidence limited and inconsistent. Both of those things are true at once.",
-            sources: [
-                source("Cochrane: nausea and vomiting in early pregnancy", "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD007575.pub4/full"),
-                source("Cochrane: PC6 wrist stimulation evidence", "https://www.cochrane.org/evidence/CD003281_what-are-benefits-and-risks-different-wrist-pc6-acupoint-stimulation-techniques-preventing-nausea"),
-                source("Memorial Sloan Kettering: locating P6", "https://www.mskcc.org/cancer-care/patient-education/acupressure-nausea-and-vomiting"),
-            ]
+            title: "Press",
+            hook: "A comfortable hold on the inside of your wrist.",
+            detail: "Choose a comfortable place on the inside of your wrist and rest your thumb there without pressing hard. Press shows simple steps and times a three-minute hold. Adjust the pressure to a comfortable level, stop whenever you want, and treat this as a self-guided comfort routine rather than medical care.",
         ),
         LearnCard(
             id: "wear",
             symbol: "applewatch.side.right",
             title: "How to wear your watch",
             hook: "Case on the inside of your wrist, snug.",
-            detail: "For Pulse and Press, loosen the band and rotate your watch so the case sits on the inside of your wrist. Snug enough that you feel each tap clearly. Rotate it back when you are done; sessions are short.\n\nBreathe does not care where the watch is. You only need to feel it."
+            detail: "For Pulse and Press, loosen the band and rotate your watch so the case sits on the inside of your wrist. Snug enough that you feel each tap or timer cue clearly. Rotate it back when you are done; sessions are short.\n\nBreathe does not care where the watch is. You only need to feel it."
         ),
         LearnCard(
             id: "morning",
             symbol: "sunrise.fill",
-            title: "Morning sickness",
-            hook: "What tends to help, and when to call someone.",
-            detail: "It is rarely only mornings, and an empty stomach is the usual trigger, so small and often beats three meals. Plain crackers before you sit up, cold food rather than hot because it carries less smell, fluids between meals rather than with them. Acupressure bands are one of the drug-free things people try; so is vitamin B6, which your midwife or doctor can advise on.\n\nCall your midwife or doctor if you cannot keep fluids down for a day, if you are losing weight, if you feel faint, or if you are passing very dark urine. Severe pregnancy sickness has a name, hyperemesis gravidarum, and it has treatment. An app is not it.",
-            sources: [
-                source("NHS: vomiting and morning sickness", "https://www.nhs.uk/pregnancy/related-conditions/common-symptoms/vomiting-and-morning-sickness/"),
-                source("ACOG: morning sickness", "https://www.acog.org/womens-health/faqs/morning-sickness-nausea-and-vomiting-of-pregnancy"),
-            ]
+            title: "Before you travel",
+            hook: "Small, practical ways to make a journey easier.",
+            detail: "Keep water close, choose a comfortable seat, and give yourself a little extra time before the journey starts. A cool cabin, a steady gaze, and a simple routine can make the next few minutes feel more manageable.\n\nQueasy offers self-guided comfort routines only. Pause if anything feels uncomfortable and ask a clinician about symptoms that are severe or persistent.",
         ),
     ]
 

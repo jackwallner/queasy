@@ -13,7 +13,7 @@ struct OnboardingView: View {
                 OnboardPage(
                     symbol: "square.grid.2x2",
                     title: "Four things to try\nwhen you feel sick",
-                    text: "A steady tap on your wrist. A paced breath you feel rather than watch. A one-minute 100 Hz tone. A timed hold on the spot an acupressure band sits on. All drug-free, all free to use."
+                    text: "A steady tap on your wrist. A paced breath you feel rather than watch. A one-minute 100 Hz tone. A short, comfortable hold on your wrist. All drug-free, all free to use."
                 )
                 .tag(0)
 
@@ -27,7 +27,7 @@ struct OnboardingView: View {
                 OnboardPage(
                     symbol: "applewatch.side.right",
                     title: "Turn the watch to\nthe inside of your wrist",
-                    text: "For Pulse and Press, rotate your watch so the case sits on the inside of your wrist, three finger-widths below the crease. That is where a Sea-Band's stud goes. Breathe works wherever the watch is."
+                    text: "For Pulse and Press, rotate your watch so the case sits on the inside of your wrist, where you can feel each cue clearly. Breathe works wherever the watch is."
                 )
                 .tag(2)
 

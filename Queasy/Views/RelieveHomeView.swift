@@ -1,5 +1,16 @@
 import SwiftUI
 
+enum TripComfortBrand {
+    static var name: String {
+        #if DEBUG
+        if ProcessInfo.processInfo.arguments.contains("-QueasyScreenshots") {
+            return "Trip Comfort"
+        }
+        #endif
+        return "Queasy"
+    }
+}
+
 struct RelieveHomeView: View {
     @Environment(AppSettings.self) private var settings
     @Environment(SubscriptionService.self) private var subscriptions
@@ -83,7 +94,7 @@ struct RelieveHomeView: View {
                 .padding(.bottom, 28)
             }
             .tideBackground()
-            .tideNavigationTitle("Queasy")
+            .tideNavigationTitle(TripComfortBrand.name)
             .onChange(of: scenePhase) { _, phase in
                 if phase == .active { watch.refresh() }
             }
@@ -456,7 +467,7 @@ struct RelieveHomeView: View {
             Image(systemName: "applewatch.side.right")
                 .font(.title3)
                 .foregroundStyle(Theme.ink2)
-            Text("For Pulse and Press, turn your watch to the **inside** of your wrist, three finger-widths below the crease. That is where an acupressure band sits.")
+            Text("For Pulse and Press, turn your watch to the **inside** of your wrist so you can feel each tap or timer cue clearly.")
                 .font(.caption)
                 .foregroundStyle(Theme.ink2)
         }

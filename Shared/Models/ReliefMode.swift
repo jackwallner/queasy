@@ -12,8 +12,7 @@ enum ReliefMode: String, Codable, CaseIterable, Identifiable, Sendable {
     case breathe
     /// The 100 Hz tone from the 2025 Nagoya study, through headphones.
     case tone
-    /// Coaching for the P6 spot an acupressure band sits on: find it, hold it,
-    /// time it. The technique the trials actually ran.
+    /// A short, self-guided hold on the inside of the wrist.
     case press
 
     var id: String { rawValue }
@@ -33,7 +32,7 @@ enum ReliefMode: String, Codable, CaseIterable, Identifiable, Sendable {
         case .pulse: return "A steady tap on the inside of your wrist"
         case .breathe: return "Slow the breath, paced by your wrist"
         case .tone: return "A 100 Hz tone through your headphones"
-        case .press: return "Find the spot a band sits on, and hold it"
+        case .press: return "A comfortable hold on the inside of your wrist"
         }
     }
 
@@ -47,7 +46,7 @@ enum ReliefMode: String, Codable, CaseIterable, Identifiable, Sendable {
         case .tone:
             return "A pure 100 Hz tone at a low volume. Headphones, one minute, eyes wherever you like."
         case .press:
-            return "The inside of the wrist, three finger-widths below the crease, between the two tendons. Press with your thumb, or line up the stud on a band you already own."
+            return "A short hold on the inside of your wrist. Adjust the pressure to a comfortable level and stop whenever you want."
         }
     }
 
@@ -88,9 +87,9 @@ enum ReliefMode: String, Codable, CaseIterable, Identifiable, Sendable {
         case .breathe:
             return "A paced-breathing routine to follow with your wrist. This is complementary wellness guidance, not medical care."
         case .tone:
-            return "A 2025 Nagoya University study is titled \"Just 1-min exposure to a pure tone at 100 Hz with daily exposable sound pressure levels may improve motion sickness\"."
+            return "A low-volume 100 Hz listening routine to follow with headphones. This is complementary wellness guidance, not medical care."
         case .press:
-            return "Pressure at this spot has been trialled for travel, post-surgery and pregnancy sickness. The Cochrane review of early-pregnancy trials calls the evidence limited and inconsistent."
+            return "A short, self-guided wrist routine with clear steps and a timer. This is complementary wellness guidance, not medical care."
         }
     }
 
@@ -128,19 +127,18 @@ struct BreathePattern: Codable, Sendable, Equatable {
     var breathsPerMinute: Int { Int((60.0 / cycleSeconds).rounded()) }
 }
 
-/// How Press is dosed. The numbers come from the wristband trials: a few
-/// minutes of steady pressure, repeated through the day, rather than one go.
+/// How Press is timed, as a few short holds through the day.
 enum PressProtocol {
     static let holdSeconds = 180
     static let suggestedDailyHolds = 3
 
-    /// Finding the spot. Deliberately physical instructions with no claim about
-    /// what happens once you are there.
+    /// Simple physical instructions with no claim about what happens once you
+    /// are there.
     static let steps: [String] = [
         "Turn one hand palm up.",
-        "Lay three fingers of the other hand across the wrist, just below the crease.",
-        "The spot is under the edge of your third finger, in the dip between the two tendons.",
-        "Press firmly with your thumb, or sit the stud of an acupressure band there.",
-        "Do the same on the other wrist if you have a second band.",
+        "Choose a comfortable place on the inside of your wrist.",
+        "Rest your thumb there without pressing hard.",
+        "Keep the hold gentle and adjust it until it feels comfortable.",
+        "Stop whenever you want, then repeat later if you choose.",
     ]
 }

@@ -124,7 +124,7 @@ struct HistoryView: View {
                 label: "avg severity\nchange"
             )
             statTile(value: "\(summary.sessionsThisWeek)", label: "sessions\nthis week")
-            statTile(value: summary.bestMode?.title ?? "n/a", label: "mode that\nhelps most")
+            statTile(value: summary.bestMode?.title ?? "n/a", label: "mode used\nmost")
         }
     }
 

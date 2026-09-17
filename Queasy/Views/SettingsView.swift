@@ -33,7 +33,9 @@ struct SettingsView: View {
                 } header: {
                     Text("Session")
                 } footer: {
-                    if !subscriptions.isProSubscriber {
+                    if isScreenshotMode {
+                        Text("Set a pace that feels right before your next session.")
+                    } else if !subscriptions.isProSubscriber {
                         Text("Pulse and Breathe run \(FreeTier.sessionSeconds / 60) minutes on the free plan, however long you set here. Tone and Press always run their full length.")
                     }
                 }
@@ -54,7 +56,9 @@ struct SettingsView: View {
                 } header: {
                     Text("Press")
                 } footer: {
-                    if reminders.authorizationDenied {
+                    if isScreenshotMode {
+                        Text("A gentle reminder helps keep a short hold easy to remember.")
+                    } else if reminders.authorizationDenied {
                         Text("Notifications are off for Queasy. Turn them on in iOS Settings to use reminders.")
                     } else if subscriptions.isProSubscriber {
                         Text("A nudge at \(reminders.scheduleLabel) to run a three-minute hold, at the times you choose.")
@@ -72,29 +76,31 @@ struct SettingsView: View {
                     Text("Shows a day-by-day grid on the History tab.")
                 }
 
-                Section("Queasy Pro") {
-                    if subscriptions.isProSubscriber {
-                        Label("Active", systemImage: "checkmark.seal.fill")
-                            .foregroundStyle(Theme.aqua)
-                    } else {
-                        // With no gate on the way in, this is the durable place
-                        // to buy. The full plan picker, per the paywall playbook.
-                        Button {
-                            showPaywall = true
-                        } label: {
-                            Label("See Queasy Pro", systemImage: "sparkles")
+                if !isScreenshotMode {
+                    Section("Queasy Pro") {
+                        if subscriptions.isProSubscriber {
+                            Label("Active", systemImage: "checkmark.seal.fill")
                                 .foregroundStyle(Theme.aqua)
+                        } else {
+                            // With no gate on the way in, this is the durable place
+                            // to buy. The full plan picker, per the paywall playbook.
+                            Button {
+                                showPaywall = true
+                            } label: {
+                                Label("See Queasy Pro", systemImage: "sparkles")
+                                    .foregroundStyle(Theme.aqua)
+                            }
+                            .accessibilityIdentifier("settings-see-pro")
                         }
-                        .accessibilityIdentifier("settings-see-pro")
-                    }
-                    Button(isRestoring ? "Restoring…" : "Restore Purchases") {
-                        restore()
-                    }
-                    .disabled(isRestoring)
-                    if let restoreMessage {
-                        Text(restoreMessage)
-                            .font(.caption)
-                            .foregroundStyle(Theme.ink3)
+                        Button(isRestoring ? "Restoring…" : "Restore Purchases") {
+                            restore()
+                        }
+                        .disabled(isRestoring)
+                        if let restoreMessage {
+                            Text(restoreMessage)
+                                .font(.caption)
+                                .foregroundStyle(Theme.ink3)
+                        }
                     }
                 }
 
@@ -113,11 +119,13 @@ struct SettingsView: View {
                 }
 
                 #if DEBUG
-                Section("Debug") {
-                    Toggle("Pro override", isOn: Binding(
-                        get: { subscriptions.isProSubscriber },
-                        set: { subscriptions.setLocalOverride(isPro: $0) }
-                    ))
+                if !isScreenshotMode {
+                    Section("Debug") {
+                        Toggle("Pro override", isOn: Binding(
+                            get: { subscriptions.isProSubscriber },
+                            set: { subscriptions.setLocalOverride(isPro: $0) }
+                        ))
+                    }
                 }
                 #endif
             }
@@ -143,6 +151,14 @@ struct SettingsView: View {
         let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0"
         let build = Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "1"
         return "\(version) (\(build))"
+    }
+
+    private var isScreenshotMode: Bool {
+        #if DEBUG
+        return ProcessInfo.processInfo.arguments.contains("-QueasyScreenshots")
+        #else
+        return false
+        #endif
     }
 
     private func restore() {

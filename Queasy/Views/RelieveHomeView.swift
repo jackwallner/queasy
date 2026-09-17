@@ -156,10 +156,12 @@ struct RelieveHomeView: View {
 
     private var header: some View {
         VStack(alignment: .leading, spacing: 4) {
-            Text("Feeling queasy?")
+            Text(isScreenshotRun ? "Need a little comfort?" : "Feeling queasy?")
                 .font(Theme.displaySerif(30))
                 .foregroundStyle(Theme.ink)
-            Text("Four drug-free things to try, on your wrist or in your ear. Start one now, or answer three questions first.")
+            Text(isScreenshotRun
+                 ? "Four gentle routines to try, on your wrist or in your ear. Start one now, or answer three questions first."
+                 : "Four drug-free things to try, on your wrist or in your ear. Start one now, or answer three questions first.")
                 .font(.subheadline)
                 .foregroundStyle(Theme.ink2)
         }

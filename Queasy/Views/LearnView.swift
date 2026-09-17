@@ -38,11 +38,7 @@ struct LearnView: View {
             symbol: "wind",
             title: "Breathe",
             hook: "Out for longer than in, paced by your wrist.",
-            detail: "Your watch taps a long swell in, then a longer fade out, so you can keep your eyes shut and follow it. Queasy suggests three seconds in and five out when things are mild, and four in and eight out when they are not. Breathing out for longer than you breathe in is the whole technique.\n\nSmall trials of slow diaphragmatic breathing during chemotherapy and after surgery have reported lower nausea scores. They are small, and the reviewers say so.",
-            sources: [
-                source("Breathing interventions for nausea (2026 trial)", "https://pubmed.ncbi.nlm.nih.gov/41811802/"),
-                source("Diaphragmatic breathing during chemotherapy", "https://www.sciencedirect.com/science/article/abs/pii/S1462388924000462"),
-            ]
+            detail: "Your watch taps a long swell in, then a longer fade out, so you can keep your eyes shut and follow it. Queasy suggests three seconds in and five out when things are mild, and four in and eight out when they are not. Breathing out for longer than you breathe in is the whole technique.\n\nThis is a complementary wellness routine you run yourself, not medical care. Stop if it feels uncomfortable, and talk with a clinician if nausea is severe or persistent."
         ),
         LearnCard(
             id: "tone",

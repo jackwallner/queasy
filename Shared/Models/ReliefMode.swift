@@ -86,7 +86,7 @@ enum ReliefMode: String, Codable, CaseIterable, Identifiable, Sendable {
         case .pulse:
             return nil
         case .breathe:
-            return "Trials of slow diaphragmatic breathing during chemotherapy and after surgery have reported lower nausea scores. The studies are small."
+            return "A paced-breathing routine to follow with your wrist. This is complementary wellness guidance, not medical care."
         case .tone:
             return "A 2025 Nagoya University study is titled \"Just 1-min exposure to a pure tone at 100 Hz with daily exposable sound pressure levels may improve motion sickness\"."
         case .press:

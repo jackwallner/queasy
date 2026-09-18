@@ -114,7 +114,7 @@ final class PhoneSessionController {
         if let existing = try? context.fetch(descriptor).first {
             existing.severityAfter = severityAfter
             existing.intensity = intensity
-            try? context.save()
+            context.saveOrReport()
             return existing
         }
         let episode = ReliefEpisode(
@@ -130,7 +130,7 @@ final class PhoneSessionController {
             source: .phone
         )
         context.insert(episode)
-        try? context.save()
+        context.saveOrReport()
         return episode
     }
 

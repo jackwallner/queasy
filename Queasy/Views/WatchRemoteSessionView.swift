@@ -282,7 +282,7 @@ struct WatchRemoteSessionView: View {
             )
             context.insert(episode)
         }
-        try? context.save()
+        context.saveOrReport()
 
         // The phone owns this rating now: tell the watch to drop its own rating
         // screen so it doesn't sit stuck on the wrist (and can't re-rate the

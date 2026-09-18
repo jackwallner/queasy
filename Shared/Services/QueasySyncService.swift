@@ -404,7 +404,7 @@ final class QueasySyncService: NSObject, WCSessionDelegate, @unchecked Sendable 
                     existing.severityAfter = severityAfter
                 }
                 existing.intensity = intensity
-                try? context.save()
+                context.saveOrReport()
                 return
             }
             let episode = ReliefEpisode(
@@ -420,7 +420,7 @@ final class QueasySyncService: NSObject, WCSessionDelegate, @unchecked Sendable 
                 source: .watch
             )
             context.insert(episode)
-            try? context.save()
+            context.saveOrReport()
             AnalyticsService.sessionCompleted(
                 source: .watch,
                 minutes: episode.actualMinutes,

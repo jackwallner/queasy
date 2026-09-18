@@ -100,6 +100,7 @@ struct QueasyApp: App {
 struct RootView: View {
     @Environment(AppSettings.self) private var settings
     @Environment(SubscriptionService.self) private var subscriptions
+    @State private var saveFailures = SaveFailureReporter.shared
 
     #if DEBUG
     private var forcePaywall: Bool {
@@ -125,6 +126,17 @@ struct RootView: View {
         .task {
             subscriptions.configure()
             QueasySyncService.shared.activate()
+        }
+        .alert(
+            "Not saved",
+            isPresented: Binding(
+                get: { saveFailures.message != nil },
+                set: { if !$0 { saveFailures.message = nil } }
+            )
+        ) {
+            Button("OK", role: .cancel) {}
+        } message: {
+            Text(saveFailures.message ?? "")
         }
     }
 }

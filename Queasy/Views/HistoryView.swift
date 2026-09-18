@@ -62,7 +62,7 @@ struct HistoryView: View {
                 Button("Delete", role: .destructive) {
                     if let episode = episodeToDelete {
                         modelContext.delete(episode)
-                        try? modelContext.save()
+                        modelContext.saveOrReport()
                     }
                     episodeToDelete = nil
                 }

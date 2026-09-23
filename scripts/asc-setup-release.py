@@ -9,6 +9,7 @@ version review detail. Safe to rerun; each step checks before creating.
 Usage: source ~/.baseball_credentials && python3 scripts/asc-setup-release.py
 """
 
+import os
 import sys
 from pathlib import Path
 
@@ -401,7 +402,7 @@ def main() -> None:
                         "attributes": {
                             "contactFirstName": "Jack",
                             "contactLastName": "Wallner",
-                            "contactPhone": "[redacted]",
+                            "contactPhone": os.environ.get("ASC_REVIEW_PHONE", ""),
                             "contactEmail": "jackwallner+queasy@gmail.com",
                             "demoAccountRequired": False,
                             "notes": REVIEW_NOTES,

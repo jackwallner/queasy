@@ -61,9 +61,9 @@ struct SettingsView: View {
                     } else if reminders.authorizationDenied {
                         Text("Notifications are off for Queasy. Turn them on in iOS Settings to use reminders.")
                     } else if subscriptions.isProSubscriber {
-                        Text("A nudge at \(reminders.scheduleLabel) to run a three-minute hold, at the times you choose.")
+                        Text("A nudge at \(reminders.scheduleLabel) to run a three-minute hold, the way the wristband trials spaced them.")
                     } else {
-                        Text("Queasy Pro nudges you a few times a day to run a hold, at the times you choose.")
+                        Text("Queasy Pro nudges you a few times a day to run a hold, the way the wristband trials spaced them.")
                     }
                 }
 

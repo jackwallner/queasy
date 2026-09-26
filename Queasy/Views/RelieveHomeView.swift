@@ -469,7 +469,7 @@ struct RelieveHomeView: View {
             Image(systemName: "applewatch.side.right")
                 .font(.title3)
                 .foregroundStyle(Theme.ink2)
-            Text("For Pulse and Press, turn your watch to the **inside** of your wrist so you can feel each tap or timer cue clearly.")
+            Text("For Pulse and Press, turn your watch to the **inside** of your wrist, three finger-widths below the crease. That is where an acupressure band sits.")
                 .font(.caption)
                 .foregroundStyle(Theme.ink2)
         }

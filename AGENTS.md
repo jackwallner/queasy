@@ -1,4 +1,4 @@
-# CLAUDE.md: Queasy
+# Queasy
 
 iOS + watchOS app: four drug-free things to try when you feel sick, on the wrist
 or in your ear. **Pulse** (a steady tap), **Breathe** (a paced breath you feel),
@@ -68,7 +68,7 @@ the Watch starts it, `HKWorkoutSession` when the phone remote-launches it. This 
 the load-bearing decision for the Watch app. Read
 `.claude/rules/watch-background-haptics.md` before touching `WatchHapticEngine`,
 `WatchLauncher` or `QueasySyncService`; it loads automatically when you read those
-files, and AGENTS.md readers should open it directly.
+files, and Codex and other agents should open it directly.
 
 ## Products
 
@@ -85,9 +85,9 @@ bullets render from `ProFeature` so they cannot drift from the gates.
 
 RevenueCat API key
 lives in `SubscriptionService.apiKey`; DEBUG builds can use
-`SubscriptionService.setLocalOverride(isPro:)`. Per-territory intro offers and
-PPP/emerging-market discounts use the shared `asc-*` pricing scripts (see the
-`ios-dev` skill); app-specific script here is `scripts/generate-icon.py`
+`SubscriptionService.setLocalOverride(isPro:)`. Pricing, intro offers and PPP run
+through the fleet tool at `~/ios/pricing/` (see the `ios-dev` skill);
+app-specific script here is `scripts/generate-icon.py`
 (regenerates the 1024 icon).
 
 ## Claims guardrail (App Review 1.1.6, and EU MDR)
@@ -123,4 +123,4 @@ gentler intensity cap, a longer session, and a call-your-midwife note.
 
 ---
 Shared iOS conventions (build, simulator, release/TestFlight, ASC key, signing, review funnel, gotchas):
-always-loaded global CLAUDE.md + the `ios-dev` skill. (TestFlight needs the ASC app record to exist first.)
+the global agent rules + the `ios-dev` skill. (TestFlight needs the ASC app record to exist first.)

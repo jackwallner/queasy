@@ -24,7 +24,7 @@ vertigo/dizziness, anxiety, general/illness.
 | Hardware | Watch-first + iPhone Core Haptics fallback ("hold phone to your inner wrist") |
 | Positioning | General nausea app; pregnancy is one mode |
 | Monetization | $4.99/mo, $29.99/yr (both with 1-wk trial), $69.99 lifetime (bumped 2026-07-02 to match Headache Tracker's live tier), hard paywall after onboarding, RevenueCat |
-| Name | **Queasy: Nausea Relief Band** — chosen from ASO research (see aso-plan.md) |
+| Name | **Queasy: Nausea Relief Band** — chosen from ASO research (see marketing/aso-plan.md) |
 | Bundle IDs | com.jackwallner.queasy (+ .watch), App Group group.com.jackwallner.queasy |
 
 ## Why this is winnable (competitor research, 2026-07-01, US store)

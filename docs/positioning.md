@@ -1,6 +1,6 @@
 # Queasy: positioning and rebuild plan
 
-Written 2026-08-14. Supersedes the positioning sections of `aso-plan.md` and
+Written 2026-08-14. Supersedes the positioning sections of `marketing/aso-plan.md` and
 `scope.md`. Research basis: App Store SERPs and Astro popularity data pulled
 2026-08-14, verbatim competitor listings via the iTunes lookup API, the current
 App Review Guidelines, EU MDR/MDCG guidance, and the clinical literature on P6

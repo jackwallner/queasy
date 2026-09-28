@@ -44,7 +44,7 @@ The largest immediate risks are consistency and measurement rather than a lack o
 | P1 | Capped-session upgrade prompt can be wrong | Queasy/Views/PhoneSessionView.swift:266-297 calls FreeTier.isCapped with requested duration rather than actual elapsed duration. | A user who voluntarily ends at 30 or 90 seconds can receive a message implying the free limit interrupted them. | Calculate actualSeconds >= cap and separately record voluntary, cancelled, expired, and capped endings. |
 | P1 | Watch and persistence failures are silent | Shared/Services/QueasySyncService.swift, QueasyWatch/Services/WatchHapticEngine.swift, Shared/Services/DataService.swift. | Missed handoffs, lost episodes, and store recovery cannot be distinguished from normal abandonment. | Add retry, timeout, recovery, and release-version signals, then validate on paired devices. |
 | P1 | No live-user crash or release-regression watchdog exists | No MetricKit, Sentry, Firebase Crashlytics, App Center, or ASC ingestion code was found. AnalyticsService only writes local logs. | A Mac script cannot alert on live user crashes from this repository alone. A release spike can be discovered late. | Use ASC crash and hang data or an approved telemetry backend, with version comparison and alert thresholds. |
-| P1 | Current agent instructions are contradicted by root docs | docs/scope.md, docs/positioning.md, aso-plan.md, and a release script still contain old names, prices, or hard-paywall instructions. | Future agents can undo the current free-first and claim-safe product decisions. | Mark historical documents clearly or move them under archive/; establish one current source-of-truth table. |
+| P1 | Current agent instructions are contradicted by root docs | docs/scope.md, docs/positioning.md, ../marketing/aso-plan.md, and a release script still contain old names, prices, or hard-paywall instructions. | Future agents can undo the current free-first and claim-safe product decisions. | Mark historical documents clearly or move them under archive/; establish one current source-of-truth table. |
 | P2 | Localized ASO fields leave search surface unused | All 50 locale directories exist, but many translated names and keyword fields are materially shorter than the available limits. | Potentially lower search coverage and weaker local relevance. | Use query evidence to add unique local terms, then validate translations and policy, not blind padding. |
 | P2 | Review funnel is ethically gated but not measurable | Shared/Services/ReviewPromptTracker.swift, Queasy/Views/ReviewPromptSheet.swift; no native review API or review events found. | The team cannot measure prompt reach, feedback rate, review-link opens, or timing. | Add coarse funnel events and validate the direct App Store URL on device. |
 | P2 | Paywall is vulnerable to offer, localization, and layout edge cases | Queasy/Views/PaywallView.swift:14-805 has hardcoded trial timeline language, a non-scroll layout, and eligibility that starts empty. | Users can see incomplete, misleading, or clipped purchase copy in some states and locales. | Add loading and localized StoreKit tests, then run source-specific experiments. |
@@ -86,7 +86,7 @@ Opportunities and risks:
 1. English-US is close to the useful name and subtitle ceiling, which is good. The remaining ASO opportunity is query selection and conversion proof, not adding generic words to the title.
 2. Many local names are short, including Japanese, Korean, Chinese, Hebrew, Hindi, Thai, Vietnamese, and several Indian locales. Many local keyword fields are also well below the available limit. This is an opportunity only if the terms are locally searched, accurately translated, and not redundant with the name or subtitle.
 3. A few current fields appear optimized around motion sickness while the description also addresses morning sickness, hangover, vertigo, and nervous stomach. The claim guardrail intentionally keeps pregnancy out of the indexed name, subtitle, keywords, and screenshots. Validate the positioning decision with ASC query and conversion data before expanding it.
-4. aso-plan.md:20 still describes the retired Queasy: Nausea Relief Band name and old metadata. scripts/build-metadata.py should be the only current metadata source an agent is told to edit.
+4. ../marketing/aso-plan.md:20 still describes the retired Queasy: Nausea Relief Band name and old metadata. scripts/build-metadata.py should be the only current metadata source an agent is told to edit.
 5. scripts/asc-setup-release.py:45 still describes a paywall that gates the main experience. That is inconsistent with current free-first behavior and could cause an agent to recreate the retired funnel.
 6. There is no repository-side evidence of product-page conversion, keyword rank, search term impressions, or review impact. Treat all ASO changes as experiments with a pre-change baseline.
 
@@ -98,7 +98,7 @@ Recommendation for the implementation agent:
 - Add a human review queue for non-Latin keyword additions. Do not auto-translate or fill unused characters with unverified terms.
 - Compare ASC metadata against the website title, OG title, JSON-LD name, screenshot copy, and product description before every release.
 - Pull actual ASC search and conversion data before deciding whether motion sickness, nausea, travel sickness, morning sickness, vertigo, or hangover deserves a different field in each storefront.
-- Separate metadata generation from historical planning documents. The current generator, not aso-plan.md, is the canonical implementation input.
+- Separate metadata generation from historical planning documents. The current generator, not ../marketing/aso-plan.md, is the canonical implementation input.
 
 ## 2. Current trial and purchase flow
 
@@ -660,7 +660,7 @@ The requested future fleet script can perform these checks without an LLM:
 | --- | --- | --- | --- |
 | docs/scope.md:1-124 | Old Queasy: Nausea Relief Band identity, old hard-paywall flow, old prices $4.99/mo, $29.99/yr, $69.99 lifetime, and retired feature descriptions. It also says pregnancy positioning was removed while the current product includes a guarded morning-sickness path. | An agent can restore the old paywall or claim language. | Move under archive/ or rewrite as a historical decision record with a prominent superseded banner. |
 | docs/positioning.md:311-432 | Contains old ASO name and subtitle recommendations, old launch status, and a WAITING_FOR_REVIEW snapshot superseded by the later Ready for Distribution context. | An agent can edit current metadata toward obsolete positioning. | Split current positioning from dated experiments. Put the current name, subtitle, URLs, prices, product flow, and claim rules at the top. |
-| aso-plan.md:20 | Uses old product name and old keywords; current generated metadata is elsewhere. | Metadata drift and accidental reversion. | Mark historical or replace with a short pointer to scripts/build-metadata.py. |
+| ../marketing/aso-plan.md:20 | Uses old product name and old keywords; current generated metadata is elsewhere. | Metadata drift and accidental reversion. | Mark historical or replace with a short pointer to scripts/build-metadata.py. |
 | scripts/asc-setup-release.py:45 | Release description says the paywall gates the main experience. | A release helper can encode the retired funnel in ASC copy. | Update its documentation in the implementation task and add a static stale-text check. |
 | Shared/Services/SubscriptionService.swift:110 | Comment describes a hard paywall while runtime is free-first. | Code agents may assume paywall gating is intentional. | Change the comment in a separate implementation task, or include the current free-first behavior in the canonical doc. |
 | ios27Queasy.md:1-25 | Dated Aug 5 compatibility audit with a narrow pass statement and an unreachable-code follow-up. | A current agent may treat it as a full current health audit. | Put it under archive/ or label it as a dated compatibility record and link the current test command. |
@@ -706,7 +706,7 @@ The agent handoff should state explicitly:
 3. Add watch acknowledgement, retry, duplicate prevention, and transfer diagnostics.
 4. Stop silently deleting or falling back from a corrupted local store without a durable recovery signal and a user-safe recovery message.
 5. Add ASC or approved crash-backend polling and release comparison to the future watchdog script. Keep notification sends disabled by default.
-6. Canonicalize agent docs. Archive or label docs/scope.md, stale positioning sections, aso-plan.md, ios27Queasy.md, and obsolete release-script comments.
+6. Canonicalize agent docs. Archive or label docs/scope.md, stale positioning sections, ../marketing/aso-plan.md, ios27Queasy.md, and obsolete release-script comments.
 7. Test paywall layout and offer states under Dynamic Type, RTL, long locales, no network, trial-used customers, restore, and entitlement propagation delay.
 8. Add UI and integration tests for onboarding branches, first session, free cap, rating prompts, paywall source IDs, purchase state, and watch handoff.
 
@@ -787,7 +787,7 @@ Primary local evidence reviewed:
 - privacy-policy.html
 - docs/scope.md
 - docs/positioning.md
-- aso-plan.md
+- ../marketing/aso-plan.md
 - ios27Queasy.md
 - archive/README.md
 - fastlane/metadata/review_information/notes.txt

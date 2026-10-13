@@ -69,19 +69,6 @@ struct EpisodeStatsTests {
         let summary = EpisodeStats.summarize(entries, now: now)
         #expect(summary.bestCause == .hangover)
     }
-
-    @Test func reviewPromptOnlyAfterImprovementAtMilestones() {
-        // Far-future "now" so a previously recorded prompt date can't interfere.
-        let farFuture = Date(timeIntervalSince1970: 4_000_000_000)
-        func decision(_ delta: Int?, _ count: Int) -> Bool {
-            ReviewPromptTracker.shouldPrompt(afterReliefDelta: delta, sessionCount: count, now: farFuture)
-        }
-        #expect(decision(1, 2))
-        #expect(!decision(0, 2))
-        #expect(!decision(nil, 2))
-        #expect(!decision(2, 3))
-        #expect(decision(2, 15))
-    }
 }
 
 extension EpisodeStatsTests {

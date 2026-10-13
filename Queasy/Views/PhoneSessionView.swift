@@ -275,23 +275,17 @@ struct PhoneSessionView: View {
         let episode = controller.complete(severityAfter: severityAfter)
         settings.completedSessionCount += 1
 
-        let reviewFiring = ReviewPromptTracker.shouldPrompt(
-            afterReliefDelta: episode.reliefDelta,
-            sessionCount: settings.completedSessionCount
-        )
-        if reviewFiring {
-            ReviewPromptTracker.recordPrompt()
-            // Hand off to the enjoyment funnel; RootTabView shows it once this
-            // full-screen session cover has dismissed.
-            ReviewPromptCoordinator.shared.request(.enjoyment)
-        } else if UpgradePromptTracker.shouldPrompt(
+        if UpgradePromptTracker.shouldPrompt(
             isPro: subscriptions.isProSubscriber,
             sessionWasCapped: wasCapped,
-            sessionCount: settings.completedSessionCount,
-            reviewPromptFiring: false
+            sessionCount: settings.completedSessionCount
         ) {
             UpgradePromptTracker.recordPrompt()
             UpgradePromptCoordinator.shared.request("queasy_after_session")
+        } else if (episode.reliefDelta ?? 0) >= 0 {
+            // A finished session the user didn't rate as worse. RootTabView
+            // asks for a rating once this cover is gone.
+            ReviewPromptCoordinator.shared.recordPositiveMoment()
         }
         dismiss()
     }

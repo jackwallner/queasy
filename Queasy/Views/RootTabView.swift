@@ -1,12 +1,15 @@
+import StoreKit
 import SwiftUI
+import UIKit
 
 struct RootTabView: View {
+    @Environment(AppSettings.self) private var settings
+    @Environment(\.requestReview) private var requestReview
     @State private var reviewCoordinator = ReviewPromptCoordinator.shared
     @State private var upgradeCoordinator = UpgradePromptCoordinator.shared
-    @State private var showReview = false
     @State private var showUpgrade = false
     @State private var upgradeImpressionId = "queasy_after_session"
-    @State private var reviewStep: ReviewPromptSheet.Step = .enjoyment
+    @State private var reviewTask: Task<Void, Never>?
     @State private var tab = Self.initialTab
 
     /// `-QueasyTab history|learn|settings` opens straight onto a tab, so a
@@ -43,22 +46,11 @@ struct RootTabView: View {
                 .tag(3)
         }
         .tint(Theme.aqua)
-        // The rating screen that triggers this is a full-screen cover being
-        // dismissed at the same moment; wait a beat so the sheet presents onto a
-        // clear tab view instead of racing the cover's dismissal.
-        .onChange(of: reviewCoordinator.pendingStep) { _, step in
-            guard let step else { return }
-            Task {
-                try? await Task.sleep(for: .milliseconds(600))
-                reviewStep = step
-                showReview = true
-            }
+        .onChange(of: reviewCoordinator.momentCount) { _, _ in
+            scheduleReviewRequestAfterPositiveMoment()
         }
-        .sheet(isPresented: $showReview, onDismiss: { reviewCoordinator.clear() }) {
-            ReviewPromptSheet(initialStep: reviewStep)
-        }
-        // Same staging problem as the review sheet: the session cover is on its
-        // way out when this is requested.
+        // The session cover is on its way out when this is requested; wait a
+        // beat so the sheet presents onto a clear tab view.
         .onChange(of: upgradeCoordinator.pendingImpressionId) { _, id in
             guard let id else { return }
             Task {
@@ -70,5 +62,48 @@ struct RootTabView: View {
         .sheet(isPresented: $showUpgrade, onDismiss: { upgradeCoordinator.clear() }) {
             PaywallView(displayCloseButton: true, paywallImpressionId: upgradeImpressionId)
         }
+    }
+
+    /// The rating ask after a finished session: Apple's own prompt, no question
+    /// in front of it. Waits for the session cover to close, then asks only if
+    /// nothing is presented. A blocked ask keeps the moment pending.
+    private func scheduleReviewRequestAfterPositiveMoment() {
+        reviewTask?.cancel()
+        reviewTask = Task { @MainActor in
+            try? await Task.sleep(for: .seconds(3))
+            guard !Task.isCancelled, isClear,
+                  ReviewPromptTracker.shouldRequestAfterPositiveMoment(hasCompletedSetup: settings.hasCompletedOnboarding)
+            else { return }
+            ReviewPromptTracker.markShown()
+            requestReview()
+        }
+    }
+
+    /// No paywall, cover, sheet or alert is up over the tabs.
+    private var isClear: Bool {
+        guard !showUpgrade, upgradeCoordinator.pendingImpressionId == nil,
+              UIApplication.shared.applicationState == .active
+        else { return false }
+        return !UIApplication.shared.connectedScenes
+            .compactMap { $0 as? UIWindowScene }
+            .flatMap(\.windows)
+            .contains { $0.isKeyWindow && $0.rootViewController?.presentedViewController != nil }
+    }
+}
+
+/// Signals a positive moment from inside a session cover so `RootTabView`
+/// can ask for a rating once the cover is gone.
+@MainActor
+@Observable
+final class ReviewPromptCoordinator {
+    static let shared = ReviewPromptCoordinator()
+    private init() {}
+
+    private(set) var momentCount = 0
+
+    func recordPositiveMoment() {
+        guard !ReviewPromptTracker.skipsAutomation else { return }
+        ReviewPromptTracker.recordPositiveMoment()
+        momentCount += 1
     }
 }

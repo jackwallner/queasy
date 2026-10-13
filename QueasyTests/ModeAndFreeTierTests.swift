@@ -157,14 +157,12 @@ struct UpgradePromptTests {
     private func should(
         isPro: Bool = false,
         capped: Bool = true,
-        count: Int = 3,
-        reviewFiring: Bool = false
+        count: Int = 3
     ) -> Bool {
         UpgradePromptTracker.shouldPrompt(
             isPro: isPro,
             sessionWasCapped: capped,
             sessionCount: count,
-            reviewPromptFiring: reviewFiring,
             now: Date(timeIntervalSince1970: 0)
         )
     }
@@ -180,10 +178,6 @@ struct UpgradePromptTests {
     /// Nothing to sell if the session never ran out of room.
     @Test func staysQuietWhenNothingWasCapped() {
         #expect(!should(capped: false))
-    }
-
-    @Test func yieldsToTheReviewAsk() {
-        #expect(!should(reviewFiring: true))
     }
 
     @Test func staysQuietBetweenMilestones() {

@@ -3,6 +3,7 @@ import SwiftUI
 struct SettingsView: View {
     @Environment(AppSettings.self) private var settings
     @Environment(SubscriptionService.self) private var subscriptions
+    @Environment(\.openURL) private var openURL
     @State private var isRestoring = false
     @State private var showPaywall = false
     @State private var restoreMessage: String?
@@ -105,8 +106,16 @@ struct SettingsView: View {
                 }
 
                 Section("About") {
-                    Link("Rate Queasy", destination: AppStoreReviewLinks.writeReviewURL)
-                    Link("Contact Support", destination: PaywallLinks.support)
+                    // Separate rating and feedback rows, with no question in
+                    // front of either (App Review 5.6.1).
+                    Button("Rate Queasy") {
+                        ReviewPromptTracker.markOpenedWriteReview()
+                        openURL(AppStoreReviewLinks.writeReviewURL)
+                    }
+                    Button("Send Feedback") {
+                        ReviewPromptTracker.markFeedbackSubmitted()
+                        openURL(PaywallLinks.support)
+                    }
                     Link("Privacy Policy", destination: PaywallLinks.privacyPolicy)
                     Link("Terms of Use", destination: PaywallLinks.standardEULA)
                     LabeledContent("Version", value: versionString)

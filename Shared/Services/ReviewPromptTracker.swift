@@ -1,41 +1,134 @@
 import Foundation
 
-/// Decides when to surface the review funnel: only right after a session where
-/// the user said they felt better (an "active + happy" moment), at the 2nd/5th/
-/// 15th completed session, never more than once per 60 days, and never again
-/// once they've rated or sent feedback. UserDefaults-backed and thread-safe.
+/// Persists rating-ask eligibility. The ask itself is the system
+/// `requestReview()` with no question in front of it (App Review 5.6.1).
+/// UserDefaults-backed in the App Group.
 enum ReviewPromptTracker {
-    private static let milestones: Set<Int> = [2, 5, 15]
-    private static let cooldown: TimeInterval = 60 * 24 * 3600
-    private static let lastPromptKey = "lastReviewPromptAt"
-    private static let resolvedKey = "reviewPromptResolved"
+    /// What the user did about a review. Only opening the review page ends the
+    /// passive asks: someone who sent feedback can still rate.
+    enum Outcome: String {
+        case openedWriteReview
+        /// Contacted support. Never stops the asks.
+        case submittedFeedback
+    }
+
+    private enum Key {
+        static let launchCount = "reviewPrompt.launchCount"
+        static let lastShownDate = "reviewPrompt.lastShownDate"
+        static let outcome = "reviewPrompt.outcome"
+        static let pendingPositiveMoment = "reviewPrompt.pendingPositiveMoment"
+        /// Written by the old in-app rating sheet. Read only as a cooldown
+        /// fallback so an upgrade doesn't ask again right away.
+        static let legacyLastPrompt = "lastReviewPromptAt"
+        static let legacyResolved = "reviewPromptResolved"
+    }
+
+    /// Ask early. The only tenure gate is "not the first session": a second cold start.
+    static let minimumLaunchCount = 2
+    /// Days between our calls. Apple shows the prompt at most three times a
+    /// year per device and decides each time, so this paces our asks.
+    static let cooldownDays = 30
 
     private static var defaults: UserDefaults {
         UserDefaults(suiteName: queasyAppGroupID) ?? .standard
     }
 
-    /// Whether the user has already rated or sent feedback through the funnel;
-    /// once true we never ask again.
-    static var hasResolved: Bool {
-        get { defaults.bool(forKey: resolvedKey) }
-        set { defaults.set(newValue, forKey: resolvedKey) }
+    /// Screenshot captures and UI test probes never count launches or ask.
+    static var skipsAutomation: Bool {
+        ProcessInfo.processInfo.arguments.contains {
+            $0 == "-QueasyScreenshots" || $0 == "-QueasyPaywallScreenshot"
+                || $0 == "-QueasyWatchSessionScreenshot" || $0 == "-rcfunnelprobe" || $0 == "-FASTLANE_SNAPSHOT"
+        }
     }
 
-    static func shouldPrompt(afterReliefDelta delta: Int?, sessionCount: Int, now: Date = Date()) -> Bool {
-        guard !hasResolved else { return false }
-        guard let delta, delta > 0 else { return false }
-        guard milestones.contains(sessionCount) else { return false }
-        let last = defaults.double(forKey: lastPromptKey)
-        if last > 0, now.timeIntervalSince1970 - last < cooldown { return false }
-        return true
+    // MARK: - State
+
+    static var appLaunchCount: Int {
+        get { max(defaults.integer(forKey: Key.launchCount), 0) }
+        set { defaults.set(newValue, forKey: Key.launchCount) }
     }
 
-    static func recordPrompt(now: Date = Date()) {
-        defaults.set(now.timeIntervalSince1970, forKey: lastPromptKey)
+    static var lastShownDate: Date? {
+        get {
+            let stored = defaults.object(forKey: Key.lastShownDate) as? TimeInterval
+                ?? defaults.object(forKey: Key.legacyLastPrompt) as? TimeInterval
+            return stored.map(Date.init(timeIntervalSince1970:))
+        }
+        set {
+            defaults.removeObject(forKey: Key.legacyLastPrompt)
+            if let date = newValue {
+                defaults.set(date.timeIntervalSince1970, forKey: Key.lastShownDate)
+            } else {
+                defaults.removeObject(forKey: Key.lastShownDate)
+            }
+        }
     }
 
-    /// The user rated on the App Store or sent feedback: stop asking for good.
-    static func markResolved() {
-        hasResolved = true
+    static var outcome: Outcome? {
+        get { defaults.string(forKey: Key.outcome).flatMap(Outcome.init(rawValue:)) }
+        set {
+            if let value = newValue {
+                defaults.set(value.rawValue, forKey: Key.outcome)
+            } else {
+                defaults.removeObject(forKey: Key.outcome)
+            }
+        }
+    }
+
+    static var hasPendingPositiveMoment: Bool {
+        get { defaults.bool(forKey: Key.pendingPositiveMoment) }
+        set { defaults.set(newValue, forKey: Key.pendingPositiveMoment) }
+    }
+
+    // MARK: - Recording
+
+    static func recordAppLaunch() {
+        // The old flag also counted "sent feedback", which no longer stops asks.
+        defaults.removeObject(forKey: Key.legacyResolved)
+        guard !skipsAutomation else { return }
+        appLaunchCount += 1
+    }
+
+    static func recordPositiveMoment() {
+        guard !skipsAutomation else { return }
+        hasPendingPositiveMoment = true
+    }
+
+    // MARK: - Eligibility
+
+    static func passivePromptAllowed(now: Date = .now) -> Bool {
+        guard outcome != .openedWriteReview else { return false }
+        guard let last = lastShownDate else { return true }
+        return now.timeIntervalSince(last) >= TimeInterval(cooldownDays) * 86_400
+    }
+
+    static func canRequestReview(hasCompletedSetup: Bool, now: Date = .now) -> Bool {
+        guard !skipsAutomation, hasCompletedSetup, passivePromptAllowed(now: now) else { return false }
+        return appLaunchCount >= minimumLaunchCount
+    }
+
+    static func shouldRequestAfterPositiveMoment(hasCompletedSetup: Bool, now: Date = .now) -> Bool {
+        guard hasPendingPositiveMoment else { return false }
+        return canRequestReview(hasCompletedSetup: hasCompletedSetup, now: now)
+    }
+
+    // MARK: - Outcomes
+
+    static func markShown(now: Date = .now) {
+        lastShownDate = now
+        hasPendingPositiveMoment = false
+    }
+
+    static func markOpenedWriteReview() {
+        outcome = .openedWriteReview
+        markShown()
+    }
+
+    /// Never overwrites `.openedWriteReview`: feedback sent after the review
+    /// page must not reopen the asks that page ended.
+    static func markFeedbackSubmitted() {
+        if outcome != .openedWriteReview {
+            outcome = .submittedFeedback
+        }
     }
 }

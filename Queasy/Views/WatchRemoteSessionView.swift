@@ -291,14 +291,10 @@ struct WatchRemoteSessionView: View {
 
         guard severityAfter != nil else { return }
         settings.completedSessionCount += 1
-        if ReviewPromptTracker.shouldPrompt(
-            afterReliefDelta: episode.reliefDelta,
-            sessionCount: settings.completedSessionCount
-        ) {
-            ReviewPromptTracker.recordPrompt()
-            // Hand off to the enjoyment funnel; RootTabView shows it once this
-            // full-screen session cover has dismissed.
-            ReviewPromptCoordinator.shared.request(.enjoyment)
+        if (episode.reliefDelta ?? 0) >= 0 {
+            // A finished session the user didn't rate as worse. RootTabView
+            // asks for a rating once this cover is gone.
+            ReviewPromptCoordinator.shared.recordPositiveMoment()
         }
     }
 

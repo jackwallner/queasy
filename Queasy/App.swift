@@ -26,6 +26,7 @@ struct QueasyApp: App {
         }
         #endif
         ConversionDiagnostics.recordAppOpen()
+        ReviewPromptTracker.recordAppLaunch()
         #if DEBUG && HAS_REVENUECAT
         if RevenueCatProbe.isEnabled {
             SubscriptionService.shared.configure()

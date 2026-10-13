@@ -90,6 +90,15 @@ through the fleet tool at `~/ios/pricing/` (see the `ios-dev` skill);
 app-specific script here is `scripts/generate-icon.py`
 (regenerates the 1024 icon).
 
+## Ratings
+
+No in-app rating question (App Review 5.6.1). A finished session the user did
+not rate as worse, and that did not offer Pro, is the positive moment; once the
+session cover closes, `RootTabView` calls the system `requestReview()` about 3s
+later if nothing is presented (from the 2nd launch, 30-day cooldown;
+`ReviewPromptTracker`). A blocked ask stays pending. Settings has separate
+"Rate Queasy" and "Send Feedback" rows. App Store ID `6786780495`.
+
 ## Claims guardrail (App Review 1.1.6, and EU MDR)
 
 1.0 was rejected twice under **1.1.6 (false features)**, not 1.4.1. That

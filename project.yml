@@ -70,6 +70,8 @@ targets:
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.jackwallner.queasy
+        ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES: "AppIcon-A AppIcon-B AppIcon-C"
+        ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS: YES
         INFOPLIST_FILE: Queasy/Info.plist
         CODE_SIGN_ENTITLEMENTS: Queasy/Queasy.entitlements
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon

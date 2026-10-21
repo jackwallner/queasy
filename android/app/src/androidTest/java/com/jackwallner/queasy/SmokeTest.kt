@@ -171,7 +171,8 @@ class SmokeTest {
     @Test fun theTestStoreOfferingLoadsFromRevenueCat() {
         onboarded { putString("screen", "paywall") }
         find(tag("paywall"))
-        find(tag("plan-yearly"), timeout = 45_000)
+        // A cold RevenueCat start on the slow fleet emulator took 41 s to return Test Store products.
+        find(tag("plan-yearly"), timeout = 120_000)
         find(tag("plan-monthly"))
         find(tag("plan-lifetime"))
         val disclosure = find(tag("paywall-disclosure")).text

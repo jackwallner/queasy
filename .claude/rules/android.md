@@ -77,6 +77,15 @@ paths:
 - Build and test acceptance done on jmbp (run shift-android-queasy-3-1792543160):
   99 JVM tests, 12 device tests, lint clean, QA build ignores debug hooks.
   No Play app, upload key, RevenueCat Play app, Play products or upload yet.
+- Packaging attempt on the Air, 2026-10-21 (run shift-android-package-queasy-1-1792569884):
+  blocked, no artifacts. `./gradlew assembleRelease bundleRelease` stops at
+  `validateReleaseConfiguration` ("Set REVENUECAT_PLAY_KEY"). Preflight found no
+  `queasy-upload.p12`, no `android/local.properties` in `~/queasy`, no
+  `PLAY_REVIEW_CODE` in the Air's `~/.queasy_credentials`, and RevenueCat
+  `proj2744fe37` has only App Store and Test Store apps. Evidence in
+  `~/fleet-evidence/shift-android-package-queasy-1-1792569884/`. The Air needs
+  `sdk.dir=/Users/jackwallner/Library/Android/sdk` in `local.properties`.
+  Rerun the package task once steps 1 to 4 below are done.
 - Remaining, in order (Air release worker / Console):
   1. Decide the Android US price (fleet rule $2.39 / $11.99 / $23.99, or iOS parity).
   2. Create the upload keystore `~/.android/keystores/queasy-upload.p12` and

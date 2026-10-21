@@ -2,6 +2,7 @@ package com.jackwallner.queasy.data
 
 import android.content.Context
 import android.content.SharedPreferences
+import androidx.core.content.edit
 
 /**
  * The UserDefaults of this port. Every store takes one, so unit tests run on
@@ -34,12 +35,12 @@ class SharedPreferencesStore(private val prefs: SharedPreferences) : KeyValueSto
     override fun getString(key: String): String? = prefs.getString(key, null)
     override fun getStringSet(key: String): Set<String> = prefs.getStringSet(key, null)?.toSet() ?: emptySet()
     override fun keys(): Set<String> = prefs.all.keys
-    override fun putInt(key: String, value: Int) = prefs.edit().putInt(key, value).apply()
-    override fun putLong(key: String, value: Long) = prefs.edit().putLong(key, value).apply()
-    override fun putBoolean(key: String, value: Boolean) = prefs.edit().putBoolean(key, value).apply()
-    override fun putString(key: String, value: String) = prefs.edit().putString(key, value).apply()
-    override fun putStringSet(key: String, value: Set<String>) = prefs.edit().putStringSet(key, value).apply()
-    override fun remove(key: String) = prefs.edit().remove(key).apply()
+    override fun putInt(key: String, value: Int) = prefs.edit { putInt(key, value) }
+    override fun putLong(key: String, value: Long) = prefs.edit { putLong(key, value) }
+    override fun putBoolean(key: String, value: Boolean) = prefs.edit { putBoolean(key, value) }
+    override fun putString(key: String, value: String) = prefs.edit { putString(key, value) }
+    override fun putStringSet(key: String, value: Set<String>) = prefs.edit { putStringSet(key, value) }
+    override fun remove(key: String) = prefs.edit { remove(key) }
 }
 
 class InMemoryStore : KeyValueStore {

@@ -1,8 +1,8 @@
 package com.jackwallner.queasy.ui.screens
 
-import android.app.Activity
 import android.content.Intent
 import android.net.Uri
+import androidx.activity.compose.LocalActivity
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -55,6 +55,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
+import androidx.core.net.toUri
 import com.jackwallner.queasy.BuildConfig
 import com.jackwallner.queasy.Overlay
 import com.jackwallner.queasy.content.Links
@@ -75,7 +76,7 @@ fun SettingsScreen() {
     val subscriptions = graph.subscriptions
     val reminders = graph.reminders
     val context = LocalContext.current
-    val activity = context as? Activity
+    val activity = LocalActivity.current
     val scope = rememberCoroutineScope()
     var restoring by remember { mutableStateOf(false) }
     var restoreMessage by remember { mutableStateOf<String?>(null) }
@@ -176,7 +177,7 @@ fun SettingsScreen() {
                 LinkRow("Send Feedback", tag = "settings-feedback") {
                     graph.review.markFeedbackSubmitted()
                     runCatching {
-                        context.startActivity(Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:${Links.SUPPORT_EMAIL}?subject=" + Uri.encode("Queasy feedback (Android)"))))
+                        context.startActivity(Intent(Intent.ACTION_SENDTO, ("mailto:${Links.SUPPORT_EMAIL}?subject=" + Uri.encode("Queasy feedback (Android)")).toUri()))
                     }
                 }
                 RowDivider()

@@ -1,6 +1,6 @@
 package com.jackwallner.queasy.ui.screens
 
-import android.app.Activity
+import androidx.activity.compose.LocalActivity
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.Spring
@@ -38,7 +38,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.rotate
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.font.FontWeight
@@ -82,7 +81,7 @@ fun LearnScreen() {
 
 @Composable
 private fun LearnRow(card: LearnCard, isExpanded: Boolean, onTap: () -> Unit) {
-    val context = LocalContext.current
+    val activity = LocalActivity.current
     val rotation by animateFloatAsState(if (isExpanded) 180f else 0f, label = "chevron")
     Column(
         Modifier
@@ -118,7 +117,7 @@ private fun LearnRow(card: LearnCard, isExpanded: Boolean, onTap: () -> Unit) {
                         Text("Sources", style = TideType.caption.copy(fontWeight = FontWeight.SemiBold, color = Tide.ink3))
                         card.sources.forEach { source ->
                             Row(
-                                Modifier.clickable(role = Role.Button) { (context as? Activity)?.openUrl(source.url) }.padding(vertical = 4.dp),
+                                Modifier.clickable(role = Role.Button) { activity?.openUrl(source.url) }.padding(vertical = 4.dp),
                                 horizontalArrangement = Arrangement.spacedBy(6.dp),
                             ) {
                                 Icon(Icons.Rounded.Link, null, tint = Tide.aquaDeep, modifier = Modifier.size(16.dp))

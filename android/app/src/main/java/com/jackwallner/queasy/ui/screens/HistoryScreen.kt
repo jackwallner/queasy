@@ -34,6 +34,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.contentDescription
@@ -217,7 +218,7 @@ private fun HeatmapCard(days: List<EpisodeStats.HeatmapDay>) {
 @Composable
 private fun HeatmapGrid(days: List<EpisodeStats.HeatmapDay>) {
     val first = days.firstOrNull() ?: return
-    val firstDayOfWeek = WeekFields.of(Locale.getDefault()).firstDayOfWeek
+    val firstDayOfWeek = WeekFields.of(LocalConfiguration.current.locales[0]).firstDayOfWeek
     val lead = (first.date.dayOfWeek.value - firstDayOfWeek.value + 7) % 7
     val cells: List<EpisodeStats.HeatmapDay?> = List(lead) { null } + days
     Row(Modifier.horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(3.dp)) {

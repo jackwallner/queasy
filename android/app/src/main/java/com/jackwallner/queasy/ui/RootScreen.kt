@@ -2,7 +2,6 @@ package com.jackwallner.queasy.ui
 
 import android.app.Activity
 import android.content.Intent
-import android.net.Uri
 import androidx.activity.compose.BackHandler
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.MutableTransitionState
@@ -44,6 +43,7 @@ import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.core.net.toUri
 import com.google.android.play.core.review.ReviewManagerFactory
 import com.jackwallner.queasy.AppGraph
 import com.jackwallner.queasy.Overlay
@@ -104,7 +104,7 @@ private fun requestPlayReview(activity: Activity) {
 }
 
 fun Activity.openUrl(url: String) {
-    runCatching { startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url))) }
+    runCatching { startActivity(Intent(Intent.ACTION_VIEW, url.toUri())) }
 }
 
 @Composable

@@ -121,6 +121,9 @@ class PressReminders(private val context: Context, private val defaults: KeyValu
         )
 
         fun post(context: Context, hour: Int) {
+            if (Build.VERSION.SDK_INT >= 33 &&
+                ContextCompat.checkSelfPermission(context, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED
+            ) return
             val manager = context.getSystemService(NotificationManager::class.java) ?: return
             manager.createNotificationChannel(
                 NotificationChannel(CHANNEL_ID, context.getString(R.string.reminder_channel), NotificationManager.IMPORTANCE_DEFAULT),
@@ -138,7 +141,11 @@ class PressReminders(private val context: Context, private val defaults: KeyValu
                 .setContentIntent(open)
                 .setAutoCancel(true)
                 .build()
-            runCatching { NotificationManagerCompat.from(context).notify(1000 + hour, notification) }
+            try {
+                NotificationManagerCompat.from(context).notify(1000 + hour, notification)
+            } catch (_: SecurityException) {
+                // Permission revoked between the check and the post.
+            }
         }
     }
 }
@@ -157,7 +164,15 @@ class PressReminderReceiver : BroadcastReceiver() {
 /** Alarms do not survive a reboot, an update or a clock change; lay them again. */
 class PressReminderRescheduler : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
+        if (intent.action !in RESCHEDULE_ACTIONS) return
         val graph = (context.applicationContext as QueasyApplication).graph
         if (graph.subscriptions.isPro) graph.reminders.refresh()
     }
 }
+
+private val RESCHEDULE_ACTIONS = setOf(
+    Intent.ACTION_BOOT_COMPLETED,
+    Intent.ACTION_MY_PACKAGE_REPLACED,
+    Intent.ACTION_TIMEZONE_CHANGED,
+    Intent.ACTION_TIME_CHANGED,
+)

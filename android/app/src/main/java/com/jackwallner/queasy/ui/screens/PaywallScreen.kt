@@ -1,6 +1,6 @@
 package com.jackwallner.queasy.ui.screens
 
-import android.app.Activity
+import androidx.activity.compose.LocalActivity
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -47,7 +47,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.contentDescription
@@ -158,7 +157,7 @@ private fun Empty() {
 private fun Content(selected: Plan?, onSelect: (Plan) -> Unit, closable: Boolean) {
     val graph = LocalGraph.current
     val subs = graph.subscriptions
-    val context = LocalContext.current
+    val activity = LocalActivity.current
     val scope = rememberCoroutineScope()
     var purchasing by remember { mutableStateOf(false) }
     var error by remember { mutableStateOf<String?>(null) }
@@ -219,13 +218,13 @@ private fun Content(selected: Plan?, onSelect: (Plan) -> Unit, closable: Boolean
             tag = "paywall-cta",
             onClick = {
                 val plan = selected ?: return@TideButton
-                val activity = context as? Activity ?: return@TideButton
+                val host = activity ?: return@TideButton
                 error = null
                 note = null
                 purchasing = true
                 scope.launch {
                     try {
-                        when (subs.purchase(activity, plan)) {
+                        when (subs.purchase(host, plan)) {
                             PurchaseOutcome.PURCHASED -> Unit
                             PurchaseOutcome.PENDING -> note = SubscriptionService.PENDING_MESSAGE
                             PurchaseOutcome.CANCELLED -> Unit
@@ -368,7 +367,7 @@ private fun PlanCard(plan: Plan, isSelected: Boolean, showsTrial: Boolean, savin
 @Composable
 private fun LegalFooter(onRestoreMessage: (String) -> Unit) {
     val graph = LocalGraph.current
-    val activity = LocalContext.current as? Activity
+    val activity = LocalActivity.current
     val scope = rememberCoroutineScope()
     var restoring by remember { mutableStateOf(false) }
     Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(14.dp, Alignment.CenterHorizontally), verticalAlignment = Alignment.CenterVertically) {

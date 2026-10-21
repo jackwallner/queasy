@@ -1,5 +1,6 @@
 package com.jackwallner.queasy.ui.screens
 
+import androidx.activity.compose.LocalActivity
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -23,7 +24,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -66,7 +66,7 @@ fun SheetScaffold(
 @Composable
 fun ModeStartScreen(mode: ReliefMode, onClose: () -> Unit) {
     val graph = LocalGraph.current
-    val context = LocalContext.current
+    val activity = LocalActivity.current
     val isPro = graph.subscriptions.isPro
     val plan = graph.modePlan(mode)
     val seconds = effectiveSeconds(plan, isPro)
@@ -114,7 +114,7 @@ fun ModeStartScreen(mode: ReliefMode, onClose: () -> Unit) {
                     mode.sourceUrl?.let { url ->
                         QuietButton(
                             "Read the source",
-                            onClick = { (context as? android.app.Activity)?.openUrl(url) },
+                            onClick = { activity?.openUrl(url) },
                             color = Tide.aqua,
                             icon = Icons.AutoMirrored.Rounded.OpenInNew,
                         )

@@ -45,11 +45,13 @@ paths:
 - Billing: RevenueCat project `proj2744fe37` (shared with iOS). Debug uses the
   Test Store app `appeb637c4dc1` (key in ignored `local.properties`
   `REVENUECAT_TEST_KEY`), offering `default`, entitlement lookup key
-  "Queasy Pro"; any active entitlement unlocks Pro, as on iOS. Release needs a
-  `goog_` key: no RevenueCat Play app exists yet.
-- Reviewer access: Settings > About > long-press Version, code
-  `PLAY_REVIEW_CODE` in `~/.queasy_credentials` (created on jmbp 2026-10-20;
-  copy it and `PLAY_REVIEW_CODE_SHA256` to the Air before the release build).
+  "Queasy Pro"; any active entitlement unlocks Pro, as on iOS. Release uses
+  the `goog_` key of RevenueCat Play app `app95e75d7057` (created 2026-10-21)
+  in the Air's `local.properties` `REVENUECAT_PLAY_KEY`.
+- Reviewer access: Settings > About > long-press Version. The release build
+  embeds the digest of the Air's `QUEASY_PLAY_REVIEW_CODE` (`~/.queasy_credentials`,
+  2026-10-21); give Play's App access form that code, not jmbp's older
+  `PLAY_REVIEW_CODE`.
 - Debug launch extras (debug only, `src/debug/.../DebugLaunchOptions.kt`):
   `uiTest`, `resetAll`, `onboarded`, `demoPro`, `previewStore`,
   `previewTrialUsed`, `seedDemo`, `heatmap`, `launchCount`, `learnCard <id>`,
@@ -72,32 +74,41 @@ paths:
 - jmbp is an Intel i7-5557U: emulator motion records at about 7 fps, so native
   60 fps cannot be proven there. Motion review belongs on faster hardware.
 
-## Release state (2026-10-20)
+## Release state (2026-10-21)
 
 - Build and test acceptance done on jmbp (run shift-android-queasy-3-1792543160):
   99 JVM tests, 12 device tests, lint clean, QA build ignores debug hooks.
-  No Play app, upload key, RevenueCat Play app, Play products or upload yet.
-- Packaging attempt on the Air, 2026-10-21 (run shift-android-package-queasy-1-1792569884):
-  blocked, no artifacts. `./gradlew assembleRelease bundleRelease` stops at
-  `validateReleaseConfiguration` ("Set REVENUECAT_PLAY_KEY"). Preflight found no
-  `queasy-upload.p12`, no `android/local.properties` in `~/queasy`, no
-  `PLAY_REVIEW_CODE` in the Air's `~/.queasy_credentials`, and RevenueCat
-  `proj2744fe37` has only App Store and Test Store apps. Evidence in
-  `~/fleet-evidence/shift-android-package-queasy-1-1792569884/`. The Air needs
-  `sdk.dir=/Users/jackwallner/Library/Android/sdk` in `local.properties`.
-  Rerun the package task once steps 1 to 4 below are done.
+- Signed release packaged and verified on the Air (run
+  shift-android-package-queasy-2-1792592980, source 326ed8b, android tree
+  2bb524b, identical to `main`): `queasy-1.1.4-vc1.aab` (sha256 59422e75...)
+  and `.apk` (e5a58cc6...) in
+  `~/fleet-artifacts/shift-android-package-queasy-2-1792592980/`. Package
+  `com.jackwallner.queasy`, versionCode 1, versionName 1.1.4, targetSdk 36,
+  not debuggable. APK v2 signature and AAB jarsigner both match upload key
+  `~/.android/keystores/queasy-upload.p12` alias `upload` (cert SHA-256
+  13a34c54b70cb6a69c422d137cf69e17d1c638e6d4dffc6a7962e548280c0316; backup in
+  `keystores/backups`). zipalign -P 16 passes; the only native library,
+  `libandroidx.graphics.path.so`, has 16 KB ELF alignment on all four ABIs
+  and is stored uncompressed. Release dex holds the `goog_` key and the review
+  digest, and no Test Store key, plain review code or debug-extra string.
+  Evidence (`release-preflight`, `build`, `signature-verify`) in
+  `~/fleet-evidence/shift-android-package-queasy-2-1792592980/`. Rebuild:
+  `JAVA_HOME=<temurin-17> ./gradlew --no-daemon assembleRelease bundleRelease`
+  from `android/` with the Air's `local.properties` (the guard permits it),
+  then rerun that run's `verify.py`.
+- `~/.rc-clean/apps.json` now has the queasy android block (2026-10-21).
+- Play state 2026-10-21: nothing uploaded, no track, nothing staged or in
+  review. RevenueCat Play app `app95e75d7057` has no products attached.
 - Remaining, in order (Air release worker / Console):
   1. Decide the Android US price (fleet rule $2.39 / $11.99 / $23.99, or iOS parity).
-  2. Create the upload keystore `~/.android/keystores/queasy-upload.p12` and
-     `PLAY_UPLOAD_*` in `local.properties`; build signed AAB/APK.
-  3. Create the Play app (E3 Apps), the three products with `trial-7d` offers.
-  4. Add a RevenueCat Play app to `proj2744fe37`, attach the Play products to
-     the `default` offering packages, put its `goog_` key in `local.properties`,
-     and register it in `~/.rc-clean/apps.json` (android block plus
-     `"ios": {"filter_platform": "iOS"}`) the same day.
-  5. Listing, graphics and policy answers from `android/play-assets/listing-en-US.md`;
+  2. Create the Play app (E3 Apps) if it does not exist, and the three products
+     with `trial-7d` offers.
+  3. Attach the Play products to the RevenueCat Play app, the `default`
+     offering packages and the "Queasy Pro" entitlement.
+  4. Listing, graphics and policy answers from `android/play-assets/listing-en-US.md`;
      publish the updated `privacy-policy.html`.
-  6. Internal track upload, licensed-tester purchase and restore, then a
-     production draft. Production send waits for its pacing slot.
+  5. Upload `queasy-1.1.4-vc1.aab` to internal testing (bump versionCode for any
+     later upload), licensed-tester purchase and restore, then a production
+     draft. Production send waits for its pacing slot.
 - Not ported, decision for Jack: a Wear OS companion (the iOS Watch app's
   extended-runtime background haptics). v1 is phone-only.

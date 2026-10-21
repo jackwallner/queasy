@@ -111,6 +111,14 @@ drop the bullet.
 5. Licensed-tester purchase and restore on the internal track, then a
    production draft. The production send waits for its pacing slot.
 
+## Update 2026-10-21: signed release packaged
+
+Run shift-android-package-queasy-2-1792592980 built and verified the signed
+AAB and APK on the Air (versionCode 1, 1.1.4, targetSdk 36, upload key cert
+13a34c54..., 16 KB aligned, debug hooks absent). Steps 2 and the RevenueCat
+Play app part of 4 are done; artifacts, hashes and evidence paths are in
+`.claude/rules/android.md`. Nothing is uploaded to Play yet.
+
 ## Housekeeping
 
 Emulator emulator-5556 (agent-emu-1) stopped; Gradle daemon stopped;

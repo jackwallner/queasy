@@ -163,7 +163,7 @@ private fun Running(onClose: () -> Unit) {
                     checked = session.toneEnabled,
                     onCheckedChange = session::updateToneEnabled,
                     modifier = Modifier.testTag("tone-toggle"),
-                    colors = SwitchDefaults.colors(checkedTrackColor = Tide.aqua, checkedThumbColor = Color.White),
+                    colors = SwitchDefaults.colors(checkedTrackColor = Tide.aqua, checkedThumbColor = Color.White, uncheckedTrackColor = Tide.paper3, uncheckedThumbColor = Tide.ink3, uncheckedBorderColor = Tide.ink3.copy(alpha = 0.5f)),
                 )
             }
         }

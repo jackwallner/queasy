@@ -70,6 +70,14 @@ the load-bearing decision for the Watch app. Read
 `WatchLauncher` or `QueasySyncService`; it loads automatically when you read those
 files, and Codex and other agents should open it directly.
 
+## Android
+
+Native Kotlin/Compose port in `android/` (package `com.jackwallner.queasy`,
+phone-only, no Wear OS). Read `.claude/rules/android.md` before touching
+`android/` or the `scripts/android-*` and `scripts/sync-android-*` tools; it
+holds the parity export, the paid boundary, the test commands and the Play
+release steps still to do.
+
 ## Products
 
 `com.jackwallner.queasy.pro.monthly` $2.99 · `.pro.yearly` $14.99 · `.pro.lifetime`

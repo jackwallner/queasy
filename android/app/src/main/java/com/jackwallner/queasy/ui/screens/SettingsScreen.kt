@@ -241,7 +241,7 @@ private fun ToggleRow(title: String, checked: Boolean, tag: String, onChange: (B
             checked = checked,
             onCheckedChange = onChange,
             modifier = Modifier.testTag(tag),
-            colors = SwitchDefaults.colors(checkedTrackColor = Tide.aqua, checkedThumbColor = Color.White),
+            colors = SwitchDefaults.colors(checkedTrackColor = Tide.aqua, checkedThumbColor = Color.White, uncheckedTrackColor = Tide.paper3, uncheckedThumbColor = Tide.ink3, uncheckedBorderColor = Tide.ink3.copy(alpha = 0.5f)),
         )
     }
 }

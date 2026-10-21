@@ -72,23 +72,24 @@ paths:
 - jmbp is an Intel i7-5557U: emulator motion records at about 7 fps, so native
   60 fps cannot be proven there. Motion review belongs on faster hardware.
 
-## Release state (2026-10-20)
+## Release state (2026-10-21)
 
 - Build and test acceptance done on jmbp (run shift-android-queasy-3-1792543160):
   99 JVM tests, 12 device tests, lint clean, QA build ignores debug hooks.
-  No Play app, upload key, RevenueCat Play app, Play products or upload yet.
+- Done 2026-10-21: upload keystore `~/.android/keystores/queasy-upload.p12`
+  (password in `~/.queasy_credentials`), RevenueCat Play app in `proj2744fe37`,
+  `goog_`/`test_` keys, `PLAY_UPLOAD_*` and the review code hash in
+  `local.properties` on the Air, rc-clean registered on the Air and MBP,
+  listing graphics and screenshots made.
 - Remaining, in order (Air release worker / Console):
-  1. Decide the Android US price (fleet rule $2.39 / $11.99 / $23.99, or iOS parity).
-  2. Create the upload keystore `~/.android/keystores/queasy-upload.p12` and
-     `PLAY_UPLOAD_*` in `local.properties`; build signed AAB/APK.
-  3. Create the Play app (E3 Apps), the three products with `trial-7d` offers.
-  4. Add a RevenueCat Play app to `proj2744fe37`, attach the Play products to
-     the `default` offering packages, put its `goog_` key in `local.properties`,
-     and register it in `~/.rc-clean/apps.json` (android block plus
-     `"ios": {"filter_platform": "iOS"}`) the same day.
-  5. Listing, graphics and policy answers from `android/play-assets/listing-en-US.md`;
-     publish the updated `privacy-policy.html`.
-  6. Internal track upload, licensed-tester purchase and restore, then a
+  1. Jack: the Android US price (fleet rule $2.39 / $11.99 / $23.99, or iOS parity).
+  2. Play app record (E3 Apps). Play hit its weekly new-app limit on 2026-10-21;
+     retry the next week. The name matches the App Store name.
+  3. The three products with `trial-7d` offers, attached to the `default`
+     offering packages; grant the RevenueCat service account on the new app.
+  4. Signed AAB/APK; listing, graphics and policy answers from
+     `android/play-assets/listing-en-US.md`; publish the updated `privacy-policy.html`.
+  5. Internal track upload, licensed-tester purchase and restore, then a
      production draft. Production send waits for its pacing slot.
 - Not ported, decision for Jack: a Wear OS companion (the iOS Watch app's
   extended-runtime background haptics). v1 is phone-only.

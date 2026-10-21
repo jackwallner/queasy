@@ -1,3 +1,5 @@
+@file:OptIn(androidx.compose.ui.text.ExperimentalTextApi::class)
+
 package com.jackwallner.queasy.ui.theme
 
 import androidx.compose.material3.MaterialTheme
@@ -9,6 +11,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
+import androidx.compose.ui.text.font.FontVariation
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
@@ -52,11 +55,17 @@ object Tide {
     val ctaGradient = Brush.verticalGradient(listOf(aqua, aquaDeep))
 }
 
+private val weights = listOf(FontWeight.Normal, FontWeight.Medium, FontWeight.SemiBold, FontWeight.Bold)
+
+/** Both bundled fonts are variable: each weight is an axis setting on the one file. */
+private fun variable(res: Int, weight: FontWeight, style: FontStyle) =
+    Font(res, weight, style, variationSettings = FontVariation.Settings(FontVariation.weight(weight.weight)))
+
 /** The ritual serif italic (iOS uses New York italic; Newsreader is its open-licence match). */
-val SerifItalic = FontFamily(Font(R.font.newsreader_italic, FontWeight.Normal, FontStyle.Italic))
+val SerifItalic = FontFamily(weights.map { variable(R.font.newsreader_italic, it, FontStyle.Italic) })
 
 /** Rounded numerals and headings (SF Rounded on iOS). */
-val Rounded = FontFamily(Font(R.font.nunito))
+val Rounded = FontFamily(weights.map { variable(R.font.nunito, it, FontStyle.Normal) })
 
 object TideType {
     fun display(size: TextUnit) = TextStyle(fontFamily = SerifItalic, fontStyle = FontStyle.Italic, fontSize = size, color = Tide.ink)

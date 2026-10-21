@@ -38,7 +38,9 @@ import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -68,7 +70,9 @@ fun RootScreen(activity: Activity) {
         if (!graph.settings.hasCompletedOnboarding) {
             OnboardingScreen()
         } else {
-            Tabs(graph)
+            // Under a sheet the tabs are neither readable by TalkBack nor tappable.
+            val covered = graph.navigator.overlays.isNotEmpty()
+            Box(if (covered) Modifier.clearAndSetSemantics {} else Modifier) { Tabs(graph) }
             Overlays(graph)
         }
         graph.episodes.saveFailure?.let { message ->
@@ -164,7 +168,7 @@ private fun OverlayHost(overlay: Overlay, isTop: Boolean) {
     // Slides up like an iOS sheet; removal is immediate so back never waits on an animation.
     val visible = remember { MutableTransitionState(false).apply { targetState = true } }
     AnimatedVisibility(visibleState = visible, enter = slideInVertically(tween(320)) { it / 4 } + fadeIn(tween(220))) {
-        Box(Modifier.fillMaxSize().background(Tide.paper)) {
+        Box(Modifier.fillMaxSize().background(Tide.paper).blockTouchesBelow()) {
             when (overlay) {
                 is Overlay.CheckIn -> CheckInScreen(overlay.prefill, onClose = { graph.navigator.remove(overlay) })
                 is Overlay.ModeStart -> ModeStartScreen(overlay.mode, onClose = { graph.navigator.remove(overlay) })
@@ -172,6 +176,13 @@ private fun OverlayHost(overlay: Overlay, isTop: Boolean) {
                 is Overlay.Paywall -> PaywallScreen(overlay.impressionId, overlay.closable, onClose = { graph.navigator.remove(overlay) })
             }
         }
+    }
+}
+
+/** A sheet swallows every touch its content leaves unhandled, so nothing reaches the tabs behind it. */
+private fun Modifier.blockTouchesBelow() = pointerInput(Unit) {
+    awaitPointerEventScope {
+        while (true) awaitPointerEvent().changes.forEach { it.consume() }
     }
 }
 

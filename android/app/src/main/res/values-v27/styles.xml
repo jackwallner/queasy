@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Queasy" parent="android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">#DAF0EC</item>
+        <item name="android:navigationBarColor">#EAF3F2</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:windowBackground">#EAF3F2</item>
+        <item name="android:colorAccent">#55B5A9</item>
+    </style>
+</resources>

@@ -64,7 +64,8 @@ final class NewcomerAuditUITests: XCTestCase {
     // MARK: - 2. Quick start: tap, session, rate, history
 
     func testQuickStartSession() {
-        let app = launch(["-QueasySeedDemoData-none"])
+        let app = launch()
+        shot("fresh-launch")
         let quick = app.buttons["quick-start"]
         if !quick.waitForExistence(timeout: 15) {
             let skip = app.buttons["onboarding-phone-only"]
@@ -212,6 +213,39 @@ final class NewcomerAuditUITests: XCTestCase {
             shot("paywall")
             app.swipeUp(); sleep(1)
             shot("paywall-scrolled")
+        }
+    }
+
+    // MARK: - 6. Settings load time (main-thread stall seen in the first run)
+
+    func testSettingsTimed() {
+        let app = launch()
+        let tabs = app.tabBars.buttons["Settings"]
+        if !tabs.waitForExistence(timeout: 15) {
+            let cont = app.buttons["onboarding-continue"]
+            let skip = app.buttons["onboarding-phone-only"]
+            while !skip.exists, cont.exists { cont.tap(); sleep(1) }
+            if skip.exists { skip.tap() }
+        }
+        XCTAssertTrue(tabs.waitForExistence(timeout: 15))
+        let start = Date()
+        tabs.tap()
+        let toggle = app.switches["press-reminders"]
+        let appeared = toggle.waitForExistence(timeout: 60)
+        let elapsed = Date().timeIntervalSince(start)
+        note("settings-load", "Settings content visible=\(appeared) after \(String(format: "%.1f", elapsed))s")
+        shot("settings-loaded")
+        if appeared {
+            app.swipeUp(); sleep(1)
+            shot("settings-scrolled")
+            app.swipeDown()
+            let pro = app.buttons["settings-see-pro"]
+            if pro.exists {
+                pro.tap(); sleep(4)
+                shot("paywall")
+                app.swipeUp(); sleep(1)
+                shot("paywall-scrolled")
+            }
         }
     }
 }

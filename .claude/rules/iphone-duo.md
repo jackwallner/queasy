@@ -19,8 +19,13 @@ paths:
 - `UnfoldedSplitView` is one view tree: the primary pane is never rebuilt on
   fold/unfold, so Relieve, Learn and Settings keep scroll, navigation and
   presentations. Only the History pane and tab are separate instances. Each
-  pane gets `horizontalSizeClass = .compact`, which keeps the phone layout and
-  the bottom tab bar.
+  pane gets `horizontalSizeClass = .compact`, which keeps the phone layout.
+  The system picks the primary pane's tab bar itself: a floating capsule at
+  the pane's bottom in some runs, a vertical bar at its trailing edge in
+  others. Either way it stays in the pane.
+- The inner display's status bar and toolbar items form a vertical bar on
+  the trailing edge (about 85 pt), so the History pane's content is narrower
+  than Relieve's. That is the hardware; the panes still meet the fold edges.
 - A mode's detail and the check-in (`ReliefPanel`) open as a sheet on a
   phone and in the trailing pane when split, over History, beside the grid
   they came from; a centred form sheet straddles the fold (iter1 capture).

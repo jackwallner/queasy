@@ -88,7 +88,6 @@ struct QueasyApp: App {
             ))
         }
         try? context.save()
-        AppSettings.shared.showHistoryHeatmap = true
     }
     #endif
 

@@ -38,7 +38,7 @@ struct PaywallView: View {
 
     var body: some View {
         ZStack(alignment: .top) {
-            Theme.paper.ignoresSafeArea()
+            Color.clear
 
             #if HAS_REVENUECAT
             if isScreenshotMode {
@@ -58,6 +58,8 @@ struct PaywallView: View {
                 closeButton
             }
         }
+        .leadingPaneColumn()
+        .background(Theme.paper.ignoresSafeArea())
         .onChange(of: subscriptions.isProSubscriber) { _, isPro in
             if isPro { dismiss() }
         }

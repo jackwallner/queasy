@@ -11,6 +11,9 @@ struct RootTabView: View {
     @State private var upgradeImpressionId = "queasy_after_session"
     @State private var reviewTask: Task<Void, Never>?
     @State private var tab = Self.initialTab
+    #if DEBUG
+    @State private var duoTour = DuoTour.shared
+    #endif
 
     /// `-QueasyTab history|learn|settings` opens straight onto a tab, so a
     /// headless simulator (which can be launched but not tapped) can still be
@@ -30,22 +33,40 @@ struct RootTabView: View {
         #endif
     }
 
+    /// Folded, four tabs. Unfolded, the tabs and their bar take the pane before
+    /// the fold and History the pane after it, so what you try now sits beside
+    /// what helped before. The History tab drops out of the bar while split.
     var body: some View {
-        TabView(selection: $tab) {
-            RelieveHomeView()
-                .tabItem { Label("Relieve", systemImage: "dot.radiowaves.left.and.right") }
-                .tag(0)
+        UnfoldedSplitView { isSplit in
+            TabView(selection: $tab) {
+                RelieveHomeView()
+                    .tabItem { Label("Relieve", systemImage: "dot.radiowaves.left.and.right") }
+                    .tag(0)
+                if !isSplit {
+                    HistoryView()
+                        .tabItem { Label("History", systemImage: "clock.arrow.circlepath") }
+                        .tag(1)
+                }
+                LearnView()
+                    .tabItem { Label("Learn", systemImage: "book") }
+                    .tag(2)
+                SettingsView()
+                    .tabItem { Label("Settings", systemImage: "gearshape") }
+                    .tag(3)
+            }
+            .onChange(of: isSplit) { _, isSplit in
+                if isSplit, tab == 1 { tab = 0 }
+            }
+        } secondary: {
             HistoryView()
-                .tabItem { Label("History", systemImage: "clock.arrow.circlepath") }
-                .tag(1)
-            LearnView()
-                .tabItem { Label("Learn", systemImage: "book") }
-                .tag(2)
-            SettingsView()
-                .tabItem { Label("Settings", systemImage: "gearshape") }
-                .tag(3)
         }
+        .tideBackground()
         .tint(Theme.aqua)
+        #if DEBUG
+        .onChange(of: duoTour.scene) { _, scene in
+            tab = DuoTour.tab(for: scene)
+        }
+        #endif
         .onChange(of: reviewCoordinator.momentCount) { _, _ in
             scheduleReviewRequestAfterPositiveMoment()
         }

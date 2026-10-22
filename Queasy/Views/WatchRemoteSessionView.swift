@@ -30,15 +30,17 @@ struct WatchRemoteSessionView: View {
     }
 
     var body: some View {
-        ZStack {
-            Theme.tideWash.ignoresSafeArea()
+        UnfoldedSplitView { _ in
             switch step {
             case .running:
                 runningView
             case .rating:
                 ratingView
             }
+        } secondary: {
+            HistoryView()
         }
+        .tideBackground()
         .onChange(of: mirror.phase) { _, phase in
             // The watch ended it (timer ran out, or "I'm Done" on the wrist).
             if phase == .ended, step == .running {

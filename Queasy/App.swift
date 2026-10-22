@@ -24,6 +24,8 @@ struct QueasyApp: App {
         if args.contains("-QueasySeedDemoData") {
             Self.seedDemoData()
         }
+        // Not tied to a view's task: a session cover would cancel it.
+        Task { await DuoTour.shared.run() }
         #endif
         ConversionDiagnostics.recordAppOpen()
         ReviewPromptTracker.recordAppLaunch()

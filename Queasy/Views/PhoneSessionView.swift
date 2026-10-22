@@ -24,8 +24,9 @@ struct PhoneSessionView: View {
     private var mode: ReliefMode { controller.mode }
 
     var body: some View {
-        ZStack {
-            Theme.tideWash.ignoresSafeArea()
+        // Unfolded, the session takes the pane before the fold and History
+        // the pane after it: the routine beside how earlier ones went.
+        UnfoldedSplitView { _ in
             switch controller.phase {
             case .running:
                 runningView
@@ -34,7 +35,10 @@ struct PhoneSessionView: View {
             case .idle:
                 Color.clear.onAppear { dismiss() }
             }
+        } secondary: {
+            HistoryView()
         }
+        .tideBackground()
     }
 
     // MARK: - Running

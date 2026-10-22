@@ -23,6 +23,9 @@ struct RelieveHomeView: View {
     @State private var showWatchSession = false
     @State private var sheetMode: ReliefMode?
     @State private var watchFeedback: String?
+    #if DEBUG
+    @State private var duoTour = DuoTour.shared
+    #endif
 
     /// Quick start reuses the last plan when there is one, otherwise the
     /// evergreen default (Pulse, level 5, 15 min).
@@ -109,6 +112,11 @@ struct RelieveHomeView: View {
                 await openDebugScreen()
                 #endif
             }
+            #if DEBUG
+            .onChange(of: duoTour.scene) { _, scene in
+                openTourScene(scene)
+            }
+            #endif
             .sheet(isPresented: $showCheckIn) {
                 CheckInView { plan in
                     settings.lastPlan = plan
@@ -329,6 +337,29 @@ struct RelieveHomeView: View {
             var plan = ReliefPlan.quickStart(mode: mode)
             plan.breathe = .relaxed
             PhoneSessionController.shared.start(plan: plan, seconds: FreeTier.sessionSeconds)
+        }
+    }
+
+    /// One `DuoTour` step: close whatever the last scene opened, then open
+    /// this one once the dismissal has finished animating.
+    private func openTourScene(_ scene: String?) {
+        if controller.phase != .idle { controller.cancel() }
+        showCheckIn = false
+        sheetMode = nil
+        Task {
+            try? await Task.sleep(for: .milliseconds(900))
+            switch scene {
+            case "session-breathe":
+                var plan = ReliefPlan.quickStart(mode: .breathe)
+                plan.breathe = .relaxed
+                controller.start(plan: plan, seconds: FreeTier.sessionSeconds)
+            case "mode-breathe":
+                sheetMode = .breathe
+            case "checkin":
+                showCheckIn = true
+            default:
+                break
+            }
         }
     }
     #endif

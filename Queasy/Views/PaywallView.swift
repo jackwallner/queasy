@@ -44,13 +44,13 @@ struct PaywallView: View {
 
             #if HAS_REVENUECAT
             if isScreenshotMode {
-                mockPaywallContent
+                scrollsWhenTall(mockPaywallContent)
             } else if subscriptions.isLoadingProducts && subscriptions.products.isEmpty {
                 loadingState
             } else if subscriptions.products.isEmpty {
                 emptyState
             } else {
-                paywallContent
+                scrollsWhenTall(paywallContent)
             }
             #else
             offlinePlaceholder
@@ -136,6 +136,16 @@ struct PaywallView: View {
         #else
         return "Check your connection and try again."
         #endif
+    }
+
+    /// The iPhone Duo's displays are 669 to 678 pt tall, too short for the
+    /// whole paywall, so there it scrolls instead of truncating its copy.
+    private func scrollsWhenTall(_ content: some View) -> some View {
+        ViewThatFits(in: .vertical) {
+            content
+            ScrollView { content }
+                .scrollBounceBehavior(.basedOnSize)
+        }
     }
 
     private var paywallContent: some View {

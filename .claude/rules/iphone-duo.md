@@ -32,7 +32,8 @@ paths:
   Their Close/Cancel calls `ReliefPanel.shared.close()`, not `dismiss`.
   Paywall sheets use `.foldAwareSheet`, which becomes a full-screen cover
   inside an unfolded pane (`isUnfoldedPane`), with the paywall in the
-  leading pane.
+  leading pane. Both Duo displays are 669 to 678 pt tall, shorter than the
+  paywall, so it scrolls there (`scrollsWhenTall`) instead of truncating.
 - Phone and watch-remote sessions (full-screen covers) use the same split: the
   routine before the fold, History after it. Onboarding and the full-screen
   paywall use `.leadingPaneColumn()` before their background.
@@ -42,4 +43,9 @@ paths:
   `noop://N` URLs as shutter ticks shoots both displays; `DuoTour` walks the
   scenes on a timer and logs `DUOTOUR` lines. Never drive captures by custom
   URL scheme (the "Open in?" alert cannot be tapped). Inner 2853x2007
-  landscape, outer 1398x2034.
+  landscape, outer 1398x2034. `-DuoTour` also makes the paywall show its
+  static plan cards (RevenueCat never loads on the runner).
+- Video: `gh-sim all --record-seconds` loses the launch recordings (the
+  test-phase recorder never releases the display). Record with a separate
+  `gh-sim launch --record-seconds 40`. The inner video comes back
+  2006x2852, the panel's native portrait framebuffer; do not rotate it.

@@ -76,11 +76,13 @@ struct UnfoldedSplitView<Primary: View, Secondary: View>: View {
             // Each pane is phone-width, so its screen lays out as on a phone.
             primary(split != nil)
                 .environment(\.horizontalSizeClass, split == nil ? horizontalSizeClass : .compact)
+                .environment(\.isUnfoldedPane, split != nil)
                 .frame(maxWidth: split?.primaryWidth ?? .infinity, maxHeight: .infinity)
 
             if let split {
                 secondary()
                     .environment(\.horizontalSizeClass, .compact)
+                    .environment(\.isUnfoldedPane, true)
                     .frame(maxWidth: split.secondaryWidth, maxHeight: .infinity)
                     .padding(.leading, split.secondaryX)
             }
@@ -96,5 +98,44 @@ extension View {
     /// the screen's background so the wash still fills the display.
     func leadingPaneColumn() -> some View {
         UnfoldedSplitView { _ in self } secondary: { EmptyView() }
+    }
+}
+
+extension EnvironmentValues {
+    /// True inside a pane of the unfolded split, where `horizontalSizeClass`
+    /// has been narrowed to compact and no longer says the display is wide.
+    @Entry var isUnfoldedPane = false
+}
+
+extension View {
+    /// A sheet on a phone. Inside an unfolded pane, a full-screen cover
+    /// instead, since a centred sheet would sit across the fold; the screen
+    /// keeps itself to one pane (the paywall uses `leadingPaneColumn`).
+    func foldAwareSheet<Sheet: View>(
+        isPresented: Binding<Bool>,
+        onDismiss: (() -> Void)? = nil,
+        @ViewBuilder content: @escaping () -> Sheet
+    ) -> some View {
+        modifier(FoldAwareSheet(isPresented: isPresented, onDismiss: onDismiss, sheet: content))
+    }
+}
+
+private struct FoldAwareSheet<Sheet: View>: ViewModifier {
+    @Environment(\.isUnfoldedPane) private var isUnfoldedPane
+    @Binding var isPresented: Bool
+    var onDismiss: (() -> Void)?
+    var sheet: () -> Sheet
+
+    func body(content: Content) -> some View {
+        content
+            .sheet(isPresented: presented(when: !isUnfoldedPane), onDismiss: onDismiss, content: sheet)
+            .fullScreenCover(isPresented: presented(when: isUnfoldedPane), onDismiss: onDismiss, content: sheet)
+    }
+
+    private func presented(when active: Bool) -> Binding<Bool> {
+        Binding(
+            get: { active && isPresented },
+            set: { if !$0, active { isPresented = false } }
+        )
     }
 }

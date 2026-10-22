@@ -54,11 +54,25 @@ struct RootTabView: View {
                     .tabItem { Label("Settings", systemImage: "gearshape") }
                     .tag(3)
             }
-            .onChange(of: isSplit) { _, isSplit in
+            .onChange(of: isSplit, initial: true) { _, isSplit in
+                ReliefPanel.shared.opensInPane = isSplit
                 if isSplit, tab == 1 { tab = 0 }
             }
+            .foldAwareSheet(isPresented: $showUpgrade, onDismiss: { upgradeCoordinator.clear() }) {
+                PaywallView(displayCloseButton: true, paywallImpressionId: upgradeImpressionId)
+            }
         } secondary: {
-            HistoryView()
+            // A mode or the check-in opens here, beside the grid it came from,
+            // over History, which stays mounted underneath.
+            ZStack {
+                HistoryView()
+                if let item = ReliefPanel.shared.item {
+                    ReliefPanelScreen(item: item)
+                        .id(item)
+                        .transition(.opacity)
+                }
+            }
+            .animation(.easeInOut(duration: 0.25), value: ReliefPanel.shared.item)
         }
         .tideBackground()
         .tint(Theme.aqua)
@@ -79,9 +93,6 @@ struct RootTabView: View {
                 upgradeImpressionId = id
                 showUpgrade = true
             }
-        }
-        .sheet(isPresented: $showUpgrade, onDismiss: { upgradeCoordinator.clear() }) {
-            PaywallView(displayCloseButton: true, paywallImpressionId: upgradeImpressionId)
         }
     }
 

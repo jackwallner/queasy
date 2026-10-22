@@ -5,7 +5,6 @@ struct CheckInView: View {
     /// Called with the final plan when the user starts (on either device).
     var onPlanReady: (ReliefPlan) -> Void
 
-    @Environment(\.dismiss) private var dismiss
     @State private var cause: NauseaCause?
     @State private var severity: Int?
     @State private var stillExposed: Bool?
@@ -47,7 +46,7 @@ struct CheckInView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("Cancel") { dismiss() }
+                    Button("Cancel") { ReliefPanel.shared.close() }
                         .foregroundStyle(Theme.ink2)
                 }
             }
@@ -287,7 +286,6 @@ struct RecommendationView: View {
 
     @Environment(AppSettings.self) private var settings
     @Environment(SubscriptionService.self) private var subscriptions
-    @Environment(\.dismiss) private var dismiss
     @State private var watchFeedback: String?
     @State private var chosenMode: ReliefMode?
     @State private var showPaywall = false
@@ -341,7 +339,7 @@ struct RecommendationView: View {
             settings.lastPlan = plan
         }
         .onAppear { watch.refresh() }
-        .sheet(isPresented: $showPaywall) {
+        .foldAwareSheet(isPresented: $showPaywall) {
             PaywallView(displayCloseButton: true, paywallImpressionId: "queasy_session_length")
         }
     }
@@ -536,7 +534,7 @@ struct RecommendationView: View {
                     ? "Starting on your watch…"
                     : "Sent. Open Queasy on your watch."
                 try? await Task.sleep(for: .seconds(1.8))
-                dismiss()
+                ReliefPanel.shared.close()
             }
         } else {
             // The home view watches the controller phase and presents the

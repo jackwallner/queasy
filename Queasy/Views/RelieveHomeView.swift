@@ -18,10 +18,9 @@ struct RelieveHomeView: View {
     @State private var controller = PhoneSessionController.shared
     @State private var watch = WatchAvailability.shared
     @State private var watchSession = WatchSessionMirror.shared
-    @State private var showCheckIn = false
     @State private var showSession = false
     @State private var showWatchSession = false
-    @State private var sheetMode: ReliefMode?
+    @State private var panel = ReliefPanel.shared
     @State private var watchFeedback: String?
     #if DEBUG
     @State private var duoTour = DuoTour.shared
@@ -117,16 +116,7 @@ struct RelieveHomeView: View {
                 openTourScene(scene)
             }
             #endif
-            .sheet(isPresented: $showCheckIn) {
-                CheckInView { plan in
-                    settings.lastPlan = plan
-                }
-            }
-            .sheet(item: $sheetMode) { mode in
-                ModeStartView(mode: mode) { plan in
-                    settings.lastPlan = plan
-                }
-            }
+            .sheet(item: panelSheet) { ReliefPanelScreen(item: $0) }
             .fullScreenCover(isPresented: $showSession) {
                 PhoneSessionView()
             }
@@ -137,8 +127,7 @@ struct RelieveHomeView: View {
             // UI from here once the sheet is out of the way.
             .onChange(of: controller.phase) { _, phase in
                 if phase == .running {
-                    showCheckIn = false
-                    sheetMode = nil
+                    panel.close()
                     Task {
                         try? await Task.sleep(for: .milliseconds(450))
                         showSession = true
@@ -151,8 +140,7 @@ struct RelieveHomeView: View {
                 if phase == .running { settings.hasConfirmedWatchSession = true }
                 if phase == .running, watchSession.pendingAutoPresent {
                     watchSession.pendingAutoPresent = false
-                    showCheckIn = false
-                    sheetMode = nil
+                    panel.close()
                     Task {
                         try? await Task.sleep(for: .milliseconds(450))
                         showWatchSession = true
@@ -160,6 +148,15 @@ struct RelieveHomeView: View {
                 }
             }
         }
+    }
+
+    /// Unfolded, the pane after the fold shows the panel instead of a sheet.
+    /// A sheet closing because the display unfolded must not clear it.
+    private var panelSheet: Binding<ReliefPanel.Item?> {
+        Binding(
+            get: { panel.opensInPane ? nil : panel.item },
+            set: { if $0 == nil, !panel.opensInPane { panel.close() } }
+        )
     }
 
     private var header: some View {
@@ -261,7 +258,7 @@ struct RelieveHomeView: View {
         ) {
             ForEach(ReliefMode.allCases) { mode in
                 Button {
-                    sheetMode = mode
+                    panel.open(.mode(mode))
                 } label: {
                     VStack(alignment: .leading, spacing: 8) {
                         Image(systemName: mode.symbolName)
@@ -288,7 +285,7 @@ struct RelieveHomeView: View {
 
     private var checkInButton: some View {
         Button {
-            showCheckIn = true
+            panel.open(.checkIn)
         } label: {
             HStack(spacing: 10) {
                 Image(systemName: "list.bullet.clipboard")
@@ -326,11 +323,11 @@ struct RelieveHomeView: View {
         try? await Task.sleep(for: .milliseconds(400))
 
         if screen == "checkin" || screen.hasPrefix("recommend-") {
-            showCheckIn = true
+            panel.open(.checkIn)
             return
         }
         if screen.hasPrefix("mode-"), let mode = ReliefMode(rawValue: String(screen.dropFirst(5))) {
-            sheetMode = mode
+            panel.open(.mode(mode))
             return
         }
         if screen.hasPrefix("session-"), let mode = ReliefMode(rawValue: String(screen.dropFirst(8))) {
@@ -344,8 +341,7 @@ struct RelieveHomeView: View {
     /// this one once the dismissal has finished animating.
     private func openTourScene(_ scene: String?) {
         if controller.phase != .idle { controller.cancel() }
-        showCheckIn = false
-        sheetMode = nil
+        panel.close()
         Task {
             try? await Task.sleep(for: .milliseconds(900))
             switch scene {
@@ -354,9 +350,9 @@ struct RelieveHomeView: View {
                 plan.breathe = .relaxed
                 controller.start(plan: plan, seconds: FreeTier.sessionSeconds)
             case "mode-breathe":
-                sheetMode = .breathe
+                panel.open(.mode(.breathe))
             case "checkin":
-                showCheckIn = true
+                panel.open(.checkIn)
             default:
                 break
             }

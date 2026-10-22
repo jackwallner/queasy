@@ -61,4 +61,12 @@ struct UnfoldedSplitTests {
         #expect(DuoTour.tab(for: "relieve") == 0)
         #expect(DuoTour.tab(for: nil) == 0)
     }
+
+    @MainActor @Test func reliefPanelOpensAndCloses() {
+        let panel = ReliefPanel.shared
+        panel.open(.mode(.breathe))
+        #expect(panel.item == .mode(.breathe))
+        panel.close()
+        #expect(panel.item == nil)
+    }
 }

@@ -48,7 +48,7 @@ struct HistoryView: View {
             .sheet(item: $exportURL) { url in
                 ActivityShareSheet(items: [url])
             }
-            .sheet(isPresented: $showPaywall) {
+            .foldAwareSheet(isPresented: $showPaywall) {
                 PaywallView(displayCloseButton: true, paywallImpressionId: "queasy_history")
             }
             .confirmationDialog(

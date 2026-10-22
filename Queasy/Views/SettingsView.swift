@@ -141,7 +141,7 @@ struct SettingsView: View {
             .scrollContentBackground(.hidden)
             .tideBackground()
             .tideNavigationTitle("Settings")
-            .sheet(isPresented: $showPaywall) {
+            .foldAwareSheet(isPresented: $showPaywall) {
                 PaywallView(displayCloseButton: true, paywallImpressionId: "queasy_settings")
             }
             .task {

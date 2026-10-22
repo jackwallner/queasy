@@ -29,8 +29,10 @@ struct PaywallView: View {
     #if DEBUG
     /// Simulator screenshot harness: `-QueasyPaywallScreenshot` renders the
     /// paywall with static plan cards (RC products don't load on a bare sim).
+    /// The Duo capture tour's upgrade scene uses them too.
     private var isScreenshotMode: Bool {
-        ProcessInfo.processInfo.arguments.contains("-QueasyPaywallScreenshot")
+        let args = ProcessInfo.processInfo.arguments
+        return args.contains("-QueasyPaywallScreenshot") || args.contains("-DuoTour")
     }
     #else
     private var isScreenshotMode: Bool { false }

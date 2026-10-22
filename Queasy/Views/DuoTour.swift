@@ -14,7 +14,7 @@ final class DuoTour {
     static let shared = DuoTour()
     private init() {}
 
-    static let scenes = ["relieve", "session-breathe", "learn", "settings", "mode-breathe", "checkin"]
+    static let scenes = ["relieve", "session-breathe", "learn", "settings", "mode-breathe", "checkin", "upgrade"]
 
     private(set) var scene: String?
     private var isRunning = false

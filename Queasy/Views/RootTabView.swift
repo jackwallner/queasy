@@ -79,6 +79,8 @@ struct RootTabView: View {
         #if DEBUG
         .onChange(of: duoTour.scene) { _, scene in
             tab = DuoTour.tab(for: scene)
+            showUpgrade = false
+            if scene == "upgrade" { upgradeCoordinator.request("queasy_duo_tour") }
         }
         #endif
         .onChange(of: reviewCoordinator.momentCount) { _, _ in

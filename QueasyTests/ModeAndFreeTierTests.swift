@@ -115,6 +115,45 @@ struct ModeTests {
     }
 }
 
+@Suite("Resolved session duration", .serialized)
+@MainActor
+struct ResolvedSessionDurationTests {
+    @Test func checkInProtocolsKeepTheirDurationAfterPreferences() throws {
+        let settings = AppSettings.shared
+        let savedDuration = settings.defaultDurationMinutes
+        defer { settings.defaultDurationMinutes = savedDuration }
+
+        for override in [nil, 1, 30] as [Int?] {
+            settings.defaultDurationMinutes = override
+            for cause in NauseaCause.allCases {
+                for severity in 1...5 {
+                    for mode in ReliefMode.allCases {
+                        let checkIn = CheckIn(cause: cause, severity: severity, stillExposed: false, recentlyAte: false, mode: mode)
+                        let original = PatternEngine.recommend(for: checkIn)
+                        let resolved = settings.resolvedPlan(from: original)
+                        let expected: Int
+                        switch mode {
+                        case .tone: expected = 60
+                        case .press: expected = 180
+                        case .pulse, .breathe: expected = (override ?? original.durationMinutes) * 60
+                        }
+                        #expect(resolved.durationMinutes * 60 == expected)
+                        for isPro in [false, true] {
+                            let granted = FreeTier.cappedSeconds(for: mode, requested: resolved.durationMinutes * 60, isPro: isPro)
+                            #expect(granted == (mode.hasVariableDuration && !isPro ? min(expected, FreeTier.sessionSeconds) : expected))
+                        }
+                        // The Watch receives the resolved plan over this Codable payload.
+                        let data = try JSONEncoder().encode(resolved)
+                        let watchPlan = try JSONDecoder().decode(ReliefPlan.self, from: data)
+                        #expect(watchPlan.durationMinutes * 60 == expected)
+                        #expect(original == PatternEngine.recommend(for: checkIn))
+                    }
+                }
+            }
+        }
+    }
+}
+
 @Suite("Free tier")
 struct FreeTierTests {
     @Test func freeCapsTheModesWhoseLengthIsChosen() {

@@ -111,6 +111,12 @@ final class AppSettings {
         if let breathe = defaultBreathePattern {
             resolved.breathe = breathe
         }
+        // Fixed protocols take precedence over symptom lengths and preferences.
+        switch resolved.mode {
+        case .tone: resolved.durationMinutes = 1
+        case .press: resolved.durationMinutes = PressProtocol.holdSeconds / 60
+        case .pulse, .breathe: break
+        }
         return resolved
     }
 }

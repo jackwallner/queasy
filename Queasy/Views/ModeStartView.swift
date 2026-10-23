@@ -20,8 +20,9 @@ struct ModeStartView: View {
         // resolvedPlan applies the Settings overrides for length and breathing
         // rhythm, so starting from a mode card honours them the same way the
         // check-in does.
-        var base = settings.resolvedPlan(from: settings.lastPlan ?? .quickStart)
+        var base = settings.lastPlan ?? .quickStart
         base.mode = mode
+        base = settings.resolvedPlan(from: base)
         if base.durationMinutes < PatternEngine.minDuration {
             base.durationMinutes = PatternEngine.minDuration
         }

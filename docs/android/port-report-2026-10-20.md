@@ -111,6 +111,17 @@ drop the bullet.
 5. Licensed-tester purchase and restore on the internal track, then a
    production draft. The production send waits for its pacing slot.
 
+## Update 2026-10-23: signed release verified
+
+The signed AAB and APK built on the Air on 2026-10-21 (run
+shift-android-package-queasy-2-1792592980, from 326ed8b, `android/` tree
+2bb524b) were re-verified without rebuilding by run
+shift-android-package-queasy-4-1792775526: byte-identical to the Gradle
+outputs of that tree, apksigner and jarsigner pass with the upload key cert,
+versionCode 1, 1.1.4, targetSdk 36, 16 KB aligned, debug hooks absent.
+Paths, hashes and the remaining Play steps are in `.claude/rules/android.md`.
+Nothing is uploaded to Play; the Play app record is still to be created.
+
 ## Housekeeping
 
 Emulator emulator-5556 (agent-emu-1) stopped; Gradle daemon stopped;

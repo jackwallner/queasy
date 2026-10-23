@@ -72,23 +72,37 @@ paths:
 - jmbp is an Intel i7-5557U: emulator motion records at about 7 fps, so native
   60 fps cannot be proven there. Motion review belongs on faster hardware.
 
-## Release state (2026-10-20)
+## Release state (2026-10-23)
 
 - Build and test acceptance done on jmbp (run shift-android-queasy-3-1792543160):
   99 JVM tests, 12 device tests, lint clean, QA build ignores debug hooks.
-  No Play app, upload key, RevenueCat Play app, Play products or upload yet.
+- Done 2026-10-21: upload keystore `~/.android/keystores/queasy-upload.p12`
+  (backup in `~/.android/keystores/backups`, password in `~/.queasy_credentials`),
+  RevenueCat Play app in `proj2744fe37`, `goog_`/`test_` keys, `PLAY_UPLOAD_*`
+  and the review code hash in `local.properties` on the Air, rc-clean
+  registered on the Air and MBP, listing graphics and screenshots made.
+- Signed release artifacts (Air only, built 2026-10-21, re-verified 2026-10-23
+  by run shift-android-package-queasy-4-1792775526, evidence in
+  `~/fleet-evidence/<run>/`), in
+  `~/fleet-artifacts/shift-android-package-queasy-2-1792592980/`:
+  `queasy-1.1.4-vc1.aab` (sha256 59422e75...1e45) and `queasy-1.1.4-vc1.apk`
+  (sha256 e5a58cc6...d8f1). Built from 326ed8b, `android/` tree 2bb524b.
+  com.jackwallner.queasy, versionCode 1, 1.1.4, minSdk 26, targetSdk 36,
+  upload cert SHA-256 13a34c54...0316 (APK v2, AAB jarsigner), 16 KB zip and
+  ELF alignment, no debug launch hooks, `goog_` key and review digest only.
+  main's later `android/` change (8b89b82, Test Store QA user id) only acts on
+  `test_` keys, so release behaviour is the same; a rebuild from main gives new
+  bytes and needs the same verification.
+- Play state: nothing uploaded, no app record, no track, nothing staged or in review.
 - Remaining, in order (Air release worker / Console):
-  1. Decide the Android US price (fleet rule $2.39 / $11.99 / $23.99, or iOS parity).
-  2. Create the upload keystore `~/.android/keystores/queasy-upload.p12` and
-     `PLAY_UPLOAD_*` in `local.properties`; build signed AAB/APK.
-  3. Create the Play app (E3 Apps), the three products with `trial-7d` offers.
-  4. Add a RevenueCat Play app to `proj2744fe37`, attach the Play products to
-     the `default` offering packages, put its `goog_` key in `local.properties`,
-     and register it in `~/.rc-clean/apps.json` (android block plus
-     `"ios": {"filter_platform": "iOS"}`) the same day.
-  5. Listing, graphics and policy answers from `android/play-assets/listing-en-US.md`;
-     publish the updated `privacy-policy.html`.
-  6. Internal track upload, licensed-tester purchase and restore, then a
-     production draft. Production send waits for its pacing slot.
+  1. Jack: the Android US price (fleet rule $2.39 / $11.99 / $23.99, or iOS parity).
+  2. Play app record (E3 Apps). Play hit its weekly new-app limit on 2026-10-21;
+     retry the next week. The name matches the App Store name.
+  3. The three products with `trial-7d` offers, attached to the `default`
+     offering packages; grant the RevenueCat service account on the new app.
+  4. Listing, graphics and policy answers from
+     `android/play-assets/listing-en-US.md`; publish the updated `privacy-policy.html`.
+  5. Upload the AAB above to the internal track, licensed-tester purchase and
+     restore, then a production draft. Production send waits for its pacing slot.
 - Not ported, decision for Jack: a Wear OS companion (the iOS Watch app's
   extended-runtime background haptics). v1 is phone-only.

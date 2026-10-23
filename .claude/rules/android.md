@@ -81,8 +81,9 @@ paths:
   RevenueCat Play app in `proj2744fe37`, `goog_`/`test_` keys, `PLAY_UPLOAD_*`
   and the review code hash in `local.properties` on the Air, rc-clean
   registered on the Air and MBP, listing graphics and screenshots made.
-- Signed release artifacts (Air only, built 2026-10-21, re-verified 2026-10-23
-  by run shift-android-package-queasy-4-1792775526, evidence in
+- Signed release artifacts (Air only, built 2026-10-21 by run 2 (its `build.json`
+  is the Gradle record), re-verified 2026-10-23 by runs 4 and 5 of
+  shift-android-package-queasy, evidence in
   `~/fleet-evidence/<run>/`), in
   `~/fleet-artifacts/shift-android-package-queasy-2-1792592980/`:
   `queasy-1.1.4-vc1.aab` (sha256 59422e75...1e45) and `queasy-1.1.4-vc1.apk`

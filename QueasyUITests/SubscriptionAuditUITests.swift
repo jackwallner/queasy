@@ -78,8 +78,10 @@ final class SubscriptionAuditUITests: XCTestCase {
         sleep(4)
         shot("paywall-free")
         note("paywall-free-labels", allLabels(app))
-        let close = app.buttons["Close"]
-        let paywallRestore = app.buttons["Restore Purchases"]
+        // The page sheet leaves the presenter in the query tree, so Close and
+        // Restore Purchases each match twice: the paywall's own copy is first.
+        let close = app.buttons["xmark"].firstMatch
+        let paywallRestore = app.buttons["Restore Purchases"].firstMatch
         let tryAgain = app.buttons["try again"]
         note("paywall-frames", [
             frameNote("close", close),
@@ -130,9 +132,9 @@ final class SubscriptionAuditUITests: XCTestCase {
         if unlock.exists {
             unlock.tap(); sleep(4)
             shot("paywall-from-mode")
-            app.buttons["Close"].tap(); sleep(1)
+            app.buttons["xmark"].firstMatch.tap(); sleep(1)
         }
-        app.buttons["Close"].firstMatch.tap(); sleep(1)
+        app.navigationBars.buttons["Close"].firstMatch.tap(); sleep(1)
 
         // Settings: pickers the paywall lists as Pro ("Pick your own rhythm and level").
         app.tabBars.buttons["Settings"].tap()

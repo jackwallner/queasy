@@ -13,6 +13,7 @@ enum PaywallLinks {
 
 struct PaywallView: View {
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.closePane) private var closePane
     @State private var subscriptions = SubscriptionService.shared
 
     var displayCloseButton: Bool = true
@@ -29,8 +30,10 @@ struct PaywallView: View {
     #if DEBUG
     /// Simulator screenshot harness: `-QueasyPaywallScreenshot` renders the
     /// paywall with static plan cards (RC products don't load on a bare sim).
+    /// Every screenshot run and the Duo capture tour use them too.
     private var isScreenshotMode: Bool {
-        ProcessInfo.processInfo.arguments.contains("-QueasyPaywallScreenshot")
+        let args = ProcessInfo.processInfo.arguments
+        return ["-QueasyPaywallScreenshot", "-QueasyScreenshots", "-DuoTour"].contains { args.contains($0) }
     }
     #else
     private var isScreenshotMode: Bool { false }
@@ -38,17 +41,17 @@ struct PaywallView: View {
 
     var body: some View {
         ZStack(alignment: .top) {
-            Theme.paper.ignoresSafeArea()
+            Color.clear
 
             #if HAS_REVENUECAT
             if isScreenshotMode {
-                mockPaywallContent
+                fitted { mockPaywallContent(showsDetail: $0) }
             } else if subscriptions.isLoadingProducts && subscriptions.products.isEmpty {
                 loadingState
             } else if subscriptions.products.isEmpty {
                 emptyState
             } else {
-                paywallContent
+                fitted { paywallContent(showsDetail: $0) }
             }
             #else
             offlinePlaceholder
@@ -58,8 +61,10 @@ struct PaywallView: View {
                 closeButton
             }
         }
+        .leadingPaneColumn()
+        .background(Theme.paper.ignoresSafeArea())
         .onChange(of: subscriptions.isProSubscriber) { _, isPro in
-            if isPro { dismiss() }
+            if isPro { close() }
         }
         .task {
             #if HAS_REVENUECAT
@@ -80,6 +85,11 @@ struct PaywallView: View {
     }
 
     // MARK: - States
+
+    /// Presented: dismiss. Shown in an unfolded pane: let the pane close it.
+    private func close() {
+        if let closePane { closePane() } else { dismiss() }
+    }
 
     private var loadingState: some View {
         VStack(spacing: 14) {
@@ -134,14 +144,29 @@ struct PaywallView: View {
         #endif
     }
 
-    private var paywallContent: some View {
+    /// The whole paywall when it fits. Both Duo displays are 669 to 678 pt
+    /// tall, which cut the renewal terms off at the screen edge, so there the
+    /// trial timeline (or feature list) goes first and the plans, button,
+    /// terms and links stay whole. Scrolls only if even that is too tall.
+    private func fitted<Content: View>(_ content: @escaping (_ showsDetail: Bool) -> Content) -> some View {
+        ViewThatFits(in: .vertical) {
+            content(true)
+            content(false)
+            ScrollView { content(true) }
+                .scrollBounceBehavior(.basedOnSize)
+        }
+    }
+
+    private func paywallContent(showsDetail: Bool) -> some View {
         VStack(spacing: 10) {
             header
             trustStrip
-            if selectedTrialLabel != nil {
-                trialTimeline
-            } else {
-                compactFeatureList
+            if showsDetail {
+                if selectedTrialLabel != nil {
+                    trialTimeline
+                } else {
+                    compactFeatureList
+                }
             }
             planCards
             Spacer(minLength: 0)
@@ -430,7 +455,7 @@ struct PaywallView: View {
     private var closeButton: some View {
         HStack {
             Spacer()
-            Button { dismiss() } label: {
+            Button { close() } label: {
                 Image(systemName: "xmark")
                     .font(.subheadline.weight(.bold))
                     .foregroundStyle(Theme.ink2)
@@ -446,7 +471,7 @@ struct PaywallView: View {
     }
 
     /// Static twin of `paywallContent` for screenshots and IAP review images.
-    private var mockPaywallContent: some View {
+    private func mockPaywallContent(showsDetail: Bool) -> some View {
         VStack(spacing: 10) {
             VStack(alignment: .leading, spacing: 6) {
                 Text("QUEASY PRO")
@@ -462,14 +487,16 @@ struct PaywallView: View {
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             trustStrip
-            VStack(alignment: .leading, spacing: 0) {
-                timelineRow(icon: "lock.open.fill", title: "Today", text: "Full-length sessions on both devices, free.", showsLine: true)
-                timelineRow(icon: "bell.fill", title: "Day 5", text: "Check History. How do you feel?", showsLine: true)
-                timelineRow(icon: "star.fill", title: "Day 7", text: "First charge, only if you keep it. Cancel before then and pay nothing.", showsLine: false)
+            if showsDetail {
+                VStack(alignment: .leading, spacing: 0) {
+                    timelineRow(icon: "lock.open.fill", title: "Today", text: "Full-length sessions on both devices, free.", showsLine: true)
+                    timelineRow(icon: "bell.fill", title: "Day 5", text: "Check History. How do you feel?", showsLine: true)
+                    timelineRow(icon: "star.fill", title: "Day 7", text: "First charge, only if you keep it. Cancel before then and pay nothing.", showsLine: false)
+                }
+                .padding(14)
+                .background(Theme.aquaTint.opacity(0.5), in: RoundedRectangle(cornerRadius: 16))
+                .frame(maxWidth: .infinity, alignment: .leading)
             }
-            .padding(14)
-            .background(Theme.aquaTint.opacity(0.5), in: RoundedRectangle(cornerRadius: 16))
-            .frame(maxWidth: .infinity, alignment: .leading)
             VStack(spacing: 10) {
                 mockPlanCard(name: "Yearly", secondary: "7-day free trial · $1.25/mo", price: "$14.99 / year", badge: "SAVE 58%", selected: true)
                 mockPlanCard(name: "Monthly", secondary: "7-day free trial", price: "$2.99 / month", badge: nil, selected: false)

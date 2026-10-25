@@ -53,7 +53,8 @@ XcodeGen project/scheme: `Queasy`, sim lease owner `queasy`.
 
 `-QueasyTab history|learn|settings`, `-QueasyScreen mode-<mode>|session-<mode>|checkin|recommend-<cause>`,
 plus the older `-QueasyResetOnboarding`, `-QueasyProOverride`, `-QueasySeedDemoData`,
-`-QueasyScreenshots`, `-QueasyPaywallScreenshot`, `-QueasyWatchSessionScreenshot`.
+`-QueasyScreenshots`, `-QueasyPaywallScreenshot`, `-QueasyWatchSessionScreenshot`,
+and `-DuoTour` (timed scene walk for iPhone Duo captures).
 
 On the watch app, `-QueasyWatchScreen home-<mode>|session-<mode>|rating` (App Store
 watch capture: lease a group with `agent-sim checkout queasy --watch`, build for
@@ -69,6 +70,12 @@ the load-bearing decision for the Watch app. Read
 `.claude/rules/watch-background-haptics.md` before touching `WatchHapticEngine`,
 `WatchLauncher` or `QueasySyncService`; it loads automatically when you read those
 files, and Codex and other agents should open it directly.
+
+## iPhone Duo
+
+Unfolded, Relieve and the tab bar sit before the fold and History after it
+(`Queasy/Views/UnfoldedSplit.swift`). Read `.claude/rules/iphone-duo.md` before
+touching the split, the session covers or the `-DuoTour` capture tour.
 
 ## Android
 

@@ -10,7 +10,6 @@ struct ModeStartView: View {
 
     @Environment(AppSettings.self) private var settings
     @Environment(SubscriptionService.self) private var subscriptions
-    @Environment(\.dismiss) private var dismiss
     @Environment(\.openURL) private var openURL
     @State private var watch = WatchAvailability.shared
     @State private var watchFeedback: String?
@@ -68,15 +67,13 @@ struct ModeStartView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("Close") { dismiss() }
+                    Button("Close") { ReliefPanel.shared.close() }
                         .foregroundStyle(Theme.ink2)
                 }
             }
         }
         .onAppear { watch.refresh() }
-        .sheet(isPresented: $showPaywall) {
-            PaywallView(displayCloseButton: true, paywallImpressionId: "queasy_mode_length")
-        }
+        .paywallSheet(isPresented: $showPaywall, impressionId: "queasy_mode_length")
     }
 
     private var hero: some View {
@@ -190,7 +187,7 @@ struct ModeStartView: View {
         let plan = self.plan
         onStart(plan)
         PhoneSessionController.shared.start(plan: plan, seconds: effectiveSeconds)
-        dismiss()
+        ReliefPanel.shared.close()
     }
 
     private func startOnWatch() {
@@ -203,7 +200,7 @@ struct ModeStartView: View {
                 ? "Starting on your watch…"
                 : "Sent. Open Queasy on your watch."
             try? await Task.sleep(for: .seconds(1.8))
-            dismiss()
+            ReliefPanel.shared.close()
         }
     }
 

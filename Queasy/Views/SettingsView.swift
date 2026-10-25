@@ -20,7 +20,7 @@ struct SettingsView: View {
                             Text("\(minutes) minutes").tag(Int?.some(minutes))
                         }
                     }
-                    Picker("Breathing rhythm", selection: $settings.defaultBreatheIndex) {
+                    Picker("Breath pace", selection: $settings.defaultBreatheIndex) {
                         Text("Match my symptoms").tag(Int?.none)
                         ForEach(Array(BreathePattern.all.enumerated()), id: \.offset) { index, pattern in
                             Text(pattern.label).tag(Int?.some(index))
@@ -140,10 +140,8 @@ struct SettingsView: View {
             }
             .scrollContentBackground(.hidden)
             .tideBackground()
-            .tideNavigationTitle("Settings")
-            .sheet(isPresented: $showPaywall) {
-                PaywallView(displayCloseButton: true, paywallImpressionId: "queasy_settings")
-            }
+            .paneNavigationTitle("Settings")
+            .paywallSheet(isPresented: $showPaywall, impressionId: "queasy_settings")
             .task {
                 // Reminders are a Pro feature, so a lapsed subscription stops
                 // them; the stored preference stays so resubscribing restores it.

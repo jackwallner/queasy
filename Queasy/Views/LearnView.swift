@@ -108,7 +108,7 @@ struct LearnView: View {
                 .padding(.bottom, 24)
             }
             .tideBackground()
-            .tideNavigationTitle("Learn")
+            .paneNavigationTitle("Learn")
         }
     }
 

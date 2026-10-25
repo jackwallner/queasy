@@ -6,6 +6,7 @@ import SwiftUI
 /// rate it here. The vibration never leaves the watch; only the controls do.
 struct WatchRemoteSessionView: View {
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.closePane) private var closePane
     @State private var mirror = WatchSessionMirror.shared
     @State private var settings = AppSettings.shared
 
@@ -30,15 +31,17 @@ struct WatchRemoteSessionView: View {
     }
 
     var body: some View {
-        ZStack {
-            Theme.tideWash.ignoresSafeArea()
+        UnfoldedSplitView { _ in
             switch step {
             case .running:
-                runningView
+                runningView.scrollsWhenTall()
             case .rating:
-                ratingView
+                ratingView.scrollsWhenTall()
             }
+        } secondary: {
+            HistoryView()
         }
+        .tideBackground()
         .onChange(of: mirror.phase) { _, phase in
             // The watch ended it (timer ran out, or "I'm Done" on the wrist).
             if phase == .ended, step == .running {
@@ -49,11 +52,16 @@ struct WatchRemoteSessionView: View {
 
     // MARK: - Running
 
+    /// Presented: dismiss. Shown in an unfolded pane: let the pane close it.
+    private func close() {
+        if let closePane { closePane() } else { dismiss() }
+    }
+
     private var runningView: some View {
         VStack(spacing: 22) {
             HStack {
                 Button {
-                    dismiss()
+                    close()
                 } label: {
                     Image(systemName: "chevron.down")
                         .font(.subheadline.weight(.bold))
@@ -255,7 +263,7 @@ struct WatchRemoteSessionView: View {
     private func saveEpisode(severityAfter: Int?) {
         defer {
             mirror.clear()
-            dismiss()
+            close()
         }
         guard let snapshot else { return }
         let context = DataService.sharedModelContainer.mainContext

@@ -56,6 +56,7 @@ struct OnboardingView: View {
             .padding(.horizontal, 24)
             .padding(.bottom, 14)
         }
+        .leadingPaneColumn()
         .tideBackground()
         .onAppear { watch.refresh() }
     }

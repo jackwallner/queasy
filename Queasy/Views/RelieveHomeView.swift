@@ -18,11 +18,13 @@ struct RelieveHomeView: View {
     @State private var controller = PhoneSessionController.shared
     @State private var watch = WatchAvailability.shared
     @State private var watchSession = WatchSessionMirror.shared
-    @State private var showCheckIn = false
     @State private var showSession = false
     @State private var showWatchSession = false
-    @State private var sheetMode: ReliefMode?
+    @State private var panel = ReliefPanel.shared
     @State private var watchFeedback: String?
+    #if DEBUG
+    @State private var duoTour = DuoTour.shared
+    #endif
 
     /// Quick start reuses the last plan when there is one, otherwise the
     /// evergreen default (Pulse, level 5, 15 min).
@@ -94,7 +96,17 @@ struct RelieveHomeView: View {
                 .padding(.bottom, 28)
             }
             .tideBackground()
-            .tideNavigationTitle(TripComfortBrand.name)
+            // Inside the stack, so the tabs in the navigation bar stay above it.
+            .overlay { sessionInPane }
+            // Unfolded, the session sits under the tabs on the wash, not on
+            // the bar's material over the scroll view behind it.
+            .toolbarBackground(sessionShownInPane ? .hidden : .automatic, for: .navigationBar)
+            .topScrollEdgeEffectHidden(sessionShownInPane)
+            .animation(.easeInOut(duration: 0.3), value: sessionShownInPane)
+            .paneNavigationTitle(TripComfortBrand.name)
+            .onChange(of: showSession || showWatchSession, initial: true) { _, isUp in
+                panel.sessionIsUp = isUp
+            }
             .onChange(of: scenePhase) { _, phase in
                 if phase == .active { watch.refresh() }
             }
@@ -109,28 +121,23 @@ struct RelieveHomeView: View {
                 await openDebugScreen()
                 #endif
             }
-            .sheet(isPresented: $showCheckIn) {
-                CheckInView { plan in
-                    settings.lastPlan = plan
-                }
+            #if DEBUG
+            .onChange(of: duoTour.scene) { _, scene in
+                openTourScene(scene)
             }
-            .sheet(item: $sheetMode) { mode in
-                ModeStartView(mode: mode) { plan in
-                    settings.lastPlan = plan
-                }
-            }
-            .fullScreenCover(isPresented: $showSession) {
+            #endif
+            .sheet(item: panelSheet) { ReliefPanelScreen(item: $0) }
+            .fullScreenCover(isPresented: cover($showSession)) {
                 PhoneSessionView()
             }
-            .fullScreenCover(isPresented: $showWatchSession) {
+            .fullScreenCover(isPresented: cover($showWatchSession)) {
                 WatchRemoteSessionView()
             }
             // A phone session can start from inside a sheet; present the session
             // UI from here once the sheet is out of the way.
             .onChange(of: controller.phase) { _, phase in
                 if phase == .running {
-                    showCheckIn = false
-                    sheetMode = nil
+                    panel.close()
                     Task {
                         try? await Task.sleep(for: .milliseconds(450))
                         showSession = true
@@ -143,8 +150,7 @@ struct RelieveHomeView: View {
                 if phase == .running { settings.hasConfirmedWatchSession = true }
                 if phase == .running, watchSession.pendingAutoPresent {
                     watchSession.pendingAutoPresent = false
-                    showCheckIn = false
-                    sheetMode = nil
+                    panel.close()
                     Task {
                         try? await Task.sleep(for: .milliseconds(450))
                         showWatchSession = true
@@ -152,6 +158,42 @@ struct RelieveHomeView: View {
                 }
             }
         }
+    }
+
+    private var sessionShownInPane: Bool {
+        panel.opensInPane && (showSession || showWatchSession)
+    }
+
+    /// Unfolded, a session takes this pane in place of a full-screen cover,
+    /// so its tabs stay above it and History stays after the fold.
+    @ViewBuilder
+    private var sessionInPane: some View {
+        if panel.opensInPane, showSession {
+            PhoneSessionView()
+                .environment(\.closePane, ClosePaneAction(id: "session") { showSession = false })
+                .transition(.move(edge: .bottom))
+        } else if panel.opensInPane, showWatchSession {
+            WatchRemoteSessionView()
+                .environment(\.closePane, ClosePaneAction(id: "watch-session") { showWatchSession = false })
+                .transition(.move(edge: .bottom))
+        }
+    }
+
+    /// A session's full-screen cover, presented only on a phone-width display.
+    private func cover(_ isPresented: Binding<Bool>) -> Binding<Bool> {
+        Binding(
+            get: { isPresented.wrappedValue && !panel.opensInPane },
+            set: { if !$0, !panel.opensInPane { isPresented.wrappedValue = false } }
+        )
+    }
+
+    /// Unfolded, the pane after the fold shows the panel instead of a sheet.
+    /// A sheet closing because the display unfolded must not clear it.
+    private var panelSheet: Binding<ReliefPanel.Item?> {
+        Binding(
+            get: { panel.opensInPane ? nil : panel.item },
+            set: { if $0 == nil, !panel.opensInPane { panel.close() } }
+        )
     }
 
     private var header: some View {
@@ -253,7 +295,7 @@ struct RelieveHomeView: View {
         ) {
             ForEach(ReliefMode.allCases) { mode in
                 Button {
-                    sheetMode = mode
+                    panel.open(.mode(mode))
                 } label: {
                     VStack(alignment: .leading, spacing: 8) {
                         Image(systemName: mode.symbolName)
@@ -280,7 +322,7 @@ struct RelieveHomeView: View {
 
     private var checkInButton: some View {
         Button {
-            showCheckIn = true
+            panel.open(.checkIn)
         } label: {
             HStack(spacing: 10) {
                 Image(systemName: "list.bullet.clipboard")
@@ -318,17 +360,39 @@ struct RelieveHomeView: View {
         try? await Task.sleep(for: .milliseconds(400))
 
         if screen == "checkin" || screen.hasPrefix("recommend-") {
-            showCheckIn = true
+            panel.open(.checkIn)
             return
         }
         if screen.hasPrefix("mode-"), let mode = ReliefMode(rawValue: String(screen.dropFirst(5))) {
-            sheetMode = mode
+            panel.open(.mode(mode))
             return
         }
         if screen.hasPrefix("session-"), let mode = ReliefMode(rawValue: String(screen.dropFirst(8))) {
             var plan = ReliefPlan.quickStart(mode: mode)
             plan.breathe = .relaxed
             PhoneSessionController.shared.start(plan: plan, seconds: FreeTier.sessionSeconds)
+        }
+    }
+
+    /// One `DuoTour` step: close whatever the last scene opened, then open
+    /// this one once the dismissal has finished animating.
+    private func openTourScene(_ scene: String?) {
+        if controller.phase != .idle { controller.cancel() }
+        panel.close()
+        Task {
+            try? await Task.sleep(for: .milliseconds(900))
+            switch scene {
+            case "session-breathe":
+                var plan = ReliefPlan.quickStart(mode: .breathe)
+                plan.breathe = .relaxed
+                controller.start(plan: plan, seconds: FreeTier.sessionSeconds)
+            case "mode-breathe":
+                panel.open(.mode(.breathe))
+            case "checkin":
+                panel.open(.checkIn)
+            default:
+                break
+            }
         }
     }
     #endif

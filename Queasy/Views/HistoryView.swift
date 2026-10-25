@@ -48,9 +48,7 @@ struct HistoryView: View {
             .sheet(item: $exportURL) { url in
                 ActivityShareSheet(items: [url])
             }
-            .sheet(isPresented: $showPaywall) {
-                PaywallView(displayCloseButton: true, paywallImpressionId: "queasy_history")
-            }
+            .paywallSheet(isPresented: $showPaywall, impressionId: "queasy_history")
             .confirmationDialog(
                 "Delete this session?",
                 isPresented: Binding(
@@ -337,9 +335,16 @@ private struct EpisodeRow: View {
                     .foregroundStyle(Theme.ink)
                     .lineLimit(1)
                     .minimumScaleFactor(0.85)
-                Text("\(episode.startedAt.formatted(date: .abbreviated, time: .shortened)) · \(detailLabel) · \(sourceLabel)")
+                // Date and details on their own lines, so a narrow pane never
+                // breaks a value like "18 min" across two lines.
+                Text(episode.startedAt.formatted(.dateTime.month(.abbreviated).day().hour().minute()))
                     .font(.caption)
                     .foregroundStyle(Theme.ink2)
+                    .lineLimit(1)
+                Text("\(detailLabel) · \(sourceLabel)")
+                    .font(.caption)
+                    .foregroundStyle(Theme.ink2)
+                    .lineLimit(1)
             }
 
             Spacer()

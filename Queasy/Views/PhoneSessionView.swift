@@ -7,6 +7,7 @@ import SwiftUI
 /// three choices the watch shows.
 struct PhoneSessionView: View {
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.closePane) private var closePane
     @Environment(SubscriptionService.self) private var subscriptions
     @State private var controller = PhoneSessionController.shared
     @State private var settings = AppSettings.shared
@@ -24,27 +25,47 @@ struct PhoneSessionView: View {
     private var mode: ReliefMode { controller.mode }
 
     var body: some View {
-        ZStack {
-            Theme.tideWash.ignoresSafeArea()
+        // Unfolded, the session takes the pane before the fold and History
+        // the pane after it: the routine beside how earlier ones went.
+        UnfoldedSplitView { _ in
             switch controller.phase {
             case .running:
                 runningView
             case .rating:
-                ratingView
+                ratingView.scrollsWhenTall()
             case .idle:
-                Color.clear.onAppear { dismiss() }
+                Color.clear.onAppear { close() }
             }
+        } secondary: {
+            HistoryView()
         }
+        .tideBackground()
     }
 
     // MARK: - Running
 
+    /// Presented: dismiss. Shown in an unfolded pane: let the pane close it.
+    private func close() {
+        if let closePane { closePane() } else { dismiss() }
+    }
+
+    /// The full stage when it fits. Both Duo displays are short (669 to
+    /// 678 pt), so the stage shrinks before anything scrolls.
     private var runningView: some View {
+        ViewThatFits(in: .vertical) {
+            runningLayout(stageSide: 240)
+            runningLayout(stageSide: 170)
+            ScrollView { runningLayout(stageSide: 170) }
+                .scrollBounceBehavior(.basedOnSize)
+        }
+    }
+
+    private func runningLayout(stageSide: CGFloat) -> some View {
         VStack(spacing: 22) {
             HStack {
                 Button {
                     controller.cancel()
-                    dismiss()
+                    close()
                 } label: {
                     Image(systemName: "xmark")
                         .font(.subheadline.weight(.bold))
@@ -64,7 +85,7 @@ struct PhoneSessionView: View {
 
             Spacer()
 
-            stage
+            stage(side: stageSide)
 
             VStack(spacing: 4) {
                 Text(headline)
@@ -74,6 +95,7 @@ struct PhoneSessionView: View {
                     .font(.footnote)
                     .foregroundStyle(Theme.ink2)
                     .multilineTextAlignment(.center)
+                    .fixedSize(horizontal: false, vertical: true)
                     .padding(.horizontal, 28)
                 if needsHaptics, !controller.hapticsAvailable, !isScreenshotRun {
                     Text("This device has no haptic engine, so it cannot play a pattern you can feel. Tone still works here, and wrist sessions need an Apple Watch.")
@@ -130,28 +152,28 @@ struct PhoneSessionView: View {
     private var needsHaptics: Bool { mode == .pulse || mode == .breathe }
 
     @ViewBuilder
-    private var stage: some View {
+    private func stage(side: CGFloat) -> some View {
         switch mode {
         case .pulse:
             RipplePulseView(
                 interval: PulseSpec.forLevel(controller.intensity).interval,
                 color: Theme.aqua
             )
-            .frame(width: 240, height: 240)
+            .frame(width: side, height: side)
         case .breathe:
             BreathingBloom(pattern: controller.plan.breathe, anchor: controller.startedAt)
-                .frame(width: 240, height: 240)
+                .frame(width: side, height: side)
         case .tone:
             ZStack {
                 Circle()
                     .fill(Theme.aquaTint)
-                    .frame(width: 200, height: 200)
+                    .frame(width: side * 0.83, height: side * 0.83)
                 Image(systemName: "waveform")
                     .font(.system(size: 74, weight: .medium))
                     .foregroundStyle(Theme.aqua)
                     .symbolEffect(.variableColor.iterative, options: .repeating)
             }
-            .frame(width: 240, height: 240)
+            .frame(width: side, height: side)
         case .press:
             ZStack {
                 Circle()
@@ -164,7 +186,7 @@ struct PhoneSessionView: View {
                     .font(.system(size: 58, weight: .medium))
                     .foregroundStyle(Theme.aqua)
             }
-            .frame(width: 240, height: 240)
+            .frame(width: side, height: side)
         }
     }
 
@@ -287,7 +309,7 @@ struct PhoneSessionView: View {
             // asks for a rating once this cover is gone.
             ReviewPromptCoordinator.shared.recordPositiveMoment()
         }
-        dismiss()
+        close()
     }
 
     private func timeString(_ seconds: Int) -> String {

@@ -1,0 +1,17 @@
+{
+  "project": "Queasy.xcodeproj",
+  "scheme": "QueasyUITests",
+  "uitests_dir": "QueasyUITests",
+  "journeys": [
+    "QueasyUITests/ReleaseJourneysUITests"
+  ],
+  "personas": [
+    "newcomer",
+    "accessibility",
+    "reduce-motion",
+    "german"
+  ],
+  "persona_overrides": {},
+  "slot": null,
+  "bundle_id": "com.jackwallner.queasy"
+}

@@ -1,0 +1,19 @@
+Kun automatka, venematka tai muu matka saa olosi huteraksi, valitse yksinkertainen mukavuusrutiini, jonka voit tehdä itse. Aloita tila suoraan tai vastaa kolmeen nopeaan kysymykseen saadaksesi ehdotuksen.
+
+NELJÄ TAPAA PYSÄHTYÄ HETKEKSI
+- Breathe: seuraa rauhallista hengitysrytmiä puhelimen värinän avulla, halutessasi silmät kiinni
+- Pulse: kiinnitä huomio tasaiseen, säännölliseen napautukseen; säädä voimakkuutta ylös tai alas sen aikana
+- Tone: kuuntele minuutin ajan 100 Hz:n ääntä kuulokkeilla tavallisella äänenvoimakkuudella
+- Press: opas ranteen pisteeseen, jossa akupainantarannekkeen kohta on, sekä kolmen minuutin ajastin, kun painat omalla peukalollasi tai jo omistamallasi rannekkeella
+
+KOLME NOPEAA KYSYMYSTÄ
+Kerro, millaisessa olossa olet (matka, raskaus, krapula, huimaus, jännitys tai sairaus) ja kuinka voimakkaalta se tuntuu. Queasy ehdottaa tilaa, tasoa ja kestoa ja näyttää lähteiden omin varovaisin sanoin, mihin kukin tila perustuu, jotta voit arvioida sitä itse.
+
+KOKEILE KOKO TYÖKALUPAKKIA ILMAN MAKSUA
+Kaikki neljä tilaa ovat ilmaisia ja rajattomia, ilman tiliä. Ilmaiset Pulse- ja Breathe-istunnot kestävät kaksi minuuttia; Tone ja Press kestävät aina täyden pituutensa. Viimeisen viikon istunnot ja se, miltä sinusta tuntui jälkeenpäin, säilyvät historiassa (History).
+
+Queasy Pro tuo jopa 45 minuutin istunnot, koko historian sen tilan kanssa, jonka jälkeen tunnet yleensä olosi paremmaksi, sekä Press-muistutukset päivän mittaan. Tilaukset uusiutuvat automaattisesti, kunnes ne perutaan Google Playssa, ja tarjolla on kertamaksullinen elinikäinen vaihtoehto.
+
+Nämä ovat lääkkeettömiä mukavuustekniikoita, eivät lääkinnällinen laite eivätkä minkään tilan hoito. Puhelimen värinä ei ole akupainantaa eikä sähköistä hermostimulaatiota. Sovelluksella ei ole lääketieteellistä hyväksyntää, se ei tee diagnoosia, hoida, paranna tai ehkäise mitään, eikä se välttämättä muuta oloasi. Jos oireet ovat voimakkaita, pitkittyneitä, niihin liittyy muita oireita tai et pysty pitämään nesteitä sisällä, hakeudu lääkäriin. Raskauden aikana nesteiden sisällä pysymättömyys kuuluu kätilölle tai lääkärille, ei sovellukselle.
+
+Tietosuojakäytäntö: https://jackwallner.github.io/queasy/privacy-policy.html

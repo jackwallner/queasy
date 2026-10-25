@@ -1,0 +1,19 @@
+Araba, tekne ya da başka bir yolculuk sizi rahatsız ettiğinde, kendi başınıza yapabileceğiniz basit bir rahatlama rutini seçin. Bir modu doğrudan başlatın ya da öneri için üç kısa soruyu yanıtlayın.
+
+MOLA VERMEK İÇİN DÖRT YOL
+- Breathe: telefonunuzun titreşimiyle sakin bir nefes ritmini takip edin, isterseniz gözleriniz kapalı
+- Pulse: dikkatinizi düzenli, sabit bir dokunuşa verin; çalışırken seviyeyi artırıp azaltabilirsiniz
+- Tone: kulaklıkla, olağan ses seviyesinde bir dakika boyunca 100 Hz'lik bir ses dinleyin
+- Press: akupresür bandının oturduğu bilek noktasına yönelik bir rehber ve kendi başparmağınızla ya da zaten sahip olduğunuz bir bantla bastırırken üç dakikalık bir zamanlayıcı
+
+ÜÇ KISA SORU
+Nasıl bir rahatsızlık yaşadığınızı (yolculuk, hamilelik, akşamdan kalma, baş dönmesi, sinirlilik ya da hastalık) ve ne kadar şiddetli hissettirdiğini söyleyin. Queasy bir mod, seviye ve süre önerir ve her modun neye dayandığını kaynakların kendi temkinli sözleriyle gösterir, böylece kendiniz değerlendirebilirsiniz.
+
+TÜM ARAÇ SETİNİ ÜCRETSİZ DENEYİN
+Dört mod da ücretsiz ve sınırsızdır, hesap gerekmez. Ücretsiz Pulse ve Breathe seansları iki dakika sürer; Tone ve Press her zaman tam süreyle çalışır. Son haftanın seansları ve sonrasında nasıl hissettiğiniz Geçmiş'te (History) kalır.
+
+Queasy Pro, 45 dakikaya kadar seanslar, sonrasında genellikle daha iyi hissettiğiniz modu gösteren tam geçmiş ve gün boyu Press hatırlatmaları sunar. Abonelikler Google Play'de iptal edilene kadar otomatik yenilenir; tek seferlik ömür boyu seçeneği de vardır.
+
+Bunlar ilaçsız rahatlama teknikleridir; tıbbi cihaz ya da herhangi bir durum için tedavi değildir. Telefon titreşimi akupresür veya elektriksel sinir uyarımı değildir. Uygulamanın tıbbi onayı yoktur, teşhis koymaz, tedavi etmez, iyileştirmez ya da önlemez ve hissettiğiniz şeyi değiştirmeyebilir. Belirtiler şiddetliyse, sürüyorsa, başka belirtilerle birlikteyse veya sıvı tutamıyorsanız tıbbi yardım alın. Hamilelikte sıvı tutamama bir uygulamaya değil, ebe veya doktora başvurmayı gerektirir.
+
+Gizlilik politikası: https://jackwallner.github.io/queasy/privacy-policy.html

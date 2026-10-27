@@ -1,0 +1,18 @@
+# Trip Comfort: Motion Sickness
+
+> Trip Comfort is a drug-free motion sickness app for Apple Watch and iPhone. Try a wrist pulse, paced breathing, a 100 Hz tone or a timed hold. Free.
+
+## App
+
+- [Trip Comfort: Motion Sickness App for Apple Watch](https://jackwallner.com/ios/queasy/index.html.md): Trip Comfort is a drug-free motion sickness app for Apple Watch and iPhone. Try a wrist pulse, paced breathing, a 100 Hz tone or a timed hold. Free.
+
+## Guides
+
+- [Best Motion Sickness App for iPhone (2026)](https://jackwallner.com/ios/queasy/best-motion-sickness-app.html.md): Motion sickness apps for iPhone and Apple Watch compared: Apple's Vehicle Motion Cues, RideCalm, Dizzout, Hearapy and Trip Comfort, with what each one does.
+- [Motion Sickness on a Road Trip: Practical Things to Try](https://jackwallner.com/ios/queasy/motion-sickness-road-trip.html.md): Practical things to try on a car trip if you get motion sick: seat choice, where to look, what to eat, breathing and more, with what the CDC Yellow Book says.
+
+## Optional
+
+- [Queasy Privacy Policy](https://jackwallner.com/ios/queasy/privacy-policy.html.md): Queasy is a collection of drug-free comfort routines for iPhone and Apple Watch. It does not require an account and does not use HealthKit.
+- [Queasy: Support](https://jackwallner.com/ios/queasy/support.html.md): Need a hand? Email jackwallner+q@gmail.com and you'll hear back within a day or two. It's the fastest way to reach us, and the only one you need.
+- [Queasy Terms of Use](https://jackwallner.com/ios/queasy/terms.html.md): By using Queasy, you agree to these Terms of Use and Apple's Standard Licensed Application End User License Agreement.

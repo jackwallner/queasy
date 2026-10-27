@@ -79,6 +79,7 @@ struct PhoneSessionView: View {
                     .font(Theme.roundedNumeric(17))
                     .foregroundStyle(Theme.ink2)
                     .monospacedDigit()
+                    .accessibilityIdentifier("session-timer")
             }
             .padding(.horizontal, 20)
             .padding(.top, 8)

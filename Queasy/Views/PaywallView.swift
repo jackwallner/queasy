@@ -14,6 +14,7 @@ enum PaywallLinks {
 struct PaywallView: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.closePane) private var closePane
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     @State private var subscriptions = SubscriptionService.shared
 
     var displayCloseButton: Bool = true
@@ -152,7 +153,9 @@ struct PaywallView: View {
         ViewThatFits(in: .vertical) {
             content(true)
             content(false)
-            ScrollView { content(true) }
+            // At the largest text sizes the plans come straight after the
+            // headline, so the prices are on the first screen.
+            ScrollView { content(false) }
                 .scrollBounceBehavior(.basedOnSize)
         }
     }
@@ -160,7 +163,9 @@ struct PaywallView: View {
     private func paywallContent(showsDetail: Bool) -> some View {
         VStack(spacing: 10) {
             header
-            trustStrip
+            if !dynamicTypeSize.isAccessibilitySize {
+                trustStrip
+            }
             if showsDetail {
                 if selectedTrialLabel != nil {
                     trialTimeline

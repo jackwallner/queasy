@@ -150,10 +150,12 @@ final class ReleaseJourneysUITests: XCTestCase {
         return element
     }
 
-    /// Folded, History is a tab. Unfolded on a Duo, it is the pane after the fold.
+    /// Folded, History is a tab (a vertical bar on the Duo's outer display, which
+    /// is not reported as a tab bar). Unfolded, it is the pane after the fold.
     private func showHistory(in app: XCUIApplication) {
         let tab = app.tabBars.buttons["History"].firstMatch
-        if tab.waitForExistence(timeout: 3) { tab.tap() }
+        let button = tab.waitForExistence(timeout: 3) ? tab : app.buttons["History"].firstMatch
+        if button.exists { button.tap() }
     }
 
     private func tap(_ label: String, in app: XCUIApplication) {

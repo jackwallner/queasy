@@ -182,9 +182,12 @@ final class SubscriptionService: NSObject {
         // Test Store runs share one tester instead of a fresh anonymous customer
         // per install, so test runs don't inflate the live project's customer
         // charts. Never with the App Store key: real buyers would share one identity.
-        let qaAppUserID = Self.apiKey.hasPrefix("test_")
-            ? ProcessInfo.processInfo.environment["RC_APP_USER_ID"] ?? "qa-ios"
-            : nil
+        #if DEBUG
+        let qaUserID = ProcessInfo.processInfo.environment["RC_APP_USER_ID"] ?? "qa-ios"
+        #else
+        let qaUserID = "qa-ios"
+        #endif
+        let qaAppUserID = Self.apiKey.hasPrefix("test_") ? qaUserID : nil
         Purchases.configure(withAPIKey: Self.apiKey, appUserID: qaAppUserID)
         Purchases.shared.delegate = self
         isConfigured = true

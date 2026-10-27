@@ -35,10 +35,14 @@ enum ReviewPromptTracker {
 
     /// Screenshot captures and UI test probes never count launches or ask.
     static var skipsAutomation: Bool {
-        ProcessInfo.processInfo.arguments.contains {
+        #if DEBUG
+        return ProcessInfo.processInfo.arguments.contains {
             $0 == "-QueasyScreenshots" || $0 == "-QueasyPaywallScreenshot"
                 || $0 == "-QueasyWatchSessionScreenshot" || $0 == "-rcfunnelprobe" || $0 == "-FASTLANE_SNAPSHOT"
         }
+        #else
+        return false
+        #endif
     }
 
     // MARK: - State

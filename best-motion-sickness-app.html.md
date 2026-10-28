@@ -6,7 +6,7 @@ Web page: https://jackwallner.com/ios/queasy/best-motion-sickness-app.html
 
 ## Best Motion Sickness App for iPhone
 
-By Jack Wallner · Last updated October 18, 2026
+By Jack Wallner · Last updated October 28, 2026
 
 **Try first, free and already on your iPhone:** Apple's Vehicle Motion Cues, which shows moving dots at the screen edges while you ride. **Best if you want on-screen visual modes and a trip log for car rides:** RideCalm. **Best if you want a short audio session through headphones:** Dizzout or Hearapy. **Best if you want Apple Watch routines you run yourself, such as paced breathing and wrist taps:** Trip Comfort, the app I make. A motion sickness app is an iPhone or Apple Watch app that gives you something to try while you ride, such as visual cues, a tone or paced breathing. None of these apps is a medical treatment, and most have very few ratings.
 

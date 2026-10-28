@@ -6,7 +6,7 @@ Web page: https://jackwallner.com/ios/queasy/motion-sickness-road-trip.html
 
 ## Motion sickness on a road trip: practical things to try
 
-By [Jack Wallner](https://jackwallner.com/) · Last updated October 21, 2026
+By [Jack Wallner](https://jackwallner.com/) · Last updated October 28, 2026
 
 Motion sickness is a queasy feeling that comes from a mismatch between what your eyes, inner ear and body sense of motion report. On a car trip, try sitting in the front, keeping your eyes on the horizon rather than a screen or a book, keeping your head still, getting fresh air, and getting a full night of sleep beforehand. The CDC Yellow Book lists all of these, and the CDC also says repeated exposure to motion builds tolerance over time, and that most of these steps are only partly effective. They are comfort habits to try, not guarantees.
 

@@ -243,7 +243,7 @@ struct ModeStartView: View {
                 } label: {
                     Label("Read the source", systemImage: "arrow.up.right.square")
                         .font(.caption.weight(.semibold))
-                        .foregroundStyle(Theme.aqua)
+                        .foregroundStyle(Theme.ink2)
                 }
                 .buttonStyle(.plain)
             }

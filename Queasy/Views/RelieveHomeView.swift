@@ -306,7 +306,7 @@ struct RelieveHomeView: View {
                             .foregroundStyle(Theme.ink)
                         Text(mode.tagline)
                             .font(.caption2)
-                            .foregroundStyle(Theme.ink3)
+                            .foregroundStyle(Theme.ink2)
                             .multilineTextAlignment(.leading)
                             .fixedSize(horizontal: false, vertical: true)
                     }
@@ -334,7 +334,7 @@ struct RelieveHomeView: View {
                         .foregroundStyle(Theme.ink)
                     Text("Three questions pick the mode, level and length for you.")
                         .font(.caption2)
-                        .foregroundStyle(Theme.ink3)
+                        .foregroundStyle(Theme.ink2)
                 }
                 Spacer(minLength: 0)
                 Image(systemName: "chevron.right")
@@ -547,9 +547,10 @@ struct RelieveHomeView: View {
 struct RipplePulseView: View {
     var interval: Double
     var color: Color
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     var body: some View {
-        TimelineView(.animation(minimumInterval: 1.0 / 30.0)) { context in
+        TimelineView(.animation(minimumInterval: 1.0 / 30.0, paused: reduceMotion)) { context in
             let t = context.date.timeIntervalSinceReferenceDate
             let phase = (t.truncatingRemainder(dividingBy: interval)) / interval
             ZStack {
@@ -564,10 +565,5 @@ struct RipplePulseView: View {
                     .frame(width: 18, height: 18)
             }
         }
-        // Moves on purpose; UI checks name it to leave it out of the idle test.
-        .accessibilityElement()
-        .accessibilityLabel("Pulse rhythm")
-        .accessibilityAddTraits(.isImage)
-        .accessibilityIdentifier("ripple-pulse")
     }
 }

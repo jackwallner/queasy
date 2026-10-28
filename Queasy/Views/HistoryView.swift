@@ -107,7 +107,7 @@ struct HistoryView: View {
                 }
                 Text("Touch and hold a session to delete it.")
                     .font(.caption2)
-                    .foregroundStyle(Theme.ink3)
+                    .foregroundStyle(Theme.ink2)
             }
             .padding(.horizontal, 18)
             .padding(.bottom, 24)
@@ -143,7 +143,7 @@ struct HistoryView: View {
                         .foregroundStyle(Theme.ink)
                     Text("Still saved on your iPhone. Pro shows everything past the last \(FreeTier.historyDays) days.")
                         .font(.caption2)
-                        .foregroundStyle(Theme.ink3)
+                        .foregroundStyle(Theme.ink2)
                 }
                 Spacer(minLength: 0)
                 Image(systemName: "chevron.right")

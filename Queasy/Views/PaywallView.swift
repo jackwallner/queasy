@@ -403,12 +403,13 @@ struct PaywallView: View {
             .buttonStyle(.tideCTA)
             .disabled(isPurchasing || !hasSelection)
 
+            // Never scaled down: the billed price must stay at least as large as
+            // the per-month figure on the plan card (3.1.2(c)).
             Text(disclosureText ?? " ")
                 .font(.caption2)
                 .foregroundStyle(Theme.ink3)
                 .multilineTextAlignment(.center)
-                .lineLimit(4)
-                .minimumScaleFactor(0.9)
+                .fixedSize(horizontal: false, vertical: true)
                 .frame(minHeight: 44, alignment: .top)
                 .opacity(disclosureText == nil ? 0 : 1)
                 .accessibilityHidden(disclosureText == nil)

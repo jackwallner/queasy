@@ -26,7 +26,7 @@ final class ReleaseJourneysUITests: XCTestCase {
         QA.launch(app, arguments: ["-QueasySeedDemoData"])
         relieve("relieve", in: app)
         showHistory(in: app)
-        QA.checkpoint(app, "history")
+        QA.checkpoint(app, "history", ambient: [ripple])
         for tab in ["Learn", "Settings"] {
             tapTab(tab, in: app)
             QA.checkpoint(app, tab.lowercased())
@@ -60,17 +60,17 @@ final class ReleaseJourneysUITests: XCTestCase {
 
         showHistory(in: app)
         let before = loggedPressCount(in: app)
-        QA.checkpoint(app, "core-history-before")
+        QA.checkpoint(app, "core-history-before", ambient: [ripple])
 
         tapTab("Relieve", in: app)
-        reveal(app.buttons["mode-card-press"].firstMatch, in: app).tap()
-        let start = reveal(app.buttons["mode-start-phone"].firstMatch, in: app)
+        reveal("mode-card-press", in: app).tap()
+        let start = reveal("mode-start-phone", in: app)
         QA.checkpoint(app, "core-press-mode")
         start.tap()
 
         let timer = app.staticTexts["session-timer"].firstMatch
         XCTAssertTrue(timer.waitForExistence(timeout: 15))
-        QA.checkpoint(app, "core-press-running", ambient: ["session-timer"])
+        QA.checkpoint(app, "core-press-running", ambient: ["session-timer", ripple])
         XCTAssertLessThan(seconds(timer.label), pressSeconds, "the hold timer is not counting down")
         tap("end-session", in: app)
 
@@ -82,14 +82,17 @@ final class ReleaseJourneysUITests: XCTestCase {
         XCTAssertTrue(app.buttons["quick-start"].firstMatch.waitForExistence(timeout: 15))
         showHistory(in: app)
         assertNewestPressRow(count: before + 1, in: app)
-        QA.checkpoint(app, "core-history-after")
+        QA.checkpoint(app, "core-history-after", ambient: [ripple])
 
         QA.relaunch(app)
         relieve("core-relieve-after-relaunch", in: app)
         showHistory(in: app)
         assertNewestPressRow(count: before + 1, in: app)
-        QA.checkpoint(app, "core-history-after-relaunch")
+        QA.checkpoint(app, "core-history-after-relaunch", ambient: [ripple])
     }
+
+    /// The Relieve hero's ripple, which animates on purpose (it also shows beside History on an unfolded Duo).
+    private let ripple = "ripple-pulse"
 
     /// Press is a fixed 3-minute hold, so its History row reads "3 min · iPhone".
     private let pressSeconds = 180
@@ -139,10 +142,13 @@ final class ReleaseJourneysUITests: XCTestCase {
     /// Scrolls the element's own pane until it can be tapped (AX3 pushes the
     /// mode grid and start button below the fold).
     @discardableResult
-    private func reveal(_ element: XCUIElement, in app: XCUIApplication) -> XCUIElement {
+    private func reveal(_ identifier: String, in app: XCUIApplication) -> XCUIElement {
+        // By name: reading .identifier off a button that is not built yet (a lazy
+        // grid below the fold) throws instead of returning.
+        let element = app.buttons[identifier].firstMatch
         var tries = 0
         while !(element.exists && element.isHittable) && tries < 10 {
-            let pane = app.scrollViews.containing(.button, identifier: element.identifier).allElementsBoundByIndex.last
+            let pane = app.scrollViews.containing(.button, identifier: identifier).allElementsBoundByIndex.last
                 ?? app.scrollViews.firstMatch
             QA.swipe(pane.exists ? pane : app, .up)
             tries += 1
@@ -182,6 +188,6 @@ final class ReleaseJourneysUITests: XCTestCase {
     /// The Relieve home, found by its quick start: the tab bar is hidden on an unfolded Duo.
     private func relieve(_ name: String, in app: XCUIApplication, journey: String = #function) {
         XCTAssertTrue(app.buttons["quick-start"].firstMatch.waitForExistence(timeout: 20))
-        QA.checkpoint(app, name, journey: journey)
+        QA.checkpoint(app, name, ambient: [ripple], journey: journey)
     }
 }

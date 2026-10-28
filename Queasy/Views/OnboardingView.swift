@@ -134,22 +134,33 @@ private struct OnboardPage: View {
     let text: String
 
     var body: some View {
-        VStack(spacing: 26) {
+        // A short pane (an unfolded Duo, large text) gets a smaller badge
+        // before the text is cut off.
+        ViewThatFits(in: .vertical) {
+            page(badge: 150, spacing: 26)
+            page(badge: 96, spacing: 16)
+        }
+    }
+
+    private func page(badge: CGFloat, spacing: CGFloat) -> some View {
+        VStack(spacing: spacing) {
             Spacer()
             ZStack {
-                Circle().fill(Theme.aquaTint).frame(width: 150, height: 150)
+                Circle().fill(Theme.aquaTint).frame(width: badge, height: badge)
                 Image(systemName: symbol)
-                    .font(.system(size: 56, weight: .medium))
+                    .font(.system(size: badge * 0.37, weight: .medium))
                     .foregroundStyle(Theme.aqua)
             }
             Text(title)
                 .font(Theme.displaySerif(30))
                 .foregroundStyle(Theme.ink)
                 .multilineTextAlignment(.center)
+                .fixedSize(horizontal: false, vertical: true)
             Text(text)
                 .font(.callout)
                 .foregroundStyle(Theme.ink2)
                 .multilineTextAlignment(.center)
+                .fixedSize(horizontal: false, vertical: true)
                 .padding(.horizontal, 30)
             Spacer()
             Spacer()

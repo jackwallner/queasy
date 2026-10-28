@@ -245,7 +245,6 @@ struct PhoneSessionView: View {
             Text("Compared to when you started.")
                 .font(.subheadline)
                 .foregroundStyle(Theme.ink2)
-            Spacer()
 
             VStack(spacing: 12) {
                 feelingButton("Better", symbol: "face.smiling", tint: Theme.aqua, feeling: .better)
@@ -259,7 +258,10 @@ struct PhoneSessionView: View {
             }
             .font(.subheadline.weight(.semibold))
             .foregroundStyle(Theme.ink3)
-            .padding(.bottom, 24)
+            // The choices sit above where "I'm Done" was, so a second tap on
+            // the way out cannot rate the session.
+            Spacer()
+            Spacer()
         }
     }
 
@@ -278,7 +280,8 @@ struct PhoneSessionView: View {
                 Spacer()
             }
             .padding(.horizontal, 18)
-            .frame(height: 56)
+            .padding(.vertical, 12)
+            .frame(minHeight: 56)
             .background(Theme.paper2, in: RoundedRectangle(cornerRadius: 16))
             .overlay(RoundedRectangle(cornerRadius: 16).stroke(tint.opacity(0.25), lineWidth: 1))
         }

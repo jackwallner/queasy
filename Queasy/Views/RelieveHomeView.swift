@@ -564,5 +564,10 @@ struct RipplePulseView: View {
                     .frame(width: 18, height: 18)
             }
         }
+        // Moves on purpose; UI checks name it to leave it out of the idle test.
+        .accessibilityElement()
+        .accessibilityLabel("Pulse rhythm")
+        .accessibilityAddTraits(.isImage)
+        .accessibilityIdentifier("ripple-pulse")
     }
 }

@@ -320,6 +320,10 @@ private struct ActivityShareSheet: UIViewControllerRepresentable {
 
 private struct EpisodeRow: View {
     let episode: ReliefEpisode
+    @Environment(\.dynamicTypeSize) private var typeSize
+
+    /// One line each at regular sizes; accessibility sizes wrap instead of cutting the date off.
+    private var lines: Int? { typeSize.isAccessibilitySize ? nil : 1 }
 
     var body: some View {
         HStack(spacing: 12) {
@@ -333,18 +337,18 @@ private struct EpisodeRow: View {
                 Text("\(episode.mode.title) · \(episode.cause.label)")
                     .font(.subheadline.weight(.semibold))
                     .foregroundStyle(Theme.ink)
-                    .lineLimit(1)
+                    .lineLimit(lines)
                     .minimumScaleFactor(0.85)
                 // Date and details on their own lines, so a narrow pane never
                 // breaks a value like "18 min" across two lines.
                 Text(episode.startedAt.formatted(.dateTime.month(.abbreviated).day().hour().minute()))
                     .font(.caption)
                     .foregroundStyle(Theme.ink2)
-                    .lineLimit(1)
+                    .lineLimit(lines)
                 Text("\(detailLabel) · \(sourceLabel)")
                     .font(.caption)
                     .foregroundStyle(Theme.ink2)
-                    .lineLimit(1)
+                    .lineLimit(lines)
             }
 
             Spacer()

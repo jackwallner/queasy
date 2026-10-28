@@ -34,7 +34,7 @@ final class ReleaseJourneysUITests: XCTestCase {
         let pro = app.buttons["See Queasy Pro"].firstMatch
         var tries = 0
         while !(pro.exists && pro.isHittable) && tries < 8 {
-            app.swipeUp()
+            QA.swipe(app.scrollViews.firstMatch.exists ? app.scrollViews.firstMatch : app, .up)
             tries += 1
         }
         pro.tap()
@@ -140,13 +140,14 @@ final class ReleaseJourneysUITests: XCTestCase {
     /// mode grid and start button below the fold).
     @discardableResult
     private func reveal(_ element: XCUIElement, in app: XCUIApplication) -> XCUIElement {
-        XCTAssertTrue(element.waitForExistence(timeout: 15))
         var tries = 0
-        while !element.isHittable && tries < 8 {
+        while !(element.exists && element.isHittable) && tries < 10 {
             let pane = app.scrollViews.containing(.button, identifier: element.identifier).allElementsBoundByIndex.last
-            (pane ?? app).swipeUp()
+                ?? app.scrollViews.firstMatch
+            QA.swipe(pane.exists ? pane : app, .up)
             tries += 1
         }
+        XCTAssertTrue(element.waitForExistence(timeout: 5))
         return element
     }
 

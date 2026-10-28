@@ -44,6 +44,7 @@ struct OnboardingView: View {
                     }
                     .buttonStyle(.tideCTA)
                     .accessibilityIdentifier("onboarding-continue")
+                    if !watch.isPaired { phoneOnlyPlaceholder }
                 } else {
                     gateButtons
                 }
@@ -89,6 +90,17 @@ struct OnboardingView: View {
         return "Pulse, Breathe and Press are meant to be felt on your wrist, which is what the Apple Watch app is for. Without one, your iPhone's own vibration stands in: rest it against you, or hold it to the inside of your wrist. Tone works on either."
     }
 
+    /// Holds the space of the iPhone-only link so Continue does not move on the last page.
+    private var phoneOnlyPlaceholder: some View {
+        Text(Self.phoneOnlyLabel)
+            .font(.footnote.weight(.semibold))
+            .multilineTextAlignment(.center)
+            .hidden()
+            .accessibilityHidden(true)
+    }
+
+    private static let phoneOnlyLabel = "Continue with iPhone only. I understand Queasy is designed for Apple Watch."
+
     @ViewBuilder
     private var gateButtons: some View {
         if watch.isPaired {
@@ -104,7 +116,7 @@ struct OnboardingView: View {
             .buttonStyle(.tideCTA)
             .accessibilityIdentifier("onboarding-continue")
 
-            Button("Continue with iPhone only. I understand Queasy is designed for Apple Watch.") {
+            Button(Self.phoneOnlyLabel) {
                 settings.phoneOnlyAcknowledged = true
                 settings.hasCompletedOnboarding = true
             }

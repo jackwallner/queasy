@@ -245,6 +245,7 @@ struct PhoneSessionView: View {
             Text("Compared to when you started.")
                 .font(.subheadline)
                 .foregroundStyle(Theme.ink2)
+            Spacer()
 
             VStack(spacing: 12) {
                 feelingButton("Better", symbol: "face.smiling", tint: Theme.aqua, feeling: .better)
@@ -258,8 +259,7 @@ struct PhoneSessionView: View {
             }
             .font(.subheadline.weight(.semibold))
             .foregroundStyle(Theme.ink3)
-
-            Spacer()
+            .padding(.bottom, 24)
         }
     }
 

@@ -1,1 +1,1 @@
-App Storeの情報とサブスクリプションの診断機能を更新しました。
+Fixes and improvements.

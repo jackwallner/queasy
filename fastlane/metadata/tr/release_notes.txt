@@ -1,1 +1,1 @@
-App Store bilgileri ve abonelik tanılamaları güncellendi.
+Fixes and improvements.

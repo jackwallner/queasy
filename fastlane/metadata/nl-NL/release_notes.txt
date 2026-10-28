@@ -1,1 +1,1 @@
-App Store-informatie en abonnementsdiagnostiek bijgewerkt.
+Fixes and improvements.

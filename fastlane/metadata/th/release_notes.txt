@@ -1,1 +1,1 @@
-อัปเดตข้อมูล App Store และการวินิจฉัยการสมัครสมาชิก
+Fixes and improvements.

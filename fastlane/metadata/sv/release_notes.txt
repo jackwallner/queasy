@@ -1,1 +1,1 @@
-Uppdaterad App Store-information och abonnemangsdiagnostik.
+Fixes and improvements.

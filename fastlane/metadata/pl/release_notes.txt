@@ -1,1 +1,1 @@
-Zaktualizowano informacje w App Store i diagnostykę subskrypcji.
+Fixes and improvements.

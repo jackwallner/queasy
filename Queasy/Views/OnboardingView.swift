@@ -4,6 +4,9 @@ struct OnboardingView: View {
     @Environment(AppSettings.self) private var settings
     @State private var page = 0
     @State private var watch = WatchAvailability.shared
+    @Environment(\.dynamicTypeSize) private var typeSize
+
+    static let disclaimer = "Queasy is a set of comfort techniques, not a medical device.\nIt does not diagnose, treat or cure anything, and it may not\nchange how you feel. If symptoms are severe or persistent,\ntalk to a doctor."
 
     private let lastPage = 3
 
@@ -36,6 +39,7 @@ struct OnboardingView: View {
             }
             .tabViewStyle(.page(indexDisplayMode: .always))
             .indexViewStyle(.page(backgroundDisplayMode: .always))
+            .clipped()
 
             VStack(spacing: 10) {
                 if page < lastPage {
@@ -49,11 +53,14 @@ struct OnboardingView: View {
                     gateButtons
                 }
 
-                Text("Queasy is a set of comfort techniques, not a medical device.\nIt does not diagnose, treat or cure anything, and it may not\nchange how you feel. If symptoms are severe or persistent,\ntalk to a doctor.")
-                    .font(.caption2)
-                    .foregroundStyle(Theme.ink3)
-                    .multilineTextAlignment(.center)
-                    .fixedSize(horizontal: false, vertical: true)
+                // Large text reads it at the foot of each scrolling page instead.
+                if !typeSize.isAccessibilitySize {
+                    Text(Self.disclaimer)
+                        .font(.caption2)
+                        .foregroundStyle(Theme.ink3)
+                        .multilineTextAlignment(.center)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
             }
             .padding(.horizontal, 24)
             .padding(.bottom, 14)
@@ -140,8 +147,15 @@ private struct OnboardPage: View {
         if typeSize.isAccessibilitySize {
             // Large text outgrows the page, so it scrolls instead of cutting off.
             ScrollView {
-                page(badge: 96, spacing: 16)
-                    .padding(.vertical, 24)
+                VStack(spacing: 24) {
+                    page(badge: 96, spacing: 16)
+                    Text(OnboardingView.disclaimer.replacingOccurrences(of: "\n", with: " "))
+                        .font(.caption2)
+                        .foregroundStyle(Theme.ink3)
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal, 30)
+                }
+                .padding(.vertical, 24)
             }
         } else {
             // A short pane (an unfolded Duo) gets a smaller badge before the

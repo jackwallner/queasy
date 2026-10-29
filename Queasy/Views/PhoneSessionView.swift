@@ -8,6 +8,7 @@ import SwiftUI
 struct PhoneSessionView: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.closePane) private var closePane
+    @Environment(\.dynamicTypeSize) private var typeSize
     @Environment(SubscriptionService.self) private var subscriptions
     @State private var controller = PhoneSessionController.shared
     @State private var settings = AppSettings.shared
@@ -237,14 +238,36 @@ struct PhoneSessionView: View {
     /// The same three-choice rating the watch shows, so the two surfaces read
     /// identically. Feeling → after-severity lives in `ReliefFeeling`.
     private var ratingView: some View {
+        Group {
+            if typeSize.isAccessibilitySize {
+                // Large text outgrows the screen, so the choices scroll.
+                ScrollView {
+                    ratingChoices
+                        .padding(.vertical, 24)
+                }
+            } else {
+                VStack(spacing: 0) {
+                    Spacer()
+                    ratingChoices
+                    // The choices sit above where "I'm Done" was, so a second
+                    // tap on the way out cannot rate the session.
+                    Spacer()
+                    Spacer()
+                }
+            }
+        }
+    }
+
+    private var ratingChoices: some View {
         VStack(spacing: 22) {
-            Spacer()
             Text("How do you feel now?")
                 .font(Theme.displaySerif(28))
                 .foregroundStyle(Theme.ink)
+                .multilineTextAlignment(.center)
             Text("Compared to when you started.")
                 .font(.subheadline)
                 .foregroundStyle(Theme.ink2)
+                .multilineTextAlignment(.center)
 
             VStack(spacing: 12) {
                 feelingButton("Better", symbol: "face.smiling", tint: Theme.aqua, feeling: .better)
@@ -258,10 +281,6 @@ struct PhoneSessionView: View {
             }
             .font(.subheadline.weight(.semibold))
             .foregroundStyle(Theme.ink3)
-            // The choices sit above where "I'm Done" was, so a second tap on
-            // the way out cannot rate the session.
-            Spacer()
-            Spacer()
         }
     }
 

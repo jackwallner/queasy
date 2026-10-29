@@ -229,8 +229,10 @@ struct RelieveHomeView: View {
                 Label(quickTitle, systemImage: quickMode.symbolName)
                     .font(.system(.title3, design: .rounded, weight: .semibold))
                     .foregroundStyle(.white)
+                    .multilineTextAlignment(.center)
+                    .padding(.vertical, 12)
                     .frame(maxWidth: .infinity)
-                    .frame(height: 64)
+                    .frame(minHeight: 64)
                     .background(Theme.ctaGradient, in: RoundedRectangle(cornerRadius: Theme.ctaRadius))
                     .shadow(color: Theme.aqua.opacity(0.35), radius: 10, y: 5)
             }

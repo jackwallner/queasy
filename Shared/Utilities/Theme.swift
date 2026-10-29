@@ -131,8 +131,11 @@ struct TideCTAStyle: ButtonStyle {
         configuration.label
             .font(font)
             .foregroundStyle(.white)
+            .multilineTextAlignment(.center)
+            // Grows past `height` only when large text needs a second line.
+            .padding(.vertical, 12)
             .frame(maxWidth: .infinity)
-            .frame(height: height)
+            .frame(minHeight: height)
             .background(Theme.ctaGradient, in: RoundedRectangle(cornerRadius: Theme.ctaRadius))
             .shadow(color: tint.opacity(configuration.isPressed ? 0.1 : 0.35), radius: 10, y: 5)
             .scaleEffect(configuration.isPressed ? 0.98 : 1)

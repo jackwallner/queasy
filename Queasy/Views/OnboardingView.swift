@@ -53,6 +53,7 @@ struct OnboardingView: View {
                     .font(.caption2)
                     .foregroundStyle(Theme.ink3)
                     .multilineTextAlignment(.center)
+                    .fixedSize(horizontal: false, vertical: true)
             }
             .padding(.horizontal, 24)
             .padding(.bottom, 14)
@@ -123,6 +124,7 @@ struct OnboardingView: View {
             .font(.footnote.weight(.semibold))
             .foregroundStyle(Theme.ink2)
             .multilineTextAlignment(.center)
+            .fixedSize(horizontal: false, vertical: true)
             .accessibilityIdentifier("onboarding-phone-only")
         }
     }
@@ -132,13 +134,22 @@ private struct OnboardPage: View {
     let symbol: String
     let title: String
     let text: String
+    @Environment(\.dynamicTypeSize) private var typeSize
 
     var body: some View {
-        // A short pane (an unfolded Duo, large text) gets a smaller badge
-        // before the text is cut off.
-        ViewThatFits(in: .vertical) {
-            page(badge: 150, spacing: 26)
-            page(badge: 96, spacing: 16)
+        if typeSize.isAccessibilitySize {
+            // Large text outgrows the page, so it scrolls instead of cutting off.
+            ScrollView {
+                page(badge: 96, spacing: 16)
+                    .padding(.vertical, 24)
+            }
+        } else {
+            // A short pane (an unfolded Duo) gets a smaller badge before the
+            // text is cut off.
+            ViewThatFits(in: .vertical) {
+                page(badge: 150, spacing: 26)
+                page(badge: 96, spacing: 16)
+            }
         }
     }
 

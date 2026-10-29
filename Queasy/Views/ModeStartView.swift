@@ -244,6 +244,8 @@ struct ModeStartView: View {
                     Label("Read the source", systemImage: "arrow.up.right.square")
                         .font(.caption.weight(.semibold))
                         .foregroundStyle(Theme.ink2)
+                        .frame(minHeight: 44)
+                        .contentShape(Rectangle())
                 }
                 .buttonStyle(.plain)
             }

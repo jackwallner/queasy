@@ -133,6 +133,7 @@ struct TideCTAStyle: ButtonStyle {
             .foregroundStyle(.white)
             .multilineTextAlignment(.center)
             // Grows past `height` only when large text needs a second line.
+            .fixedSize(horizontal: false, vertical: true)
             .padding(.vertical, 12)
             .frame(maxWidth: .infinity)
             .frame(minHeight: height)

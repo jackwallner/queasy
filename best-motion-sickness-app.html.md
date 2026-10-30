@@ -1,6 +1,6 @@
 # Best Motion Sickness App for iPhone (2026)
 
-> Motion sickness apps for iPhone and Apple Watch compared: Apple's Vehicle Motion Cues, RideCalm, Dizzout, Hearapy and Trip Comfort, with what each one does.
+> Motion sickness apps for iPhone and Apple Watch compared: Apple's Vehicle Motion Cues, RideCalm, Dizzout, Hearapy and Trip Comfort, and what each does.
 
 Web page: https://jackwallner.com/ios/queasy/best-motion-sickness-app.html
 

@@ -15,5 +15,5 @@ To so tehnike ugodja brez zdravil, ne zdravljenje potovalne slabosti. Tapkanje n
 
 Oba se samodejno podaljšujeta in ob upravičenosti vključujeta 7-dnevni brezplačni preizkus. Apple ob potrditvi nakupa ali po upravičenem preizkusu bremeni tvoj račun Apple. Če nisi upravičen, se bremenitev izvede ob potrditvi. Strošek podaljšanja se zaračuna v 24 urah pred koncem trenutnega obdobja. Upravljaj ali prekliči v Nastavitve › Račun Apple › Naročnine vsaj 24 ur pred koncem. Cene se razlikujejo glede na regijo in so prikazane pred nakupom.
 Na voljo je tudi enkratno doživljenjsko odklepanje.
-Pravilnik o zasebnosti: https://jackwallner.github.io/queasy/privacy-policy.html
+Pravilnik o zasebnosti: https://jackwallner.com/ios/queasy/privacy-policy.html
 Pogoji uporabe (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/

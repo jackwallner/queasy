@@ -16,4 +16,4 @@ Queasy Pro giver sessioner på op til 45 minutter, din fulde historik med den ti
 
 Det er medicinfrie komfortteknikker, ikke medicinsk udstyr eller behandling af nogen tilstand. En telefons vibration er ikke akupressur eller elektrisk nervestimulation. Appen har ingen medicinsk godkendelse, diagnosticerer, behandler, kurerer eller forebygger intet og ændrer måske ikke, hvordan du har det. Hvis symptomerne er kraftige, vedvarende, kommer sammen med andre symptomer, eller du ikke kan holde på væsken, så søg lægehjælp. Under graviditet hører manglende evne til at holde på væsken under en jordemoder eller læge, ikke en app.
 
-Privatlivspolitik: https://jackwallner.github.io/queasy/privacy-policy.html
+Privatlivspolitik: https://jackwallner.com/ios/queasy/privacy-policy.html

@@ -16,4 +16,4 @@ Queasy Pro ajoute des séances jusqu'à 45 minutes, l'historique complet avec le
 
 Ce sont des techniques de confort sans médicament, pas un dispositif médical ni un traitement. Les vibrations d'un téléphone ne sont ni de l'acupression ni de la stimulation nerveuse électrique. L'application n'a aucune autorisation médicale, ne pose aucun diagnostic, ne soigne, ne guérit et ne prévient rien, et peut ne pas changer ce que vous ressentez. Si les symptômes sont forts, persistants, accompagnés d'autres signes, ou si vous ne gardez pas les liquides, demandez un avis médical. Pendant la grossesse, c'est une sage-femme ou un médecin qu'il faut consulter, pas une application.
 
-Politique de confidentialité: https://jackwallner.github.io/queasy/privacy-policy.html
+Politique de confidentialité: https://jackwallner.com/ios/queasy/privacy-policy.html

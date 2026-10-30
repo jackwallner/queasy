@@ -16,4 +16,4 @@ Queasy Pro přidává relace až na 45 minut, celou historii s režimem, po kter
 
 Jde o techniky pohodlí bez léků, nikoli zdravotnický prostředek ani léčbu jakéhokoli stavu. Vibrace telefonu není akupresura ani elektrická stimulace nervů. Aplikace nemá zdravotnické schválení, nestanovuje diagnózu, nic neléčí, neuzdravuje ani nepředchází a nemusí změnit, jak se cítíte. Pokud jsou potíže silné, trvalé, doprovázené dalšími příznaky nebo nezadržíte tekutiny, vyhledejte lékařskou pomoc. V těhotenství patří neschopnost zadržet tekutiny porodní asistentce nebo lékaři, ne aplikaci.
 
-Zásady ochrany osobních údajů: https://jackwallner.github.io/queasy/privacy-policy.html
+Zásady ochrany osobních údajů: https://jackwallner.com/ios/queasy/privacy-policy.html

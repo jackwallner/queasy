@@ -16,4 +16,4 @@ O Queasy Pro oferece sessões de até 45 minutos, o histórico completo com o mo
 
 São técnicas de conforto sem medicamentos, não um dispositivo médico nem um tratamento para qualquer condição. A vibração de um celular não é acupressão nem estimulação elétrica dos nervos. O app não tem autorização médica, não diagnostica, trata, cura nem previne nada, e pode não mudar como você se sente. Se os sintomas forem fortes, persistentes, vierem com outros sintomas ou você não conseguir reter líquidos, procure orientação médica. Na gravidez, não conseguir reter líquidos exige uma parteira ou um médico, não um app.
 
-Política de privacidade: https://jackwallner.github.io/queasy/privacy-policy.html
+Política de privacidade: https://jackwallner.com/ios/queasy/privacy-policy.html

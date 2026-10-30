@@ -16,4 +16,4 @@ Queasy Pro ger pass på upp till 45 minuter, hela historiken med det läge du br
 
 Det här är läkemedelsfria komforttekniker, inte en medicinteknisk produkt eller en behandling av något tillstånd. Vibrationen i en telefon är inte akupressur eller elektrisk nervstimulering. Appen har inget medicinskt godkännande, ställer inga diagnoser, behandlar, botar eller förebygger ingenting och kanske inte ändrar hur du mår. Om symtomen är svåra, ihållande, kommer med andra symtom eller om du inte kan behålla vätska, sök läkarvård. Under graviditet hör oförmåga att behålla vätska hemma hos barnmorska eller läkare, inte en app.
 
-Integritetspolicy: https://jackwallner.github.io/queasy/privacy-policy.html
+Integritetspolicy: https://jackwallner.com/ios/queasy/privacy-policy.html

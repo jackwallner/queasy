@@ -16,4 +16,4 @@ Queasy Pro biedt sessies tot 45 minuten, je volledige geschiedenis met de modus 
 
 Dit zijn medicijnvrije comforttechnieken, geen medisch hulpmiddel en geen behandeling voor welke aandoening dan ook. De trilling van een telefoon is geen acupressuur of elektrische zenuwstimulatie. De app heeft geen medische goedkeuring, stelt geen diagnoses, behandelt, geneest of voorkomt niets en verandert misschien niets aan hoe je je voelt. Bij ernstige of aanhoudende klachten, bij andere symptomen of als je geen vocht binnenhoudt, zoek dan medisch advies. Bij zwangerschap hoort niet kunnen binnenhouden van vocht bij een verloskundige of arts, niet bij een app.
 
-Privacybeleid: https://jackwallner.github.io/queasy/privacy-policy.html
+Privacybeleid: https://jackwallner.com/ios/queasy/privacy-policy.html

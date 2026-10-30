@@ -16,4 +16,4 @@ Queasy Pro, 45 dakikaya kadar seanslar, sonrasında genellikle daha iyi hissetti
 
 Bunlar ilaçsız rahatlama teknikleridir; tıbbi cihaz ya da herhangi bir durum için tedavi değildir. Telefon titreşimi akupresür veya elektriksel sinir uyarımı değildir. Uygulamanın tıbbi onayı yoktur, teşhis koymaz, tedavi etmez, iyileştirmez ya da önlemez ve hissettiğiniz şeyi değiştirmeyebilir. Belirtiler şiddetliyse, sürüyorsa, başka belirtilerle birlikteyse veya sıvı tutamıyorsanız tıbbi yardım alın. Hamilelikte sıvı tutamama bir uygulamaya değil, ebe veya doktora başvurmayı gerektirir.
 
-Gizlilik politikası: https://jackwallner.github.io/queasy/privacy-policy.html
+Gizlilik politikası: https://jackwallner.com/ios/queasy/privacy-policy.html

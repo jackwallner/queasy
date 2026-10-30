@@ -16,4 +16,4 @@ Queasy Pro adds sessions up to 45 minutes, your full history with the mode you t
 
 These are drug-free comfort techniques, not a medical device or a treatment for any condition. A phone's vibration is not acupressure or electrical nerve stimulation. The app has no medical clearance, does not diagnose, treat, cure or prevent anything, and may not change how you feel. If symptoms are severe, persistent, come with other symptoms, or you cannot keep fluids down, seek medical advice. In pregnancy, being unable to keep fluids down needs a midwife or doctor, not an app.
 
-Privacy policy: https://jackwallner.github.io/queasy/privacy-policy.html
+Privacy policy: https://jackwallner.com/ios/queasy/privacy-policy.html

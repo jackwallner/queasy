@@ -16,4 +16,4 @@ Queasy Pro dodaje sesije do 45 minuta, cijelu povijest s načinom nakon kojeg se
 
 Ovo su tehnike udobnosti bez lijekova, a ne medicinski proizvod ni liječenje bilo kojeg stanja. Vibracija telefona nije akupresura ni električna stimulacija živaca. Aplikacija nema medicinsko odobrenje, ne postavlja dijagnozu, ništa ne liječi, ne izliječuje niti sprječava i možda neće promijeniti kako se osjećate. Ako su simptomi jaki, dugotrajni, prate ih drugi simptomi ili ne možete zadržati tekućinu, potražite liječnički savjet. U trudnoći nemogućnost zadržavanja tekućine zahtijeva primalju ili liječnika, a ne aplikaciju.
 
-Pravila privatnosti: https://jackwallner.github.io/queasy/privacy-policy.html
+Pravila privatnosti: https://jackwallner.com/ios/queasy/privacy-policy.html

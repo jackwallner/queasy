@@ -16,4 +16,4 @@ Queasy Pro menambahkan sesi hingga 45 menit, riwayat lengkap dengan mode yang bi
 
 Ini adalah teknik kenyamanan tanpa obat, bukan alat kesehatan atau pengobatan untuk kondisi apa pun. Getaran ponsel bukan akupresur atau stimulasi saraf listrik. Aplikasi ini tidak memiliki izin medis, tidak mendiagnosis, mengobati, menyembuhkan, atau mencegah apa pun, dan mungkin tidak mengubah apa yang Anda rasakan. Jika gejala berat, berkepanjangan, disertai gejala lain, atau Anda tidak bisa menahan cairan, cari saran medis. Pada kehamilan, tidak bisa menahan cairan memerlukan bidan atau dokter, bukan aplikasi.
 
-Kebijakan privasi: https://jackwallner.github.io/queasy/privacy-policy.html
+Kebijakan privasi: https://jackwallner.com/ios/queasy/privacy-policy.html

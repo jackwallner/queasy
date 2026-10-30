@@ -16,4 +16,4 @@ Queasy Pro afegeix sessions de fins a 45 minuts, l'historial complet amb el mode
 
 Són tècniques de confort sense fàrmacs, no un producte sanitari ni un tractament per a cap afecció. La vibració d'un mòbil no és acupressió ni estimulació elèctrica dels nervis. L'aplicació no té cap autorització mèdica, no diagnostica, tracta, cura ni prevé res, i pot ser que no canviï com et sents. Si els símptomes són intensos, persistents, van acompanyats d'altres símptomes o no pots retenir líquids, consulta un metge. Durant l'embaràs, no poder retenir líquids requereix una llevadora o un metge, no una aplicació.
 
-Política de privadesa: https://jackwallner.github.io/queasy/privacy-policy.html
+Política de privadesa: https://jackwallner.com/ios/queasy/privacy-policy.html

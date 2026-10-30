@@ -16,4 +16,4 @@ Queasy Pro 提供最长45分钟的练习、完整历史记录(显示你做完后
 
 这些是不使用药物的舒缓方法,不是医疗器械,也不是对任何病症的治疗。手机振动不是穴位按压或电神经刺激。本应用未获得医疗认证,不进行诊断,不治疗、治愈或预防任何疾病,也可能不会改变你的感觉。如果症状严重、持续、伴有其他症状,或无法保持水分,请就医咨询。怀孕期间无法保持水分时,需要找助产士或医生,而不是应用。
 
-隐私政策: https://jackwallner.github.io/queasy/privacy-policy.html
+隐私政策: https://jackwallner.com/ios/queasy/privacy-policy.html

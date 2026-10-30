@@ -16,4 +16,4 @@ Queasy Pro bổ sung các phiên dài đến 45 phút, toàn bộ lịch sử v�
 
 Đây là các kỹ thuật thoải mái không dùng thuốc, không phải thiết bị y tế hay phương pháp điều trị bất kỳ tình trạng nào. Rung của điện thoại không phải bấm huyệt hay kích thích thần kinh bằng điện. Ứng dụng không có giấy phép y tế, không chẩn đoán, điều trị, chữa khỏi hay phòng ngừa bất cứ điều gì và có thể không thay đổi cảm giác của bạn. Nếu triệu chứng nặng, kéo dài, kèm triệu chứng khác hoặc bạn không giữ được nước, hãy tìm tư vấn y tế. Khi mang thai, không giữ được nước cần đến nữ hộ sinh hoặc bác sĩ, không phải ứng dụng.
 
-Chính sách quyền riêng tư: https://jackwallner.github.io/queasy/privacy-policy.html
+Chính sách quyền riêng tư: https://jackwallner.com/ios/queasy/privacy-policy.html

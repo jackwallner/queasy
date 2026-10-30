@@ -16,4 +16,4 @@ Queasy Pro adaugă sesiuni de până la 45 de minute, istoricul complet cu modul
 
 Acestea sunt tehnici de confort fără medicamente, nu un dispozitiv medical și nu un tratament pentru vreo afecțiune. Vibrația unui telefon nu este acupresiune sau stimulare electrică a nervilor. Aplicația nu are aprobare medicală, nu diagnostichează, nu tratează, nu vindecă și nu previne nimic și s-ar putea să nu schimbe cum te simți. Dacă simptomele sunt severe, persistente, apar împreună cu alte simptome sau nu poți reține lichidele, cere sfatul unui medic. În sarcină, imposibilitatea de a reține lichidele necesită o moașă sau un medic, nu o aplicație.
 
-Politica de confidențialitate: https://jackwallner.github.io/queasy/privacy-policy.html
+Politica de confidențialitate: https://jackwallner.com/ios/queasy/privacy-policy.html

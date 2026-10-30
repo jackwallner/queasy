@@ -16,4 +16,4 @@ A Queasy Pro akár 45 perces munkameneteket, a teljes előzményeket azzal a mó
 
 Ezek gyógyszermentes komforttechnikák, nem orvostechnikai eszközök, és nem kezelnek semmilyen állapotot. A telefon rezgése nem akupresszúra és nem elektromos idegstimuláció. Az alkalmazásnak nincs orvosi engedélye, nem diagnosztizál, nem kezel, nem gyógyít és nem előz meg semmit, és lehet, hogy nem változtat azon, hogyan érzed magad. Ha a tünetek erősek, tartósak, más tünetekkel járnak, vagy nem tudod bent tartani a folyadékot, kérj orvosi tanácsot. Terhesség alatt a folyadék bent tartásának képtelensége szülésznőt vagy orvost igényel, nem alkalmazást.
 
-Adatvédelmi irányelvek: https://jackwallner.github.io/queasy/privacy-policy.html
+Adatvédelmi irányelvek: https://jackwallner.com/ios/queasy/privacy-policy.html

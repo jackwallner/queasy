@@ -16,4 +16,4 @@ Queasy Pro dodaje sesje do 45 minut, pełną historię z trybem, po którym zwyk
 
 To techniki komfortu bez leków, nie wyrób medyczny ani leczenie żadnego schorzenia. Wibracje telefonu to nie akupresura ani elektryczna stymulacja nerwów. Aplikacja nie ma zgody medycznej, nie diagnozuje, nie leczy, nie uzdrawia ani niczemu nie zapobiega i może nie zmienić tego, jak się czujesz. Jeśli objawy są silne, utrzymują się, towarzyszą im inne objawy lub nie możesz utrzymać płynów, zasięgnij porady lekarza. W ciąży niemożność utrzymania płynów wymaga położnej lub lekarza, a nie aplikacji.
 
-Polityka prywatności: https://jackwallner.github.io/queasy/privacy-policy.html
+Polityka prywatności: https://jackwallner.com/ios/queasy/privacy-policy.html

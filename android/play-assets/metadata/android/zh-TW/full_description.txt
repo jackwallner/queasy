@@ -16,4 +16,4 @@ Queasy Pro 提供最長45分鐘的練習、完整歷程記錄(顯示你做完後
 
 這些是不使用藥物的舒緩方法,不是醫療器材,也不是對任何病症的治療。手機震動不是穴位按壓或電神經刺激。本應用程式未取得醫療認證,不進行診斷,也不治療、治癒或預防任何疾病,且可能不會改變你的感覺。如果症狀嚴重、持續、伴隨其他症狀,或無法留住水分,請尋求醫療建議。懷孕期間無法留住水分時,需要找助產士或醫師,而不是應用程式。
 
-隱私權政策: https://jackwallner.github.io/queasy/privacy-policy.html
+隱私權政策: https://jackwallner.com/ios/queasy/privacy-policy.html

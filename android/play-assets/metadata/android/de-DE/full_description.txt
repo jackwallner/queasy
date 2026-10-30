@@ -16,4 +16,4 @@ Queasy Pro bietet Sitzungen von bis zu 45 Minuten, den vollständigen Verlauf mi
 
 Dies sind medikamentenfreie Wohlfühl-Techniken, kein Medizinprodukt und keine Behandlung einer Erkrankung. Die Vibration eines Smartphones ist keine Akupressur und keine elektrische Nervenstimulation. Die App hat keine medizinische Zulassung, stellt keine Diagnosen, behandelt, heilt oder verhindert nichts und verändert Ihr Befinden möglicherweise nicht. Bei starken oder anhaltenden Beschwerden, weiteren Symptomen oder wenn Sie keine Flüssigkeit bei sich behalten können, suchen Sie ärztlichen Rat. In der Schwangerschaft gehört dies zu Hebamme oder Arzt, nicht zu einer App.
 
-Datenschutzerklärung: https://jackwallner.github.io/queasy/privacy-policy.html
+Datenschutzerklärung: https://jackwallner.com/ios/queasy/privacy-policy.html

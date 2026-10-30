@@ -16,4 +16,4 @@ Queasy Pro aggiunge sessioni fino a 45 minuti, la cronologia completa con la mod
 
 Sono tecniche di comfort senza farmaci, non un dispositivo medico né un trattamento per alcuna condizione. La vibrazione di un telefono non è agopressione né stimolazione elettrica dei nervi. L'app non ha alcuna autorizzazione medica, non diagnostica, non tratta, non cura e non previene nulla, e potrebbe non cambiare come ti senti. Se i sintomi sono forti, persistenti, accompagnati da altri sintomi o non riesci a trattenere i liquidi, rivolgiti a un medico. In gravidanza, non riuscire a trattenere i liquidi richiede un'ostetrica o un medico, non un'app.
 
-Informativa sulla privacy: https://jackwallner.github.io/queasy/privacy-policy.html
+Informativa sulla privacy: https://jackwallner.com/ios/queasy/privacy-policy.html

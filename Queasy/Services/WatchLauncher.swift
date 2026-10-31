@@ -10,6 +10,11 @@ final class WatchLauncher {
 
     private init() {}
 
+    /// How a plan reaches the watch. A test swaps it to see what would be sent.
+    var send: (ReliefPlan, _ autoStart: Bool) -> Void = { plan, autoStart in
+        QueasySyncService.shared.sendPlan(plan, autoStart: autoStart)
+    }
+
     enum Outcome {
         /// The watch app is reachable and will start the plan now.
         case started
@@ -21,7 +26,7 @@ final class WatchLauncher {
         // Every phone-initiated start wants the remote controls to follow.
         WatchSessionMirror.shared.pendingAutoPresent = true
         // Send the plan first so it's waiting when the watch app wakes.
-        QueasySyncService.shared.sendPlan(plan, autoStart: true)
+        send(plan, true)
         AnalyticsService.sentToWatch(intensity: plan.intensity)
 
         return QueasySyncService.shared.isWatchReachable ? .started : .queued

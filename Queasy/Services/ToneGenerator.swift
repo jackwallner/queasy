@@ -22,12 +22,17 @@ final class ToneGenerator {
         try? AVAudioSession.sharedInstance().setCategory(.playback, options: [.mixWithOthers])
         try? AVAudioSession.sharedInstance().setActive(true)
 
+        // The source node renders in whatever format it is given, and the default
+        // is 44.1 kHz, not the hardware rate. Build the phase step for the same
+        // format the node is connected with, or the mixer resamples the tone to
+        // the wrong pitch.
         let sampleRate = engine.outputNode.outputFormat(forBus: 0).sampleRate
-        guard sampleRate > 0 else { return }
+        guard sampleRate > 0,
+              let format = AVAudioFormat(standardFormatWithSampleRate: sampleRate, channels: 2) else { return }
         let increment = 2.0 * Double.pi * Self.frequency / sampleRate
         // The render closure runs on the audio thread; keep state local.
         var theta = 0.0
-        let node = AVAudioSourceNode { _, _, frameCount, audioBufferList -> OSStatus in
+        let node = AVAudioSourceNode(format: format) { _, _, frameCount, audioBufferList -> OSStatus in
             let buffers = UnsafeMutableAudioBufferListPointer(audioBufferList)
             for frame in 0..<Int(frameCount) {
                 let value = Float(sin(theta)) * ToneGenerator.amplitude
@@ -41,7 +46,7 @@ final class ToneGenerator {
             return noErr
         }
         engine.attach(node)
-        engine.connect(node, to: engine.mainMixerNode, format: nil)
+        engine.connect(node, to: engine.mainMixerNode, format: format)
         sourceNode = node
         do {
             try engine.start()

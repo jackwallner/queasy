@@ -100,4 +100,28 @@ extension EpisodeStatsTests {
     @Test func heatmapEmptyWithoutEpisodes() {
         #expect(EpisodeStats.heatmap([], endingAt: now).isEmpty)
     }
+
+    /// Cairo, Beirut and Havana skip local midnight when DST starts, so that one
+    /// day starts at 01:00. Every cell after it must still start its own day,
+    /// or the episodes filed under that day go missing from the grid.
+    @Test(arguments: ["Africa/Cairo", "Asia/Beirut", "America/Havana", "America/Los_Angeles"])
+    func heatmapKeepsEveryDayWhereDSTSkipsMidnight(zone: String) throws {
+        var calendar = Calendar(identifier: .gregorian)
+        calendar.timeZone = try #require(TimeZone(identifier: zone))
+        let end = try #require(calendar.date(from: DateComponents(year: 2026, month: 5, day: 20, hour: 12)))
+        let entries = try stride(from: 0, to: 80, by: 3).map { offset in
+            EpisodeStats.Entry(
+                startedAt: try #require(calendar.date(byAdding: .day, value: -offset, to: end)),
+                cause: .motion,
+                severityBefore: 3,
+                severityAfter: 2
+            )
+        }
+
+        let days = EpisodeStats.heatmap(entries, endingAt: end, calendar: calendar)
+
+        #expect(days.reduce(0) { $0 + $1.count } == entries.count, "\(zone) lost episodes from the grid")
+        let drifted = days.filter { $0.date != calendar.startOfDay(for: $0.date) }
+        #expect(drifted.isEmpty, "\(zone): \(drifted.count) of \(days.count) cells do not start their day")
+    }
 }

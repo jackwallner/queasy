@@ -84,7 +84,7 @@ enum EpisodeStats {
         calendar: Calendar = .current
     ) -> [HeatmapDay] {
         let today = calendar.startOfDay(for: end)
-        guard let windowStart = calendar.date(byAdding: .day, value: -(days - 1), to: today),
+        guard let windowStart = calendar.date(byAdding: .day, value: -(days - 1), to: today).map(calendar.startOfDay(for:)),
               let firstEpisode = entries.map(\.startedAt).min()
         else { return [] }
         let firstDay = calendar.startOfDay(for: firstEpisode)
@@ -105,7 +105,11 @@ enum EpisodeStats {
         while cursor <= today {
             let cell = byDay[cursor]
             out.append(HeatmapDay(date: cursor, count: cell?.count ?? 0, peakSeverity: cell?.peak))
-            cursor = calendar.date(byAdding: .day, value: 1, to: cursor) ?? cursor.addingTimeInterval(86_400)
+            // Land on the start of the next day, not a day's length on. Where DST skips
+            // local midnight a day starts at 01:00, and stepping from there would leave
+            // every later cell an hour off the key its episodes are filed under.
+            let next = calendar.date(byAdding: .day, value: 1, to: cursor).map(calendar.startOfDay(for:))
+            cursor = next ?? cursor.addingTimeInterval(86_400)
         }
         return out
     }

@@ -5,12 +5,17 @@ import Foundation
 /// reduced motion-sickness symptoms after ~1 minute of exposure. Offered as an
 /// optional layer during phone sessions (headphones recommended).
 final class ToneGenerator {
-    private let engine = AVAudioEngine()
+    private let engine: AVAudioEngine
     private var sourceNode: AVAudioSourceNode?
     private(set) var isPlaying = false
 
     static let frequency = 100.0
     static let amplitude: Float = 0.18
+
+    /// Takes the engine so a test can render the tone offline and measure it.
+    init(engine: AVAudioEngine = AVAudioEngine()) {
+        self.engine = engine
+    }
 
     func start() {
         guard !isPlaying else { return }

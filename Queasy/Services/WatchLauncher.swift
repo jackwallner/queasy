@@ -25,6 +25,15 @@ final class WatchLauncher {
     func startOnWatch(plan: ReliefPlan) async -> Outcome {
         // Every phone-initiated start wants the remote controls to follow.
         WatchSessionMirror.shared.pendingAutoPresent = true
+        // The watch has no purchase state, so a free session's length is capped here,
+        // whichever screen asked for it.
+        var plan = plan
+        let granted = FreeTier.cappedSeconds(
+            for: plan.mode,
+            requested: plan.durationMinutes * 60,
+            isPro: SubscriptionService.shared.isProSubscriber
+        )
+        plan.durationMinutes = max(granted / 60, 1)
         // Send the plan first so it's waiting when the watch app wakes.
         send(plan, true)
         AnalyticsService.sentToWatch(intensity: plan.intensity)

@@ -1,1 +1,1 @@
-Fixes and improvements.
+Queasy'ın sorunsuz çalışması için arka planda iyileştirmeler ve hata düzeltmeleri. Burada olduğun için teşekkürler.

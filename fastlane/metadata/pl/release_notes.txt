@@ -1,1 +1,1 @@
-Fixes and improvements.
+Ulepszenia w tle i poprawki błędów, aby Queasy działał płynnie. Dziękujemy, że jesteś.

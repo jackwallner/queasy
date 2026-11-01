@@ -1,1 +1,1 @@
-Fixes and improvements.
+Forbedringer bag kulisserne og fejlrettelser, så Queasy kører glat. Tak fordi du er her.

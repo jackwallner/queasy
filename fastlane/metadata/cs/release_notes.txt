@@ -1,1 +1,1 @@
-Fixes and improvements.
+Vylepšení na pozadí a opravy chyb, aby Queasy běžel hladce. Děkujeme, že jste tu.

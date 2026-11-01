@@ -1,1 +1,1 @@
-Fixes and improvements.
+Behind-the-scenes improvements and fixes to keep Queasy running smoothly. Thank you for being here.

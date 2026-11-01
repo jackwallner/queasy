@@ -1,1 +1,1 @@
-Fixes and improvements.
+進行了背景優化與錯誤修復，讓 Queasy 運行更順暢。感謝一路有你。

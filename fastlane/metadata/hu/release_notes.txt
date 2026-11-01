@@ -1,1 +1,1 @@
-Fixes and improvements.
+Háttérbeli fejlesztések és hibajavítások, hogy a Queasy gördülékenyen működjön. Köszönjük, hogy itt vagy.

@@ -1,1 +1,1 @@
-Fixes and improvements.
+Taustaparannuksia ja virhekorjauksia, jotta Queasy toimii sujuvasti. Kiitos, että olet mukana.

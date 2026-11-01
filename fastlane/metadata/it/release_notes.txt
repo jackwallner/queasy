@@ -1,1 +1,1 @@
-Fixes and improvements.
+Miglioramenti dietro le quinte e correzioni di bug per far funzionare Queasy senza intoppi. Grazie di esserci.

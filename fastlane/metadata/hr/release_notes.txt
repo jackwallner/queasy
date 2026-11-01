@@ -1,1 +1,1 @@
-Fixes and improvements.
+Poboljšanja u pozadini i ispravci grešaka kako bi Queasy radio glatko. Hvala što ste tu.

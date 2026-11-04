@@ -17,23 +17,35 @@ enum NauseaCause: String, Codable, CaseIterable, Identifiable, Sendable {
 
     var label: String {
         switch self {
-        case .motion: return "Motion sickness"
-        case .morningSickness: return "Morning sickness"
-        case .hangover: return "Hangover"
-        case .vertigo: return "Vertigo / dizziness"
-        case .anxiety: return "Nervous stomach"
-        case .general: return "Illness / other"
+        case .motion: return String(localized: "Motion sickness")
+        case .morningSickness: return String(localized: "Morning sickness")
+        case .hangover: return String(localized: "Hangover")
+        case .vertigo: return String(localized: "Vertigo / dizziness")
+        case .anxiety: return String(localized: "Nervous stomach")
+        case .general: return String(localized: "Illness / other")
         }
     }
 
     var shortLabel: String {
         switch self {
-        case .motion: return "Motion"
-        case .morningSickness: return "Morning"
-        case .hangover: return "Hangover"
-        case .vertigo: return "Vertigo"
-        case .anxiety: return "Nerves"
-        case .general: return "Other"
+        case .motion: return String(localized: "Motion")
+        case .morningSickness: return String(localized: "Morning")
+        case .hangover: return String(localized: "Hangover")
+        case .vertigo: return String(localized: "Vertigo")
+        case .anxiety: return String(localized: "Nerves")
+        case .general: return String(localized: "Other")
+        }
+    }
+
+    /// The recommendation screen's heading, one whole sentence per occasion.
+    var suggestedHeading: String {
+        switch self {
+        case .motion: return String(localized: "Suggested for motion sickness")
+        case .morningSickness: return String(localized: "Suggested for morning sickness")
+        case .hangover: return String(localized: "Suggested for hangover")
+        case .vertigo: return String(localized: "Suggested for vertigo / dizziness")
+        case .anxiety: return String(localized: "Suggested for nervous stomach")
+        case .general: return String(localized: "Suggested for illness / other")
         }
     }
 
@@ -53,9 +65,9 @@ enum NauseaCause: String, Codable, CaseIterable, Identifiable, Sendable {
     var safetyNote: String? {
         switch self {
         case .morningSickness:
-            return "If you cannot keep fluids down for a day, are losing weight, or feel faint, call your midwife or doctor. Sickness in pregnancy can get serious and there is treatment for it."
+            return String(localized: "If you cannot keep fluids down for a day, are losing weight, or feel faint, call your midwife or doctor. Sickness in pregnancy can get serious and there is treatment for it.")
         case .vertigo:
-            return "New, severe or one-sided spinning is worth a doctor's opinion rather than an app's."
+            return String(localized: "New, severe or one-sided spinning is worth a doctor's opinion rather than an app's.")
         case .motion, .hangover, .anxiety, .general:
             return nil
         }
@@ -132,6 +144,10 @@ struct PulseSpec: Codable, Sendable, Equatable {
     }
 }
 
+/// Marks copy that is saved in English as it stands (a plan's tips): the literal
+/// is its own catalog key, and the screen looks it up at display time.
+func storedCatalogKey(_ english: String) -> String { english }
+
 /// The engine's output: what to run and for how long.
 struct ReliefPlan: Codable, Sendable, Equatable {
     var cause: NauseaCause
@@ -146,6 +162,11 @@ struct ReliefPlan: Codable, Sendable, Equatable {
     var tips: [String]
 
     var spec: PulseSpec { PulseSpec.forLevel(intensity) }
+
+    /// `tips` is stored and synced in English; this translates it for the screen.
+    var displayTips: [String] {
+        tips.map { String(localized: String.LocalizationValue($0)) }
+    }
 
     init(
         cause: NauseaCause,

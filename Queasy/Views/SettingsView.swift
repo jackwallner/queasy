@@ -129,8 +129,8 @@ struct SettingsView: View {
 
                 #if DEBUG
                 if !isScreenshotMode {
-                    Section("Debug") {
-                        Toggle("Pro override", isOn: Binding(
+                    Section(String("Debug")) {
+                        Toggle(String("Pro override"), isOn: Binding(
                             get: { subscriptions.isProSubscriber },
                             set: { subscriptions.setLocalOverride(isPro: $0) }
                         ))
@@ -140,7 +140,7 @@ struct SettingsView: View {
             }
             .scrollContentBackground(.hidden)
             .tideBackground()
-            .paneNavigationTitle("Settings")
+            .paneNavigationTitle(String(localized: "Settings"))
             .paywallSheet(isPresented: $showPaywall, impressionId: "queasy_settings")
             .task {
                 // Reminders are a Pro feature, so a lapsed subscription stops
@@ -175,7 +175,7 @@ struct SettingsView: View {
             defer { isRestoring = false }
             #if HAS_REVENUECAT
             await subscriptions.restorePurchases()
-            restoreMessage = subscriptions.isProSubscriber ? "Restored." : "No purchases found."
+            restoreMessage = subscriptions.isProSubscriber ? String(localized: "Restored.") : String(localized: "No purchases found.")
             #else
             await subscriptions.refresh()
             #endif

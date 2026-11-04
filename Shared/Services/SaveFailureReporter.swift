@@ -19,7 +19,7 @@ final class SaveFailureReporter {
 
     func report(_ error: Error) {
         logger.error("Local save failed: \(String(describing: error), privacy: .private)")
-        message = "Your last change could not be saved on this iPhone, so it may be missing after you close Queasy. This is usually because storage is full. Free up some space and try again."
+        message = String(localized: "Your last change could not be saved on this iPhone, so it may be missing after you close Queasy. This is usually because storage is full. Free up some space and try again.")
     }
 }
 

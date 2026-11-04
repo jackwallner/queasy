@@ -40,7 +40,7 @@ struct WatchSessionView: View {
             .disabled(engine.intensity <= PatternEngine.minIntensity)
 
             VStack(spacing: 0) {
-                Text("\(engine.intensity)")
+                Text(engine.intensity, format: .number)
                     .font(.system(size: 34, weight: .bold, design: .rounded))
                     .foregroundStyle(Theme.aqua)
                     .contentTransition(.numericText())
@@ -83,8 +83,7 @@ struct WatchSessionView: View {
     }
 
     private func timeString(_ seconds: Int) -> String {
-        let clamped = max(seconds, 0)
-        return String(format: "%d:%02d", clamped / 60, clamped % 60)
+        DisplayFormat.clock(seconds)
     }
 }
 
@@ -97,9 +96,9 @@ struct WatchRatingView: View {
                 Text("Feeling…")
                     .font(.headline)
 
-                ratingButton("Better", symbol: "face.smiling", tint: Theme.aqua, feeling: .better)
-                ratingButton("The same", symbol: "face.dashed", tint: Theme.sand, feeling: .same)
-                ratingButton("Worse", symbol: "cloud.rain", tint: Theme.coral, feeling: .worse)
+                ratingButton(String(localized: "Better"), symbol: "face.smiling", tint: Theme.aqua, feeling: .better)
+                ratingButton(String(localized: "The same"), symbol: "face.dashed", tint: Theme.sand, feeling: .same)
+                ratingButton(String(localized: "Worse"), symbol: "cloud.rain", tint: Theme.coral, feeling: .worse)
 
                 Button("Skip") {
                     engine.complete(feeling: nil)

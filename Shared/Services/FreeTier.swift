@@ -17,8 +17,6 @@ enum FreeTier {
     /// see a pattern, which is what Pro is for.
     static let historyDays = 7
 
-    static var sessionMinutesLabel: String { "2-minute" }
-
     /// Modes with a fixed protocol (Tone's minute, Press's three) are never
     /// shortened. Capping a timer that counts the user's own thumb would be
     /// petty, and Tone is the mode with the citation, so it should be the one
@@ -52,23 +50,23 @@ enum ProFeature: String, CaseIterable, Identifiable {
 
     var title: String {
         switch self {
-        case .fullLengthSessions: return "Sessions as long as you need"
-        case .fullHistory: return "Your whole history, and what helps"
-        case .ownRhythm: return "Pick your own rhythm and level"
-        case .pressReminders: return "Press reminders through the day"
+        case .fullLengthSessions: return String(localized: "Sessions as long as you need")
+        case .fullHistory: return String(localized: "Your whole history, and what helps")
+        case .ownRhythm: return String(localized: "Pick your own rhythm and level")
+        case .pressReminders: return String(localized: "Press reminders through the day")
         }
     }
 
     var detail: String {
         switch self {
         case .fullLengthSessions:
-            return "Pulse and Breathe run up to \(PatternEngine.maxDuration) minutes instead of \(FreeTier.sessionMinutesLabel) sessions, and keep going on your wrist with the screen off."
+            return String(localized: "Pulse and Breathe run up to \(PatternEngine.maxDuration) minutes instead of \(FreeTier.sessionSeconds / 60)-minute sessions, and keep going on your wrist with the screen off.")
         case .fullHistory:
-            return "Every session kept, not just the last \(FreeTier.historyDays) days, with which mode you tend to come out of feeling better."
+            return String(localized: "Every session kept, not just the last \(FreeTier.historyDays) days, with which mode you tend to come out of feeling better.")
         case .ownRhythm:
-            return "Set the breathing rhythm and the pulse level yourself, and save the one that suits you as your default."
+            return String(localized: "Set the breathing rhythm and the pulse level yourself, and save the one that suits you as your default.")
         case .pressReminders:
-            return "A nudge to run a hold a few times a day, the way the wristband trials spaced them."
+            return String(localized: "A nudge to run a hold a few times a day, the way the wristband trials spaced them.")
         }
     }
 

@@ -20,20 +20,20 @@ enum ReliefMode: String, Codable, CaseIterable, Identifiable, Sendable {
 
     var title: String {
         switch self {
-        case .pulse: return "Pulse"
-        case .breathe: return "Breathe"
-        case .tone: return "Tone"
-        case .press: return "Press"
+        case .pulse: return String(localized: "Pulse")
+        case .breathe: return String(localized: "Breathe")
+        case .tone: return String(localized: "Tone")
+        case .press: return String(localized: "Press")
         }
     }
 
     /// One line, on the card. States what happens, never what it will do to you.
     var tagline: String {
         switch self {
-        case .pulse: return "A steady tap on the inside of your wrist"
-        case .breathe: return "Slow the breath, paced by your wrist"
-        case .tone: return "A 100 Hz tone through your headphones"
-        case .press: return "Find the spot a band sits on, and hold it"
+        case .pulse: return String(localized: "A steady tap on the inside of your wrist")
+        case .breathe: return String(localized: "Slow the breath, paced by your wrist")
+        case .tone: return String(localized: "A 100 Hz tone through your headphones")
+        case .press: return String(localized: "Find the spot a band sits on, and hold it")
         }
     }
 
@@ -41,13 +41,13 @@ enum ReliefMode: String, Codable, CaseIterable, Identifiable, Sendable {
     var blurb: String {
         switch self {
         case .pulse:
-            return "An unhurried, regular tap you can rest your attention on while a wave passes. Nudge the level until it is clear but not annoying."
+            return String(localized: "An unhurried, regular tap you can rest your attention on while a wave passes. Nudge the level until it is clear but not annoying.")
         case .breathe:
-            return "Your watch taps the rhythm so you can keep your eyes shut: a long tap in, a longer one out. Breathing out for longer than you breathe in is the whole technique."
+            return String(localized: "Your watch taps the rhythm so you can keep your eyes shut: a long tap in, a longer one out. Breathing out for longer than you breathe in is the whole technique.")
         case .tone:
-            return "A pure 100 Hz tone at a low volume. Headphones, one minute, eyes wherever you like."
+            return String(localized: "A pure 100 Hz tone at a low volume. Headphones, one minute, eyes wherever you like.")
         case .press:
-            return "The inside of the wrist, three finger-widths below the crease, between the two tendons. Press with your thumb, or line up the stud on a band you already own."
+            return String(localized: "The inside of the wrist, three finger-widths below the crease, between the two tendons. Press with your thumb, or line up the stud on a band you already own.")
         }
     }
 
@@ -86,11 +86,11 @@ enum ReliefMode: String, Codable, CaseIterable, Identifiable, Sendable {
         case .pulse:
             return nil
         case .breathe:
-            return "Trials of slow diaphragmatic breathing during chemotherapy and after surgery have reported lower nausea scores. The studies are small."
+            return String(localized: "Trials of slow diaphragmatic breathing during chemotherapy and after surgery have reported lower nausea scores. The studies are small.")
         case .tone:
-            return "A 2025 Nagoya University study is titled \"Just 1-min exposure to a pure tone at 100 Hz with daily exposable sound pressure levels may improve motion sickness\"."
+            return String(localized: "A 2025 Nagoya University study is titled \"Just 1-min exposure to a pure tone at 100 Hz with daily exposable sound pressure levels may improve motion sickness\".")
         case .press:
-            return "Pressure at this spot has been trialled for travel, post-surgery and pregnancy sickness. The Cochrane review of early-pregnancy trials calls the evidence limited and inconsistent."
+            return String(localized: "Pressure at this spot has been trialled for travel, post-surgery and pregnancy sickness. The Cochrane review of early-pregnancy trials calls the evidence limited and inconsistent.")
         }
     }
 
@@ -122,7 +122,7 @@ struct BreathePattern: Codable, Sendable, Equatable {
     var cycleSeconds: Double { inhaleSeconds + exhaleSeconds }
 
     var label: String {
-        "\(Int(inhaleSeconds)) in · \(Int(exhaleSeconds)) out"
+        String(localized: "\(Int(inhaleSeconds)) in · \(Int(exhaleSeconds)) out")
     }
 
     var breathsPerMinute: Int { Int((60.0 / cycleSeconds).rounded()) }
@@ -137,10 +137,10 @@ enum PressProtocol {
     /// Finding the spot. Deliberately physical instructions with no claim about
     /// what happens once you are there.
     static let steps: [String] = [
-        "Turn one hand palm up.",
-        "Lay three fingers of the other hand across the wrist, just below the crease.",
-        "The spot is under the edge of your third finger, in the dip between the two tendons.",
-        "Press firmly with your thumb, or sit the stud of an acupressure band there.",
-        "Do the same on the other wrist if you have a second band.",
+        String(localized: "Turn one hand palm up."),
+        String(localized: "Lay three fingers of the other hand across the wrist, just below the crease."),
+        String(localized: "The spot is under the edge of your third finger, in the dip between the two tendons."),
+        String(localized: "Press firmly with your thumb, or sit the stud of an acupressure band there."),
+        String(localized: "Do the same on the other wrist if you have a second band."),
     ]
 }

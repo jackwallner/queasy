@@ -6,7 +6,7 @@ struct OnboardingView: View {
     @State private var watch = WatchAvailability.shared
     @Environment(\.dynamicTypeSize) private var typeSize
 
-    static let disclaimer = "Queasy is a set of comfort techniques, not a medical device.\nIt does not diagnose, treat or cure anything, and it may not\nchange how you feel. If symptoms are severe or persistent,\ntalk to a doctor."
+    static let disclaimer = String(localized: "Queasy is a set of comfort techniques, not a medical device.\nIt does not diagnose, treat or cure anything, and it may not\nchange how you feel. If symptoms are severe or persistent,\ntalk to a doctor.")
 
     private let lastPage = 3
 
@@ -15,22 +15,22 @@ struct OnboardingView: View {
             TabView(selection: $page) {
                 OnboardPage(
                     symbol: "square.grid.2x2",
-                    title: "Four things to try\nwhen you feel sick",
-                    text: "A steady tap on your wrist. A paced breath you feel rather than watch. A one-minute 100 Hz tone. A timed hold on the spot an acupressure band sits on. All drug-free, all free to use."
+                    title: String(localized: "Four things to try\nwhen you feel sick"),
+                    text: String(localized: "A steady tap on your wrist. A paced breath you feel rather than watch. A one-minute 100 Hz tone. A timed hold on the spot an acupressure band sits on. All drug-free, all free to use.")
                 )
                 .tag(0)
 
                 OnboardPage(
                     symbol: "list.bullet.clipboard",
-                    title: "Or answer three\nquick questions",
-                    text: "Tell Queasy what kind of queasy moment you are in and how strong it feels. It picks a mode, a level and a length, and shows you what each one leans on so you can judge it yourself."
+                    title: String(localized: "Or answer three\nquick questions"),
+                    text: String(localized: "Tell Queasy what kind of queasy moment you are in and how strong it feels. It picks a mode, a level and a length, and shows you what each one leans on so you can judge it yourself.")
                 )
                 .tag(1)
 
                 OnboardPage(
                     symbol: "applewatch.side.right",
-                    title: "Turn the watch to\nthe inside of your wrist",
-                    text: "For Pulse and Press, rotate your watch so the case sits on the inside of your wrist, three finger-widths below the crease. That is where a Sea-Band's stud goes. Breathe works wherever the watch is."
+                    title: String(localized: "Turn the watch to\nthe inside of your wrist"),
+                    text: String(localized: "For Pulse and Press, rotate your watch so the case sits on the inside of your wrist, three finger-widths below the crease. That is where a Sea-Band's stud goes. Breathe works wherever the watch is.")
                 )
                 .tag(2)
 
@@ -83,19 +83,19 @@ struct OnboardingView: View {
     }
 
     private var gateTitle: String {
-        if watch.isAppInstalled { return "Your watch\nis ready" }
-        if watch.isPairedWithoutApp { return "Setting up\nyour watch" }
-        return "Built for\nApple Watch"
+        if watch.isAppInstalled { return String(localized: "Your watch\nis ready") }
+        if watch.isPairedWithoutApp { return String(localized: "Setting up\nyour watch") }
+        return String(localized: "Built for\nApple Watch")
     }
 
     private var gateText: String {
         if watch.isAppInstalled {
-            return "Queasy is on your Apple Watch. Sessions play on your wrist and keep running with the screen off."
+            return String(localized: "Queasy is on your Apple Watch. Sessions play on your wrist and keep running with the screen off.")
         }
         if watch.isPairedWithoutApp {
-            return "Queasy is installing on your Apple Watch now. It appears there automatically, and wrist sessions start working the moment it finishes. You can run your first session from your iPhone in the meantime."
+            return String(localized: "Queasy is installing on your Apple Watch now. It appears there automatically, and wrist sessions start working the moment it finishes. You can run your first session from your iPhone in the meantime.")
         }
-        return "Pulse, Breathe and Press are meant to be felt on your wrist, which is what the Apple Watch app is for. Without one, your iPhone's own vibration stands in: rest it against you, or hold it to the inside of your wrist. Tone works on either."
+        return String(localized: "Pulse, Breathe and Press are meant to be felt on your wrist, which is what the Apple Watch app is for. Without one, your iPhone's own vibration stands in: rest it against you, or hold it to the inside of your wrist. Tone works on either.")
     }
 
     /// Holds the space of the iPhone-only link so Continue does not move on the last page.
@@ -107,7 +107,7 @@ struct OnboardingView: View {
             .accessibilityHidden(true)
     }
 
-    private static let phoneOnlyLabel = "Continue with iPhone only. I understand Queasy is designed for Apple Watch."
+    private static let phoneOnlyLabel = String(localized: "Continue with iPhone only. I understand Queasy is designed for Apple Watch.")
 
     @ViewBuilder
     private var gateButtons: some View {

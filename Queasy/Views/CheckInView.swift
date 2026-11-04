@@ -68,7 +68,7 @@ struct CheckInView: View {
 
     private var causeStep: some View {
         VStack(spacing: 16) {
-            stepTitle("What kind of queasy?")
+            stepTitle(String(localized: "What kind of queasy?"))
             LazyVGrid(columns: [GridItem(.flexible(), spacing: 12), GridItem(.flexible())], spacing: 12) {
                 ForEach(NauseaCause.allCases) { candidate in
                     Button {
@@ -105,7 +105,7 @@ struct CheckInView: View {
 
     private var severityStep: some View {
         VStack(spacing: 16) {
-            stepTitle("How bad is it right now?")
+            stepTitle(String(localized: "How bad is it right now?"))
             VStack(spacing: 10) {
                 ForEach(1...5, id: \.self) { level in
                     Button {
@@ -113,7 +113,7 @@ struct CheckInView: View {
                         withAnimation { step = 2 }
                     } label: {
                         HStack {
-                            Text("\(level)")
+                            Text(level, format: .number)
                                 .font(Theme.roundedNumeric(20, weight: .bold))
                                 .foregroundStyle(severity == level ? .white : Theme.severityColor(level))
                                 .frame(width: 34)
@@ -140,11 +140,11 @@ struct CheckInView: View {
     }
 
     static let severityLabels = [
-        "Barely there",
-        "Noticeable",
-        "Uncomfortable",
-        "Really rough",
-        "About to be sick",
+        String(localized: "Barely there"),
+        String(localized: "Noticeable"),
+        String(localized: "Uncomfortable"),
+        String(localized: "Really rough"),
+        String(localized: "About to be sick"),
     ]
 
     // MARK: - Step 3: context
@@ -155,7 +155,7 @@ struct CheckInView: View {
 
     private var contextStep: some View {
         VStack(spacing: 22) {
-            stepTitle("Two quick things")
+            stepTitle(String(localized: "Two quick things"))
 
             VStack(spacing: 20) {
                 contextQuestion(
@@ -169,8 +169,8 @@ struct CheckInView: View {
                 }
 
                 contextQuestion(
-                    prompt: "Eaten in the last hour?",
-                    detail: "We start gentler on a full stomach.",
+                    prompt: String(localized: "Eaten in the last hour?"),
+                    detail: String(localized: "We start gentler on a full stomach."),
                     selection: recentlyAte,
                     idPrefix: "ate"
                 ) { answer in
@@ -189,17 +189,17 @@ struct CheckInView: View {
     private var exposureQuestion: (prompt: String, detail: String) {
         switch cause {
         case .motion:
-            return ("Still moving?", "In the car, on the boat, or in the air right now.")
+            return (String(localized: "Still moving?"), String(localized: "In the car, on the boat, or in the air right now."))
         case .morningSickness:
-            return ("Mid-wave?", "Right in it, or on the way back down.")
+            return (String(localized: "Mid-wave?"), String(localized: "Right in it, or on the way back down."))
         case .hangover:
-            return ("Still feeling rough?", "At the peak, or on the way down.")
+            return (String(localized: "Still feeling rough?"), String(localized: "At the peak, or on the way down."))
         case .vertigo:
-            return ("Still spinning?", "Room still moving, or starting to settle.")
+            return (String(localized: "Still spinning?"), String(localized: "Room still moving, or starting to settle."))
         case .anxiety:
-            return ("Still in the thick of it?", "In the stressful moment, or winding down.")
+            return (String(localized: "Still in the thick of it?"), String(localized: "In the stressful moment, or winding down."))
         case .general, .none:
-            return ("Feeling it right now?", "Mid-wave, or easing off.")
+            return (String(localized: "Feeling it right now?"), String(localized: "Mid-wave, or easing off."))
         }
     }
 
@@ -220,8 +220,8 @@ struct CheckInView: View {
                     .foregroundStyle(Theme.ink2)
             }
             HStack(spacing: 12) {
-                answerButton("Yes", isOn: selection == true, id: "\(idPrefix)-yes") { onAnswer(true) }
-                answerButton("No", isOn: selection == false, id: "\(idPrefix)-no") { onAnswer(false) }
+                answerButton(String(localized: "Yes"), isOn: selection == true, id: "\(idPrefix)-yes") { onAnswer(true) }
+                answerButton(String(localized: "No"), isOn: selection == false, id: "\(idPrefix)-no") { onAnswer(false) }
             }
         }
         .frame(maxWidth: .infinity, alignment: .leading)
@@ -327,7 +327,7 @@ struct RecommendationView: View {
                 startButtons(plan: plan)
                 if isCapped { unlockLengthNote }
                 if let note = checkIn.cause.safetyNote { safetyCard(note) }
-                if !plan.tips.isEmpty { tipsCard(plan.tips) }
+                if !plan.tips.isEmpty { tipsCard(plan.displayTips) }
                 disclaimer
             }
             .padding(.horizontal, 20)
@@ -346,7 +346,7 @@ struct RecommendationView: View {
 
     private var modePicker: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text("Suggested for \(checkIn.cause.label.lowercased())")
+            Text(checkIn.cause.suggestedHeading)
                 .font(.caption.weight(.semibold))
                 .tracking(1.2)
                 .foregroundStyle(Theme.ink3)
@@ -441,7 +441,7 @@ struct RecommendationView: View {
                 .stroke(Theme.aqua, style: StrokeStyle(lineWidth: 10, lineCap: .round))
                 .rotationEffect(.degrees(-90))
             VStack(spacing: 0) {
-                Text("\(intensity)")
+                Text(intensity, format: .number)
                     .font(Theme.roundedNumeric(44, weight: .bold))
                     .foregroundStyle(Theme.ink)
                 Text("of 10")
@@ -456,10 +456,10 @@ struct RecommendationView: View {
     private var lengthLabel: String {
         let minutes = effectiveSeconds / 60
         switch mode {
-        case .tone: return "One minute, then it stops on its own"
-        case .press: return "Three minutes, timed for you"
+        case .tone: return String(localized: "One minute, then it stops on its own")
+        case .press: return String(localized: "Three minutes, timed for you")
         case .pulse, .breathe:
-            return isCapped ? "\(minutes) minutes on the free plan" : "\(minutes) minutes"
+            return isCapped ? String(localized: "\(minutes) minutes on the free plan") : String(localized: "\(minutes) minutes")
         }
     }
 
@@ -472,7 +472,7 @@ struct RecommendationView: View {
                 Button {
                     start(plan: plan, onWatch: true)
                 } label: {
-                    Label(watchFeedback ?? "Start on Apple Watch",
+                    Label(watchFeedback ?? String(localized: "Start on Apple Watch"),
                           systemImage: watchFeedback == nil ? "applewatch" : "checkmark")
                 }
                 .buttonStyle(.tideCTA)
@@ -516,10 +516,10 @@ struct RecommendationView: View {
 
     private var phoneStartLabel: String {
         switch mode {
-        case .pulse: return "Start the Pulse"
-        case .breathe: return "Start Breathing"
-        case .tone: return "Play the Tone"
-        case .press: return "Start the Hold"
+        case .pulse: return String(localized: "Start the Pulse")
+        case .breathe: return String(localized: "Start Breathing")
+        case .tone: return String(localized: "Play the Tone")
+        case .press: return String(localized: "Start the Hold")
         }
     }
 
@@ -529,8 +529,8 @@ struct RecommendationView: View {
             Task {
                 let outcome = await WatchLauncher.shared.startOnWatch(plan: plan)
                 watchFeedback = outcome == .started
-                    ? "Starting on your watch…"
-                    : "Sent. Open Queasy on your watch."
+                    ? String(localized: "Starting on your watch…")
+                    : String(localized: "Sent. Open Queasy on your watch.")
                 try? await Task.sleep(for: .seconds(1.8))
                 ReliefPanel.shared.close()
             }
@@ -615,13 +615,15 @@ struct RecommendationView: View {
     }
 
     private func specDescription(_ spec: PulseSpec) -> String {
-        let taps = spec.burstCount == 1 ? "Single tap" : "\(spec.burstCount)-tap burst"
-        let strength: String
-        switch spec.strength {
-        case .soft: strength = "soft"
-        case .medium: strength = "medium"
-        case .strong: strength = "strong"
+        let n = spec.burstCount
+        let seconds = DisplayFormat.oneDecimal(spec.interval)
+        switch (n == 1, spec.strength) {
+        case (true, .soft): return String(localized: "Single tap, soft, every \(seconds)s")
+        case (true, .medium): return String(localized: "Single tap, medium, every \(seconds)s")
+        case (true, .strong): return String(localized: "Single tap, strong, every \(seconds)s")
+        case (false, .soft): return String(localized: "\(n)-tap burst, soft, every \(seconds)s")
+        case (false, .medium): return String(localized: "\(n)-tap burst, medium, every \(seconds)s")
+        case (false, .strong): return String(localized: "\(n)-tap burst, strong, every \(seconds)s")
         }
-        return "\(taps), \(strength), every \(String(format: "%.1f", spec.interval))s"
     }
 }

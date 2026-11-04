@@ -104,9 +104,9 @@ struct ModeStartView: View {
 
     private var lengthLabel: String {
         switch mode {
-        case .tone: return "One minute, then it stops on its own"
-        case .press: return "\(PressProtocol.holdSeconds / 60) minutes, timed for you"
-        case .pulse, .breathe: return "\(effectiveSeconds / 60) minutes"
+        case .tone: return String(localized: "One minute, then it stops on its own")
+        case .press: return String(localized: "\(PressProtocol.holdSeconds / 60) minutes, timed for you")
+        case .pulse, .breathe: return String(localized: "\(effectiveSeconds / 60) minutes")
         }
     }
 
@@ -119,7 +119,7 @@ struct ModeStartView: View {
                 .textCase(.uppercase)
             ForEach(Array(PressProtocol.steps.enumerated()), id: \.offset) { index, step in
                 HStack(alignment: .top, spacing: 10) {
-                    Text("\(index + 1)")
+                    Text(index + 1, format: .number)
                         .font(Theme.roundedNumeric(13, weight: .bold))
                         .foregroundStyle(.white)
                         .frame(width: 22, height: 22)
@@ -142,7 +142,7 @@ struct ModeStartView: View {
                 Button {
                     startOnWatch()
                 } label: {
-                    Label(watchFeedback ?? "Start on Apple Watch",
+                    Label(watchFeedback ?? String(localized: "Start on Apple Watch"),
                           systemImage: watchFeedback == nil ? "applewatch" : "checkmark")
                 }
                 .buttonStyle(.tideCTA)
@@ -176,10 +176,10 @@ struct ModeStartView: View {
 
     private var startLabel: String {
         switch mode {
-        case .pulse: return "Start the Pulse"
-        case .breathe: return "Start Breathing"
-        case .tone: return "Play the Tone"
-        case .press: return "Start the Hold"
+        case .pulse: return String(localized: "Start the Pulse")
+        case .breathe: return String(localized: "Start Breathing")
+        case .tone: return String(localized: "Play the Tone")
+        case .press: return String(localized: "Start the Hold")
         }
     }
 
@@ -197,8 +197,8 @@ struct ModeStartView: View {
         Task {
             let outcome = await WatchLauncher.shared.startOnWatch(plan: plan)
             watchFeedback = outcome == .started
-                ? "Starting on your watch…"
-                : "Sent. Open Queasy on your watch."
+                ? String(localized: "Starting on your watch…")
+                : String(localized: "Sent. Open Queasy on your watch.")
             try? await Task.sleep(for: .seconds(1.8))
             ReliefPanel.shared.close()
         }

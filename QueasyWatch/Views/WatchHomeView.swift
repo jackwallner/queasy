@@ -88,25 +88,25 @@ struct WatchHomeView: View {
 
     private func detail(for plan: ReliefPlan) -> String {
         switch plan.mode {
-        case .press: return "\(PressProtocol.holdSeconds / 60) min hold"
-        case .breathe: return "\(plan.breathe.label) · \(min(plan.durationMinutes, 45)) min"
-        case .pulse, .tone: return "Level \(plan.intensity) · \(min(plan.durationMinutes, 45)) min"
+        case .press: return String(localized: "\(PressProtocol.holdSeconds / 60) min hold")
+        case .breathe: return String(localized: "\(plan.breathe.label) · \(min(plan.durationMinutes, 45)) min")
+        case .pulse, .tone: return String(localized: "Level \(plan.intensity) · \(min(plan.durationMinutes, 45)) min")
         }
     }
 
     private func startLabel(for mode: ReliefMode) -> String {
         switch mode {
-        case .breathe: return "Breathe"
-        case .press: return "Hold"
-        case .pulse, .tone: return "Pulse"
+        case .breathe: return String(localized: "Breathe")
+        case .press: return String(localized: "Hold")
+        case .pulse, .tone: return String(localized: "Pulse")
         }
     }
 
     private func hint(for mode: ReliefMode) -> String {
         switch mode {
-        case .pulse, .tone: return "Turn your watch to the inside of your wrist."
-        case .breathe: return "Long tap in, longer fade out. Eyes can stay shut."
-        case .press: return "Thumb on the spot, three fingers below the crease."
+        case .pulse, .tone: return String(localized: "Turn your watch to the inside of your wrist.")
+        case .breathe: return String(localized: "Long tap in, longer fade out. Eyes can stay shut.")
+        case .press: return String(localized: "Thumb on the spot, three fingers below the crease.")
         }
     }
 }

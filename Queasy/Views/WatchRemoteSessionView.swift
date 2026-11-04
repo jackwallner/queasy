@@ -146,17 +146,17 @@ struct WatchRemoteSessionView: View {
 
     private var headline: String {
         switch mirror.mode {
-        case .breathe: return "Follow the breath"
-        case .press: return "Keep the pressure on"
-        case .pulse, .tone: return "Level \(mirror.intensity)"
+        case .breathe: return String(localized: "Follow the breath")
+        case .press: return String(localized: "Keep the pressure on")
+        case .pulse, .tone: return String(localized: "Level \(mirror.intensity)")
         }
     }
 
     private var hint: String {
         switch mirror.mode {
-        case .breathe: return "Long tap in, longer fade out. Eyes can stay shut."
-        case .press: return "Thumb or band on the spot, three finger-widths below the crease."
-        case .pulse, .tone: return "Turn the watch to the inside of your wrist."
+        case .breathe: return String(localized: "Long tap in, longer fade out. Eyes can stay shut.")
+        case .press: return String(localized: "Thumb or band on the spot, three finger-widths below the crease.")
+        case .pulse, .tone: return String(localized: "Turn the watch to the inside of your wrist.")
         }
     }
 
@@ -218,9 +218,9 @@ struct WatchRemoteSessionView: View {
                 .foregroundStyle(Theme.ink2)
 
             VStack(spacing: 12) {
-                feelingButton("Better", symbol: "face.smiling", tint: Theme.aqua, feeling: .better)
-                feelingButton("The same", symbol: "face.dashed", tint: Theme.sand, feeling: .same)
-                feelingButton("Worse", symbol: "cloud.rain", tint: Theme.coral, feeling: .worse)
+                feelingButton(String(localized: "Better"), symbol: "face.smiling", tint: Theme.aqua, feeling: .better)
+                feelingButton(String(localized: "The same"), symbol: "face.dashed", tint: Theme.sand, feeling: .same)
+                feelingButton(String(localized: "Worse"), symbol: "cloud.rain", tint: Theme.coral, feeling: .worse)
             }
             .padding(.horizontal, 24)
 
@@ -307,7 +307,6 @@ struct WatchRemoteSessionView: View {
     }
 
     private func timeString(_ seconds: Int) -> String {
-        let clamped = max(seconds, 0)
-        return String(format: "%d:%02d", clamped / 60, clamped % 60)
+        DisplayFormat.clock(seconds)
     }
 }

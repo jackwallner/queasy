@@ -200,23 +200,23 @@ struct PhoneSessionView: View {
 
     private var headline: String {
         switch mode {
-        case .pulse: return "Level \(controller.intensity)"
-        case .breathe: return "Follow the breath"
-        case .tone: return "100 Hz"
-        case .press: return "Keep the pressure on"
+        case .pulse: return String(localized: "Level \(controller.intensity)")
+        case .breathe: return String(localized: "Follow the breath")
+        case .tone: return String(localized: "100 Hz")
+        case .press: return String(localized: "Keep the pressure on")
         }
     }
 
     private var guidance: String {
         switch mode {
         case .pulse:
-            return "Hold your iPhone against the inside of your wrist, or rest it where you can feel the taps."
+            return String(localized: "Hold your iPhone against the inside of your wrist, or rest it where you can feel the taps.")
         case .breathe:
-            return "Long swell in, longer fade out. Rest the phone on you and shut your eyes if you like."
+            return String(localized: "Long swell in, longer fade out. Rest the phone on you and shut your eyes if you like.")
         case .tone:
-            return "Keep the volume low. It should sit under the noise around you, not over it."
+            return String(localized: "Keep the volume low. It should sit under the noise around you, not over it.")
         case .press:
-            return "Thumb or band on the spot, steady pressure, three finger-widths below the wrist crease."
+            return String(localized: "Thumb or band on the spot, steady pressure, three finger-widths below the wrist crease.")
         }
     }
 
@@ -270,9 +270,9 @@ struct PhoneSessionView: View {
                 .multilineTextAlignment(.center)
 
             VStack(spacing: 12) {
-                feelingButton("Better", symbol: "face.smiling", tint: Theme.aqua, feeling: .better)
-                feelingButton("The same", symbol: "face.dashed", tint: Theme.sand, feeling: .same)
-                feelingButton("Worse", symbol: "cloud.rain", tint: Theme.coral, feeling: .worse)
+                feelingButton(String(localized: "Better"), symbol: "face.smiling", tint: Theme.aqua, feeling: .better)
+                feelingButton(String(localized: "The same"), symbol: "face.dashed", tint: Theme.sand, feeling: .same)
+                feelingButton(String(localized: "Worse"), symbol: "cloud.rain", tint: Theme.coral, feeling: .worse)
             }
             .padding(.horizontal, 24)
 
@@ -336,7 +336,6 @@ struct PhoneSessionView: View {
     }
 
     private func timeString(_ seconds: Int) -> String {
-        let clamped = max(seconds, 0)
-        return String(format: "%d:%02d", clamped / 60, clamped % 60)
+        DisplayFormat.clock(seconds)
     }
 }

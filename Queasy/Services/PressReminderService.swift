@@ -94,8 +94,8 @@ final class PressReminderService {
         cancelAll()
         for hour in Self.hours {
             let content = UNMutableNotificationContent()
-            content.title = "Time for a hold"
-            content.body = "Three minutes of steady pressure on the inside of your wrist."
+            content.title = String(localized: "Time for a hold")
+            content.body = String(localized: "Three minutes of steady pressure on the inside of your wrist.")
             content.sound = .default
 
             var components = DateComponents()

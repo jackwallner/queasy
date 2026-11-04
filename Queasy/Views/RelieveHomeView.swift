@@ -271,20 +271,29 @@ struct RelieveHomeView: View {
 
     private var quickTitle: String {
         switch quickMode {
-        case .pulse: return "Start the Pulse"
-        case .breathe: return "Start Breathing"
-        case .tone: return "Play the Tone"
-        case .press: return "Start the Hold"
+        case .pulse: return String(localized: "Start the Pulse")
+        case .breathe: return String(localized: "Start Breathing")
+        case .tone: return String(localized: "Play the Tone")
+        case .press: return String(localized: "Start the Hold")
         }
     }
 
     private var quickCaption: String {
-        let where_ = (showsWatchPrimary && quickMode.runsOnWatch) ? "on your wrist" : "on this iPhone"
+        let onWrist = showsWatchPrimary && quickMode.runsOnWatch
+        let level = quickPlan.intensity
+        let minutes = quickSeconds / 60
+        let pace = quickPlan.breathe.label
         switch quickMode {
-        case .tone: return "100 Hz, one minute, headphones in"
-        case .press: return "\(PressProtocol.holdSeconds / 60) minutes of steady pressure, timed"
-        case .pulse: return "Level \(quickPlan.intensity) · \(quickSeconds / 60) min \(where_)"
-        case .breathe: return "\(quickPlan.breathe.label) · \(quickSeconds / 60) min \(where_)"
+        case .tone: return String(localized: "100 Hz, one minute, headphones in")
+        case .press: return String(localized: "\(PressProtocol.holdSeconds / 60) minutes of steady pressure, timed")
+        case .pulse:
+            return onWrist
+                ? String(localized: "Level \(level) · \(minutes) min on your wrist")
+                : String(localized: "Level \(level) · \(minutes) min on this iPhone")
+        case .breathe:
+            return onWrist
+                ? String(localized: "\(pace) · \(minutes) min on your wrist")
+                : String(localized: "\(pace) · \(minutes) min on this iPhone")
         }
     }
 
@@ -420,11 +429,11 @@ struct RelieveHomeView: View {
             let outcome = await WatchLauncher.shared.startOnWatch(plan: plan)
             withAnimation {
                 if firstTime, outcome == .queued {
-                    watchFeedback = "Open Queasy on your Apple Watch to start this wrist session."
+                    watchFeedback = String(localized: "Open Queasy on your Apple Watch to start this wrist session.")
                 } else {
                     watchFeedback = outcome == .started
-                        ? "Starting on your watch…"
-                        : "Sent. Open Queasy on your watch."
+                        ? String(localized: "Starting on your watch…")
+                        : String(localized: "Sent. Open Queasy on your watch.")
                 }
             }
             try? await Task.sleep(for: .seconds(firstTime ? 7 : 4))
@@ -452,7 +461,7 @@ struct RelieveHomeView: View {
                     Text(controller.phase == .running ? "\(controller.mode.title) running" : "How do you feel?")
                         .font(.headline)
                         .foregroundStyle(Theme.ink)
-                    Text("\(controller.remainingSeconds / 60):\(String(format: "%02d", controller.remainingSeconds % 60)) left")
+                    Text("\(DisplayFormat.clock(controller.remainingSeconds)) left")
                         .font(.caption)
                         .foregroundStyle(Theme.ink2)
                 }

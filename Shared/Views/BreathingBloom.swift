@@ -35,7 +35,7 @@ struct BreathingBloom: View {
                             Text(phase.isInhale ? "In" : "Out")
                                 .font(.system(.title3, design: .rounded, weight: .semibold))
                                 .foregroundStyle(Theme.ink)
-                            Text("\(phase.secondsLeft)")
+                            Text(phase.secondsLeft, format: .number)
                                 .font(Theme.roundedNumeric(15, weight: .medium))
                                 .foregroundStyle(Theme.ink3)
                                 .monospacedDigit()

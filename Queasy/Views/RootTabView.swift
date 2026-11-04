@@ -139,9 +139,9 @@ struct RootTabView: View {
 
     /// The tabs left in the leading pane while History has its own.
     private static let paneTabItems: [PaneTabs.Item] = [
-        .init(tag: 0, title: "Relieve", systemImage: "dot.radiowaves.left.and.right"),
-        .init(tag: 2, title: "Learn", systemImage: "book"),
-        .init(tag: 3, title: "Settings", systemImage: "gearshape"),
+        .init(tag: 0, title: String(localized: "Relieve"), systemImage: "dot.radiowaves.left.and.right"),
+        .init(tag: 2, title: String(localized: "Learn"), systemImage: "book"),
+        .init(tag: 3, title: String(localized: "Settings"), systemImage: "gearshape"),
     ]
 
     /// No paywall, cover, sheet or alert is up over the tabs.

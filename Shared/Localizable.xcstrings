@@ -1,0 +1,4725 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "$14.99 / year" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "$14.99 / year"
+          }
+        }
+      }
+    },
+    "$2.99 / month" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "$2.99 / month"
+          }
+        }
+      }
+    },
+    "%@ / %lld days" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ / %#@n@"
+          },
+          "substitutions" : {
+            "n" : {
+              "argNum" : 2,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg days"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%@ / %lld months" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ / %#@n@"
+          },
+          "substitutions" : {
+            "n" : {
+              "argNum" : 2,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg months"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%@ / %lld weeks" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ / %#@n@"
+          },
+          "substitutions" : {
+            "n" : {
+              "argNum" : 2,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg weeks"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%@ / %lld years" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ / %#@n@"
+          },
+          "substitutions" : {
+            "n" : {
+              "argNum" : 2,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg years"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%@ / day" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ / day"
+          }
+        }
+      }
+    },
+    "%@ / month" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ / month"
+          }
+        }
+      }
+    },
+    "%@ / week" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ / week"
+          }
+        }
+      }
+    },
+    "%@ / year" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ / year"
+          }
+        }
+      }
+    },
+    "%@ left" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ left"
+          }
+        }
+      }
+    },
+    "%@ running" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ running"
+          }
+        }
+      }
+    },
+    "%@ · %@" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ · %2$@"
+          }
+        }
+      }
+    },
+    "%@ · %lld min" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ · %#@n@"
+          },
+          "substitutions" : {
+            "n" : {
+              "argNum" : 2,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg min"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%@ · %lld min on this iPhone" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ · %#@n@ on this iPhone"
+          },
+          "substitutions" : {
+            "n" : {
+              "argNum" : 2,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg min"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%@ · %lld min on your wrist" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ · %#@n@ on your wrist"
+          },
+          "substitutions" : {
+            "n" : {
+              "argNum" : 2,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg min"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%@ · about %lld breaths a minute" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ · about %#@n@"
+          },
+          "substitutions" : {
+            "n" : {
+              "argNum" : 2,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg breaths a minute"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%@. %@" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@. %2$@"
+          }
+        }
+      }
+    },
+    "%@. One-time purchase. Lifetime access, no subscription." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@. One-time purchase. Lifetime access, no subscription."
+          }
+        }
+      }
+    },
+    "%@/mo" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@/mo"
+          }
+        }
+      }
+    },
+    "%lld in · %lld out" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld in · %2$lld out"
+          }
+        }
+      }
+    },
+    "%lld min" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld min"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld min hold" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld min hold"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld minutes" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld minutes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld minutes of steady pressure, timed" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld minutes of steady pressure, timed"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld minutes on the free plan" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld minutes on the free plan"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld minutes, timed for you" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld minutes, timed for you"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld older sessions" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld older session"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld older sessions"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld plural category" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "one %lld"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "other %lld"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld-Day Free Trial" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld-Day Free Trial"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld-Day Free Trial, then %@. %@" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%#@n@, then %2$@. %3$@"
+          },
+          "substitutions" : {
+            "n" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg-Day Free Trial"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld-Month Free Trial" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld-Month Free Trial"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld-Month Free Trial, then %@. %@" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%#@n@, then %2$@. %3$@"
+          },
+          "substitutions" : {
+            "n" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg-Month Free Trial"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld-Year Free Trial" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld-Year Free Trial"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld-Year Free Trial, then %@. %@" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%#@n@, then %2$@. %3$@"
+          },
+          "substitutions" : {
+            "n" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg-Year Free Trial"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld-tap burst, medium, every %@s" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%#@n@ burst, medium, every %2$@s"
+          },
+          "substitutions" : {
+            "n" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg-tap"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld-tap burst, soft, every %@s" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%#@n@ burst, soft, every %2$@s"
+          },
+          "substitutions" : {
+            "n" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg-tap"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld-tap burst, strong, every %@s" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%#@n@ burst, strong, every %2$@s"
+          },
+          "substitutions" : {
+            "n" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg-tap"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "+%lld" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+%lld"
+          }
+        }
+      }
+    },
+    "100 Hz" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "100 Hz"
+          }
+        }
+      }
+    },
+    "100 Hz · one minute · headphones" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "100 Hz · one minute · headphones"
+          }
+        }
+      }
+    },
+    "100 Hz, one minute, headphones in" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "100 Hz, one minute, headphones in"
+          }
+        }
+      }
+    },
+    "7-day free trial" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "7-day free trial"
+          }
+        }
+      }
+    },
+    "7-day free trial · $1.25/mo" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "7-day free trial · $1.25/mo"
+          }
+        }
+      }
+    },
+    "7-day free trial, then $14.99 / year. Auto-renews unless cancelled at least 24 hours before the end of the current period. Manage or cancel in Settings." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "7-day free trial, then $14.99 / year. Auto-renews unless cancelled at least 24 hours before the end of the current period. Manage or cancel in Settings."
+          }
+        }
+      }
+    },
+    "A 100 Hz tone through your headphones" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A 100 Hz tone through your headphones"
+          }
+        }
+      }
+    },
+    "A 2025 Nagoya University study is titled \"Just 1-min exposure to a pure tone at 100 Hz with daily exposable sound pressure levels may improve motion sickness\"." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A 2025 Nagoya University study is titled \"Just 1-min exposure to a pure tone at 100 Hz with daily exposable sound pressure levels may improve motion sickness\"."
+          }
+        }
+      }
+    },
+    "A gentle reminder helps keep a short hold easy to remember." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A gentle reminder helps keep a short hold easy to remember."
+          }
+        }
+      }
+    },
+    "A nudge at %@ to run a three-minute hold, the way the wristband trials spaced them." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A nudge at %@ to run a three-minute hold, the way the wristband trials spaced them."
+          }
+        }
+      }
+    },
+    "A nudge to run a hold a few times a day, the way the wristband trials spaced them." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A nudge to run a hold a few times a day, the way the wristband trials spaced them."
+          }
+        }
+      }
+    },
+    "A pure 100 Hz tone at a low volume. Headphones, one minute, eyes wherever you like." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A pure 100 Hz tone at a low volume. Headphones, one minute, eyes wherever you like."
+          }
+        }
+      }
+    },
+    "A steady tap on the inside of your wrist" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A steady tap on the inside of your wrist"
+          }
+        }
+      }
+    },
+    "A steady tap on your wrist. A paced breath you feel rather than watch. A one-minute 100 Hz tone. A timed hold on the spot an acupressure band sits on. All drug-free, all free to use." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A steady tap on your wrist. A paced breath you feel rather than watch. A one-minute 100 Hz tone. A timed hold on the spot an acupressure band sits on. All drug-free, all free to use."
+          }
+        }
+      }
+    },
+    "A steady tap to rest your attention on." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A steady tap to rest your attention on."
+          }
+        }
+      }
+    },
+    "ACOG: morning sickness" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ACOG: morning sickness"
+          }
+        }
+      }
+    },
+    "About" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "About"
+          }
+        }
+      }
+    },
+    "About to be sick" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "About to be sick"
+          }
+        }
+      }
+    },
+    "Active" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Active"
+          }
+        }
+      }
+    },
+    "Add the 100 Hz tone" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add the 100 Hz tone"
+          }
+        }
+      }
+    },
+    "An empty stomach is the usual trigger. Small and often beats three meals." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "An empty stomach is the usual trigger. Small and often beats three meals."
+          }
+        }
+      }
+    },
+    "An unhurried, regular tap you can rest your attention on while a wave passes. Nudge the level until it is clear but not annoying." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "An unhurried, regular tap you can rest your attention on while a wave passes. Nudge the level until it is clear but not annoying."
+          }
+        }
+      }
+    },
+    "At the peak, or on the way down." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "At the peak, or on the way down."
+          }
+        }
+      }
+    },
+    "Auto-renews unless cancelled at least 24 hours before the end of the current period. Manage or cancel in Settings." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Auto-renews unless cancelled at least 24 hours before the end of the current period. Manage or cancel in Settings."
+          }
+        }
+      }
+    },
+    "BEST VALUE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BEST VALUE"
+          }
+        }
+      }
+    },
+    "Barely there" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Barely there"
+          }
+        }
+      }
+    },
+    "Better" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Better"
+          }
+        }
+      }
+    },
+    "Bland carbs (toast, crackers) settle faster than grease." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bland carbs (toast, crackers) settle faster than grease."
+          }
+        }
+      }
+    },
+    "Breath pace" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Breath pace"
+          }
+        }
+      }
+    },
+    "Breathe" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Breathe"
+          }
+        }
+      }
+    },
+    "Breathe out longer than you breathe in: 4 in, 6 out." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Breathe out longer than you breathe in: 4 in, 6 out."
+          }
+        }
+      }
+    },
+    "Breathing interventions for nausea (2026 trial)" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Breathing interventions for nausea (2026 trial)"
+          }
+        }
+      }
+    },
+    "Built for\nApple Watch" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Built for\nApple Watch"
+          }
+        }
+      }
+    },
+    "Calendar heatmap" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Calendar heatmap"
+          }
+        }
+      }
+    },
+    "Cancel" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancel"
+          }
+        }
+      }
+    },
+    "Cancel session" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancel session"
+          }
+        }
+      }
+    },
+    "Case on the inside of your wrist, snug." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Case on the inside of your wrist, snug."
+          }
+        }
+      }
+    },
+    "Check History. How do you feel?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Check History. How do you feel?"
+          }
+        }
+      }
+    },
+    "Check your connection and try again." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Check your connection and try again."
+          }
+        }
+      }
+    },
+    "Close" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Close"
+          }
+        }
+      }
+    },
+    "Cochrane: PC6 wrist stimulation evidence" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cochrane: PC6 wrist stimulation evidence"
+          }
+        }
+      }
+    },
+    "Cochrane: nausea and vomiting in early pregnancy" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cochrane: nausea and vomiting in early pregnancy"
+          }
+        }
+      }
+    },
+    "Cold food carries less smell than hot food." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cold food carries less smell than hot food."
+          }
+        }
+      }
+    },
+    "Compared to when you started." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Compared to when you started."
+          }
+        }
+      }
+    },
+    "Connect to load plans" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Connect to load plans"
+          }
+        }
+      }
+    },
+    "Continue" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continue"
+          }
+        }
+      }
+    },
+    "Continue with iPhone only. I understand Queasy is designed for Apple Watch." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continue with iPhone only. I understand Queasy is designed for Apple Watch."
+          }
+        }
+      }
+    },
+    "Cool air and loose clothing help more than you'd think." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cool air and loose clothing help more than you'd think."
+          }
+        }
+      }
+    },
+    "Couldn't load subscription options. Check your connection and try again." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Couldn't load subscription options. Check your connection and try again."
+          }
+        }
+      }
+    },
+    "Couldn't restore purchases. Try again." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Couldn't restore purchases. Try again."
+          }
+        }
+      }
+    },
+    "Crack a window. Cool moving air helps." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Crack a window. Cool moving air helps."
+          }
+        }
+      }
+    },
+    "Day 5" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Day 5"
+          }
+        }
+      }
+    },
+    "Day 7" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Day 7"
+          }
+        }
+      }
+    },
+    "Decrease intensity" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Decrease intensity"
+          }
+        }
+      }
+    },
+    "Delete" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete"
+          }
+        }
+      }
+    },
+    "Delete Session" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete Session"
+          }
+        }
+      }
+    },
+    "Delete this session?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete this session?"
+          }
+        }
+      }
+    },
+    "Diaphragmatic breathing during chemotherapy" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diaphragmatic breathing during chemotherapy"
+          }
+        }
+      }
+    },
+    "Dim screens and bright lights while the session runs." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dim screens and bright lights while the session runs."
+          }
+        }
+      }
+    },
+    "Do the same on the other wrist if you have a second band." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Do the same on the other wrist if you have a second band."
+          }
+        }
+      }
+    },
+    "Drop your shoulders and unclench your jaw." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Drop your shoulders and unclench your jaw."
+          }
+        }
+      }
+    },
+    "Drug-free" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Drug-free"
+          }
+        }
+      }
+    },
+    "Eaten in the last hour?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eaten in the last hour?"
+          }
+        }
+      }
+    },
+    "Environmental Health and Preventive Medicine (DOI)" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Environmental Health and Preventive Medicine (DOI)"
+          }
+        }
+      }
+    },
+    "Every mode stays free, unlimited, with no account. Pro buys length, memory and reminders. Queasy is a set of comfort techniques, not a medical device, and it makes no treatment claims." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Every mode stays free, unlimited, with no account. Pro buys length, memory and reminders. Queasy is a set of comfort techniques, not a medical device, and it makes no treatment claims."
+          }
+        }
+      }
+    },
+    "Every session kept, not just the last %lld days, with which mode you tend to come out of feeling better." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Every session kept, not just the last %#@n@, with which mode you tend to come out of feeling better."
+          },
+          "substitutions" : {
+            "n" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg days"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Export history as CSV" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Export history as CSV"
+          }
+        }
+      }
+    },
+    "Feeling it right now?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Feeling it right now?"
+          }
+        }
+      }
+    },
+    "Feeling queasy?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Feeling queasy?"
+          }
+        }
+      }
+    },
+    "Feeling…" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Feeling…"
+          }
+        }
+      }
+    },
+    "Find the spot a band sits on, and hold it" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Find the spot a band sits on, and hold it"
+          }
+        }
+      }
+    },
+    "Finding the spot" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Finding the spot"
+          }
+        }
+      }
+    },
+    "First charge, only if you keep it. Cancel before then and pay nothing." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "First charge, only if you keep it. Cancel before then and pay nothing."
+          }
+        }
+      }
+    },
+    "Follow the breath" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Follow the breath"
+          }
+        }
+      }
+    },
+    "For Pulse and Press, loosen the band and rotate your watch so the case sits on the inside of your wrist. Snug enough that you feel each tap clearly. Rotate it back when you are done; sessions are short.\n\nBreathe does not care where the watch is. You only need to feel it." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "For Pulse and Press, loosen the band and rotate your watch so the case sits on the inside of your wrist. Snug enough that you feel each tap clearly. Rotate it back when you are done; sessions are short.\n\nBreathe does not care where the watch is. You only need to feel it."
+          }
+        }
+      }
+    },
+    "For Pulse and Press, rotate your watch so the case sits on the inside of your wrist, three finger-widths below the crease. That is where a Sea-Band's stud goes. Breathe works wherever the watch is." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "For Pulse and Press, rotate your watch so the case sits on the inside of your wrist, three finger-widths below the crease. That is where a Sea-Band's stud goes. Breathe works wherever the watch is."
+          }
+        }
+      }
+    },
+    "For Pulse and Press, turn your watch to the **inside** of your wrist, three finger-widths below the crease. That is where an acupressure band sits." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "For Pulse and Press, turn your watch to the **inside** of your wrist, three finger-widths below the crease. That is where an acupressure band sits."
+          }
+        }
+      }
+    },
+    "Four drug-free things to try, on your wrist or in your ear. Start one now, or answer three questions first." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Four drug-free things to try, on your wrist or in your ear. Start one now, or answer three questions first."
+          }
+        }
+      }
+    },
+    "Four gentle routines to try, on your wrist or in your ear. Start one now, or answer three questions first." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Four gentle routines to try, on your wrist or in your ear. Start one now, or answer three questions first."
+          }
+        }
+      }
+    },
+    "Four things to try\nwhen you feel sick" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Four things to try\nwhen you feel sick"
+          }
+        }
+      }
+    },
+    "Free sessions run %lld minutes. Pro goes up to %lld." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Free sessions run %#@n@. Pro goes up to %2$lld."
+          },
+          "substitutions" : {
+            "n" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg minutes"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Free sessions run %lld minutes. Pro runs the full %lld." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Free sessions run %#@n@. Pro runs the full %2$lld."
+          },
+          "substitutions" : {
+            "n" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg minutes"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Free sessions run %lld minutes. Pro runs up to %lld." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Free sessions run %#@n@. Pro runs up to %2$lld."
+          },
+          "substitutions" : {
+            "n" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg minutes"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "From your iPhone" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "From your iPhone"
+          }
+        }
+      }
+    },
+    "Full-length sessions on both devices, free." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Full-length sessions on both devices, free."
+          }
+        }
+      }
+    },
+    "Get Started" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Get Started"
+          }
+        }
+      }
+    },
+    "Hangover" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hangover"
+          }
+        }
+      }
+    },
+    "Headphones in, volume low. It is meant to be quiet." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Headphones in, volume low. It is meant to be quiet."
+          }
+        }
+      }
+    },
+    "Headphones recommended" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Headphones recommended"
+          }
+        }
+      }
+    },
+    "Hide session controls" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hide session controls"
+          }
+        }
+      }
+    },
+    "History" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "History"
+          }
+        }
+      }
+    },
+    "Hold" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hold"
+          }
+        }
+      }
+    },
+    "Hold your iPhone against the inside of your wrist, or rest it where you can feel the taps." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hold your iPhone against the inside of your wrist, or rest it where you can feel the taps."
+          }
+        }
+      }
+    },
+    "How bad is it right now?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How bad is it right now?"
+          }
+        }
+      }
+    },
+    "How do you feel now?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How do you feel now?"
+          }
+        }
+      }
+    },
+    "How do you feel?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How do you feel?"
+          }
+        }
+      }
+    },
+    "How to wear your watch" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How to wear your watch"
+          }
+        }
+      }
+    },
+    "I'll Use My Apple Watch" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I'll Use My Apple Watch"
+          }
+        }
+      }
+    },
+    "I'm Done" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I'm Done"
+          }
+        }
+      }
+    },
+    "If you cannot keep fluids down for a day, are losing weight, or feel faint, call your midwife or doctor. Sickness in pregnancy can get serious and there is treatment for it." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "If you cannot keep fluids down for a day, are losing weight, or feel faint, call your midwife or doctor. Sickness in pregnancy can get serious and there is treatment for it."
+          }
+        }
+      }
+    },
+    "If you're a passenger, face forward and sit up front if you can." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "If you're a passenger, face forward and sit up front if you can."
+          }
+        }
+      }
+    },
+    "Illness / other" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Illness / other"
+          }
+        }
+      }
+    },
+    "In" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In"
+          }
+        }
+      }
+    },
+    "In 2025 a Nagoya University group published a paper whose title says it plainly: \"Just 1-min exposure to a pure tone at 100 Hz with daily exposable sound pressure levels may improve motion sickness\". They measured posture, heart rhythm and questionnaire scores after a minute of a 100 Hz tone at everyday volume.\n\nQueasy generates that tone. May improve is the authors' own wording, and it is worth keeping. Headphones, volume low enough that it sits under the noise around you." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In 2025 a Nagoya University group published a paper whose title says it plainly: \"Just 1-min exposure to a pure tone at 100 Hz with daily exposable sound pressure levels may improve motion sickness\". They measured posture, heart rhythm and questionnaire scores after a minute of a 100 Hz tone at everyday volume.\n\nQueasy generates that tone. May improve is the authors' own wording, and it is worth keeping. Headphones, volume low enough that it sits under the noise around you."
+          }
+        }
+      }
+    },
+    "In the car, on the boat, or in the air right now." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In the car, on the boat, or in the air right now."
+          }
+        }
+      }
+    },
+    "In the stressful moment, or winding down." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In the stressful moment, or winding down."
+          }
+        }
+      }
+    },
+    "Increase intensity" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Increase intensity"
+          }
+        }
+      }
+    },
+    "It is rarely only mornings, and an empty stomach is the usual trigger, so small and often beats three meals. Plain crackers before you sit up, cold food rather than hot because it carries less smell, fluids between meals rather than with them. Acupressure bands are one of the drug-free things people try; so is vitamin B6, which your midwife or doctor can advise on.\n\nCall your midwife or doctor if you cannot keep fluids down for a day, if you are losing weight, if you feel faint, or if you are passing very dark urine. Severe pregnancy sickness has a name, hyperemesis gravidarum, and it has treatment. An app is not it." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "It is rarely only mornings, and an empty stomach is the usual trigger, so small and often beats three meals. Plain crackers before you sit up, cold food rather than hot because it carries less smell, fluids between meals rather than with them. Acupressure bands are one of the drug-free things people try; so is vitamin B6, which your midwife or doctor can advise on.\n\nCall your midwife or doctor if you cannot keep fluids down for a day, if you are losing weight, if you feel faint, or if you are passing very dark urine. Severe pregnancy sickness has a name, hyperemesis gravidarum, and it has treatment. An app is not it."
+          }
+        }
+      }
+    },
+    "Keep the pressure on" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keep the pressure on"
+          }
+        }
+      }
+    },
+    "Keep the volume low. It should sit under the noise around you, not over it." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keep the volume low. It should sit under the noise around you, not over it."
+          }
+        }
+      }
+    },
+    "LEVEL" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LEVEL"
+          }
+        }
+      }
+    },
+    "Last %lld days" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Last %lld days"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Lay three fingers of the other hand across the wrist, just below the crease." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lay three fingers of the other hand across the wrist, just below the crease."
+          }
+        }
+      }
+    },
+    "Learn" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Learn"
+          }
+        }
+      }
+    },
+    "Level %lld" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Level %lld"
+          }
+        }
+      }
+    },
+    "Level %lld · %lld min" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Level %1$lld · %#@n@"
+          },
+          "substitutions" : {
+            "n" : {
+              "argNum" : 2,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg min"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Level %lld · %lld min left · tap to control" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Level %1$lld · %#@n@ left · tap to control"
+          },
+          "substitutions" : {
+            "n" : {
+              "argNum" : 2,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg min"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Level %lld · %lld min on this iPhone" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Level %1$lld · %#@n@ on this iPhone"
+          },
+          "substitutions" : {
+            "n" : {
+              "argNum" : 2,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg min"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Level %lld · %lld min on your wrist" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Level %1$lld · %#@n@ on your wrist"
+          },
+          "substitutions" : {
+            "n" : {
+              "argNum" : 2,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg min"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Lifetime" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lifetime"
+          }
+        }
+      }
+    },
+    "Long swell in, longer fade out. Rest the phone on you and shut your eyes if you like." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Long swell in, longer fade out. Rest the phone on you and shut your eyes if you like."
+          }
+        }
+      }
+    },
+    "Long tap in, longer fade out. Eyes can stay shut." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Long tap in, longer fade out. Eyes can stay shut."
+          }
+        }
+      }
+    },
+    "Look at the horizon or a stable point far away." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Look at the horizon or a stable point far away."
+          }
+        }
+      }
+    },
+    "Match my symptoms" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Match my symptoms"
+          }
+        }
+      }
+    },
+    "Match to my symptoms" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Match to my symptoms"
+          }
+        }
+      }
+    },
+    "Match your exhale to the pulse rhythm." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Match your exhale to the pulse rhythm."
+          }
+        }
+      }
+    },
+    "Medium" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Medium"
+          }
+        }
+      }
+    },
+    "Memorial Sloan Kettering: locating P6" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Memorial Sloan Kettering: locating P6"
+          }
+        }
+      }
+    },
+    "Mid-wave, or easing off." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mid-wave, or easing off."
+          }
+        }
+      }
+    },
+    "Mid-wave?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mid-wave?"
+          }
+        }
+      }
+    },
+    "Monthly" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Monthly"
+          }
+        }
+      }
+    },
+    "Morning" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Morning"
+          }
+        }
+      }
+    },
+    "Morning sickness" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Morning sickness"
+          }
+        }
+      }
+    },
+    "Motion" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Motion"
+          }
+        }
+      }
+    },
+    "Motion sickness" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Motion sickness"
+          }
+        }
+      }
+    },
+    "Move your head slowly, no quick turns." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Move your head slowly, no quick turns."
+          }
+        }
+      }
+    },
+    "NHS: vomiting and morning sickness" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "NHS: vomiting and morning sickness"
+          }
+        }
+      }
+    },
+    "Nagoya University: a unique sound alleviates motion sickness" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nagoya University: a unique sound alleviates motion sickness"
+          }
+        }
+      }
+    },
+    "Need a little comfort?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Need a little comfort?"
+          }
+        }
+      }
+    },
+    "Nei-Kuan, or P6, sits on the inside of the forearm about three finger-widths below the wrist crease, in the dip between the two tendons. It is where the stud of a Sea-Band lands, and where the trials put their pressure.\n\nPress does not press for you. It shows you the spot, then times a three-minute hold while you use your thumb or line up a band you already own. The wristband trials spaced their holds through the day rather than doing one long one.\n\nThe evidence is genuinely mixed. Some trials in pregnancy and after surgery report lower nausea scores; the Cochrane review of early-pregnancy trials calls the P6 evidence limited and inconsistent. Both of those things are true at once." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nei-Kuan, or P6, sits on the inside of the forearm about three finger-widths below the wrist crease, in the dip between the two tendons. It is where the stud of a Sea-Band lands, and where the trials put their pressure.\n\nPress does not press for you. It shows you the spot, then times a three-minute hold while you use your thumb or line up a band you already own. The wristband trials spaced their holds through the day rather than doing one long one.\n\nThe evidence is genuinely mixed. Some trials in pregnancy and after surgery report lower nausea scores; the Cochrane review of early-pregnancy trials calls the P6 evidence limited and inconsistent. Both of those things are true at once."
+          }
+        }
+      }
+    },
+    "Nerves" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nerves"
+          }
+        }
+      }
+    },
+    "Nervous stomach" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nervous stomach"
+          }
+        }
+      }
+    },
+    "New, severe or one-sided spinning is worth a doctor's opinion rather than an app's." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "New, severe or one-sided spinning is worth a doctor's opinion rather than an app's."
+          }
+        }
+      }
+    },
+    "No" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No"
+          }
+        }
+      }
+    },
+    "No active Queasy Pro purchase found for this Apple ID." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No active Queasy Pro purchase found for this Apple ID."
+          }
+        }
+      }
+    },
+    "No ads, ever" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No ads, ever"
+          }
+        }
+      }
+    },
+    "No payment due now" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No payment due now"
+          }
+        }
+      }
+    },
+    "No purchases found to restore." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No purchases found to restore."
+          }
+        }
+      }
+    },
+    "No purchases found." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No purchases found."
+          }
+        }
+      }
+    },
+    "No sessions yet" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No sessions yet"
+          }
+        }
+      }
+    },
+    "Not a medical device" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not a medical device"
+          }
+        }
+      }
+    },
+    "Not feeling anything on your wrist? Open Queasy on your Apple Watch once to finish installing and start the wrist session." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not feeling anything on your wrist? Open Queasy on your Apple Watch once to finish installing and start the wrist session."
+          }
+        }
+      }
+    },
+    "Not feeling anything on your wrist? Open Queasy on your Apple Watch once to finish installing it and start the wrist session." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not feeling anything on your wrist? Open Queasy on your Apple Watch once to finish installing it and start the wrist session."
+          }
+        }
+      }
+    },
+    "Not saved" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not saved"
+          }
+        }
+      }
+    },
+    "Noticeable" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Noticeable"
+          }
+        }
+      }
+    },
+    "Notifications are off for Queasy. Turn them on in iOS Settings to use reminders." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notifications are off for Queasy. Turn them on in iOS Settings to use reminders."
+          }
+        }
+      }
+    },
+    "OK" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        }
+      }
+    },
+    "One minute, headphones, low volume." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "One minute, headphones, low volume."
+          }
+        }
+      }
+    },
+    "One minute, then it stops on its own" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "One minute, then it stops on its own"
+          }
+        }
+      }
+    },
+    "Open Queasy on your Apple Watch to start this wrist session." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open Queasy on your Apple Watch to start this wrist session."
+          }
+        }
+      }
+    },
+    "Or answer three\nquick questions" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Or answer three\nquick questions"
+          }
+        }
+      }
+    },
+    "Other" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Other"
+          }
+        }
+      }
+    },
+    "Out" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Out"
+          }
+        }
+      }
+    },
+    "Out for longer than in, paced by your wrist." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Out for longer than in, paced by your wrist."
+          }
+        }
+      }
+    },
+    "Pay once · never renews" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pay once · never renews"
+          }
+        }
+      }
+    },
+    "Pick your own rhythm and level" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pick your own rhythm and level"
+          }
+        }
+      }
+    },
+    "Plain crackers before you sit up in the morning, if you can face them." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plain crackers before you sit up in the morning, if you can face them."
+          }
+        }
+      }
+    },
+    "Play the Tone" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Play the Tone"
+          }
+        }
+      }
+    },
+    "Playing on your Apple Watch" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Playing on your Apple Watch"
+          }
+        }
+      }
+    },
+    "Press" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Press"
+          }
+        }
+      }
+    },
+    "Press firmly with your thumb, or sit the stud of an acupressure band there." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Press firmly with your thumb, or sit the stud of an acupressure band there."
+          }
+        }
+      }
+    },
+    "Press reminders" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Press reminders"
+          }
+        }
+      }
+    },
+    "Press reminders through the day" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Press reminders through the day"
+          }
+        }
+      }
+    },
+    "Press, and the P6 spot" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Press, and the P6 spot"
+          }
+        }
+      }
+    },
+    "Pressure at this spot has been trialled for travel, post-surgery and pregnancy sickness. The Cochrane review of early-pregnancy trials calls the evidence limited and inconsistent." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pressure at this spot has been trialled for travel, post-surgery and pregnancy sickness. The Cochrane review of early-pregnancy trials calls the evidence limited and inconsistent."
+          }
+        }
+      }
+    },
+    "Privacy Policy" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Privacy Policy"
+          }
+        }
+      }
+    },
+    "Private" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Private"
+          }
+        }
+      }
+    },
+    "Pulse" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pulse"
+          }
+        }
+      }
+    },
+    "Pulse and Breathe run %lld minutes on the free plan, however long you set here. Tone and Press always run their full length." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pulse and Breathe run %#@n@ on the free plan, however long you set here. Tone and Press always run their full length."
+          },
+          "substitutions" : {
+            "n" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg minutes"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Pulse and Breathe run up to %lld minutes instead of %lld-minute sessions, and keep going on your wrist with the screen off." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pulse and Breathe run up to %#@n@ instead of %#@m@ sessions, and keep going on your wrist with the screen off."
+          },
+          "substitutions" : {
+            "n" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg minutes"
+                    }
+                  }
+                }
+              }
+            },
+            "m" : {
+              "argNum" : 2,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg-minute"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Pulse taps your wrist on a regular, unhurried beat. That is the whole of it. Nudge the level until the tap is clear but not annoying, and let it be the thing you notice instead of your stomach, the way you might count breaths or stare at the horizon.\n\nWorth being straight about: a watch tapping your wrist is not acupressure and not nerve stimulation. Those are different things, done by bands that press or by cleared devices that deliver current, and no trial has tested a watch buzz in their place. Pulse is here because a predictable sensation is easy to focus on, not because it does something to you." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pulse taps your wrist on a regular, unhurried beat. That is the whole of it. Nudge the level until the tap is clear but not annoying, and let it be the thing you notice instead of your stomach, the way you might count breaths or stare at the horizon.\n\nWorth being straight about: a watch tapping your wrist is not acupressure and not nerve stimulation. Those are different things, done by bands that press or by cleared devices that deliver current, and no trial has tested a watch buzz in their place. Pulse is here because a predictable sensation is easy to focus on, not because it does something to you."
+          }
+        }
+      }
+    },
+    "Pulse, Breathe and Press are meant to be felt on your wrist, which is what the Apple Watch app is for. Without one, your iPhone's own vibration stands in: rest it against you, or hold it to the inside of your wrist. Tone works on either." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pulse, Breathe and Press are meant to be felt on your wrist, which is what the Apple Watch app is for. Without one, your iPhone's own vibration stands in: rest it against you, or hold it to the inside of your wrist. Tone works on either."
+          }
+        }
+      }
+    },
+    "Pulse, and what it is not" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pulse, and what it is not"
+          }
+        }
+      }
+    },
+    "Purchase didn't complete. Please try again." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Purchase didn't complete. Please try again."
+          }
+        }
+      }
+    },
+    "Purchase is pending approval. Queasy Pro unlocks as soon as it's approved." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Purchase is pending approval. Queasy Pro unlocks as soon as it's approved."
+          }
+        }
+      }
+    },
+    "Put headphones in first, and keep the volume low." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Put headphones in first, and keep the volume low."
+          }
+        }
+      }
+    },
+    "QUEASY PRO" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QUEASY PRO"
+          }
+        }
+      }
+    },
+    "Queasy" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Queasy"
+          }
+        }
+      }
+    },
+    "Queasy Pro" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Queasy Pro"
+          }
+        }
+      }
+    },
+    "Queasy Pro nudges you a few times a day to run a hold, the way the wristband trials spaced them." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Queasy Pro nudges you a few times a day to run a hold, the way the wristband trials spaced them."
+          }
+        }
+      }
+    },
+    "Queasy is a set of comfort techniques you run yourself, not a medical device, and it holds no clearance. It does not diagnose, treat, cure or prevent anything, and it may not change how you feel. If nausea is severe or persistent, talk to a doctor." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Queasy is a set of comfort techniques you run yourself, not a medical device, and it holds no clearance. It does not diagnose, treat, cure or prevent anything, and it may not change how you feel. If nausea is severe or persistent, talk to a doctor."
+          }
+        }
+      }
+    },
+    "Queasy is a set of comfort techniques, not a medical device.\nIt does not diagnose, treat or cure anything, and it may not\nchange how you feel. If symptoms are severe or persistent,\ntalk to a doctor." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Queasy is a set of comfort techniques, not a medical device.\nIt does not diagnose, treat or cure anything, and it may not\nchange how you feel. If symptoms are severe or persistent,\ntalk to a doctor."
+          }
+        }
+      }
+    },
+    "Queasy is a set of drug-free comfort techniques you run yourself. It is not a medical device and holds no clearance. It does not diagnose, treat, cure or prevent anything, and it may not change how you feel. Bands like Sea-Band and devices like Reliefband are cleared medical devices; Queasy is not one of them and is not a substitute for one. If nausea is severe, persistent, comes with other symptoms, or you cannot keep fluids down, see a doctor." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Queasy is a set of drug-free comfort techniques you run yourself. It is not a medical device and holds no clearance. It does not diagnose, treat, cure or prevent anything, and it may not change how you feel. Bands like Sea-Band and devices like Reliefband are cleared medical devices; Queasy is not one of them and is not a substitute for one. If nausea is severe, persistent, comes with other symptoms, or you cannot keep fluids down, see a doctor."
+          }
+        }
+      }
+    },
+    "Queasy is a set of drug-free comfort techniques you run yourself. It is not a medical device, it does not diagnose or treat anything, and it may not change how you feel." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Queasy is a set of drug-free comfort techniques you run yourself. It is not a medical device, it does not diagnose or treat anything, and it may not change how you feel."
+          }
+        }
+      }
+    },
+    "Queasy is built for Apple Watch: sessions you feel on your wrist that keep running with the screen off. On iPhone they run through the phone's own vibration instead, so rest it against you." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Queasy is built for Apple Watch: sessions you feel on your wrist that keep running with the screen off. On iPhone they run through the phone's own vibration instead, so rest it against you."
+          }
+        }
+      }
+    },
+    "Queasy is installing on your Apple Watch now. It appears there automatically, and wrist sessions start working the moment it finishes. You can run your first session from your iPhone in the meantime." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Queasy is installing on your Apple Watch now. It appears there automatically, and wrist sessions start working the moment it finishes. You can run your first session from your iPhone in the meantime."
+          }
+        }
+      }
+    },
+    "Queasy is on your Apple Watch. Sessions play on your wrist and keep running with the screen off." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Queasy is on your Apple Watch. Sessions play on your wrist and keep running with the screen off."
+          }
+        }
+      }
+    },
+    "Quick start" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quick start"
+          }
+        }
+      }
+    },
+    "Rate Queasy" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rate Queasy"
+          }
+        }
+      }
+    },
+    "Read the source" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Read the source"
+          }
+        }
+      }
+    },
+    "Really rough" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Really rough"
+          }
+        }
+      }
+    },
+    "Rehydrate slowly, small sips beat big gulps." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rehydrate slowly, small sips beat big gulps."
+          }
+        }
+      }
+    },
+    "Relieve" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Relieve"
+          }
+        }
+      }
+    },
+    "Restore Purchases" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restore Purchases"
+          }
+        }
+      }
+    },
+    "Restored." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restored."
+          }
+        }
+      }
+    },
+    "Restoring…" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restoring…"
+          }
+        }
+      }
+    },
+    "Right in it, or on the way back down." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Right in it, or on the way back down."
+          }
+        }
+      }
+    },
+    "Room still moving, or starting to settle." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Room still moving, or starting to settle."
+          }
+        }
+      }
+    },
+    "Run your first comfort session and it will show up here with how you felt afterward." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Run your first comfort session and it will show up here with how you felt afterward."
+          }
+        }
+      }
+    },
+    "Running on your watch" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Running on your watch"
+          }
+        }
+      }
+    },
+    "SAVE %lld%%" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SAVE %lld%%"
+          }
+        }
+      }
+    },
+    "SAVE 58%" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SAVE 58%"
+          }
+        }
+      }
+    },
+    "See Queasy Pro" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "See Queasy Pro"
+          }
+        }
+      }
+    },
+    "Send Feedback" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Send Feedback"
+          }
+        }
+      }
+    },
+    "Sent. Open Queasy on your watch." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sent. Open Queasy on your watch."
+          }
+        }
+      }
+    },
+    "Session" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Session"
+          }
+        }
+      }
+    },
+    "Session length" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Session length"
+          }
+        }
+      }
+    },
+    "Sessions as long as\nyou actually need." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sessions as long as\nyou actually need."
+          }
+        }
+      }
+    },
+    "Sessions as long as you need" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sessions as long as you need"
+          }
+        }
+      }
+    },
+    "Set a pace that feels right before your next session." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Set a pace that feels right before your next session."
+          }
+        }
+      }
+    },
+    "Set the breathing rhythm and the pulse level yourself, and save the one that suits you as your default." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Set the breathing rhythm and the pulse level yourself, and save the one that suits you as your default."
+          }
+        }
+      }
+    },
+    "Setting up\nyour watch" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Setting up\nyour watch"
+          }
+        }
+      }
+    },
+    "Settings" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings"
+          }
+        }
+      }
+    },
+    "Shows a day-by-day grid on the History tab." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shows a day-by-day grid on the History tab."
+          }
+        }
+      }
+    },
+    "Single tap, medium, every %@s" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Single tap, medium, every %@s"
+          }
+        }
+      }
+    },
+    "Single tap, soft, every %@s" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Single tap, soft, every %@s"
+          }
+        }
+      }
+    },
+    "Single tap, strong, every %@s" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Single tap, strong, every %@s"
+          }
+        }
+      }
+    },
+    "Sip fluids between meals rather than with them." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sip fluids between meals rather than with them."
+          }
+        }
+      }
+    },
+    "Sit down and fix your eyes on one still object." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sit down and fix your eyes on one still object."
+          }
+        }
+      }
+    },
+    "Skip" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skip"
+          }
+        }
+      }
+    },
+    "Skip reading or scrolling until the wave passes." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skip reading or scrolling until the wave passes."
+          }
+        }
+      }
+    },
+    "Slow the breath, paced by your wrist" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slow the breath, paced by your wrist"
+          }
+        }
+      }
+    },
+    "Slow, steady breaths through your nose." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slow, steady breaths through your nose."
+          }
+        }
+      }
+    },
+    "Small sips of water, and avoid strong smells." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Small sips of water, and avoid strong smells."
+          }
+        }
+      }
+    },
+    "Soft" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Soft"
+          }
+        }
+      }
+    },
+    "Sources" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sources"
+          }
+        }
+      }
+    },
+    "Start Breathing" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start Breathing"
+          }
+        }
+      }
+    },
+    "Start My %lld-Day Free Trial" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start My %#@n@"
+          },
+          "substitutions" : {
+            "n" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg-Day Free Trial"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Start My %lld-Month Free Trial" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start My %#@n@"
+          },
+          "substitutions" : {
+            "n" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg-Month Free Trial"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Start My %lld-Year Free Trial" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start My %#@n@"
+          },
+          "substitutions" : {
+            "n" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg-Year Free Trial"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Start My 7-Day Free Trial" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start My 7-Day Free Trial"
+          }
+        }
+      }
+    },
+    "Start Queasy Pro" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start Queasy Pro"
+          }
+        }
+      }
+    },
+    "Start on Apple Watch" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start on Apple Watch"
+          }
+        }
+      }
+    },
+    "Start the Hold" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start the Hold"
+          }
+        }
+      }
+    },
+    "Start the Pulse" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start the Pulse"
+          }
+        }
+      }
+    },
+    "Starting on your watch…" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Starting on your watch…"
+          }
+        }
+      }
+    },
+    "Still feeling rough?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Still feeling rough?"
+          }
+        }
+      }
+    },
+    "Still in the thick of it?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Still in the thick of it?"
+          }
+        }
+      }
+    },
+    "Still moving?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Still moving?"
+          }
+        }
+      }
+    },
+    "Still saved on your iPhone. Pro shows everything past the last %lld days." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Still saved on your iPhone. Pro shows everything past the last %#@n@."
+          },
+          "substitutions" : {
+            "n" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg days"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Still spinning?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Still spinning?"
+          }
+        }
+      }
+    },
+    "Strong" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Strong"
+          }
+        }
+      }
+    },
+    "Suggested for hangover" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suggested for hangover"
+          }
+        }
+      }
+    },
+    "Suggested for illness / other" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suggested for illness / other"
+          }
+        }
+      }
+    },
+    "Suggested for morning sickness" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suggested for morning sickness"
+          }
+        }
+      }
+    },
+    "Suggested for motion sickness" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suggested for motion sickness"
+          }
+        }
+      }
+    },
+    "Suggested for nervous stomach" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suggested for nervous stomach"
+          }
+        }
+      }
+    },
+    "Suggested for vertigo / dizziness" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suggested for vertigo / dizziness"
+          }
+        }
+      }
+    },
+    "Tell Queasy what kind of queasy moment you are in and how strong it feels. It picks a mode, a level and a length, and shows you what each one leans on so you can judge it yourself." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tell Queasy what kind of queasy moment you are in and how strong it feels. It picks a mode, a level and a length, and shows you what each one leans on so you can judge it yourself."
+          }
+        }
+      }
+    },
+    "Terms of Use" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terms of Use"
+          }
+        }
+      }
+    },
+    "The 100 Hz tone" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The 100 Hz tone"
+          }
+        }
+      }
+    },
+    "The inside of the wrist, three finger-widths below the crease, between the two tendons. Press with your thumb, or line up the stud on a band you already own." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The inside of the wrist, three finger-widths below the crease, between the two tendons. Press with your thumb, or line up the stud on a band you already own."
+          }
+        }
+      }
+    },
+    "The same" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The same"
+          }
+        }
+      }
+    },
+    "The spot an acupressure band sits on." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The spot an acupressure band sits on."
+          }
+        }
+      }
+    },
+    "The spot is under the edge of your third finger, in the dip between the two tendons." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The spot is under the edge of your third finger, in the dip between the two tendons."
+          }
+        }
+      }
+    },
+    "Then $14.99 / year, cancel anytime." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Then $14.99 / year, cancel anytime."
+          }
+        }
+      }
+    },
+    "Then %@, cancel anytime." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Then %@, cancel anytime."
+          }
+        }
+      }
+    },
+    "This device has no haptic engine, so it cannot play a pattern you can feel. Tone still works here, and wrist sessions need an Apple Watch." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This device has no haptic engine, so it cannot play a pattern you can feel. Tone still works here, and wrist sessions need an Apple Watch."
+          }
+        }
+      }
+    },
+    "This removes the session from your history permanently." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This removes the session from your history permanently."
+          }
+        }
+      }
+    },
+    "Three minutes of steady pressure" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Three minutes of steady pressure"
+          }
+        }
+      }
+    },
+    "Three minutes of steady pressure on the inside of your wrist." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Three minutes of steady pressure on the inside of your wrist."
+          }
+        }
+      }
+    },
+    "Three minutes, timed for you" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Three minutes, timed for you"
+          }
+        }
+      }
+    },
+    "Three questions pick the mode, level and length for you." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Three questions pick the mode, level and length for you."
+          }
+        }
+      }
+    },
+    "Thumb on the spot, three fingers below the crease." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thumb on the spot, three fingers below the crease."
+          }
+        }
+      }
+    },
+    "Thumb or band on the spot, steady pressure, three finger-widths below the wrist crease." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thumb or band on the spot, steady pressure, three finger-widths below the wrist crease."
+          }
+        }
+      }
+    },
+    "Thumb or band on the spot, three finger-widths below the crease." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thumb or band on the spot, three finger-widths below the crease."
+          }
+        }
+      }
+    },
+    "Time for a hold" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Time for a hold"
+          }
+        }
+      }
+    },
+    "Today" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Today"
+          }
+        }
+      }
+    },
+    "Tone" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tone"
+          }
+        }
+      }
+    },
+    "Touch and hold a session to delete it." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Touch and hold a session to delete it."
+          }
+        }
+      }
+    },
+    "Trial ends" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trial ends"
+          }
+        }
+      }
+    },
+    "Trials of slow diaphragmatic breathing during chemotherapy and after surgery have reported lower nausea scores. The studies are small." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trials of slow diaphragmatic breathing during chemotherapy and after surgery have reported lower nausea scores. The studies are small."
+          }
+        }
+      }
+    },
+    "Try Queasy Pro\n%lld-day free trial." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Try Queasy Pro\n%#@n@."
+          },
+          "substitutions" : {
+            "n" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg-day free trial"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Try Queasy Pro\n%lld-month free trial." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Try Queasy Pro\n%#@n@."
+          },
+          "substitutions" : {
+            "n" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg-month free trial"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Try Queasy Pro\n%lld-year free trial." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Try Queasy Pro\n%#@n@."
+          },
+          "substitutions" : {
+            "n" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg-year free trial"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Try Queasy Pro\n7-day free trial." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Try Queasy Pro\n7-day free trial."
+          }
+        }
+      }
+    },
+    "Turn one hand palm up." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turn one hand palm up."
+          }
+        }
+      }
+    },
+    "Turn the watch to\nthe inside of your wrist" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turn the watch to\nthe inside of your wrist"
+          }
+        }
+      }
+    },
+    "Turn the watch to the inside of your wrist." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turn the watch to the inside of your wrist."
+          }
+        }
+      }
+    },
+    "Turn your watch to the inside of your wrist." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turn your watch to the inside of your wrist."
+          }
+        }
+      }
+    },
+    "Two quick things" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Two quick things"
+          }
+        }
+      }
+    },
+    "Uncomfortable" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uncomfortable"
+          }
+        }
+      }
+    },
+    "Unlock Lifetime" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unlock Lifetime"
+          }
+        }
+      }
+    },
+    "Unlock every pattern, both devices, free." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unlock every pattern, both devices, free."
+          }
+        }
+      }
+    },
+    "Use iPhone instead" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Use iPhone instead"
+          }
+        }
+      }
+    },
+    "Version" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Version"
+          }
+        }
+      }
+    },
+    "Vertigo" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vertigo"
+          }
+        }
+      }
+    },
+    "Vertigo / dizziness" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vertigo / dizziness"
+          }
+        }
+      }
+    },
+    "Watch" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Watch"
+          }
+        }
+      }
+    },
+    "Watch pulse cap" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Watch pulse cap"
+          }
+        }
+      }
+    },
+    "We start gentler on a full stomach." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "We start gentler on a full stomach."
+          }
+        }
+      }
+    },
+    "What kind of queasy?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What kind of queasy?"
+          }
+        }
+      }
+    },
+    "What tends to help, and when to call someone." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What tends to help, and when to call someone."
+          }
+        }
+      }
+    },
+    "What this leans on" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What this leans on"
+          }
+        }
+      }
+    },
+    "While it runs" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "While it runs"
+          }
+        }
+      }
+    },
+    "Worse" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Worse"
+          }
+        }
+      }
+    },
+    "Yearly" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yearly"
+          }
+        }
+      }
+    },
+    "Yes" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yes"
+          }
+        }
+      }
+    },
+    "Your last change could not be saved on this iPhone, so it may be missing after you close Queasy. This is usually because storage is full. Free up some space and try again." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your last change could not be saved on this iPhone, so it may be missing after you close Queasy. This is usually because storage is full. Free up some space and try again."
+          }
+        }
+      }
+    },
+    "Your watch\nis ready" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your watch\nis ready"
+          }
+        }
+      }
+    },
+    "Your watch taps a long swell in, then a longer fade out, so you can keep your eyes shut and follow it. Queasy suggests three seconds in and five out when things are mild, and four in and eight out when they are not. Breathing out for longer than you breathe in is the whole technique.\n\nSmall trials of slow diaphragmatic breathing during chemotherapy and after surgery have reported lower nausea scores. They are small, and the reviewers say so." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your watch taps a long swell in, then a longer fade out, so you can keep your eyes shut and follow it. Queasy suggests three seconds in and five out when things are mild, and four in and eight out when they are not. Breathing out for longer than you breathe in is the whole technique.\n\nSmall trials of slow diaphragmatic breathing during chemotherapy and after surgery have reported lower nausea scores. They are small, and the reviewers say so."
+          }
+        }
+      }
+    },
+    "Your watch taps the rhythm so you can keep your eyes shut: a long tap in, a longer one out. Breathing out for longer than you breathe in is the whole technique." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your watch taps the rhythm so you can keep your eyes shut: a long tap in, a longer one out. Breathing out for longer than you breathe in is the whole technique."
+          }
+        }
+      }
+    },
+    "Your whole history, and what helps" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your whole history, and what helps"
+          }
+        }
+      }
+    },
+    "avg severity\nchange" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "avg severity\nchange"
+          }
+        }
+      }
+    },
+    "calm day" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "calm day"
+          }
+        }
+      }
+    },
+    "calm days" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "calm days"
+          }
+        }
+      }
+    },
+    "calm days (few)" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "calm days"
+          }
+        }
+      }
+    },
+    "calm days (many)" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "calm days"
+          }
+        }
+      }
+    },
+    "couldn't load plans" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "couldn't load plans"
+          }
+        }
+      }
+    },
+    "iPhone" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iPhone"
+          }
+        }
+      }
+    },
+    "loading plans…" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "loading plans…"
+          }
+        }
+      }
+    },
+    "mode that\nhelps most" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "mode that\nhelps most"
+          }
+        }
+      }
+    },
+    "n/a" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "n/a"
+          }
+        }
+      }
+    },
+    "of 10" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "of 10"
+          }
+        }
+      }
+    },
+    "queasy day" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "queasy day"
+          }
+        }
+      }
+    },
+    "queasy days" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "queasy days"
+          }
+        }
+      }
+    },
+    "queasy days (few)" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "queasy days"
+          }
+        }
+      }
+    },
+    "queasy days (many)" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "queasy days"
+          }
+        }
+      }
+    },
+    "sessions\nthis week" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "sessions\nthis week"
+          }
+        }
+      }
+    },
+    "sessions\nthis week (few)" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "sessions\nthis week"
+          }
+        }
+      }
+    },
+    "sessions\nthis week (many)" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "sessions\nthis week"
+          }
+        }
+      }
+    },
+    "sessions\nthis week (one)" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "sessions\nthis week"
+          }
+        }
+      }
+    },
+    "try again" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "try again"
+          }
+        }
+      }
+    },
+    "unrated" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "unrated"
+          }
+        }
+      }
+    },
+    "±0" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "±0"
+          }
+        }
+      }
+    },
+    "−%lld" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "−%lld"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

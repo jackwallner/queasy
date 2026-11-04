@@ -139,9 +139,9 @@ struct PaywallView: View {
 
     private var subscriptionsLastError: String {
         #if HAS_REVENUECAT
-        return subscriptions.lastError ?? "Check your connection and try again."
+        return subscriptions.lastError ?? String(localized: "Check your connection and try again.")
         #else
-        return "Check your connection and try again."
+        return String(localized: "Check your connection and try again.")
         #endif
     }
 
@@ -208,11 +208,11 @@ struct PaywallView: View {
         #if HAS_REVENUECAT
         if let pkg = selectedPackage ?? subscriptions.products.first(where: { $0.queasyPackageKind == .yearly }),
            subscriptions.isEligibleForIntroOffer(pkg),
-           let trial = pkg.queasyIntroOfferLabel {
-            return "Try Queasy Pro\n\(trial)."
+           let headline = pkg.queasyTryTrialHeadline {
+            return headline
         }
         #endif
-        return "Sessions as long as\nyou actually need."
+        return String(localized: "Sessions as long as\nyou actually need.")
     }
 
     private var subtitleText: String {
@@ -220,19 +220,19 @@ struct PaywallView: View {
         if let package = selectedPackage,
            package.queasyPackageKind != .lifetime,
            subscriptions.isEligibleForIntroOffer(package) {
-            return "Then \(package.queasyPriceLabel), cancel anytime."
+            return String(localized: "Then \(package.queasyPriceLabel), cancel anytime.")
         }
         #endif
-        return "Free sessions run \(FreeTier.sessionSeconds / 60) minutes. Pro runs up to \(PatternEngine.maxDuration)."
+        return String(localized: "Free sessions run \(FreeTier.sessionSeconds / 60) minutes. Pro runs up to \(PatternEngine.maxDuration).")
     }
 
     private var trustStrip: some View {
         HStack(spacing: 14) {
-            trustItem(icon: "leaf", label: "Drug-free")
+            trustItem(icon: "leaf", label: String(localized: "Drug-free"))
             Divider().frame(height: 14).background(Theme.paper3)
-            trustItem(icon: "lock.shield", label: "Private")
+            trustItem(icon: "lock.shield", label: String(localized: "Private"))
             Divider().frame(height: 14).background(Theme.paper3)
-            trustItem(icon: "moon.stars", label: "No ads, ever")
+            trustItem(icon: "moon.stars", label: String(localized: "No ads, ever"))
         }
         .frame(maxWidth: .infinity)
     }
@@ -248,14 +248,14 @@ struct PaywallView: View {
         }
     }
 
-    /// Trial label ("7-day free trial") for the current selection, nil when
+    /// Trial label ("7-Day Free Trial") for the current selection, nil when
     /// the selection has no intro offer (lifetime, or trial already used).
     private var selectedTrialLabel: String? {
         #if HAS_REVENUECAT
         guard let package = selectedPackage,
               package.queasyPackageKind != .lifetime,
               subscriptions.isEligibleForIntroOffer(package) else { return nil }
-        return package.queasyIntroOfferLabel
+        return package.queasyIntroOfferTitle
         #else
         return nil
         #endif
@@ -267,20 +267,20 @@ struct PaywallView: View {
         VStack(alignment: .leading, spacing: 0) {
             timelineRow(
                 icon: "lock.open.fill",
-                title: "Today",
-                text: "Unlock every pattern, both devices, free.",
+                title: String(localized: "Today"),
+                text: String(localized: "Unlock every pattern, both devices, free."),
                 showsLine: true
             )
             timelineRow(
                 icon: "bell.fill",
-                title: "Day 5",
-                text: "Check History. How do you feel?",
+                title: String(localized: "Day 5"),
+                text: String(localized: "Check History. How do you feel?"),
                 showsLine: true
             )
             timelineRow(
                 icon: "star.fill",
                 title: trialEndTitle,
-                text: "First charge, only if you keep it. Cancel before then and pay nothing.",
+                text: String(localized: "First charge, only if you keep it. Cancel before then and pay nothing."),
                 showsLine: false
             )
         }
@@ -291,9 +291,9 @@ struct PaywallView: View {
 
     private var trialEndTitle: String {
         #if HAS_REVENUECAT
-        if let trial = selectedTrialLabel, trial.lowercased().contains("7") { return "Day 7" }
+        if selectedTrialLabel != nil, selectedPackage?.queasyIntroOfferDays == 7 { return String(localized: "Day 7") }
         #endif
-        return "Trial ends"
+        return String(localized: "Trial ends")
     }
 
     private func timelineRow(icon: String, title: String, text: String, showsLine: Bool) -> some View {
@@ -450,7 +450,7 @@ struct PaywallView: View {
 
             HStack(spacing: 4) {
                 Link("Terms of Use", destination: PaywallLinks.standardEULA)
-                Text("·")
+                Text(verbatim: "·")
                 Link("Privacy Policy", destination: PaywallLinks.privacyPolicy)
             }
             .font(.caption2.weight(.semibold))
@@ -495,18 +495,18 @@ struct PaywallView: View {
             trustStrip
             if showsDetail {
                 VStack(alignment: .leading, spacing: 0) {
-                    timelineRow(icon: "lock.open.fill", title: "Today", text: "Full-length sessions on both devices, free.", showsLine: true)
-                    timelineRow(icon: "bell.fill", title: "Day 5", text: "Check History. How do you feel?", showsLine: true)
-                    timelineRow(icon: "star.fill", title: "Day 7", text: "First charge, only if you keep it. Cancel before then and pay nothing.", showsLine: false)
+                    timelineRow(icon: "lock.open.fill", title: String(localized: "Today"), text: String(localized: "Full-length sessions on both devices, free."), showsLine: true)
+                    timelineRow(icon: "bell.fill", title: String(localized: "Day 5"), text: String(localized: "Check History. How do you feel?"), showsLine: true)
+                    timelineRow(icon: "star.fill", title: String(localized: "Day 7"), text: String(localized: "First charge, only if you keep it. Cancel before then and pay nothing."), showsLine: false)
                 }
                 .padding(14)
                 .background(Theme.aquaTint.opacity(0.5), in: RoundedRectangle(cornerRadius: 16))
                 .frame(maxWidth: .infinity, alignment: .leading)
             }
             VStack(spacing: 10) {
-                mockPlanCard(name: "Yearly", secondary: "7-day free trial · $1.25/mo", price: "$14.99 / year", badge: "SAVE 58%", selected: true)
-                mockPlanCard(name: "Monthly", secondary: "7-day free trial", price: "$2.99 / month", badge: nil, selected: false)
-                mockPlanCard(name: "Lifetime", secondary: "Pay once · never renews", price: "$29.99", badge: nil, selected: false)
+                mockPlanCard(name: String(localized: "Yearly"), secondary: String(localized: "7-day free trial · $1.25/mo"), price: String(localized: "$14.99 / year"), badge: String(localized: "SAVE 58%"), selected: true)
+                mockPlanCard(name: String(localized: "Monthly"), secondary: String(localized: "7-day free trial"), price: String(localized: "$2.99 / month"), badge: nil, selected: false)
+                mockPlanCard(name: String(localized: "Lifetime"), secondary: String(localized: "Pay once · never renews"), price: "$29.99", badge: nil, selected: false)
             }
             Spacer(minLength: 0)
             VStack(spacing: 8) {
@@ -604,14 +604,14 @@ struct PaywallView: View {
 
     private var ctaTitle: String {
         #if HAS_REVENUECAT
-        guard let package = selectedPackage else { return "Continue" }
-        if package.queasyPackageKind == .lifetime { return "Unlock Lifetime" }
-        if subscriptions.isEligibleForIntroOffer(package), let trial = package.queasyIntroOfferLabel {
-            return "Start My \(trial.capitalized)"
+        guard let package = selectedPackage else { return String(localized: "Continue") }
+        if package.queasyPackageKind == .lifetime { return String(localized: "Unlock Lifetime") }
+        if subscriptions.isEligibleForIntroOffer(package), let title = package.queasyStartMyTrialTitle {
+            return title
         }
-        return "Start Queasy Pro"
+        return String(localized: "Start Queasy Pro")
         #else
-        return "Continue"
+        return String(localized: "Continue")
         #endif
     }
 
@@ -620,13 +620,13 @@ struct PaywallView: View {
         guard let package = selectedPackage else { return nil }
         let price = package.queasyPriceLabel
         if package.queasyPackageKind == .lifetime {
-            return "\(price). One-time purchase. Lifetime access, no subscription."
+            return String(localized: "\(price). One-time purchase. Lifetime access, no subscription.")
         }
-        let renew = "Auto-renews unless cancelled at least 24 hours before the end of the current period. Manage or cancel in Settings."
-        if subscriptions.isEligibleForIntroOffer(package), let trial = package.queasyIntroOfferLabel {
-            return "\(trial.capitalized), then \(price). \(renew)"
+        let renew = String(localized: "Auto-renews unless cancelled at least 24 hours before the end of the current period. Manage or cancel in Settings.")
+        if subscriptions.isEligibleForIntroOffer(package), let disclosure = package.queasyTrialDisclosure(terms: renew) {
+            return disclosure
         }
-        return "\(price). \(renew)"
+        return String(localized: "\(price). \(renew)")
         #else
         return nil
         #endif
@@ -659,7 +659,7 @@ struct PaywallView: View {
             return f
         }()
         guard let text = formatter.string(from: monthly) else { return nil }
-        return "\(text)/mo"
+        return String(localized: "\(text)/mo")
     }
 
     private func savingsPercent(for package: Package) -> Int? {
@@ -686,12 +686,12 @@ struct PaywallView: View {
                 case .purchased:
                     break
                 case .pending:
-                    restoreMessage = "Purchase is pending approval. Queasy Pro unlocks as soon as it's approved."
+                    restoreMessage = String(localized: "Purchase is pending approval. Queasy Pro unlocks as soon as it's approved.")
                 case .cancelled:
                     errorMessage = nil
                 }
             } catch {
-                errorMessage = "Purchase didn't complete. Please try again."
+                errorMessage = String(localized: "Purchase didn't complete. Please try again.")
             }
         }
     }
@@ -704,7 +704,7 @@ struct PaywallView: View {
             defer { isRestoring = false }
             await subscriptions.restorePurchases()
             if !subscriptions.isProSubscriber {
-                restoreMessage = subscriptions.lastError ?? "No purchases found to restore."
+                restoreMessage = subscriptions.lastError ?? String(localized: "No purchases found to restore.")
             }
         }
     }
@@ -750,9 +750,9 @@ private struct QueasyPlanCard: View {
                             .font(.subheadline.weight(.semibold))
                             .foregroundStyle(Theme.ink)
                         if let savings = savingsPercent {
-                            badge("SAVE \(savings)%")
+                            badge(String(localized: "SAVE \(savings)%"))
                         } else if isBestValue {
-                            badge("BEST VALUE")
+                            badge(String(localized: "BEST VALUE"))
                         }
                     }
                     if let secondary = secondaryLine {
@@ -791,20 +791,17 @@ private struct QueasyPlanCard: View {
     }
 
     private var secondaryLine: String? {
-        var parts: [String] = []
-        if showsTrialBadge, let trial = package.queasyIntroOfferLabel {
-            parts.append(trial.capitalized)
+        let trial = showsTrialBadge ? package.queasyIntroOfferTitle : nil
+        switch (trial, perMonthLabel) {
+        case let (trial?, perMonth?):
+            return String(localized: "\(trial) · \(perMonth)")
+        case let (trial?, nil):
+            return trial
+        case let (nil, perMonth?):
+            return perMonth
+        case (nil, nil):
+            return package.queasyPackageKind == .lifetime ? String(localized: "Pay once · never renews") : nil
         }
-        if let perMonthLabel {
-            parts.append(perMonthLabel)
-        }
-        if !parts.isEmpty {
-            return parts.joined(separator: " · ")
-        }
-        if package.queasyPackageKind == .lifetime {
-            return "Pay once · never renews"
-        }
-        return nil
     }
 }
 #endif

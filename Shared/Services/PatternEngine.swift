@@ -73,43 +73,43 @@ enum PatternEngine {
         switch checkIn.cause {
         case .motion:
             tips = [
-                "Look at the horizon or a stable point far away.",
-                "Crack a window. Cool moving air helps.",
-                "Skip reading or scrolling until the wave passes.",
+                storedCatalogKey("Look at the horizon or a stable point far away."),
+                storedCatalogKey("Crack a window. Cool moving air helps."),
+                storedCatalogKey("Skip reading or scrolling until the wave passes."),
             ]
         case .morningSickness:
             tips = [
-                "An empty stomach is the usual trigger. Small and often beats three meals.",
-                "Plain crackers before you sit up in the morning, if you can face them.",
-                "Cold food carries less smell than hot food.",
-                "Sip fluids between meals rather than with them.",
+                storedCatalogKey("An empty stomach is the usual trigger. Small and often beats three meals."),
+                storedCatalogKey("Plain crackers before you sit up in the morning, if you can face them."),
+                storedCatalogKey("Cold food carries less smell than hot food."),
+                storedCatalogKey("Sip fluids between meals rather than with them."),
             ]
         case .hangover:
             tips = [
-                "Rehydrate slowly, small sips beat big gulps.",
-                "Bland carbs (toast, crackers) settle faster than grease.",
-                "Dim screens and bright lights while the session runs.",
+                storedCatalogKey("Rehydrate slowly, small sips beat big gulps."),
+                storedCatalogKey("Bland carbs (toast, crackers) settle faster than grease."),
+                storedCatalogKey("Dim screens and bright lights while the session runs."),
             ]
         case .vertigo:
             tips = [
-                "Sit down and fix your eyes on one still object.",
-                "Move your head slowly, no quick turns.",
+                storedCatalogKey("Sit down and fix your eyes on one still object."),
+                storedCatalogKey("Move your head slowly, no quick turns."),
             ]
         case .anxiety:
             tips = [
-                "Breathe out longer than you breathe in: 4 in, 6 out.",
-                "Drop your shoulders and unclench your jaw.",
-                "Match your exhale to the pulse rhythm.",
+                storedCatalogKey("Breathe out longer than you breathe in: 4 in, 6 out."),
+                storedCatalogKey("Drop your shoulders and unclench your jaw."),
+                storedCatalogKey("Match your exhale to the pulse rhythm."),
             ]
         case .general:
             tips = [
-                "Slow, steady breaths through your nose.",
-                "Cool air and loose clothing help more than you'd think.",
-                "Small sips of water, and avoid strong smells.",
+                storedCatalogKey("Slow, steady breaths through your nose."),
+                storedCatalogKey("Cool air and loose clothing help more than you'd think."),
+                storedCatalogKey("Small sips of water, and avoid strong smells."),
             ]
         }
         if checkIn.stillExposed, checkIn.cause == .motion {
-            tips.insert("If you're a passenger, face forward and sit up front if you can.", at: 0)
+            tips.insert(storedCatalogKey("If you're a passenger, face forward and sit up front if you can."), at: 0)
         }
         return tips
     }

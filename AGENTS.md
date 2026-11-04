@@ -85,6 +85,12 @@ phone-only, no Wear OS). Read `.claude/rules/android.md` before touching
 holds the parity export, the paid boundary, the test commands and the Play
 release steps still to do.
 
+## Localization
+
+All copy routes through `Shared/Localizable.xcstrings` (`en` only for now). Read
+`.claude/rules/localization.md` before adding or changing a user-facing string;
+`python3 Tools/Localization/check.py` fails on copy with no key.
+
 ## Products
 
 `com.jackwallner.queasy.pro.monthly` $2.99 · `.pro.yearly` $14.99 · `.pro.lifetime`

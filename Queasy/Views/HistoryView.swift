@@ -31,7 +31,7 @@ struct HistoryView: View {
                 }
             }
             .tideBackground()
-            .tideNavigationTitle("History")
+            .tideNavigationTitle(String(localized: "History"))
             .toolbar {
                 if !episodes.isEmpty {
                     ToolbarItem(placement: .topBarTrailing) {
@@ -118,11 +118,11 @@ struct HistoryView: View {
         let summary = EpisodeStats.summarize(entries)
         return HStack(spacing: 10) {
             statTile(
-                value: summary.averageReliefDelta.map { String(format: "%+.1f", -$0) } ?? "n/a",
-                label: "avg severity\nchange"
+                value: summary.averageReliefDelta.map { DisplayFormat.signedOneDecimal(-$0) } ?? String(localized: "n/a"),
+                label: String(localized: "avg severity\nchange")
             )
-            statTile(value: "\(summary.sessionsThisWeek)", label: "sessions\nthis week")
-            statTile(value: summary.bestMode?.title ?? "n/a", label: "mode that\nhelps most")
+            statTile(value: summary.sessionsThisWeek.formatted(), label: PluralLabel.sessionsThisWeek(summary.sessionsThisWeek))
+            statTile(value: summary.bestMode?.title ?? String(localized: "n/a"), label: String(localized: "mode that\nhelps most"))
         }
     }
 
@@ -138,7 +138,7 @@ struct HistoryView: View {
                     .font(.footnote.weight(.semibold))
                     .foregroundStyle(Theme.aqua)
                 VStack(alignment: .leading, spacing: 1) {
-                    Text("\(hiddenEpisodeCount) older \(hiddenEpisodeCount == 1 ? "session" : "sessions")")
+                    Text("\(hiddenEpisodeCount) older sessions")
                         .font(.subheadline.weight(.semibold))
                         .foregroundStyle(Theme.ink)
                     Text("Still saved on your iPhone. Pro shows everything past the last \(FreeTier.historyDays) days.")
@@ -169,8 +169,8 @@ struct HistoryView: View {
                 .foregroundStyle(Theme.ink2)
             EpisodeHeatmapGrid(days: days)
             HStack(spacing: 14) {
-                summaryChip(value: queasyDays, label: queasyDays == 1 ? "queasy day" : "queasy days")
-                summaryChip(value: calmDays, label: calmDays == 1 ? "calm day" : "calm days")
+                summaryChip(value: queasyDays, label: PluralLabel.queasyDays(queasyDays))
+                summaryChip(value: calmDays, label: PluralLabel.calmDays(calmDays))
                 Spacer(minLength: 0)
             }
             .font(.caption.monospacedDigit())
@@ -183,7 +183,7 @@ struct HistoryView: View {
 
     private func summaryChip(value: Int, label: String) -> some View {
         HStack(spacing: 4) {
-            Text("\(value)").fontWeight(.semibold).foregroundStyle(Theme.ink)
+            Text(value, format: .number).fontWeight(.semibold).foregroundStyle(Theme.ink)
             Text(label)
         }
     }
@@ -360,12 +360,12 @@ private struct EpisodeRow: View {
     }
 
     private var sourceLabel: String {
-        episode.source == .watch ? "Watch" : "iPhone"
+        episode.source == .watch ? String(localized: "Watch") : String(localized: "iPhone")
     }
 
     /// Level only means something for Pulse; the other modes report length.
     private var detailLabel: String {
-        episode.mode == .pulse ? "Level \(episode.intensity)" : "\(episode.plannedMinutes) min"
+        episode.mode == .pulse ? String(localized: "Level \(episode.intensity)") : String(localized: "\(episode.plannedMinutes) min")
     }
 
     @ViewBuilder

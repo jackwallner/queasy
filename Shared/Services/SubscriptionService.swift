@@ -49,10 +49,20 @@ extension Package {
 
     var queasyDisplayName: String {
         switch queasyPackageKind {
-        case .lifetime: return "Lifetime"
-        case .yearly: return "Yearly"
-        case .monthly: return "Monthly"
+        case .lifetime: return String(localized: "Lifetime")
+        case .yearly: return String(localized: "Yearly")
+        case .monthly: return String(localized: "Monthly")
         case .other: return storeProduct.localizedTitle
+        }
+    }
+
+    /// The plan name analytics records, the same in every language.
+    var queasyAnalyticsPlan: String {
+        switch queasyPackageKind {
+        case .lifetime: return "lifetime"
+        case .yearly: return "yearly"
+        case .monthly: return "monthly"
+        case .other: return storeProduct.localizedTitle.lowercased()
         }
     }
 
@@ -60,37 +70,85 @@ extension Package {
         guard let period = storeProduct.subscriptionPeriod else {
             return storeProduct.localizedPriceString
         }
-        let unit: String
+        let price = storeProduct.localizedPriceString
+        let n = period.value
         switch period.unit {
-        case .day: unit = period.value == 1 ? "day" : "days"
-        case .week: unit = period.value == 1 ? "week" : "weeks"
-        case .month: unit = period.value == 1 ? "month" : "months"
-        case .year: unit = period.value == 1 ? "year" : "years"
-        @unknown default: unit = ""
+        case .day: return n == 1 ? String(localized: "\(price) / day") : String(localized: "\(price) / \(n) days")
+        case .week: return n == 1 ? String(localized: "\(price) / week") : String(localized: "\(price) / \(n) weeks")
+        case .month: return n == 1 ? String(localized: "\(price) / month") : String(localized: "\(price) / \(n) months")
+        case .year: return n == 1 ? String(localized: "\(price) / year") : String(localized: "\(price) / \(n) years")
+        @unknown default: return price
         }
-        if period.value == 1 {
-            return "\(storeProduct.localizedPriceString) / \(unit)"
-        }
-        return "\(storeProduct.localizedPriceString) / \(period.value) \(unit)"
     }
 
-    var queasyIntroOfferLabel: String? {
+    /// Picks the whole-sentence variant for the free-trial length. A trial
+    /// counted in weeks reads in days, so it shares the day keys.
+    private func queasyTrialCopy(
+        day: (Int) -> String,
+        month: (Int) -> String,
+        year: (Int) -> String
+    ) -> String? {
         guard let intro = storeProduct.introductoryDiscount, intro.paymentMode == .freeTrial else {
             return nil
         }
         let period = intro.subscriptionPeriod
-        if period.unit == .week {
-            return "\(period.value * 7)-day free trial"
-        }
-        let unit: String
         switch period.unit {
-        case .day: unit = "day"
-        case .week: unit = "week"
-        case .month: unit = "month"
-        case .year: unit = "year"
-        @unknown default: unit = ""
+        case .day: return day(period.value)
+        case .week: return day(period.value * 7)
+        case .month: return month(period.value)
+        case .year: return year(period.value)
+        @unknown default: return nil
         }
-        return "\(period.value)-\(unit) free trial"
+    }
+
+    /// The free trial's length in days, when it is counted in days or weeks.
+    var queasyIntroOfferDays: Int? {
+        guard let intro = storeProduct.introductoryDiscount, intro.paymentMode == .freeTrial else {
+            return nil
+        }
+        let period = intro.subscriptionPeriod
+        switch period.unit {
+        case .day: return period.value
+        case .week: return period.value * 7
+        default: return nil
+        }
+    }
+
+    /// "7-Day Free Trial"
+    var queasyIntroOfferTitle: String? {
+        queasyTrialCopy(
+            day: { String(localized: "\($0)-Day Free Trial") },
+            month: { String(localized: "\($0)-Month Free Trial") },
+            year: { String(localized: "\($0)-Year Free Trial") }
+        )
+    }
+
+    /// "Try Queasy Pro\n7-day free trial."
+    var queasyTryTrialHeadline: String? {
+        queasyTrialCopy(
+            day: { String(localized: "Try Queasy Pro\n\($0)-day free trial.") },
+            month: { String(localized: "Try Queasy Pro\n\($0)-month free trial.") },
+            year: { String(localized: "Try Queasy Pro\n\($0)-year free trial.") }
+        )
+    }
+
+    /// "Start My 7-Day Free Trial"
+    var queasyStartMyTrialTitle: String? {
+        queasyTrialCopy(
+            day: { String(localized: "Start My \($0)-Day Free Trial") },
+            month: { String(localized: "Start My \($0)-Month Free Trial") },
+            year: { String(localized: "Start My \($0)-Year Free Trial") }
+        )
+    }
+
+    /// "7-Day Free Trial, then $14.99 / year." followed by the renewal terms.
+    func queasyTrialDisclosure(terms: String) -> String? {
+        let price = queasyPriceLabel
+        return queasyTrialCopy(
+            day: { String(localized: "\($0)-Day Free Trial, then \(price). \(terms)") },
+            month: { String(localized: "\($0)-Month Free Trial, then \(price). \(terms)") },
+            year: { String(localized: "\($0)-Year Free Trial, then \(price). \(terms)") }
+        )
     }
 }
 
@@ -223,7 +281,7 @@ final class SubscriptionService: NSObject {
             lastError = nil
             await refreshIntroEligibility()
         } catch {
-            lastError = "Couldn't load subscription options. Check your connection and try again."
+            lastError = String(localized: "Couldn't load subscription options. Check your connection and try again.")
         }
     }
 
@@ -242,7 +300,7 @@ final class SubscriptionService: NSObject {
     /// Default to NOT eligible until RevenueCat confirms, so we never promise a
     /// trial to someone who already used it and would be charged immediately.
     func isEligibleForIntroOffer(_ package: Package) -> Bool {
-        guard package.queasyIntroOfferLabel != nil else { return false }
+        guard package.queasyIntroOfferTitle != nil else { return false }
         return introEligibility[package.storeProduct.productIdentifier] ?? false
     }
 
@@ -283,7 +341,7 @@ final class SubscriptionService: NSObject {
     @discardableResult
     func purchase(_ package: Package) async throws -> PurchaseState {
         guard isConfigured else { throw PurchaseError.notConfigured }
-        let plan = package.queasyDisplayName.lowercased()
+        let plan = package.queasyAnalyticsPlan
         AnalyticsService.purchaseAttempted(plan: plan)
         let startedTrial = isEligibleForIntroOffer(package)
         let result = try await Purchases.shared.purchase(package: package)
@@ -310,9 +368,9 @@ final class SubscriptionService: NSObject {
         do {
             let info = try await Purchases.shared.restorePurchases()
             applyProStatus(from: info)
-            lastError = isProSubscriber ? nil : "No active Queasy Pro purchase found for this Apple ID."
+            lastError = isProSubscriber ? nil : String(localized: "No active Queasy Pro purchase found for this Apple ID.")
         } catch {
-            lastError = "Couldn't restore purchases. Try again."
+            lastError = String(localized: "Couldn't restore purchases. Try again.")
         }
     }
 

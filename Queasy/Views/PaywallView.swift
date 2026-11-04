@@ -528,6 +528,7 @@ struct PaywallView: View {
                     .font(.caption2)
                     .foregroundStyle(Theme.ink3)
                     .multilineTextAlignment(.center)
+                    .fixedSize(horizontal: false, vertical: true)
             }
             legalFooter
         }

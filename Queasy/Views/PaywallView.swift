@@ -565,6 +565,7 @@ struct PaywallView: View {
                     Text(secondary)
                         .font(.caption2.weight(.medium))
                         .foregroundStyle(Theme.ink3)
+                        .fixedSize(horizontal: false, vertical: true)
                 }
             }
             Spacer(minLength: 8)
@@ -759,6 +760,7 @@ private struct QueasyPlanCard: View {
                         Text(secondary)
                             .font(.caption2.weight(.medium))
                             .foregroundStyle(Theme.ink3)
+                            .fixedSize(horizontal: false, vertical: true)
                     }
                 }
 

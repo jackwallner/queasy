@@ -124,4 +124,37 @@ struct LocalizationTests {
             #expect(DisplayFormat.signedOneDecimal(value) == String(format: "%+.1f", value))
         }
     }
+
+    static let languages = ["id", "ja", "nl", "pt-BR", "ru", "th", "vi", "zh-Hans"]
+
+    private func bundle(_ language: String) throws -> Bundle {
+        for host in [Bundle.main] + Bundle.allBundles {
+            if let path = host.path(forResource: language, ofType: "lproj"), let bundle = Bundle(path: path) {
+                return bundle
+            }
+        }
+        throw LocalizationMissing(language: language)
+    }
+
+    @Test func everyLanguageTranslatesThePlurals() throws {
+        for language in Self.languages {
+            let host = try bundle(language)
+            let locale = Locale(identifier: language)
+            let text = String(localized: "\(10) minutes", bundle: host, locale: locale)
+            #expect(!text.contains("#@"), "\(language): \(text)")
+            #expect(text != "10 minutes", "\(language)")
+            #expect(text.contains("10"), "\(language): \(text)")
+        }
+    }
+
+    @Test func russianPicksPluralCategories() throws {
+        let russian = try bundle("ru")
+        let locale = Locale(identifier: "ru")
+        let forms = [1, 3, 5].map { String(localized: "\($0) minutes", bundle: russian, locale: locale) }
+        #expect(Set(forms.map { $0.dropFirst(2) }).count == 3, "\(forms)")
+    }
+}
+
+private struct LocalizationMissing: Error {
+    let language: String
 }

@@ -28,7 +28,7 @@ import sys
 
 ROOT = os.getcwd()
 DIRS = ['Queasy', 'Shared', 'QueasyWatch']
-LANGS = []
+LANGS = ['id', 'ja', 'nl', 'pt-BR', 'ru', 'th', 'vi', 'zh-Hans']
 UI_FUNCS = {'Text', 'Button', 'Label', 'Section', 'Toggle', 'TextField', 'navigationTitle', 'accessibilityLabel',
             'alert', 'DatePicker', 'Stepper', 'Link', 'configurationDisplayName', 'description',
             'confirmationDialog', 'Picker', 'LocalizedStringKey', 'accessibilityHint', 'SecureField',

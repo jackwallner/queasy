@@ -9,8 +9,10 @@ paths:
 # Queasy: localization (added 2026-11-04)
 
 Every user-facing string in the iPhone and Watch apps routes through the catalog,
-which holds `en` only for now. Separate runs add the other languages, then list
-them in `CFBundleLocalizations` in each Info.plist and in `LANGS` in `check.py`.
+which holds `en` plus id, ja, nl, pt-BR, ru, th, vi and zh-Hans. A new language
+goes in `CFBundleLocalizations` in each Info.plist, `LANGS` in `check.py` and
+`languages` in `LocalizationTests`. Pulse, Breathe, Tone, Press, Pro and P6 stay
+in English everywhere.
 `android/` has its own strings and is out of this.
 
 ## Setup

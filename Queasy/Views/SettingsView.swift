@@ -1,6 +1,16 @@
 import SwiftUI
+import UIKit
 
 struct SettingsView: View {
+    /// The language the app is running in, named in that language, as iOS
+    /// Settings names it ("Deutsch", "Español").
+    private static var currentLanguageName: String {
+        let code = Bundle.main.preferredLocalizations.first ?? "en"
+        let locale = Locale(identifier: code)
+        guard let name = locale.localizedString(forLanguageCode: code) else { return code }
+        return name.prefix(1).uppercased(with: locale) + name.dropFirst()
+    }
+
     @Environment(AppSettings.self) private var settings
     @Environment(SubscriptionService.self) private var subscriptions
     @Environment(\.openURL) private var openURL
@@ -118,6 +128,7 @@ struct SettingsView: View {
                     }
                     Link("Privacy Policy", destination: PaywallLinks.privacyPolicy)
                     Link("Terms of Use", destination: PaywallLinks.standardEULA)
+                    languageRow
                     LabeledContent("Version", value: versionString)
                 }
 
@@ -152,6 +163,29 @@ struct SettingsView: View {
                 }
             }
         }
+    }
+
+    private var languageRow: some View {
+        Button {
+            if let url = URL(string: UIApplication.openSettingsURLString) {
+                UIApplication.shared.open(url)
+            }
+        } label: {
+            LabeledContent {
+                HStack(spacing: 6) {
+                    Text(Self.currentLanguageName).foregroundStyle(Theme.ink3)
+                    // Leaves the app, so the outward arrow rather than a chevron.
+                    Image(systemName: "arrow.up.forward")
+                        .font(.footnote.weight(.semibold))
+                        .foregroundStyle(Theme.ink3)
+                        .accessibilityHidden(true)
+                }
+            } label: {
+                Text("Language")
+            }
+        }
+        .accessibilityHint("Opens iOS Settings")
+        .accessibilityIdentifier("settings-language")
     }
 
     private var versionString: String {

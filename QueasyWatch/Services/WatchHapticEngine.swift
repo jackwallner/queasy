@@ -136,6 +136,8 @@ final class WatchHapticEngine: NSObject {
             "intensity": intensity,
             "cause": plan.cause.rawValue,
             "mode": mode.rawValue,
+            "inhaleSeconds": plan.breathe.inhaleSeconds,
+            "exhaleSeconds": plan.breathe.exhaleSeconds,
             "severityBefore": plan.severityBefore,
             "plannedMinutes": plan.durationMinutes,
         ])

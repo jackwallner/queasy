@@ -128,7 +128,7 @@ struct WatchRemoteSessionView: View {
     private var stage: some View {
         switch mirror.mode {
         case .breathe:
-            BreathingBloom(pattern: .relaxed, anchor: mirror.startedAt)
+            BreathingBloom(pattern: mirror.breathe, anchor: mirror.startedAt)
         case .press:
             ZStack {
                 Circle().fill(Theme.aquaTint)

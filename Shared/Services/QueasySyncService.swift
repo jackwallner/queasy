@@ -54,6 +54,7 @@ final class WatchSessionMirror {
     private(set) var endsAt = Date.distantPast
     private(set) var cause: NauseaCause = .general
     private(set) var mode: ReliefMode = .pulse
+    private(set) var breathe: BreathePattern = .relaxed
     private(set) var severityBefore = 3
     private(set) var plannedMinutes = 15
 
@@ -75,6 +76,7 @@ final class WatchSessionMirror {
         var endsAt: Date
         var cause: NauseaCause
         var mode: ReliefMode
+        var breathe: BreathePattern
         var severityBefore: Int
         var plannedMinutes: Int
 
@@ -87,6 +89,13 @@ final class WatchSessionMirror {
             self.endsAt = (state["endsAt"] as? TimeInterval).map(Date.init(timeIntervalSince1970:)) ?? .distantPast
             self.cause = (state["cause"] as? String).flatMap(NauseaCause.init(rawValue:)) ?? .general
             self.mode = (state["mode"] as? String).flatMap(ReliefMode.init(rawValue:)) ?? .pulse
+            // A watch on an older build sends no pace; its pacer ran the default.
+            if let inhale = state["inhaleSeconds"] as? Double, let exhale = state["exhaleSeconds"] as? Double,
+               inhale > 0, exhale > 0 {
+                self.breathe = BreathePattern(inhaleSeconds: inhale, exhaleSeconds: exhale)
+            } else {
+                self.breathe = .relaxed
+            }
             self.severityBefore = state["severityBefore"] as? Int ?? 3
             self.plannedMinutes = state["plannedMinutes"] as? Int ?? 15
             self.isRunning = phaseRaw == "running"
@@ -100,6 +109,7 @@ final class WatchSessionMirror {
         endsAt = snapshot.endsAt
         cause = snapshot.cause
         mode = snapshot.mode
+        breathe = snapshot.breathe
         severityBefore = snapshot.severityBefore
         plannedMinutes = snapshot.plannedMinutes
         phase = (snapshot.isRunning && snapshot.endsAt > Date()) ? .running : .ended

@@ -305,3 +305,61 @@ struct BreathingBloomTests {
         #expect(phase.progress >= 0)
     }
 }
+
+@Suite("Quick start plan")
+struct QuickStartPlanTests {
+    @Test func noSavedPlanStartsTheDefault() {
+        #expect(ReliefPlan.quickStart(resuming: nil) == .quickStart)
+    }
+
+    /// Builds up to 1.1.7 saved the free two-minute cap into the last plan after
+    /// a watch start, so a user who then bought Pro kept getting two minutes.
+    @Test func aSavedFreeCapGoesBackToTheEngineFloor() {
+        for mode in [ReliefMode.pulse, .breathe] {
+            var saved = ReliefPlan.quickStart(mode: mode)
+            saved.durationMinutes = FreeTier.sessionSeconds / 60
+            let plan = ReliefPlan.quickStart(resuming: saved)
+            #expect(plan.durationMinutes == PatternEngine.minDuration)
+            #expect(FreeTier.cappedSeconds(for: mode, requested: plan.durationMinutes * 60, isPro: true) > FreeTier.sessionSeconds)
+            #expect(FreeTier.isCapped(mode, requested: plan.durationMinutes * 60, isPro: false))
+        }
+    }
+
+    @Test func aChosenLengthAndTheFixedProtocolsAreKept() {
+        var pulse = ReliefPlan.quickStart(mode: .pulse)
+        pulse.durationMinutes = 30
+        #expect(ReliefPlan.quickStart(resuming: pulse) == pulse)
+
+        var tone = ReliefPlan.quickStart(mode: .tone)
+        tone.durationMinutes = 1
+        #expect(ReliefPlan.quickStart(resuming: tone) == tone)
+
+        let press = ReliefPlan.quickStart(mode: .press)
+        #expect(ReliefPlan.quickStart(resuming: press) == press)
+    }
+}
+
+@Suite("Watch state mirror")
+struct WatchStateSnapshotTests {
+    private func state(_ extra: [String: Any] = [:]) -> [String: Any] {
+        var state: [String: Any] = ["sessionUUID": "s1", "phase": "running", "mode": "breathe"]
+        state.merge(extra) { $1 }
+        return state
+    }
+
+    /// The phone's remote controls drew a 4-in, 6-out bloom whatever pace the
+    /// wrist was tapping.
+    @Test func thePhoneMirrorsTheWatchsBreathPace() throws {
+        let slower = BreathePattern.slower
+        let snapshot = try #require(WatchSessionMirror.Snapshot(state([
+            "inhaleSeconds": slower.inhaleSeconds,
+            "exhaleSeconds": slower.exhaleSeconds,
+        ])))
+        #expect(snapshot.breathe == slower)
+    }
+
+    @Test func aWatchThatSendsNoPaceReadsAsTheDefault() throws {
+        let snapshot = try #require(WatchSessionMirror.Snapshot(state()))
+        #expect(snapshot.breathe == .relaxed)
+    }
+}

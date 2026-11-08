@@ -22,6 +22,8 @@ def main() -> None:
         i = args.index("--from")
         reuse = args[i + 1]
         args = args[:i] + args[i + 2:]
+    nobase = "--no-baseline" in args  # skip the en-US baseline screens (raw/en-US already captured)
+    args = [a for a in args if a != "--no-baseline"]
     want = args
     targets = json.loads((KIT / "app.json").read_text())["targets"]
     if want:
@@ -30,7 +32,7 @@ def main() -> None:
     plan = []  # (locale, scene)
     cmd = ["gh-sim", "-C", str(repo), "launch", "--device", "iPhone 17 Pro Max", "--wait", "6",
            "--id-file", str(KIT / "last_run_id")]
-    for t in [BASELINE] + targets:
+    for t in ([] if nobase else [BASELINE]) + targets:
         for name, args in scenes.items():
             lang = f"-AppleLanguages {t['apple_languages']} -AppleLocale {t['apple_locale']}"
             cmd += ["--screen", f"{lang} {args}"]
@@ -40,16 +42,19 @@ def main() -> None:
     else:
         subprocess.run(cmd, check=False)
         run_id = (KIT / "last_run_id").read_text().strip()
-    shots = sorted((RESULTS / run_id).glob("shots/*.png"), key=lambda p: [int(x) if x.isdigit() else x for x in re.split(r"(\d+)", p.name)])
-    print(f"run {run_id}: {len(shots)} shots for {len(plan)} scenes")
-    if len(shots) < len(plan):
-        sys.exit("fewer shots than scenes; inspect the run")
-    # gh-sim writes the base launch first when --args is empty? align from the tail.
-    shots = shots[-len(plan):]
-    for (loc, name), shot in zip(plan, shots):
+    by_index = {}
+    for p in (RESULTS / run_id).glob("shots/screen*.png"):
+        m = re.match(r"screen(\d+)-", p.name)
+        if m:
+            by_index[int(m.group(1))] = p
+    print(f"run {run_id}: {len(by_index)} shots for {len(plan)} scenes")
+    for n, (loc, name) in enumerate(plan, 1):
+        if n not in by_index:
+            print(f"missing {loc}/{name}")
+            continue
         out = KIT / "raw" / loc / "phone"
         out.mkdir(parents=True, exist_ok=True)
-        shutil.copyfile(shot, out / f"{name}.png")
+        shutil.copyfile(by_index[n], out / f"{name}.png")
 
 
 if __name__ == "__main__":

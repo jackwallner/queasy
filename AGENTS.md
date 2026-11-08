@@ -85,6 +85,12 @@ phone-only, no Wear OS). Read `.claude/rules/android.md` before touching
 holds the parity export, the paid boundary, the test commands and the Play
 release steps still to do.
 
+## Store screenshots
+
+Localized phone store sets (eight languages) are rebuilt from
+`artifacts/asc-screenshots/l10n-20261105/`. Read `.claude/rules/screenshots.md`
+before recapturing or editing them.
+
 ## Localization
 
 All copy routes through `Shared/Localizable.xcstrings` (`en` only for now). Read

@@ -212,7 +212,10 @@ struct SettingsView: View {
             defer { isRestoring = false }
             #if HAS_REVENUECAT
             await subscriptions.restorePurchases()
-            restoreMessage = subscriptions.isProSubscriber ? String(localized: "Restored.") : String(localized: "No purchases found.")
+            // lastError tells a failed restore apart from one that found nothing.
+            restoreMessage = subscriptions.isProSubscriber
+                ? String(localized: "Restored.")
+                : subscriptions.lastError ?? String(localized: "No purchases found.")
             #else
             await subscriptions.refresh()
             #endif

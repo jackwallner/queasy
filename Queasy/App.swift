@@ -21,6 +21,10 @@ struct QueasyApp: App {
         if args.contains("-QueasyScreenshots") {
             AppSettings.shared.hasCompletedOnboarding = true
         }
+        // Store frames start from a clean quick start, whatever the last scene ran.
+        if args.contains("-QueasyStoreFrames") {
+            AppSettings.shared.lastPlan = nil
+        }
         if args.contains("-QueasySeedDemoData") {
             Self.seedDemoData()
         }

@@ -24,16 +24,24 @@ def main() -> None:
         args = args[:i] + args[i + 2:]
     nobase = "--no-baseline" in args  # skip the en-US baseline screens (raw/en-US already captured)
     args = [a for a in args if a != "--no-baseline"]
-    want = args
+    # args: store_locale, or store_locale:scene to capture a single scene
+    only = {}
+    for a in args:
+        loc, _, scene = a.partition(":")
+        only.setdefault(loc, set())
+        if scene:
+            only[loc].add(scene)
     targets = json.loads((KIT / "app.json").read_text())["targets"]
-    if want:
-        targets = [t for t in targets if t["store_locale"] in want]
+    if only:
+        targets = [t for t in targets if t["store_locale"] in only]
     scenes = json.loads((KIT / "tools/scenes.json").read_text())
     plan = []  # (locale, scene)
-    cmd = ["gh-sim", "-C", str(repo), "launch", "--device", "iPhone 17 Pro Max", "--wait", "6",
+    cmd = ["gh-sim", "-C", str(repo), "launch", "--device", "iPhone 17 Pro Max", "--wait", "10",
            "--id-file", str(KIT / "last_run_id")]
     for t in ([] if nobase else [BASELINE]) + targets:
         for name, args in scenes.items():
+            if only.get(t["store_locale"]) and name not in only[t["store_locale"]]:
+                continue
             lang = f"-AppleLanguages {t['apple_languages']} -AppleLocale {t['apple_locale']}"
             cmd += ["--screen", f"{lang} {args}"]
             plan.append((t["store_locale"], name))

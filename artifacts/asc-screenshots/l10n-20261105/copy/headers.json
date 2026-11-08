@@ -41,20 +41,6 @@
   "appstore_06_history.png": "よく使うモードが\n履歴でわかる",
   "appstore_06_history.png#sub": "セッションごとに評価をつけて\n履歴で試したモードを振り返れます"
  },
- "nl": {
-  "appstore_01_four.png": "Vier dingen voor\nals je misselijk bent",
-  "appstore_01_four.png#sub": "Pulse, Breathe, Tone en Press\nzonder medicijnen, gratis, geen account",
-  "appstore_02_breathe.png": "Een ademhaling\ndie je kunt voelen",
-  "appstore_02_breathe.png#sub": "Je horloge tikt langzaam in en langer uit\nVolg het met je ogen dicht",
-  "appstore_03_press.png": "Waar je moet drukken\nen hoe lang",
-  "appstore_03_press.png#sub": "Press wijst de plek op je pols aan\nen houdt drie minuten bij",
-  "appstore_04_match.png": "Wat zet het aan?\nKrijg een passende modus",
-  "appstore_04_match.png#sub": "Drie vragen kiezen de modus met het meeste\nbeschikbare onderzoek erachter",
-  "appstore_05_sources.png": "Bronnen bij elke modus\nmet een link",
-  "appstore_05_sources.png#sub": "Elke modus toont de bron, in de eigen\nwoorden van de studie, met link",
-  "appstore_06_history.png": "Zie welke modus\nje vaak kiest",
-  "appstore_06_history.png#sub": "Beoordeel elke sessie, in Geschiedenis zie je\nje sessies en hoe je ze beoordeelde"
- },
  "pt-BR": {
   "appstore_01_four.png": "Quatro coisas para tentar\nquando o enjoo bate",
   "appstore_01_four.png#sub": "Pulse, Breathe, Tone e Press\nsem medicamentos, grátis e sem conta",
@@ -124,5 +110,19 @@
   "appstore_05_sources.png#sub": "每种模式都说明依据，使用来源\n原话并附链接",
   "appstore_06_history.png": "看看哪种方式\n你用得最多",
   "appstore_06_history.png#sub": "为每次练习评分，在历史记录中\n查看你尝试过的模式和评分"
+ },
+ "nl-NL": {
+  "appstore_01_four.png": "Vier dingen voor\nals je misselijk bent",
+  "appstore_01_four.png#sub": "Pulse, Breathe, Tone en Press\nzonder medicijnen, gratis, geen account",
+  "appstore_02_breathe.png": "Een ademhaling\ndie je kunt voelen",
+  "appstore_02_breathe.png#sub": "Je horloge tikt langzaam in en langer uit\nVolg het met je ogen dicht",
+  "appstore_03_press.png": "Waar je moet drukken\nen hoe lang",
+  "appstore_03_press.png#sub": "Press wijst de plek op je pols aan\nen houdt drie minuten bij",
+  "appstore_04_match.png": "Wat zet het aan?\nKrijg een passende modus",
+  "appstore_04_match.png#sub": "Drie vragen kiezen de modus met het meeste\nbeschikbare onderzoek erachter",
+  "appstore_05_sources.png": "Bronnen bij elke modus\nmet een link",
+  "appstore_05_sources.png#sub": "Elke modus toont de bron, in de eigen\nwoorden van de studie, met link",
+  "appstore_06_history.png": "Zie welke modus\nje vaak kiest",
+  "appstore_06_history.png#sub": "Beoordeel elke sessie, in Geschiedenis zie je\nje sessies en hoe je ze beoordeelde"
  }
 }

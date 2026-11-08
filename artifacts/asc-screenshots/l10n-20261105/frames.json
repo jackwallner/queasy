@@ -1,0 +1,541 @@
+{
+ "english_locale": "en-US",
+ "sets": {
+  "phone": {
+   "canvas": [
+    1284,
+    2778
+   ],
+   "frames": [
+    {
+     "file": "appstore_01_four.png",
+     "base": "en-live/phone/01_appstore_01_four.png",
+     "raw": "01_four",
+     "screen": [
+      193,
+      778,
+      898,
+      1952
+     ],
+     "radius": 99,
+     "header_box": [
+      40,
+      150,
+      1204,
+      560
+     ],
+     "items": [
+      {
+       "role": "h1",
+       "box": [
+        80,
+        159,
+        1130,
+        170
+       ],
+       "font": "x",
+       "color": [
+        30,
+        48,
+        52
+       ],
+       "max_size": 142,
+       "align": "left"
+      },
+      {
+       "role": "h2",
+       "box": [
+        80,
+        314,
+        1130,
+        170
+       ],
+       "font": "x",
+       "color": [
+        52,
+        148,
+        137
+       ],
+       "max_size": 142,
+       "align": "left"
+      },
+      {
+       "role": "s1",
+       "box": [
+        80,
+        502,
+        1130,
+        90
+       ],
+       "font": "system-regular",
+       "color": [
+        110,
+        130,
+        133
+       ],
+       "max_size": 59,
+       "align": "left"
+      },
+      {
+       "role": "s2",
+       "box": [
+        80,
+        579,
+        1130,
+        90
+       ],
+       "font": "system-regular",
+       "color": [
+        110,
+        130,
+        133
+       ],
+       "max_size": 59,
+       "align": "left"
+      }
+     ]
+    },
+    {
+     "file": "appstore_02_breathe.png",
+     "base": "en-live/phone/02_appstore_02_breathe.png",
+     "raw": "02_breathe",
+     "screen": [
+      193,
+      822,
+      898,
+      1952
+     ],
+     "radius": 99,
+     "header_box": [
+      40,
+      150,
+      1204,
+      560
+     ],
+     "items": [
+      {
+       "role": "h1",
+       "box": [
+        80,
+        169,
+        1130,
+        170
+       ],
+       "font": "x",
+       "color": [
+        30,
+        48,
+        52
+       ],
+       "max_size": 142,
+       "align": "left"
+      },
+      {
+       "role": "h2",
+       "box": [
+        80,
+        350,
+        1130,
+        170
+       ],
+       "font": "x",
+       "color": [
+        52,
+        148,
+        137
+       ],
+       "max_size": 142,
+       "align": "left"
+      },
+      {
+       "role": "s1",
+       "box": [
+        80,
+        546,
+        1130,
+        90
+       ],
+       "font": "system-regular",
+       "color": [
+        110,
+        130,
+        133
+       ],
+       "max_size": 59,
+       "align": "left"
+      },
+      {
+       "role": "s2",
+       "box": [
+        80,
+        625,
+        1130,
+        90
+       ],
+       "font": "system-regular",
+       "color": [
+        110,
+        130,
+        133
+       ],
+       "max_size": 59,
+       "align": "left"
+      }
+     ]
+    },
+    {
+     "file": "appstore_03_press.png",
+     "base": "en-live/phone/03_appstore_03_press.png",
+     "raw": "03_press",
+     "screen": [
+      193,
+      822,
+      898,
+      1952
+     ],
+     "radius": 99,
+     "header_box": [
+      40,
+      150,
+      1204,
+      560
+     ],
+     "items": [
+      {
+       "role": "h1",
+       "box": [
+        80,
+        169,
+        1130,
+        170
+       ],
+       "font": "x",
+       "color": [
+        30,
+        48,
+        52
+       ],
+       "max_size": 142,
+       "align": "left"
+      },
+      {
+       "role": "h2",
+       "box": [
+        80,
+        334,
+        1130,
+        170
+       ],
+       "font": "x",
+       "color": [
+        52,
+        148,
+        137
+       ],
+       "max_size": 142,
+       "align": "left"
+      },
+      {
+       "role": "s1",
+       "box": [
+        80,
+        546,
+        1130,
+        90
+       ],
+       "font": "system-regular",
+       "color": [
+        110,
+        130,
+        133
+       ],
+       "max_size": 59,
+       "align": "left"
+      },
+      {
+       "role": "s2",
+       "box": [
+        80,
+        625,
+        1130,
+        90
+       ],
+       "font": "system-regular",
+       "color": [
+        110,
+        130,
+        133
+       ],
+       "max_size": 59,
+       "align": "left"
+      }
+     ]
+    },
+    {
+     "file": "appstore_04_match.png",
+     "base": "en-live/phone/04_appstore_04_match.png",
+     "raw": "04_match",
+     "screen": [
+      193,
+      742,
+      898,
+      1952
+     ],
+     "radius": 99,
+     "header_box": [
+      40,
+      150,
+      1204,
+      560
+     ],
+     "items": [
+      {
+       "role": "h1",
+       "box": [
+        80,
+        149,
+        1130,
+        170
+       ],
+       "font": "x",
+       "color": [
+        30,
+        48,
+        52
+       ],
+       "max_size": 142,
+       "align": "left"
+      },
+      {
+       "role": "h2",
+       "box": [
+        80,
+        281,
+        1130,
+        170
+       ],
+       "font": "x",
+       "color": [
+        52,
+        148,
+        137
+       ],
+       "max_size": 142,
+       "align": "left"
+      },
+      {
+       "role": "s1",
+       "box": [
+        80,
+        466,
+        1130,
+        90
+       ],
+       "font": "system-regular",
+       "color": [
+        110,
+        130,
+        133
+       ],
+       "max_size": 59,
+       "align": "left"
+      },
+      {
+       "role": "s2",
+       "box": [
+        80,
+        544,
+        1130,
+        90
+       ],
+       "font": "system-regular",
+       "color": [
+        110,
+        130,
+        133
+       ],
+       "max_size": 59,
+       "align": "left"
+      }
+     ]
+    },
+    {
+     "file": "appstore_05_sources.png",
+     "base": "en-live/phone/05_appstore_05_sources.png",
+     "raw": "05_sources",
+     "screen": [
+      193,
+      793,
+      898,
+      1952
+     ],
+     "radius": 99,
+     "header_box": [
+      40,
+      150,
+      1204,
+      560
+     ],
+     "items": [
+      {
+       "role": "h1",
+       "box": [
+        80,
+        151,
+        1130,
+        170
+       ],
+       "font": "x",
+       "color": [
+        30,
+        48,
+        52
+       ],
+       "max_size": 142,
+       "align": "left"
+      },
+      {
+       "role": "h2",
+       "box": [
+        80,
+        318,
+        1130,
+        170
+       ],
+       "font": "x",
+       "color": [
+        52,
+        148,
+        137
+       ],
+       "max_size": 142,
+       "align": "left"
+      },
+      {
+       "role": "s1",
+       "box": [
+        80,
+        518,
+        1130,
+        90
+       ],
+       "font": "system-regular",
+       "color": [
+        110,
+        130,
+        133
+       ],
+       "max_size": 59,
+       "align": "left"
+      },
+      {
+       "role": "s2",
+       "box": [
+        80,
+        594,
+        1130,
+        90
+       ],
+       "font": "system-regular",
+       "color": [
+        110,
+        130,
+        133
+       ],
+       "max_size": 59,
+       "align": "left"
+      }
+     ]
+    },
+    {
+     "file": "appstore_06_history.png",
+     "base": "en-live/phone/06_appstore_06_history.png",
+     "raw": "06_history",
+     "screen": [
+      193,
+      800,
+      898,
+      1952
+     ],
+     "radius": 99,
+     "header_box": [
+      40,
+      150,
+      1204,
+      560
+     ],
+     "items": [
+      {
+       "role": "h1",
+       "box": [
+        80,
+        157,
+        1130,
+        170
+       ],
+       "font": "x",
+       "color": [
+        30,
+        48,
+        52
+       ],
+       "max_size": 142,
+       "align": "left"
+      },
+      {
+       "role": "h2",
+       "box": [
+        80,
+        328,
+        1130,
+        170
+       ],
+       "font": "x",
+       "color": [
+        52,
+        148,
+        137
+       ],
+       "max_size": 142,
+       "align": "left"
+      },
+      {
+       "role": "s1",
+       "box": [
+        80,
+        525,
+        1130,
+        90
+       ],
+       "font": "system-regular",
+       "color": [
+        110,
+        130,
+        133
+       ],
+       "max_size": 59,
+       "align": "left"
+      },
+      {
+       "role": "s2",
+       "box": [
+        80,
+        602,
+        1130,
+        90
+       ],
+       "font": "system-regular",
+       "color": [
+        110,
+        130,
+        133
+       ],
+       "max_size": 59,
+       "align": "left"
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

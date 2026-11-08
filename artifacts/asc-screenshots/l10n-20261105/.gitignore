@@ -6,3 +6,4 @@ out/
 tools/headline
 tools/ocr
 __pycache__/
+.work/

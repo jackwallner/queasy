@@ -40,6 +40,15 @@ func covers(_ font: NSFont, _ text: String) -> Bool {
 }
 
 func chooseFont(_ job: Job) -> NSFont {
+    if job.font == "system-regular" {
+        let l = job.locale.replacingOccurrences(of: "_", with: "-").lowercased()
+        var light: [String] = []
+        if l.hasPrefix("ja") { light = ["HiraginoSans-W3"] }
+        if l.hasPrefix("zh") { light = ["PingFangSC-Regular"] }
+        if l.hasPrefix("th") { light = ["SukhumvitSet-Text", "Thonburi"] }
+        for name in light { if let f = NSFont(name: name, size: 100), covers(f, job.text) { return f } }
+        return NSFont.systemFont(ofSize: 100, weight: .regular)
+    }
     let locale = job.locale.replacingOccurrences(of: "_", with: "-").lowercased()
     var names = [job.font]
     if locale.hasPrefix("ja") { names += ["HiraginoSans-W8"] }
@@ -52,9 +61,6 @@ func chooseFont(_ job: Job) -> NSFont {
     if locale.hasPrefix("hi") { names += ["KohinoorDevanagari-Bold"] }
     if locale.hasPrefix("ar") { names += ["AlNile-Bold", "GeezaPro-Bold"] }
     if locale.hasPrefix("he") { names += ["ArialHebrew-Bold"] }
-    if job.text.unicodeScalars.contains(where: { (0x370...0x52F).contains($0.value) }) {
-        names += ["HelveticaNeue-CondensedBold", "HelveticaNeue-Bold"]
-    }
     for name in names {
         if let font = NSFont(name: name, size: 100), covers(font, job.text) { return font }
     }

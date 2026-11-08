@@ -16,7 +16,13 @@ BASELINE = {"store_locale": "en-US", "apple_languages": "(en)", "apple_locale": 
 
 def main() -> None:
     repo = Path(sys.argv[1])
-    want = sys.argv[2:]
+    args = sys.argv[2:]
+    reuse = None
+    if "--from" in args:  # sort an existing run instead of launching: --from RUN_ID locale...
+        i = args.index("--from")
+        reuse = args[i + 1]
+        args = args[:i] + args[i + 2:]
+    want = args
     targets = json.loads((KIT / "app.json").read_text())["targets"]
     if want:
         targets = [t for t in targets if t["store_locale"] in want]
@@ -29,8 +35,11 @@ def main() -> None:
             lang = f"-AppleLanguages {t['apple_languages']} -AppleLocale {t['apple_locale']}"
             cmd += ["--screen", f"{lang} {args}"]
             plan.append((t["store_locale"], name))
-    subprocess.run(cmd, check=False)
-    run_id = (KIT / "last_run_id").read_text().strip()
+    if reuse:
+        run_id = reuse
+    else:
+        subprocess.run(cmd, check=False)
+        run_id = (KIT / "last_run_id").read_text().strip()
     shots = sorted((RESULTS / run_id).glob("shots/*.png"), key=lambda p: [int(x) if x.isdigit() else x for x in re.split(r"(\d+)", p.name)])
     print(f"run {run_id}: {len(shots)} shots for {len(plan)} scenes")
     if len(shots) < len(plan):

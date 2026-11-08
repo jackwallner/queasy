@@ -192,8 +192,9 @@ struct ModeStartView: View {
     }
 
     private func startOnWatch() {
-        var plan = self.plan
-        plan.durationMinutes = max(effectiveSeconds / 60, 1)
+        // WatchLauncher applies the free cap to what it sends. The saved plan
+        // keeps the full length, so an upgrade to Pro gets it back.
+        let plan = self.plan
         onStart(plan)
         Task {
             let outcome = await WatchLauncher.shared.startOnWatch(plan: plan)

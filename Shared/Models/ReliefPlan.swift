@@ -210,6 +210,18 @@ struct ReliefPlan: Codable, Sendable, Equatable {
         tips: []
     )
 
+    /// Quick start's plan: the last one run, or the default. Builds up to 1.1.7
+    /// saved a free session's capped length into the last plan after a watch
+    /// start, which then stuck after an upgrade to Pro. A Pulse or Breathe
+    /// length under the engine's floor can only be that, so it goes back up.
+    static func quickStart(resuming lastPlan: ReliefPlan?) -> ReliefPlan {
+        guard var plan = lastPlan else { return .quickStart }
+        if plan.mode.hasVariableDuration, plan.durationMinutes < PatternEngine.minDuration {
+            plan.durationMinutes = PatternEngine.minDuration
+        }
+        return plan
+    }
+
     /// The free-tier default for a mode: no check-in, no tailoring, just go.
     static func quickStart(mode: ReliefMode) -> ReliefPlan {
         ReliefPlan(

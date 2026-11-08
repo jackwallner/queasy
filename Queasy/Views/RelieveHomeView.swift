@@ -28,11 +28,12 @@ struct RelieveHomeView: View {
     #endif
 
     /// Quick start reuses the last plan when there is one, otherwise the
-    /// evergreen default (Pulse, level 5, 15 min).
+    /// evergreen default (Pulse, level 5, 15 min), with the Settings length and
+    /// breath pace on top, as the mode cards and the check-in apply them.
     private var quickPlan: ReliefPlan {
-        var plan = settings.lastPlan ?? .quickStart
+        var plan = ReliefPlan.quickStart(resuming: settings.lastPlan)
         plan.mode = plan.mode.onThisDevice
-        return plan
+        return settings.resolvedPlan(from: plan)
     }
 
     private var quickMode: ReliefMode { quickPlan.mode }
@@ -485,8 +486,9 @@ struct RelieveHomeView: View {
     }
 
     private func startOnWatch() {
-        var plan = quickPlan
-        plan.durationMinutes = max(quickSeconds / 60, 1)
+        // WatchLauncher applies the free cap to what it sends. The saved plan
+        // keeps the full length, so an upgrade to Pro gets it back.
+        let plan = quickPlan
         settings.lastPlan = plan
         // Extended Runtime sessions start on the watch, so first-time users may
         // need to open Queasy there before the phone can show live controls.

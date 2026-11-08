@@ -1,0 +1,8 @@
+{
+ "01_four": "-QueasyScreenshots -QueasyStoreFrames",
+ "02_breathe": "-QueasyScreenshots -QueasyStoreFrames -QueasyScreen session-breathe",
+ "03_press": "-QueasyScreenshots -QueasyStoreFrames -QueasyScreen mode-press",
+ "04_match": "-QueasyScreenshots -QueasyStoreFrames -QueasyScreen recommend-morningSickness",
+ "05_sources": "-QueasyScreenshots -QueasyStoreFrames -QueasyTab learn -QueasyLearnCard tone",
+ "06_history": "-QueasyScreenshots -QueasyStoreFrames -QueasyTab history -QueasySeedDemoData"
+}

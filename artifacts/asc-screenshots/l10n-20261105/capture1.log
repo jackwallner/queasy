@@ -1,0 +1,40 @@
+gh-sim: offering queasy-shots@20261107-230908-fa85-claude-mbpro318fa-1107-231251-6534 to the Air
+gh-sim: the Air had no room, going to GitHub
+gh-sim: pushing snapshot of jackwallner/queasy to refs/gh-sim/queasy-shots@20261107-230908-fa85-claude-mbpro318fa-1107-231756-13485
+gh-sim: queasy-shots@20261107-230908-fa85-claude-mbpro318fa-1107-231756-13485 launch on GitHub (https://github.com/jackwallner/gh-sim/actions/runs/42458214578)
+gh-sim: Build
+gh-sim: Launch and screenshot
+xcode 27.1, iPhone 17 Pro Max on iOS-27-2, runner 3 cores
+xcodegen ready in 1s
+built Queasy in 53s
+booted in 65s
+launched com.jackwallner.queasy 226s after the build
+screenshot shots/launch.png
+screenshot shots/screen1-AppleLanguages-en-AppleLocale-en-US-Quea.png
+screenshot shots/screen2-AppleLanguages-en-AppleLocale-en-US-Quea.png
+screenshot shots/screen3-AppleLanguages-en-AppleLocale-en-US-Quea.png
+screenshot shots/screen4-AppleLanguages-en-AppleLocale-en-US-Quea.png
+screenshot shots/screen5-AppleLanguages-en-AppleLocale-en-US-Quea.png
+screenshot shots/screen6-AppleLanguages-en-AppleLocale-en-US-Quea.png
+screenshot shots/screen7-AppleLanguages-ru-AppleLocale-ru-RU-Quea.png
+screenshot shots/screen8-AppleLanguages-ru-AppleLocale-ru-RU-Quea.png
+screenshot shots/screen9-AppleLanguages-ru-AppleLocale-ru-RU-Quea.png
+screenshot shots/screen10-AppleLanguages-ru-AppleLocale-ru-RU-Quea.png
+screenshot shots/screen11-AppleLanguages-ru-AppleLocale-ru-RU-Quea.png
+screenshot shots/screen12-AppleLanguages-ru-AppleLocale-ru-RU-Quea.png
+app still running at the end
+  /Users/jackwallner/.gh-sim/results/queasy-shots@20261107-230908-fa85-claude-mbpro318fa-1107-231756-13485/shots/launch.png
+  /Users/jackwallner/.gh-sim/results/queasy-shots@20261107-230908-fa85-claude-mbpro318fa-1107-231756-13485/shots/screen1-AppleLanguages-en-AppleLocale-en-US-Quea.png
+  /Users/jackwallner/.gh-sim/results/queasy-shots@20261107-230908-fa85-claude-mbpro318fa-1107-231756-13485/shots/screen10-AppleLanguages-ru-AppleLocale-ru-RU-Quea.png
+  /Users/jackwallner/.gh-sim/results/queasy-shots@20261107-230908-fa85-claude-mbpro318fa-1107-231756-13485/shots/screen11-AppleLanguages-ru-AppleLocale-ru-RU-Quea.png
+  /Users/jackwallner/.gh-sim/results/queasy-shots@20261107-230908-fa85-claude-mbpro318fa-1107-231756-13485/shots/screen12-AppleLanguages-ru-AppleLocale-ru-RU-Quea.png
+  /Users/jackwallner/.gh-sim/results/queasy-shots@20261107-230908-fa85-claude-mbpro318fa-1107-231756-13485/shots/screen2-AppleLanguages-en-AppleLocale-en-US-Quea.png
+  /Users/jackwallner/.gh-sim/results/queasy-shots@20261107-230908-fa85-claude-mbpro318fa-1107-231756-13485/shots/screen3-AppleLanguages-en-AppleLocale-en-US-Quea.png
+  /Users/jackwallner/.gh-sim/results/queasy-shots@20261107-230908-fa85-claude-mbpro318fa-1107-231756-13485/shots/screen4-AppleLanguages-en-AppleLocale-en-US-Quea.png
+  /Users/jackwallner/.gh-sim/results/queasy-shots@20261107-230908-fa85-claude-mbpro318fa-1107-231756-13485/shots/screen5-AppleLanguages-en-AppleLocale-en-US-Quea.png
+  /Users/jackwallner/.gh-sim/results/queasy-shots@20261107-230908-fa85-claude-mbpro318fa-1107-231756-13485/shots/screen6-AppleLanguages-en-AppleLocale-en-US-Quea.png
+  /Users/jackwallner/.gh-sim/results/queasy-shots@20261107-230908-fa85-claude-mbpro318fa-1107-231756-13485/shots/screen7-AppleLanguages-ru-AppleLocale-ru-RU-Quea.png
+  /Users/jackwallner/.gh-sim/results/queasy-shots@20261107-230908-fa85-claude-mbpro318fa-1107-231756-13485/shots/screen8-AppleLanguages-ru-AppleLocale-ru-RU-Quea.png
+  /Users/jackwallner/.gh-sim/results/queasy-shots@20261107-230908-fa85-claude-mbpro318fa-1107-231756-13485/shots/screen9-AppleLanguages-ru-AppleLocale-ru-RU-Quea.png
+gh-sim: queasy-shots@20261107-230908-fa85-claude-mbpro318fa-1107-231756-13485 success, results in /Users/jackwallner/.gh-sim/results/queasy-shots@20261107-230908-fa85-claude-mbpro318fa-1107-231756-13485
+run queasy-shots@20261107-230908-fa85-claude-mbpro318fa-1107-231756-13485: 13 shots for 12 scenes

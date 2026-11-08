@@ -3,7 +3,8 @@ import SwiftUI
 enum TripComfortBrand {
     static var name: String {
         #if DEBUG
-        if ProcessInfo.processInfo.arguments.contains("-QueasyScreenshots") {
+        let args = ProcessInfo.processInfo.arguments
+        if args.contains("-QueasyScreenshots"), !args.contains("-QueasyStoreFrames") {
             return "Trip Comfort"
         }
         #endif
@@ -53,8 +54,15 @@ struct RelieveHomeView: View {
     private var isScreenshotRun: Bool {
         ProcessInfo.processInfo.arguments.contains("-QueasyScreenshots")
     }
+
+    /// `-QueasyStoreFrames` keeps the live Queasy wording on top of the
+    /// screenshot layout, for the localized store sets.
+    private var usesStoreCopy: Bool {
+        ProcessInfo.processInfo.arguments.contains("-QueasyStoreFrames")
+    }
     #else
     private var isScreenshotRun: Bool { false }
+    private var usesStoreCopy: Bool { false }
     #endif
 
     /// Watch-first whenever a watch is paired at all. We deliberately do NOT
@@ -198,10 +206,10 @@ struct RelieveHomeView: View {
 
     private var header: some View {
         VStack(alignment: .leading, spacing: 4) {
-            Text(isScreenshotRun ? "Need a little comfort?" : "Feeling queasy?")
+            Text(isScreenshotRun && !usesStoreCopy ? "Need a little comfort?" : "Feeling queasy?")
                 .font(Theme.displaySerif(30))
                 .foregroundStyle(Theme.ink)
-            Text(isScreenshotRun
+            Text(isScreenshotRun && !usesStoreCopy
                  ? "Four gentle routines to try, on your wrist or in your ear. Start one now, or answer three questions first."
                  : "Four drug-free things to try, on your wrist or in your ear. Start one now, or answer three questions first.")
                 .font(.subheadline)

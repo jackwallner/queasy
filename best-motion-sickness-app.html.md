@@ -6,11 +6,11 @@ Web page: https://jackwallner.com/ios/queasy/best-motion-sickness-app.html
 
 ## Best Motion Sickness App for iPhone
 
-By Jack Wallner · Last updated November 11, 2026
+By Jack Wallner · Last updated November 12, 2026
 
 **Try first, free and already on your iPhone:** Apple's Vehicle Motion Cues, which shows moving dots at the screen edges while you ride. **Best if you want on-screen visual modes and a trip log for car rides:** RideCalm. **Best if you want a short audio session through headphones:** Dizzout or Hearapy. **Best if you want Apple Watch routines you run yourself, such as paced breathing and wrist taps:** Queasy, the app I make. A motion sickness app is an iPhone or Apple Watch app that gives you something to try while you ride, such as visual cues, a tone or paced breathing. None of these apps is a medical treatment, and most have very few ratings.
 
-**How we compared (November 11, 2026):** I read each app's US App Store listing and Apple's support page for Vehicle Motion Cues, and pulled ratings, rating counts, supported devices, purchase types and update dates from Apple's store data. I did not install or subscribe to the other apps, so what I say about them comes from their own listings, including any claims they make. Queasy's entry comes from its code and listing. Prices are left out on purpose, because they vary by region and change.
+**How we compared (November 12, 2026):** I read each app's US App Store listing and Apple's support page for Vehicle Motion Cues, and pulled ratings, rating counts, supported devices, purchase types and update dates from Apple's store data. I did not install or subscribe to the other apps, so what I say about them comes from their own listings, including any claims they make. Queasy's entry comes from its code and listing. Prices are left out on purpose, because they vary by region and change.
 
 **Disclosure:** Jack Wallner makes Queasy - Motion Sickness Aid, one of the apps below, so read its entry with that in mind.
 
@@ -28,7 +28,7 @@ Vehicle Motion Cues and RideCalm work on screen, Dizzout and Hearapy play audio 
 | [Hearapy: Motion Sickness Aid](https://apps.apple.com/us/app/hearapy-motion-sickness-aid/id6761693902) | A one-minute 100 Hz tone through AirPods | Free + subscription or lifetime | Yes | Yes | Not stated | 5.0 (1) | Oct 31, 2026 |
 | [Queasy - Motion Sickness Aid](https://apps.apple.com/us/app/queasy-motion-sickness-aid/id6786780495?pt=128748779&ct=jw-queasy-best-motion-sickness-app&mt=8) | Breathing, wrist taps, a tone and a pressure-point timer | Free + subscription or lifetime | Yes | No | None | No ratings yet | Nov 2, 2026 |
 
-Ratings and counts are US App Store figures as of November 11, 2026. Apple Watch and iPad show the devices each listing supports. "Not stated" means the listing does not say whether an account is needed. Vehicle Motion Cues is a setting, not an App Store app. Price models describe the structure only.
+Ratings and counts are US App Store figures as of November 12, 2026. Apple Watch and iPad show the devices each listing supports. "Not stated" means the listing does not say whether an account is needed. Vehicle Motion Cues is a setting, not an App Store app. Price models describe the structure only.
 
 ## Vehicle Motion Cues (built into iPhone)
 
@@ -52,7 +52,7 @@ Four modes you run yourself. Breathe paces your breathing with gentle haptics. P
 
 ## What other motion sickness apps will you see?
 
-Two more apps, Carsick.App and KineStop, come up when you search for a motion sickness app. I did not install either; the notes below come from their store listings as of November 11, 2026.
+Two more apps, Carsick.App and KineStop, come up when you search for a motion sickness app. I did not install either; the notes below come from their store listings as of November 12, 2026.
 
 ### Carsick.App - Motion Sickness
 
@@ -121,4 +121,4 @@ Related: [Motion sickness on a road trip: practical things to try](https://jackw
 - [KineStop: Car sickness aid on Google Play](https://play.google.com/store/apps/details?id=com.urbandroid.kinestop)
 - [Just 1-min exposure to a pure tone at 100 Hz with daily exposable sound pressure levels may improve motion sickness, Environmental Health and Preventive Medicine, 2025](https://doi.org/10.1265/ehpm.24-00247)
 
-Queasy is an independent app and is not affiliated with Apple or with any app compared here. It is not a medical device and does not diagnose, treat, cure or prevent anything. App details were checked on November 11, 2026 and may change.
+Queasy is an independent app and is not affiliated with Apple or with any app compared here. It is not a medical device and does not diagnose, treat, cure or prevent anything. App details were checked on November 12, 2026 and may change.

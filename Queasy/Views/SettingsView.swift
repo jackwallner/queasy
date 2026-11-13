@@ -36,10 +36,12 @@ struct SettingsView: View {
                             Text(pattern.label).tag(Int?.some(index))
                         }
                     }
-                    Picker("Watch pulse cap", selection: $settings.watchStrengthCap) {
-                        Text("Soft").tag(PulseStrength.soft)
-                        Text("Medium").tag(PulseStrength.medium)
-                        Text("Strong").tag(PulseStrength.strong)
+                    if !DeviceIdiom.isPad {
+                        Picker("Watch pulse cap", selection: $settings.watchStrengthCap) {
+                            Text("Soft").tag(PulseStrength.soft)
+                            Text("Medium").tag(PulseStrength.medium)
+                            Text("Strong").tag(PulseStrength.strong)
+                        }
                     }
                 } header: {
                     Text("Session")
@@ -150,6 +152,7 @@ struct SettingsView: View {
                 #endif
             }
             .scrollContentBackground(.hidden)
+            .readableColumn(700)
             .tideBackground()
             .paneNavigationTitle(String(localized: "Settings"))
             .paywallSheet(isPresented: $showPaywall, impressionId: "queasy_settings")

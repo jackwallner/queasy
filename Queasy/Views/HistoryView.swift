@@ -111,6 +111,7 @@ struct HistoryView: View {
             }
             .padding(.horizontal, 18)
             .padding(.bottom, 24)
+            .readableColumn()
         }
     }
 
@@ -360,7 +361,9 @@ private struct EpisodeRow: View {
     }
 
     private var sourceLabel: String {
-        episode.source == .watch ? String(localized: "Watch") : String(localized: "iPhone")
+        episode.source == .watch
+            ? String(localized: "Watch")
+            : (DeviceIdiom.isPad ? String(localized: "iPad") : String(localized: "iPhone"))
     }
 
     /// Level only means something for Pulse; the other modes report length.

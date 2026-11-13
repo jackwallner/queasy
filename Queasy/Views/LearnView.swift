@@ -25,6 +25,26 @@ struct LearnView: View {
         LearnSource(title: title, url: URL(string: url)!)
     }
 
+    /// An iPad has no wrist: the circle on screen sets the pace.
+    private static let ipadBreathe = LearnCard(
+        id: "breathe",
+        symbol: "wind",
+        title: String(localized: "Breathe"),
+        hook: String(localized: "Out for longer than in, paced on screen."),
+        detail: String(localized: "A circle swells as you breathe in and slowly fades as you breathe out, so you can follow it without counting. Queasy suggests three seconds in and five out when things are mild, and four in and eight out when they are not. Breathing out for longer than you breathe in is the whole technique.\n\nSmall trials of slow diaphragmatic breathing during chemotherapy and after surgery have reported lower nausea scores. They are small, and the reviewers say so."),
+        sources: [
+            source(String(localized: "Breathing interventions for nausea (2026 trial)"), "https://pubmed.ncbi.nlm.nih.gov/41811802/"),
+            source(String(localized: "Diaphragmatic breathing during chemotherapy"), "https://www.sciencedirect.com/science/article/abs/pii/S1462388924000462"),
+        ]
+    )
+
+    private static var visibleCards: [LearnCard] {
+        guard DeviceIdiom.isPad else { return cards }
+        return cards
+            .filter { !["pulse", "wear"].contains($0.id) }
+            .map { $0.id == "breathe" ? ipadBreathe : $0 }
+    }
+
     private static let cards: [LearnCard] = [
         LearnCard(
             id: "pulse",
@@ -91,7 +111,7 @@ struct LearnView: View {
         NavigationStack {
             ScrollView {
                 VStack(spacing: 12) {
-                    ForEach(Self.cards) { card in
+                    ForEach(Self.visibleCards) { card in
                         LearnRow(
                             card: card,
                             isExpanded: expandedID == card.id
@@ -104,8 +124,9 @@ struct LearnView: View {
                     disclaimerCard
                 }
                 .padding(.horizontal, 18)
-                .padding(.top, 4)
+                .padding(.top, DeviceIdiom.isPad ? 12 : 4)
                 .padding(.bottom, 24)
+                .readableColumn()
             }
             .tideBackground()
             .paneNavigationTitle(String(localized: "Learn"))

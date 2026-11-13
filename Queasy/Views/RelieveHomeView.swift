@@ -22,6 +22,7 @@ struct RelieveHomeView: View {
     @State private var showWatchSession = false
     @State private var panel = ReliefPanel.shared
     @State private var watchFeedback: String?
+    @State private var width: CGFloat = 0
     #if DEBUG
     @State private var duoTour = DuoTour.shared
     #endif
@@ -29,7 +30,9 @@ struct RelieveHomeView: View {
     /// Quick start reuses the last plan when there is one, otherwise the
     /// evergreen default (Pulse, level 5, 15 min).
     private var quickPlan: ReliefPlan {
-        settings.lastPlan ?? .quickStart
+        var plan = settings.lastPlan ?? .quickStart
+        plan.mode = plan.mode.onThisDevice
+        return plan
     }
 
     private var quickMode: ReliefMode { quickPlan.mode }
@@ -63,37 +66,32 @@ struct RelieveHomeView: View {
     /// Queasy installed on their wrist. Offer the wrist, attempt the launch, and
     /// let the troubleshooting note cover the rare not-installed / no-perms case.
     private var showsWatchPrimary: Bool {
-        watch.isPaired || isScreenshotRun
+        watch.isPaired || (isScreenshotRun && !DeviceIdiom.isPad)
     }
 
     var body: some View {
         NavigationStack {
-            ScrollView {
-                VStack(spacing: 18) {
-                    header
-
-                    if controller.phase != .idle {
-                        activeSessionCard
-                    }
-                    if watchSession.isRunning {
-                        watchActiveSessionCard
-                    }
-
-                    quickStartCard
-                    checkInButton
-                    modeGrid
-
-                    if showsWatchPrimary {
-                        wearHintCard
-                        if !isScreenshotRun {
-                            watchTroubleshootNote
+            CenteringScrollView {
+                Group {
+                    if isWide {
+                        HStack(alignment: .top, spacing: 28) {
+                            VStack(spacing: 18) { startContent }
+                                .frame(maxWidth: .infinity)
+                            VStack(spacing: 18) { modesContent }
+                                .frame(maxWidth: .infinity)
+                                .padding(.top, 8)
                         }
-                    } else if !isScreenshotRun {
-                        builtForWatchCard
+                    } else {
+                        VStack(spacing: 18) {
+                            startContent
+                            modesContent
+                        }
                     }
                 }
                 .padding(.horizontal, 18)
                 .padding(.bottom, 28)
+                .readableColumn(isWide ? 1060 : 600)
+                .onGeometryChange(for: CGFloat.self) { $0.size.width } action: { width = $0 }
             }
             .tideBackground()
             // Inside the stack, so the tabs in the navigation bar stay above it.
@@ -126,7 +124,7 @@ struct RelieveHomeView: View {
                 openTourScene(scene)
             }
             #endif
-            .sheet(item: panelSheet) { ReliefPanelScreen(item: $0) }
+            .sheet(item: panelSheet) { ReliefPanelScreen(item: $0).padPageSheet() }
             .fullScreenCover(isPresented: cover($showSession)) {
                 PhoneSessionView()
             }
@@ -157,6 +155,38 @@ struct RelieveHomeView: View {
                     }
                 }
             }
+        }
+    }
+
+    /// An iPad wide enough for the start card and the modes side by side.
+    private var isWide: Bool { DeviceIdiom.isPad && width >= 1100 }
+
+    @ViewBuilder
+    private var startContent: some View {
+        header
+
+        if controller.phase != .idle {
+            activeSessionCard
+        }
+        if watchSession.isRunning {
+            watchActiveSessionCard
+        }
+
+        quickStartCard
+        checkInButton
+    }
+
+    @ViewBuilder
+    private var modesContent: some View {
+        modeGrid
+
+        if showsWatchPrimary {
+            wearHintCard
+            if !isScreenshotRun {
+                watchTroubleshootNote
+            }
+        } else if !isScreenshotRun, !DeviceIdiom.isPad {
+            builtForWatchCard
         }
     }
 
@@ -201,11 +231,14 @@ struct RelieveHomeView: View {
             Text(isScreenshotRun ? "Need a little comfort?" : "Feeling queasy?")
                 .font(Theme.displaySerif(30))
                 .foregroundStyle(Theme.ink)
-            Text(isScreenshotRun
-                 ? "Four gentle routines to try, on your wrist or in your ear. Start one now, or answer three questions first."
-                 : "Four drug-free things to try, on your wrist or in your ear. Start one now, or answer three questions first.")
+            Text(DeviceIdiom.isPad
+                 ? String(localized: "Gentle, drug-free routines to try. Start one now, or answer three questions first.")
+                 : isScreenshotRun
+                 ? String(localized: "Four gentle routines to try, on your wrist or in your ear. Start one now, or answer three questions first.")
+                 : String(localized: "Four drug-free things to try, on your wrist or in your ear. Start one now, or answer three questions first."))
                 .font(.subheadline)
                 .foregroundStyle(Theme.ink2)
+                .fixedSize(horizontal: false, vertical: true)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(.top, 8)
@@ -291,8 +324,9 @@ struct RelieveHomeView: View {
                 ? String(localized: "Level \(level) · \(minutes) min on your wrist")
                 : String(localized: "Level \(level) · \(minutes) min on this iPhone")
         case .breathe:
-            return onWrist
-                ? String(localized: "\(pace) · \(minutes) min on your wrist")
+            if onWrist { return String(localized: "\(pace) · \(minutes) min on your wrist") }
+            return DeviceIdiom.isPad
+                ? String(localized: "\(pace) · \(minutes) min on this iPad")
                 : String(localized: "\(pace) · \(minutes) min on this iPhone")
         }
     }
@@ -301,33 +335,65 @@ struct RelieveHomeView: View {
 
     private var modeGrid: some View {
         LazyVGrid(
-            columns: [GridItem(.flexible(), spacing: 12), GridItem(.flexible())],
+            columns: DeviceIdiom.isPad
+                ? [GridItem(.flexible())]
+                : [GridItem(.flexible(), spacing: 12), GridItem(.flexible())],
             spacing: 12
         ) {
-            ForEach(ReliefMode.allCases) { mode in
+            ForEach(ReliefMode.available) { mode in
                 Button {
                     panel.open(.mode(mode))
                 } label: {
-                    VStack(alignment: .leading, spacing: 8) {
-                        Image(systemName: mode.symbolName)
-                            .font(.title3)
-                            .foregroundStyle(Theme.aqua)
-                        Text(mode.title)
-                            .font(.system(.headline, design: .rounded))
-                            .foregroundStyle(Theme.ink)
-                        Text(mode.tagline)
-                            .font(.caption2)
-                            .foregroundStyle(Theme.ink2)
-                            .multilineTextAlignment(.leading)
-                            .fixedSize(horizontal: false, vertical: true)
-                    }
-                    .frame(maxWidth: .infinity, minHeight: 116, alignment: .topLeading)
-                    .padding(14)
-                    .tideCard(cornerRadius: 20)
+                    modeCardLabel(mode)
                 }
                 .buttonStyle(.plain)
                 .accessibilityIdentifier("mode-card-\(mode.rawValue)")
             }
+        }
+    }
+
+    @ViewBuilder
+    private func modeCardLabel(_ mode: ReliefMode) -> some View {
+        if DeviceIdiom.isPad {
+            HStack(spacing: 16) {
+                Image(systemName: mode.symbolName)
+                    .font(.title2)
+                    .foregroundStyle(Theme.aqua)
+                    .frame(width: 36)
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(mode.title)
+                        .font(.system(.headline, design: .rounded))
+                        .foregroundStyle(Theme.ink)
+                    Text(mode.cardTagline)
+                        .font(.subheadline)
+                        .foregroundStyle(Theme.ink2)
+                        .multilineTextAlignment(.leading)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+                Spacer(minLength: 0)
+                Image(systemName: "chevron.right")
+                    .font(.footnote.weight(.semibold))
+                    .foregroundStyle(Theme.ink3)
+            }
+            .padding(18)
+            .tideCard(cornerRadius: 20)
+        } else {
+            VStack(alignment: .leading, spacing: 8) {
+                Image(systemName: mode.symbolName)
+                    .font(.title3)
+                    .foregroundStyle(Theme.aqua)
+                Text(mode.title)
+                    .font(.system(.headline, design: .rounded))
+                    .foregroundStyle(Theme.ink)
+                Text(mode.cardTagline)
+                    .font(.caption2)
+                    .foregroundStyle(Theme.ink2)
+                    .multilineTextAlignment(.leading)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+            .frame(maxWidth: .infinity, minHeight: 116, alignment: .topLeading)
+            .padding(14)
+            .tideCard(cornerRadius: 20)
         }
     }
 

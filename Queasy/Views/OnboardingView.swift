@@ -2,21 +2,36 @@ import SwiftUI
 
 struct OnboardingView: View {
     @Environment(AppSettings.self) private var settings
-    @State private var page = 0
+    @State private var page = Self.debugPage
     @State private var watch = WatchAvailability.shared
     @Environment(\.dynamicTypeSize) private var typeSize
 
     static let disclaimer = String(localized: "Queasy is a set of comfort techniques, not a medical device.\nIt does not diagnose, treat or cure anything, and it may not\nchange how you feel. If symptoms are severe or persistent,\ntalk to a doctor.")
 
-    private let lastPage = 3
+    /// An iPad cannot pair with a watch, so it skips the two watch pages.
+    /// `-QueasyOnboardingPage n` opens a page for capture. DEBUG only.
+    private static var debugPage: Int {
+        #if DEBUG
+        let args = ProcessInfo.processInfo.arguments
+        if let flag = args.firstIndex(of: "-QueasyOnboardingPage"), args.indices.contains(flag + 1),
+           let value = Int(args[flag + 1]) { return value }
+        #endif
+        return 0
+    }
+
+    private let lastPage = DeviceIdiom.isPad ? 1 : 3
 
     var body: some View {
         VStack(spacing: 0) {
             TabView(selection: $page) {
                 OnboardPage(
                     symbol: "square.grid.2x2",
-                    title: String(localized: "Four things to try\nwhen you feel sick"),
-                    text: String(localized: "A steady tap on your wrist. A paced breath you feel rather than watch. A one-minute 100 Hz tone. A timed hold on the spot an acupressure band sits on. All drug-free, all free to use.")
+                    title: DeviceIdiom.isPad
+                        ? String(localized: "Three things to try\nwhen you feel sick")
+                        : String(localized: "Four things to try\nwhen you feel sick"),
+                    text: DeviceIdiom.isPad
+                        ? String(localized: "A paced breath you follow on screen. A one-minute 100 Hz tone. A timed hold on the spot an acupressure band sits on. All drug-free, all free to use.")
+                        : String(localized: "A steady tap on your wrist. A paced breath you feel rather than watch. A one-minute 100 Hz tone. A timed hold on the spot an acupressure band sits on. All drug-free, all free to use.")
                 )
                 .tag(0)
 
@@ -27,15 +42,17 @@ struct OnboardingView: View {
                 )
                 .tag(1)
 
-                OnboardPage(
-                    symbol: "applewatch.side.right",
-                    title: String(localized: "Turn the watch to\nthe inside of your wrist"),
-                    text: String(localized: "For Pulse and Press, rotate your watch so the case sits on the inside of your wrist, three finger-widths below the crease. That is where a Sea-Band's stud goes. Breathe works wherever the watch is.")
-                )
-                .tag(2)
+                if !DeviceIdiom.isPad {
+                    OnboardPage(
+                        symbol: "applewatch.side.right",
+                        title: String(localized: "Turn the watch to\nthe inside of your wrist"),
+                        text: String(localized: "For Pulse and Press, rotate your watch so the case sits on the inside of your wrist, three finger-widths below the crease. That is where a Sea-Band's stud goes. Breathe works wherever the watch is.")
+                    )
+                    .tag(2)
 
-                watchGatePage
-                    .tag(3)
+                    watchGatePage
+                        .tag(3)
+                }
             }
             .tabViewStyle(.page(indexDisplayMode: .always))
             .indexViewStyle(.page(backgroundDisplayMode: .always))
@@ -48,7 +65,7 @@ struct OnboardingView: View {
                     }
                     .buttonStyle(.tideCTA)
                     .accessibilityIdentifier("onboarding-continue")
-                    if !watch.isPaired { phoneOnlyPlaceholder }
+                    if !watch.isPaired, !DeviceIdiom.isPad { phoneOnlyPlaceholder }
                 } else {
                     gateButtons
                 }
@@ -65,6 +82,7 @@ struct OnboardingView: View {
             .padding(.horizontal, 24)
             .padding(.bottom, 14)
         }
+        .readableColumn(560)
         .leadingPaneColumn()
         .tideBackground()
         .onAppear { watch.refresh() }
@@ -111,8 +129,9 @@ struct OnboardingView: View {
 
     @ViewBuilder
     private var gateButtons: some View {
-        if watch.isPaired {
+        if watch.isPaired || DeviceIdiom.isPad {
             Button("Get Started") {
+                if DeviceIdiom.isPad { settings.phoneOnlyAcknowledged = true }
                 settings.hasCompletedOnboarding = true
             }
             .buttonStyle(.tideCTA)

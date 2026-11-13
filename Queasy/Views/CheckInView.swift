@@ -294,7 +294,7 @@ struct RecommendationView: View {
     @State private var watch = WatchAvailability.shared
 
     private var suggestedModes: [ReliefMode] {
-        PatternEngine.suggestedModes(for: checkIn.cause)
+        PatternEngine.suggestedModes(for: checkIn.cause).filter { ReliefMode.available.contains($0) }
     }
 
     private var mode: ReliefMode { chosenMode ?? suggestedModes[0] }
@@ -333,6 +333,7 @@ struct RecommendationView: View {
             .padding(.horizontal, 20)
             .padding(.top, 16)
             .padding(.bottom, 24)
+            .readableColumn()
         }
         .task {
             AnalyticsService.checkInCompleted(cause: checkIn.cause, severity: checkIn.severity)
@@ -419,7 +420,7 @@ struct RecommendationView: View {
                     .foregroundStyle(Theme.ink2)
             }
 
-            Text(mode.blurb)
+            Text(mode.detailBlurb)
                 .font(.footnote)
                 .foregroundStyle(Theme.ink3)
                 .multilineTextAlignment(.center)

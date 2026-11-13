@@ -78,7 +78,7 @@ targets:
         INFOPLIST_FILE: Queasy/Info.plist
         CODE_SIGN_ENTITLEMENTS: Queasy/Queasy.entitlements
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
-        TARGETED_DEVICE_FAMILY: "1"
+        TARGETED_DEVICE_FAMILY: "1,2"
         SWIFT_ACTIVE_COMPILATION_CONDITIONS: "$(inherited) HAS_REVENUECAT"
     dependencies:
       - package: RevenueCat

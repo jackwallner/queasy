@@ -1727,6 +1727,245 @@
         }
       }
     },
+    "%@ · %lld min on this iPad" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ · %#@n@ on this iPad"
+          },
+          "substitutions" : {
+            "n" : {
+              "argNum" : 2,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg min"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ · %#@n@ di iPad ini"
+          },
+          "substitutions" : {
+            "n" : {
+              "argNum" : 2,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg mnt"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ · このiPadで%#@n@"
+          },
+          "substitutions" : {
+            "n" : {
+              "argNum" : 2,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg分"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ · %#@n@ op deze iPad"
+          },
+          "substitutions" : {
+            "n" : {
+              "argNum" : 2,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg min"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg min"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ · %#@n@ neste iPad"
+          },
+          "substitutions" : {
+            "n" : {
+              "argNum" : 2,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg min"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg min"
+                    }
+                  },
+                  "many" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg min"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ · %#@n@ на этом iPad"
+          },
+          "substitutions" : {
+            "n" : {
+              "argNum" : 2,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg мин"
+                    }
+                  },
+                  "few" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg мин"
+                    }
+                  },
+                  "many" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg мин"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg мин"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ · %#@n@ บน iPad เครื่องนี้"
+          },
+          "substitutions" : {
+            "n" : {
+              "argNum" : 2,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg นาที"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ · %#@n@ trên iPad này"
+          },
+          "substitutions" : {
+            "n" : {
+              "argNum" : 2,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg phút"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ · 在此 iPad 上进行 %#@n@"
+          },
+          "substitutions" : {
+            "n" : {
+              "argNum" : 2,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg 分钟"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "%@ · %lld min on this iPhone" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -6290,6 +6529,124 @@
         }
       }
     },
+    "A circle grows and fades at a steady pace so you can slow your breath to match. Breathing out for longer than you breathe in is the whole technique." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A circle grows and fades at a steady pace so you can slow your breath to match. Breathing out for longer than you breathe in is the whole technique."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sebuah lingkaran membesar dan memudar dengan irama tetap agar kamu bisa memperlambat napas mengikutinya. Menghembuskan napas lebih lama daripada menarik napas adalah seluruh tekniknya."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "円が一定のペースで広がったり薄れたりするので、それに合わせて呼吸をゆっくりにできます。吸うより長く吐くことが、この方法のすべてです。"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Een cirkel groeit en vervaagt in een vast tempo, zodat je je ademhaling daaraan kunt aanpassen. Langer uitademen dan inademen is de hele techniek."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Um círculo cresce e se dissolve em ritmo constante para você desacelerar a respiração junto com ele. Expirar por mais tempo do que inspira é toda a técnica."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Круг с ровным темпом растёт и тает, а ты замедляешь дыхание в такт ему. Выдыхать дольше, чем вдыхаешь, и есть вся техника."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "วงกลมจะขยายและจางลงด้วยจังหวะสม่ำเสมอ เพื่อให้คุณชะลอลมหายใจตามได้ การหายใจออกให้นานกว่าหายใจเข้าคือหัวใจของเทคนิคนี้"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Một vòng tròn lớn dần rồi mờ đi theo nhịp đều để bạn thở chậm lại theo. Thở ra lâu hơn thở vào chính là toàn bộ kỹ thuật."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "圆圈以稳定的节奏扩大再淡去，你可以跟着放慢呼吸。呼气比吸气更久，就是这个方法的全部要点。"
+          }
+        }
+      }
+    },
+    "A circle swells as you breathe in and slowly fades as you breathe out, so you can follow it without counting. Queasy suggests three seconds in and five out when things are mild, and four in and eight out when they are not. Breathing out for longer than you breathe in is the whole technique.\n\nSmall trials of slow diaphragmatic breathing during chemotherapy and after surgery have reported lower nausea scores. They are small, and the reviewers say so." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A circle swells as you breathe in and slowly fades as you breathe out, so you can follow it without counting. Queasy suggests three seconds in and five out when things are mild, and four in and eight out when they are not. Breathing out for longer than you breathe in is the whole technique.\n\nSmall trials of slow diaphragmatic breathing during chemotherapy and after surgery have reported lower nausea scores. They are small, and the reviewers say so."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sebuah lingkaran membesar saat Anda menarik napas dan perlahan mengecil saat mengembuskan napas, sehingga Anda bisa mengikutinya tanpa menghitung. Queasy menyarankan tiga detik menarik napas dan lima detik mengembuskan saat rasa mual ringan, serta empat detik menarik dan delapan detik mengembuskan saat rasa mual lebih berat. Inti teknik ini adalah mengembuskan napas lebih lama daripada menariknya.\n\nUji coba berskala kecil tentang pernapasan diafragma secara perlahan selama kemoterapi dan setelah operasi melaporkan skor rasa mual yang lebih rendah. Para peninjau juga menyebutkan bahwa uji coba tersebut berskala kecil."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "息を吸うと円が大きくなり、吐くとゆっくり小さくなるので、数えなくても合わせられます。Queasyでは、症状が軽いときは3秒吸って5秒吐くこと、そうでないときは4秒吸って8秒吐くことを提案しています。吸う時間より長く吐くことが、この方法のすべてです。\n\n化学療法中や手術後にゆっくりとした腹式呼吸を行った小規模な試験では、吐き気のスコアが低かったと報告されています。試験の規模が小さいことは、レビューの著者も指摘しています。"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Een cirkel zwelt aan als je inademt en wordt langzaam kleiner als je uitademt, zodat je hem kunt volgen zonder te tellen. Queasy stelt drie seconden inademen en vijf uitademen voor als het meevalt, en vier in en acht uit als dat niet zo is. De hele techniek bestaat uit langer uitademen dan inademen.\n\nIn kleine onderzoeken naar langzame buikademhaling tijdens chemotherapie en na een operatie zijn lagere scores voor gevoelens van misselijkheid gemeld. De onderzoeken zijn klein, zoals de beoordelaars ook aangeven."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Um círculo cresce ao inspirar e diminui devagar ao expirar, então você pode acompanhá-lo sem contar. Queasy sugere inspirar por três segundos e expirar por cinco quando a sensação é leve, e inspirar por quatro e expirar por oito quando não é. Toda a técnica está em expirar por mais tempo do que se inspira.\n\nPequenos estudos sobre respiração diafragmática lenta durante a quimioterapia e após cirurgias relataram pontuações menores de sensação de enjoo. Os estudos são pequenos, como apontam os revisores."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Круг увеличивается на вдохе и медленно уменьшается на выдохе, так что можно следовать ему, не считая. Queasy предлагает три секунды вдоха и пять секунд выдоха, когда тошнота слабая, и четыре на вдох и восемь на выдох, когда она сильнее. Вся техника состоит в том, чтобы выдыхать дольше, чем вдыхать.\n\nВ небольших исследованиях медленного диафрагмального дыхания во время химиотерапии и после операции участники сообщали о более низкой выраженности ощущения тошноты. Авторы обзора отмечают, что исследования были небольшими."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "วงกลมจะขยายเมื่อคุณหายใจเข้าและค่อย ๆ หดลงเมื่อหายใจออก คุณจึงทำตามได้โดยไม่ต้องนับ Queasy แนะนำให้หายใจเข้า 3 วินาทีและออก 5 วินาทีเมื่ออาการไม่มาก และเข้า 4 วินาทีออก 8 วินาทีเมื่ออาการมากกว่านั้น หัวใจของเทคนิคนี้คือการหายใจออกให้นานกว่าหายใจเข้า\n\nการทดลองขนาดเล็กเกี่ยวกับการหายใจช้าๆ ด้วยกะบังลมระหว่างการให้เคมีบำบัดและหลังการผ่าตัดรายงานว่าคะแนนความรู้สึกคลื่นไส้ลดลง ผู้ทบทวนระบุว่าการทดลองเหล่านี้มีขนาดเล็ก"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Một vòng tròn nở ra khi bạn hít vào và thu nhỏ dần khi bạn thở ra, nên bạn có thể làm theo mà không cần đếm. Queasy gợi ý hít vào ba giây và thở ra năm giây khi cảm giác nhẹ, còn hít vào bốn giây và thở ra tám giây khi nặng hơn. Cốt lõi của kỹ thuật này là thở ra lâu hơn hít vào.\n\nCác thử nghiệm nhỏ về thở chậm bằng cơ hoành trong khi hóa trị và sau phẫu thuật ghi nhận điểm đánh giá cảm giác buồn nôn thấp hơn. Những người đánh giá cũng lưu ý rằng các thử nghiệm này có quy mô nhỏ."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "吸气时圆圈慢慢变大，呼气时慢慢缩小，无需计数也能跟上。感觉较轻时，Queasy 建议吸气三秒、呼气五秒；较重时建议吸气四秒、呼气八秒。这个方法的全部要点就是呼气比吸气更长。\n\n化疗期间和手术后进行缓慢膈肌呼吸的小规模试验报告了较低的恶心感评分。评审者也指出，这些试验规模较小。"
+          }
+        }
+      }
+    },
     "A gentle reminder helps keep a short hold easy to remember." : {
       "extractionState" : "manual",
       "localizations" : {
@@ -6463,6 +6820,65 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "提醒你每天按压几次，间隔参考腕带试验。"
+          }
+        }
+      }
+    },
+    "A paced breath you follow on screen. A one-minute 100 Hz tone. A timed hold on the spot an acupressure band sits on. All drug-free, all free to use." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A paced breath you follow on screen. A one-minute 100 Hz tone. A timed hold on the spot an acupressure band sits on. All drug-free, all free to use."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Napas berirama yang kamu ikuti di layar. Nada 100 Hz selama satu menit. Tekanan dengan timer pada titik tempat gelang akupresur dipasang. Semuanya bebas obat dan gratis digunakan."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "画面を見ながら合わせる、ペースのある呼吸。1分間の100 Hzの音。指圧バンドを当てる場所を押さえる時間の計測。すべて薬を使わず、無料で試せます。"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Een vast ademritme dat je op het scherm volgt. Een minuut lang een toon van 100 Hz. Met een timer druk houden op de plek waar een acupressuurbandje zit. Allemaal zonder medicijnen en gratis te gebruiken."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uma respiração ritmada que você acompanha na tela. Um tom de 100 Hz por um minuto. Uma pressão cronometrada no ponto onde fica uma pulseira de acupressão. Tudo sem medicamentos e grátis para usar."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Дыхание в заданном ритме, за которым можно следить на экране. Звук 100 Hz в течение минуты. Нажатие по таймеру на точку под акупрессурным браслетом. Всё без лекарств и бесплатно."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "การหายใจตามจังหวะที่คุณทำตามบนหน้าจอ เสียง 100 Hz หนึ่งนาที และการจับเวลากดค้างตรงตำแหน่งที่สายรัดกดจุดวางอยู่ ทั้งหมดไม่ใช้ยาและใช้งานได้ฟรี"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thở theo nhịp bạn theo dõi trên màn hình. Nghe âm 100 Hz trong một phút. Ấn giữ có tính giờ tại vị trí đặt vòng bấm huyệt. Tất cả đều không dùng thuốc và miễn phí."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在屏幕上跟随节奏呼吸。听一分钟 100 Hz 音调。在穴位按压腕带佩戴的位置持续按压并计时。全部无需用药，均可免费使用。"
           }
         }
       }
@@ -7584,6 +8000,65 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Breathe"
+          }
+        }
+      }
+    },
+    "Breathe in as the circle grows, and out as it shrinks." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Breathe in as the circle grows, and out as it shrinks."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tarik napas saat lingkaran membesar, embuskan saat mengecil."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "円が広がるときに息を吸い、縮むときに吐きます。"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adem in terwijl de cirkel groeit en uit terwijl hij krimpt."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inspire enquanto o círculo cresce e expire enquanto ele diminui."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вдыхай, пока круг растёт, и выдыхай, пока он уменьшается."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "หายใจเข้าเมื่อวงกลมขยาย และหายใจออกเมื่อวงกลมหดลง"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hít vào khi vòng tròn lớn dần, thở ra khi vòng tròn nhỏ lại."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "圆圈扩大时吸气，缩小时呼气。"
           }
         }
       }
@@ -11549,6 +12024,65 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "两台设备均可免费进行完整练习。"
+          }
+        }
+      }
+    },
+    "Gentle, drug-free routines to try. Start one now, or answer three questions first." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gentle, drug-free routines to try. Start one now, or answer three questions first."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rutinitas lembut tanpa obat untuk dicoba. Mulai sekarang, atau jawab tiga pertanyaan dulu."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "薬を使わない、やさしい方法をいくつか。今すぐ始めるか、先に3つの質問に答えてください。"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rustige routines zonder medicijnen om te proberen. Begin meteen, of beantwoord eerst drie vragen."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rotinas suaves e sem medicamentos para experimentar. Comece agora ou responda a três perguntas primeiro."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мягкие способы без лекарств, которые можно попробовать. Начни сразу или сначала ответь на три вопроса."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "กิจวัตรเบา ๆ ที่ไม่ใช้ยาให้ลอง เริ่มได้ทันที หรือตอบสามคำถามก่อน"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vài cách nhẹ nhàng, không dùng thuốc để thử. Bắt đầu ngay, hoặc trả lời ba câu hỏi trước."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "几种温和、不用药的方式可以试试。现在就开始，或者先回答三个问题。"
           }
         }
       }
@@ -17142,6 +17676,65 @@
         }
       }
     },
+    "Out for longer than in, paced on screen." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Out for longer than in, paced on screen."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Embuskan napas lebih lama daripada menariknya, ikuti irama di layar."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "画面のペースに合わせて、吸うときより長く息を吐きます。"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adem langer uit dan in, op het tempo van het scherm."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Expire por mais tempo do que inspira, acompanhando o ritmo na tela."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выдыхай дольше, чем вдыхаешь, следуя ритму на экране."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "หายใจออกให้นานกว่าหายใจเข้า ตามจังหวะบนหน้าจอ"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thở ra lâu hơn hít vào, theo nhịp trên màn hình."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "跟随屏幕上的节奏呼吸，呼气比吸气更长。"
+          }
+        }
+      }
+    },
     "Pay once · never renews" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -21676,6 +22269,65 @@
         }
       }
     },
+    "Slow the breath, paced on screen" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slow the breath, paced on screen"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Perlambat napas, diatur di layar"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "画面のペースで呼吸をゆっくりに"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adem rustiger, op het tempo van het scherm"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Desacelere a respiração, no ritmo da tela"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Замедли дыхание в темпе на экране"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ชะลอลมหายใจตามจังหวะบนหน้าจอ"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thở chậm lại theo nhịp trên màn hình"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "跟随屏幕节奏放慢呼吸"
+          }
+        }
+      }
+    },
     "Slow, steady breaths through your nose." : {
       "extractionState" : "manual",
       "localizations" : {
@@ -24811,6 +25463,65 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "回答三个问题，为你选择模式、强度和时长。"
+          }
+        }
+      }
+    },
+    "Three things to try\nwhen you feel sick" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Three things to try\nwhen you feel sick"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tiga cara untuk dicoba\nsaat kamu merasa mual"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "気分が悪いときに\n試せる3つの方法"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Drie dingen om te proberen\nals je je niet lekker voelt"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Três opções para experimentar\nquando você não se sente bem"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Три способа\nпри недомогании"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "สามวิธีให้ลอง\nเมื่อรู้สึกไม่สบาย"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ba cách để thử\nkhi bạn thấy khó chịu"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "感觉不舒服时\n试试这三种方法"
           }
         }
       }
@@ -28065,6 +28776,65 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "无法载入方案"
+          }
+        }
+      }
+    },
+    "iPad" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iPad"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iPad"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iPad"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iPad"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iPad"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iPad"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iPad"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iPad"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iPad"
           }
         }
       }

@@ -61,6 +61,7 @@ struct ModeStartView: View {
                 .padding(.horizontal, 20)
                 .padding(.top, 12)
                 .padding(.bottom, 28)
+                .readableColumn()
             }
             .tideBackground()
             .navigationTitle(mode.title)
@@ -89,7 +90,7 @@ struct ModeStartView: View {
                         .foregroundStyle(Theme.aqua)
                 }
             }
-            Text(mode.blurb)
+            Text(mode.detailBlurb)
                 .font(.callout)
                 .foregroundStyle(Theme.ink2)
                 .multilineTextAlignment(.center)

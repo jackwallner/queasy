@@ -85,6 +85,13 @@ phone-only, no Wear OS). Read `.claude/rules/android.md` before touching
 holds the parity export, the paid boundary, the test commands and the Play
 release steps still to do.
 
+## iPad
+
+Native iPad support: Pulse is hidden there (no haptics), content sits in
+a readable column, Relieve goes two-column when wide. Read
+`.claude/rules/ipad-layout.md` before touching layout, `ReliefMode.available`,
+onboarding or the session screens.
+
 ## Localization
 
 All copy routes through `Shared/Localizable.xcstrings` (`en` only for now). Read

@@ -31,9 +31,9 @@ struct PhoneSessionView: View {
         UnfoldedSplitView { _ in
             switch controller.phase {
             case .running:
-                runningView
+                runningView.readableColumn(560)
             case .rating:
-                ratingView.scrollsWhenTall()
+                ratingView.scrollsWhenTall().readableColumn(560)
             case .idle:
                 Color.clear.onAppear { close() }
             }
@@ -54,6 +54,8 @@ struct PhoneSessionView: View {
     /// 678 pt), so the stage shrinks before anything scrolls.
     private var runningView: some View {
         ViewThatFits(in: .vertical) {
+            if DeviceIdiom.isPad { runningLayout(stageSide: 420) }
+            if DeviceIdiom.isPad { runningLayout(stageSide: 340) }
             runningLayout(stageSide: 240)
             runningLayout(stageSide: 170)
             ScrollView { runningLayout(stageSide: 170) }
@@ -151,7 +153,7 @@ struct PhoneSessionView: View {
         }
     }
 
-    private var needsHaptics: Bool { mode == .pulse || mode == .breathe }
+    private var needsHaptics: Bool { mode == .pulse || (mode == .breathe && !DeviceIdiom.isPad) }
 
     @ViewBuilder
     private func stage(side: CGFloat) -> some View {
@@ -212,6 +214,9 @@ struct PhoneSessionView: View {
         case .pulse:
             return String(localized: "Hold your iPhone against the inside of your wrist, or rest it where you can feel the taps.")
         case .breathe:
+            if DeviceIdiom.isPad {
+                return String(localized: "Breathe in as the circle grows, and out as it shrinks.")
+            }
             return String(localized: "Long swell in, longer fade out. Rest the phone on you and shut your eyes if you like.")
         case .tone:
             return String(localized: "Keep the volume low. It should sit under the noise around you, not over it.")

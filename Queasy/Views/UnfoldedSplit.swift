@@ -71,7 +71,7 @@ struct UnfoldedSplitView<Primary: View, Secondary: View>: View {
     @ViewBuilder var secondary: () -> Secondary
 
     var body: some View {
-        let split = UnfoldedSplit.make(geometry, isRegularWidth: horizontalSizeClass == .regular)
+        let split = UnfoldedSplit.make(geometry, isRegularWidth: horizontalSizeClass == .regular && !DeviceIdiom.isPad)
         ZStack(alignment: .topLeading) {
             // Each pane is phone-width, so its screen lays out as on a phone.
             primary(split)

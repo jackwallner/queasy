@@ -62,6 +62,7 @@ struct PaywallView: View {
                 closeButton
             }
         }
+        .readableColumn(560)
         .leadingPaneColumn()
         .background(Theme.paper.ignoresSafeArea())
         .onChange(of: subscriptions.isProSubscriber) { _, isPro in

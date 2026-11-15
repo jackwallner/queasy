@@ -9,8 +9,8 @@ final class ReleaseJourneysUITests: XCTestCase {
     func test1OnboardingToRelieve() {
         let app = XCUIApplication(bundleIdentifier: "com.jackwallner.queasy")
         QA.launch(app, arguments: ["-QueasyResetOnboarding"])
-        // An iPad skips the watch page, so it has two Continue pages, not three.
-        let pages = UIDevice.current.userInterfaceIdiom == .pad ? 2 : 3
+        // An iPad skips the watch page: one Continue, then Get Started on page two.
+        let pages = UIDevice.current.userInterfaceIdiom == .pad ? 1 : 3
         for name in ["four-things", "three-questions", "watch-wrist"].prefix(pages) {
             checkpoint(name, button: "Continue", in: app)
             tap("Continue", in: app)
@@ -94,9 +94,9 @@ final class ReleaseJourneysUITests: XCTestCase {
         QA.checkpoint(app, "core-history-after-relaunch")
     }
 
-    /// Press is a fixed 3-minute hold, so its History row reads "3 min · iPhone".
+    /// Press is a fixed 3-minute hold, so its History row reads "3 min · iPhone" (iPad on an iPad).
     private let pressSeconds = 180
-    private let pressDetail = NSPredicate(format: "label == %@", "3 min · iPhone")
+    private let pressDetail = NSPredicate(format: "label IN %@", ["3 min · iPhone", "3 min · iPad"])
 
     private func loggedPressCount(in app: XCUIApplication) -> Int {
         let list = app.buttons["Export history as CSV"].firstMatch

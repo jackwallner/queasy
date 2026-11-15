@@ -135,7 +135,7 @@ struct PhoneSessionView: View {
                             .foregroundStyle(Theme.ink2)
                     }
                 }
-                .tint(Theme.aqua)
+                .tint(Theme.aquaInk)
                 .padding(16)
                 .tideCard(cornerRadius: 16)
                 .padding(.horizontal, 20)

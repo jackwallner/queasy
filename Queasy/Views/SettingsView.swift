@@ -64,7 +64,7 @@ struct SettingsView: View {
                             Task { await reminders.setEnabled(wanted) }
                         }
                     ))
-                    .tint(Theme.aqua)
+                    .tint(Theme.aquaInk)
                     .accessibilityIdentifier("press-reminders")
                 } header: {
                     Text("Press")
@@ -82,7 +82,7 @@ struct SettingsView: View {
 
                 Section {
                     Toggle("Calendar heatmap", isOn: $settings.showHistoryHeatmap)
-                        .tint(Theme.aqua)
+                        .tint(Theme.aquaInk)
                 } header: {
                     Text("History")
                 } footer: {

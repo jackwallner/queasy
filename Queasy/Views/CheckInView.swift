@@ -29,7 +29,7 @@ struct CheckInView: View {
         NavigationStack {
             VStack(spacing: 0) {
                 ProgressView(value: Double(step + 1), total: 4)
-                    .tint(Theme.aqua)
+                    .tint(Theme.aquaInk)
                     .padding(.horizontal, 20)
                     .padding(.top, 12)
 

@@ -124,7 +124,7 @@ struct ModeStartView: View {
                         .font(Theme.roundedNumeric(13, weight: .bold))
                         .foregroundStyle(.white)
                         .frame(width: 22, height: 22)
-                        .background(Theme.aqua, in: Circle())
+                        .background(Theme.aquaInk, in: Circle())
                     Text(step)
                         .font(.footnote)
                         .foregroundStyle(Theme.ink2)

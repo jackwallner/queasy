@@ -91,7 +91,7 @@ struct RootTabView: View {
             .horizontalBarsInPane()
         }
         .tideBackground()
-        .tint(Theme.aqua)
+        .tint(Theme.aquaInk)
         #if DEBUG
         // `-QueasyScreen upgrade`: the after-session paywall, for captures.
         .task {

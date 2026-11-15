@@ -21,8 +21,8 @@ enum Theme {
     static let paper2 = Color.white                                   // card
     static let paper3 = Color(red: 0.949, green: 0.973, blue: 0.969) // #F2F8F7 track/divider
     static let ink    = Color(red: 0.141, green: 0.224, blue: 0.243) // #24393E deep petrol
-    static let ink2   = Color(red: 0.361, green: 0.451, blue: 0.471) // #5C7378 secondary
-    static let ink3   = Color(red: 0.549, green: 0.635, blue: 0.651) // #8CA2A6 tertiary
+    static let ink2   = Color(red: 0.271, green: 0.357, blue: 0.376) // #455B60 secondary
+    static let ink3   = Color(red: 0.325, green: 0.412, blue: 0.431) // #53696E tertiary (4.5:1 on the canvas)
     static let aqua     = Color(red: 0.333, green: 0.710, blue: 0.663) // #55B5A9 brand
     static let aquaTint = Color(red: 0.855, green: 0.941, blue: 0.925) // pale aqua wash
     static let sand     = Color(red: 0.910, green: 0.784, blue: 0.588) // #E8C896 moderate
@@ -74,7 +74,7 @@ enum Theme {
     /// CTA fill: aqua with a slightly deeper foot so buttons read dimensional.
     static var ctaGradient: LinearGradient {
         LinearGradient(
-            colors: [aqua, aquaDeep],
+            colors: [aquaInk, aquaInkDeep],
             startPoint: .top,
             endPoint: .bottom
         )
@@ -84,6 +84,15 @@ enum Theme {
     static let aquaDeep = Color(red: 0.322, green: 0.647, blue: 0.600)
     #else
     static let aquaDeep = Color(red: 0.243, green: 0.604, blue: 0.557) // #3E9A8E
+    #endif
+
+    /// Aqua dark enough for text and white-on-fill (4.5:1), for tints and CTAs.
+    #if os(watchOS)
+    static let aquaInk = aqua
+    static let aquaInkDeep = aquaDeep
+    #else
+    static let aquaInk = Color(red: 0.165, green: 0.463, blue: 0.420)     // #2A766B
+    static let aquaInkDeep = Color(red: 0.133, green: 0.388, blue: 0.353) // #226359
     #endif
 }
 

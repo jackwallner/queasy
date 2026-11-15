@@ -9,13 +9,15 @@ final class ReleaseJourneysUITests: XCTestCase {
     func test1OnboardingToRelieve() {
         let app = XCUIApplication(bundleIdentifier: "com.jackwallner.queasy")
         QA.launch(app, arguments: ["-QueasyResetOnboarding"])
-        for name in ["four-things", "three-questions", "watch-wrist"] {
+        // An iPad skips the watch page, so it has two Continue pages, not three.
+        let pages = UIDevice.current.userInterfaceIdiom == .pad ? 2 : 3
+        for name in ["four-things", "three-questions", "watch-wrist"].prefix(pages) {
             checkpoint(name, button: "Continue", in: app)
             tap("Continue", in: app)
         }
         let phoneOnly = app.buttons["onboarding-phone-only"]
         let ready = app.buttons["Get Started"]
-        XCTAssertTrue(phoneOnly.waitForExistence(timeout: 15) || ready.exists)
+        XCTAssertTrue(phoneOnly.waitForExistence(timeout: 15) || ready.waitForExistence(timeout: 15))
         QA.checkpoint(app, "watch-gate")
         if phoneOnly.exists { phoneOnly.tap() } else { ready.tap() }
         relieve("first-relieve", in: app)
@@ -24,6 +26,7 @@ final class ReleaseJourneysUITests: XCTestCase {
     func test2TabsUpgradeAndReturn() {
         let app = XCUIApplication(bundleIdentifier: "com.jackwallner.queasy")
         QA.launch(app, arguments: ["-QueasySeedDemoData"])
+        finishOnboardingIfShown(in: app)
         relieve("relieve", in: app)
         showHistory(in: app)
         QA.checkpoint(app, "history")
@@ -131,9 +134,10 @@ final class ReleaseJourneysUITests: XCTestCase {
     /// A journey run on its own starts on a fresh install, before onboarding.
     private func finishOnboardingIfShown(in app: XCUIApplication) {
         guard !app.buttons["quick-start"].firstMatch.waitForExistence(timeout: 10) else { return }
-        for _ in 0..<3 { tap("Continue", in: app) }
         let phoneOnly = app.buttons["onboarding-phone-only"]
-        if phoneOnly.waitForExistence(timeout: 15) { phoneOnly.tap() } else { tap("Get Started", in: app) }
+        let ready = app.buttons["Get Started"]
+        while app.buttons["Continue"].firstMatch.waitForExistence(timeout: 3) { tap("Continue", in: app) }
+        if phoneOnly.waitForExistence(timeout: 15) { phoneOnly.tap() } else { ready.tap() }
     }
 
     /// Scrolls the element's own pane until it can be tapped (AX3 pushes the

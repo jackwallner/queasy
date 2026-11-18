@@ -93,7 +93,7 @@ struct SettingsView: View {
                     Section("Queasy Pro") {
                         if subscriptions.isProSubscriber {
                             Label("Active", systemImage: "checkmark.seal.fill")
-                                .foregroundStyle(Theme.aqua)
+                                .foregroundStyle(Theme.aquaInk)
                         } else {
                             // With no gate on the way in, this is the durable place
                             // to buy. The full plan picker, per the paywall playbook.
@@ -101,7 +101,7 @@ struct SettingsView: View {
                                 showPaywall = true
                             } label: {
                                 Label("See Queasy Pro", systemImage: "sparkles")
-                                    .foregroundStyle(Theme.aqua)
+                                    .foregroundStyle(Theme.aquaInk)
                             }
                             .accessibilityIdentifier("settings-see-pro")
                         }

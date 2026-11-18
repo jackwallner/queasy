@@ -164,9 +164,8 @@ final class ReleaseJourneysUITests: XCTestCase {
     /// Folded, History is a tab (a vertical bar on the Duo's outer display, which
     /// is not reported as a tab bar). Unfolded, it is the pane after the fold.
     private func showHistory(in app: XCUIApplication) {
-        let tab = app.tabBars.buttons["History"].firstMatch
-        let button = tab.waitForExistence(timeout: 3) ? tab : app.buttons["History"].firstMatch
-        if button.exists { button.tap() }
+        let button = QA.tab(app, "History")
+        if button.waitForExistence(timeout: 3) { QA.openTab(app, "History") }
     }
 
     private func tap(_ label: String, in app: XCUIApplication) {
@@ -177,10 +176,7 @@ final class ReleaseJourneysUITests: XCTestCase {
 
     /// A tab-bar button folded; unfolded on a Duo, the same label in the pane's tab strip.
     private func tapTab(_ label: String, in app: XCUIApplication) {
-        let tab = app.tabBars.buttons[label].firstMatch
-        let button = tab.waitForExistence(timeout: 3) ? tab : app.buttons[label].firstMatch
-        XCTAssertTrue(button.waitForExistence(timeout: 15))
-        button.tap()
+        QA.openTab(app, label, timeout: 15)
     }
 
     private func checkpoint(_ name: String, button label: String, in app: XCUIApplication,

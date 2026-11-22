@@ -57,6 +57,7 @@ import com.jackwallner.queasy.ui.theme.ChevronCard
 import com.jackwallner.queasy.ui.theme.Tide
 import com.jackwallner.queasy.ui.theme.TideType
 import com.jackwallner.queasy.ui.theme.icon
+import com.jackwallner.queasy.ui.theme.isLargeText
 import com.jackwallner.queasy.ui.theme.tideCard
 import java.io.File
 import java.time.Instant
@@ -260,7 +261,8 @@ private fun EpisodeRow(episode: ReliefEpisode, onLongPress: () -> Unit) {
             Text(
                 "${episode.mode.title} · ${episode.cause.label}",
                 style = TideType.subheadline.copy(fontWeight = FontWeight.SemiBold, color = Tide.ink),
-                maxLines = 1,
+                // One line at regular sizes; large text wraps instead of cutting the cause off.
+                maxLines = if (isLargeText()) Int.MAX_VALUE else 1,
                 overflow = TextOverflow.Ellipsis,
             )
             val detail = if (episode.mode == ReliefMode.PULSE) "Level ${episode.intensity}" else "${episode.plannedMinutes} min"

@@ -51,6 +51,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.font.FontWeight
@@ -109,7 +110,8 @@ fun TideButton(
     Box(
         modifier
             .fillMaxWidth()
-            .height(if (hero) 64.dp else 52.dp)
+            // Grows past the nominal height only when large text needs a second line.
+            .heightIn(min = if (hero) 64.dp else 52.dp)
             .scale(if (pressed) 0.98f else 1f)
             .shadow(if (pressed) 2.dp else 8.dp, shape, ambientColor = Tide.aqua, spotColor = Tide.aqua)
             .background(Tide.ctaGradient, shape)
@@ -122,13 +124,17 @@ fun TideButton(
         if (content != null) {
             content()
         } else {
-            Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            Row(
+                Modifier.padding(horizontal = 16.dp, vertical = 12.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+            ) {
                 if (icon != null) Icon(icon, null, tint = Color.White, modifier = Modifier.size(if (hero) 24.dp else 20.dp))
                 Text(
                     text,
                     style = TideType.rounded(if (hero) 20.sp else 17.sp, FontWeight.Bold),
                     color = Color.White,
-                    maxLines = 1,
+                    textAlign = TextAlign.Center,
                 )
             }
         }
@@ -285,3 +291,9 @@ fun Gap(height: Dp) = Spacer(Modifier.height(height))
 
 @Composable
 fun HGap(width: Dp) = Spacer(Modifier.width(width))
+
+/** True at the accessibility end of the system font scale (iOS's `isAccessibilitySize`). */
+@Composable
+fun isLargeText(): Boolean = LocalDensity.current.fontScale >= LARGE_TEXT_SCALE
+
+private const val LARGE_TEXT_SCALE = 1.5f

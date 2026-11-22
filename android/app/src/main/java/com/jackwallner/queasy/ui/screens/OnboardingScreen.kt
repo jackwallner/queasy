@@ -4,18 +4,22 @@ import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.rounded.Assignment
 import androidx.compose.material.icons.rounded.GridView
@@ -35,6 +39,7 @@ import com.jackwallner.queasy.ui.theme.SymbolDisc
 import com.jackwallner.queasy.ui.theme.Tide
 import com.jackwallner.queasy.ui.theme.TideButton
 import com.jackwallner.queasy.ui.theme.TideType
+import com.jackwallner.queasy.ui.theme.isLargeText
 import kotlinx.coroutines.launch
 
 private data class OnboardPage(val icon: ImageVector, val title: String, val text: String)
@@ -67,6 +72,9 @@ private val pages = listOf(
     ),
 )
 
+private const val DISCLAIMER =
+    "Queasy is a set of comfort techniques, not a medical device. It does not diagnose, treat or cure anything, and it may not change how you feel. If symptoms are severe or persistent, talk to a doctor."
+
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun OnboardingScreen() {
@@ -74,10 +82,11 @@ fun OnboardingScreen() {
     val pager = rememberPagerState { pages.size }
     val scope = rememberCoroutineScope()
     val last = pager.currentPage == pages.lastIndex
+    val largeText = isLargeText()
 
     Column(Modifier.fillMaxSize().background(Tide.tideWash).statusBarsPadding().navigationBarsPadding()) {
         HorizontalPager(pager, Modifier.weight(1f).fillMaxWidth()) { index ->
-            Page(pages[index])
+            Page(pages[index], showsDisclaimer = largeText)
         }
         Row(Modifier.fillMaxWidth().padding(bottom = 16.dp), horizontalArrangement = Arrangement.Center) {
             pages.indices.forEach { i ->
@@ -100,25 +109,26 @@ fun OnboardingScreen() {
                 },
                 tag = "onboarding-continue",
             )
-            Text(
-                "Queasy is a set of comfort techniques, not a medical device. It does not diagnose, treat or cure anything, and it may not change how you feel. If symptoms are severe or persistent, talk to a doctor.",
-                style = TideType.caption2,
-                textAlign = TextAlign.Center,
-            )
+            // Large text reads it at the foot of each scrolling page instead.
+            if (!largeText) Text(DISCLAIMER, style = TideType.caption2, textAlign = TextAlign.Center)
         }
     }
 }
 
 @Composable
-private fun Page(page: OnboardPage) {
-    Column(
-        Modifier.fillMaxSize().padding(horizontal = 30.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(26.dp, Alignment.CenterVertically),
-    ) {
-        SymbolDisc(page.icon, size = 150.dp, iconSize = 60.dp)
-        Text(page.title, style = TideType.display(30.sp).copy(lineHeight = 36.sp), textAlign = TextAlign.Center)
-        Text(page.text, style = TideType.callout, textAlign = TextAlign.Center)
-        Spacer(Modifier.size(40.dp))
+private fun Page(page: OnboardPage, showsDisclaimer: Boolean) {
+    // Scrolls when large text outgrows the page; otherwise the content sits centred.
+    BoxWithConstraints(Modifier.fillMaxSize()) {
+        Column(
+            Modifier.heightIn(min = maxHeight).verticalScroll(rememberScrollState()).padding(horizontal = 30.dp, vertical = 16.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.spacedBy(26.dp, Alignment.CenterVertically),
+        ) {
+            SymbolDisc(page.icon, size = 150.dp, iconSize = 60.dp)
+            Text(page.title, style = TideType.display(30.sp).copy(lineHeight = 36.sp), textAlign = TextAlign.Center)
+            Text(page.text, style = TideType.callout, textAlign = TextAlign.Center)
+            if (showsDisclaimer) Text(DISCLAIMER, style = TideType.caption2, textAlign = TextAlign.Center)
+            else Spacer(Modifier.size(40.dp))
+        }
     }
 }

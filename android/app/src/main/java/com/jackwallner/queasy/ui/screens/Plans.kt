@@ -1,6 +1,7 @@
 package com.jackwallner.queasy.ui.screens
 
 import com.jackwallner.queasy.AppGraph
+import com.jackwallner.queasy.data.AppSettings
 import com.jackwallner.queasy.model.FreeTier
 import com.jackwallner.queasy.model.PatternEngine
 import com.jackwallner.queasy.model.PressProtocol
@@ -17,9 +18,12 @@ fun effectiveSeconds(plan: ReliefPlan, isPro: Boolean): Int = when (plan.mode) {
 /** Quick start reuses the last plan when there is one, otherwise Pulse at level 5 for 15 minutes. */
 fun AppGraph.quickPlan(): ReliefPlan = settings.lastPlan ?: ReliefPlan.QUICK_START
 
-/** `ModeStartView.plan`: the last plan with Settings overrides, switched to [mode]. */
-fun AppGraph.modePlan(mode: ReliefMode): ReliefPlan {
-    var base = settings.resolvedPlan(settings.lastPlan ?: ReliefPlan.QUICK_START).copy(mode = mode)
+/** `ModeStartView.plan`: the last plan switched to [mode], then the Settings overrides. */
+fun AppGraph.modePlan(mode: ReliefMode): ReliefPlan = modePlanFor(settings, mode)
+
+fun modePlanFor(settings: AppSettings, mode: ReliefMode): ReliefPlan {
+    // Switch the mode first: resolvedPlan pins Tone and Press to their fixed protocols by plan mode.
+    var base = settings.resolvedPlan((settings.lastPlan ?: ReliefPlan.QUICK_START).copy(mode = mode))
     if (base.durationMinutes < PatternEngine.MIN_DURATION) base = base.copy(durationMinutes = PatternEngine.MIN_DURATION)
     // Tone and Press are fixed protocols, not a length anyone chose.
     if (mode == ReliefMode.PRESS) base = base.copy(durationMinutes = PressProtocol.HOLD_SECONDS / 60)

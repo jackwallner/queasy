@@ -4,6 +4,8 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import com.jackwallner.queasy.model.BreathePattern
+import com.jackwallner.queasy.model.PressProtocol
+import com.jackwallner.queasy.model.ReliefMode
 import com.jackwallner.queasy.model.ReliefPlan
 
 /** Preferences, under the same keys as iOS's `AppSettings`. */
@@ -67,6 +69,12 @@ class AppSettings(private val defaults: KeyValueStore) {
         var resolved = plan
         defaultDurationMinutes?.let { resolved = resolved.copy(durationMinutes = it) }
         defaultBreathePattern?.let { resolved = resolved.copy(breathe = it) }
+        // Fixed protocols take precedence over symptom lengths and preferences.
+        when (resolved.mode) {
+            ReliefMode.TONE -> resolved = resolved.copy(durationMinutes = 1)
+            ReliefMode.PRESS -> resolved = resolved.copy(durationMinutes = PressProtocol.HOLD_SECONDS / 60)
+            ReliefMode.PULSE, ReliefMode.BREATHE -> Unit
+        }
         return resolved
     }
 

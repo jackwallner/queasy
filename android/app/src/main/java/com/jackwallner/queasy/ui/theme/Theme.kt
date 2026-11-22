@@ -31,6 +31,8 @@ object Tide {
     val ink3 = Color(0xFF8CA2A6)
     val aqua = Color(0xFF55B5A9)
     val aquaDeep = Color(0xFF3E9A8E)
+    /** Aqua dark enough for text on paper or white (4.5:1), as on iOS. */
+    val aquaInk = Color(0xFF2A766B)
     val aquaTint = Color(0xFFDAF0EC)
     val sand = Color(0xFFE8C896)
     val sandTint = Color(0xFFFAF1E1)

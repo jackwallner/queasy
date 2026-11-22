@@ -139,15 +139,15 @@ fun SettingsScreen() {
             Section("Queasy Pro") {
                 if (subscriptions.isPro) {
                     Row(Modifier.heightIn(min = 48.dp).padding(horizontal = 16.dp), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                        Icon(Icons.Rounded.Verified, null, tint = Tide.aqua, modifier = Modifier.size(20.dp))
-                        Text("Active", style = TideType.body.copy(color = Tide.aqua), modifier = Modifier.testTag("pro-active"))
+                        Icon(Icons.Rounded.Verified, null, tint = Tide.aquaInk, modifier = Modifier.size(20.dp))
+                        Text("Active", style = TideType.body.copy(color = Tide.aquaInk), modifier = Modifier.testTag("pro-active"))
                     }
                     if (!subscriptions.hasReviewAccess) {
                         RowDivider()
                         LinkRow("Manage subscription") { activity?.openUrl(Links.manageSubscription(null)) }
                     }
                 } else {
-                    LinkRow("See Queasy Pro", color = Tide.aqua, icon = { Icon(Icons.Rounded.AutoAwesome, null, tint = Tide.aqua, modifier = Modifier.size(20.dp)) }, tag = "settings-see-pro") {
+                    LinkRow("See Queasy Pro", color = Tide.aquaInk, icon = { Icon(Icons.Rounded.AutoAwesome, null, tint = Tide.aquaInk, modifier = Modifier.size(20.dp)) }, tag = "settings-see-pro") {
                         graph.navigator.push(Overlay.Paywall("queasy_settings"))
                     }
                 }

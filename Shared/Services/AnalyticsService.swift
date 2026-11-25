@@ -40,4 +40,13 @@ enum AnalyticsService {
     static func purchaseCompleted(plan: String) {
         track("purchase_completed", properties: ["plan": plan])
     }
+
+    /// A purchase that did not complete: `pending` (Ask to Buy), `cancelled` or `error`.
+    static func purchaseFinished(plan: String, outcome: String) {
+        track("purchase_finished", properties: ["plan": plan, "outcome": outcome])
+    }
+
+    static func ratingAsked() {
+        track("rating_asked")
+    }
 }

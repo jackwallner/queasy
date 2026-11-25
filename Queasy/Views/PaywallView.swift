@@ -689,12 +689,14 @@ struct PaywallView: View {
                 case .purchased:
                     break
                 case .pending:
-                    restoreMessage = String(localized: "Purchase is pending approval. Queasy Pro unlocks as soon as it's approved.")
+                    // Calm, not an error: the parent's approval unlocks Pro
+                    // through the customer-info update and closes this sheet.
+                    restoreMessage = PurchaseFailure.waitingForApproval.message
                 case .cancelled:
                     errorMessage = nil
                 }
             } catch {
-                errorMessage = String(localized: "Purchase didn't complete. Please try again.")
+                errorMessage = PurchaseFailure(error).message
             }
         }
     }

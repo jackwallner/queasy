@@ -10,6 +10,67 @@ enum PurchaseState {
     case pending
 }
 
+/// What a purchase that did not go through shows. A pending Ask to Buy is not
+/// a failure, and RevenueCat's own error descriptions are English only.
+enum PurchaseFailure: Equatable {
+    /// Ask to Buy: a parent has the request. Apple finishes it later and the
+    /// customer-info update unlocks Pro.
+    case waitingForApproval
+    case storeUnreachable
+    case failed
+
+    var message: String {
+        switch self {
+        case .waitingForApproval:
+            return String(localized: "Waiting for approval. Your purchase unlocks once it is approved.")
+        case .storeUnreachable:
+            return String(localized: "Check your connection and try again.")
+        case .failed:
+            return String(localized: "Purchase didn't complete. Please try again.")
+        }
+    }
+
+    /// The outcome analytics records, the same in every language.
+    var analyticsOutcome: String {
+        self == .waitingForApproval ? "pending" : "error"
+    }
+}
+
+#if HAS_REVENUECAT
+extension PurchaseFailure {
+    init(_ error: Error) {
+        switch error as? RevenueCat.ErrorCode {
+        case .paymentPendingError?: self = .waitingForApproval
+        case .networkError?, .offlineConnectionError?: self = .storeUnreachable
+        default: self = .failed
+        }
+    }
+
+    #if DEBUG
+    /// Test seam: the test bundle cannot import RevenueCat, so it reaches the
+    /// SDK's own error codes through the app.
+    enum SDKCase: CaseIterable {
+        case paymentPending, network, offline, purchaseNotAllowed, storeProblem
+    }
+
+    /// Maps the SDK's error as Swift sees it, or as the NSError RevenueCat throws.
+    static func fromSDK(_ sdkCase: SDKCase, asNSError: Bool = false) -> PurchaseFailure {
+        let code: RevenueCat.ErrorCode
+        switch sdkCase {
+        case .paymentPending: code = .paymentPendingError
+        case .network: code = .networkError
+        case .offline: code = .offlineConnectionError
+        case .purchaseNotAllowed: code = .purchaseNotAllowedError
+        case .storeProblem: code = .storeProblemError
+        }
+        guard asNSError else { return PurchaseFailure(code) }
+        let bridged = code as NSError
+        return PurchaseFailure(NSError(domain: bridged.domain, code: bridged.code))
+    }
+    #endif
+}
+#endif
+
 #if HAS_REVENUECAT
 enum QueasyPackageKind: Int {
     case yearly = 0
@@ -344,9 +405,20 @@ final class SubscriptionService: NSObject {
         let plan = package.queasyAnalyticsPlan
         AnalyticsService.purchaseAttempted(plan: plan)
         let startedTrial = isEligibleForIntroOffer(package)
-        let result = try await Purchases.shared.purchase(package: package)
+        let result: PurchaseResultData
+        do {
+            result = try await Purchases.shared.purchase(package: package)
+        } catch {
+            // Ask to Buy arrives as an error. It is a request waiting on a
+            // parent, so it returns as pending and the delegate unlocks later.
+            let failure = PurchaseFailure(error)
+            AnalyticsService.purchaseFinished(plan: plan, outcome: failure.analyticsOutcome)
+            if failure == .waitingForApproval { return .pending }
+            throw error
+        }
         applyProStatus(from: result.customerInfo)
         if result.userCancelled {
+            AnalyticsService.purchaseFinished(plan: plan, outcome: "cancelled")
             return .cancelled
         }
         if isProSubscriber {
@@ -359,6 +431,7 @@ final class SubscriptionService: NSObject {
             syncConversionAttributes()
             return .purchased
         }
+        AnalyticsService.purchaseFinished(plan: plan, outcome: "pending")
         return .pending
     }
 

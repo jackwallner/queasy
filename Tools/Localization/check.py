@@ -59,7 +59,8 @@ COPY_FUNCS = {'feelingButton', 'ratingButton', 'answerButton', 'stepTitle', 'bad
 # Single words returned or compared in code that are not copy.
 ALLOWED = {'lifetime', 'monthly', 'yearly', 'Queasy', 'Trip Comfort', 'Debug', 'Pro override', 'h a',
            'CFBundleShortVersionString', 'CFBundleVersion', 'funnel-probe-queasy', 'qa-ios',
-           'en', 'applewatch', 'wineglass', 'tornado', 'wind', 'waveform', 'timer', 'screenshot', 'running', 'ended'}
+           'en', 'applewatch', 'wineglass', 'tornado', 'wind', 'waveform', 'timer', 'screenshot', 'running', 'ended',
+           'pending', 'error', 'cancelled', 'off'}
 SYMBOL_OR_ID = re.compile(r'^[A-Za-z0-9_-]+([._][A-Za-z0-9_-]+)+$')
 URLISH = re.compile(r'^[a-z]+://|^mailto:')
 

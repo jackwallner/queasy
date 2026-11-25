@@ -19437,65 +19437,6 @@
         }
       }
     },
-    "Purchase is pending approval. Queasy Pro unlocks as soon as it's approved." : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Purchase is pending approval. Queasy Pro unlocks as soon as it's approved."
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pembelian menunggu persetujuan. Queasy Pro terbuka setelah disetujui."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "購入は承認待ちです。承認されるとQueasy Proを利用できます。"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "De aankoop wacht op goedkeuring. Queasy Pro wordt ontgrendeld zodra die is gegeven."
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "A compra aguarda aprovação. O Queasy Pro será liberado assim que ela for aprovada."
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Покупка ожидает подтверждения. Queasy Pro откроется сразу после него."
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "การซื้อกำลังรออนุมัติ Queasy Pro จะปลดล็อกเมื่อได้รับอนุมัติ"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Giao dịch mua đang chờ phê duyệt. Queasy Pro sẽ mở khóa ngay khi được duyệt."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "购买正在等待批准，获批后即可解锁 Queasy Pro。"
-          }
-        }
-      }
-    },
     "Put headphones in first, and keep the volume low." : {
       "extractionState" : "manual",
       "localizations" : {
@@ -27537,6 +27478,65 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "眩晕 / 头晕"
+          }
+        }
+      }
+    },
+    "Waiting for approval. Your purchase unlocks once it is approved." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Waiting for approval. Your purchase unlocks once it is approved."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menunggu persetujuan. Pembelianmu terbuka setelah disetujui."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "承認を待っています。承認されると購入したものを利用できます。"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wacht op goedkeuring. Je aankoop wordt ontgrendeld zodra die is goedgekeurd."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aguardando aprovação. Sua compra será liberada assim que for aprovada."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ожидает одобрения. Покупка откроется, как только её одобрят."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "กำลังรอการอนุมัติ การซื้อของคุณจะปลดล็อกเมื่อได้รับการอนุมัติ"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đang chờ phê duyệt. Giao dịch mua sẽ mở khóa ngay khi được duyệt."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在等待批准，获批后即可解锁你的购买内容。"
           }
         }
       }

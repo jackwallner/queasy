@@ -98,4 +98,50 @@ struct ReviewPromptTrackerTests {
             #expect(!ReviewPromptTracker.shouldRequestAfterPositiveMoment(hasCompletedSetup: true))
         }
     }
+
+    /// The good moment is a session the user rated as helping. A neutral, bad
+    /// or skipped rating never asks.
+    @Test func onlyASessionRatedBetterIsAGoodMoment() {
+        #expect(ReviewPromptTracker.isPositiveMoment(feeling: .better))
+        #expect(!ReviewPromptTracker.isPositiveMoment(feeling: .same))
+        #expect(!ReviewPromptTracker.isPositiveMoment(feeling: .worse))
+        #expect(!ReviewPromptTracker.isPositiveMoment(feeling: nil))
+    }
+
+    @Test func firstLaunchMomentIsBlockedAndSecondLaunchMomentAsks() {
+        withCleanTracker {
+            ReviewPromptTracker.appLaunchCount = 1
+            ReviewPromptTracker.recordPositiveMoment()
+            #expect(!ReviewPromptTracker.shouldRequestAfterPositiveMoment(hasCompletedSetup: true))
+            ReviewPromptTracker.appLaunchCount = 2
+            #expect(ReviewPromptTracker.shouldRequestAfterPositiveMoment(hasCompletedSetup: true))
+        }
+    }
+
+    @Test func noMomentMeansNoAsk() {
+        withCleanTracker {
+            ReviewPromptTracker.appLaunchCount = 9
+            #expect(!ReviewPromptTracker.shouldRequestAfterPositiveMoment(hasCompletedSetup: true))
+        }
+    }
+
+    /// The cooldown starts when the call is made, measured from that stamp.
+    @Test func markShownStartsTheCooldown() {
+        withCleanTracker {
+            ReviewPromptTracker.appLaunchCount = 9
+            let asked = Date.now
+            ReviewPromptTracker.markShown(now: asked)
+            #expect(!ReviewPromptTracker.canRequestReview(hasCompletedSetup: true, now: asked.addingTimeInterval(29 * 86_400)))
+            #expect(ReviewPromptTracker.canRequestReview(hasCompletedSetup: true, now: asked.addingTimeInterval(30 * 86_400)))
+        }
+    }
+
+    /// A stamp from a clock that ran ahead must not hold the asks shut.
+    @Test func aFutureStampDoesNotHoldTheCooldownShut() {
+        withCleanTracker {
+            ReviewPromptTracker.appLaunchCount = 9
+            ReviewPromptTracker.lastShownDate = Date.now.addingTimeInterval(200 * 86_400)
+            #expect(ReviewPromptTracker.canRequestReview(hasCompletedSetup: true))
+        }
+    }
 }

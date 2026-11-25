@@ -125,10 +125,11 @@ app-specific script here is `scripts/generate-icon.py`
 
 ## Ratings
 
-No in-app rating question (App Review 5.6.1). A finished session the user did
-not rate as worse, and that did not offer Pro, is the positive moment; once the
-session cover closes, `RootTabView` calls the system `requestReview()` about 3s
-later if nothing is presented (from the 2nd launch, 30-day cooldown;
+No in-app rating question (App Review 5.6.1). The one automatic moment is a
+finished session the user rated "Better" (phone or watch-remote) that did not
+offer Pro; "The same", "Worse" and Skip never ask. Once the session cover
+closes, `RootTabView` calls the system `requestReview()` about 3s later if
+nothing is presented (from the 2nd launch, 30-day cooldown;
 `ReviewPromptTracker`). A blocked ask stays pending. Settings has separate
 "Rate Queasy" and "Send Feedback" rows. App Store ID `6786780495`.
 

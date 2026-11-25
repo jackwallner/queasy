@@ -282,7 +282,7 @@ struct PhoneSessionView: View {
             .padding(.horizontal, 24)
 
             Button("Skip") {
-                saveEpisode(severityAfter: nil)
+                saveEpisode(feeling: nil)
             }
             .font(.subheadline.weight(.semibold))
             .foregroundStyle(Theme.ink3)
@@ -291,7 +291,7 @@ struct PhoneSessionView: View {
 
     private func feelingButton(_ label: String, symbol: String, tint: Color, feeling: ReliefFeeling) -> some View {
         Button {
-            saveEpisode(severityAfter: feeling.severityAfter(before: controller.plan.severityBefore))
+            saveEpisode(feeling: feeling)
         } label: {
             HStack(spacing: 12) {
                 Image(systemName: symbol)
@@ -313,7 +313,8 @@ struct PhoneSessionView: View {
         .accessibilityIdentifier("after-feeling-\(feeling.rawValue)")
     }
 
-    private func saveEpisode(severityAfter: Int?) {
+    private func saveEpisode(feeling: ReliefFeeling?) {
+        let severityAfter = feeling?.severityAfter(before: controller.plan.severityBefore)
         // The session hit the free ceiling if it ran the whole way and the whole
         // way was shorter than the plan asked for.
         let wasCapped = FreeTier.isCapped(
@@ -322,7 +323,7 @@ struct PhoneSessionView: View {
             isPro: subscriptions.isProSubscriber
         )
         // complete() upserts the episode into the shared store itself.
-        let episode = controller.complete(severityAfter: severityAfter)
+        controller.complete(severityAfter: severityAfter)
         settings.completedSessionCount += 1
 
         if UpgradePromptTracker.shouldPrompt(
@@ -332,9 +333,9 @@ struct PhoneSessionView: View {
         ) {
             UpgradePromptTracker.recordPrompt()
             UpgradePromptCoordinator.shared.request("queasy_after_session")
-        } else if (episode.reliefDelta ?? 0) >= 0 {
-            // A finished session the user didn't rate as worse. RootTabView
-            // asks for a rating once this cover is gone.
+        } else if ReviewPromptTracker.isPositiveMoment(feeling: feeling) {
+            // A finished session the user rated as helping. RootTabView asks
+            // for a rating once this cover is gone.
             ReviewPromptCoordinator.shared.recordPositiveMoment()
         }
         close()

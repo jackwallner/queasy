@@ -225,7 +225,7 @@ struct WatchRemoteSessionView: View {
             .padding(.horizontal, 24)
 
             Button("Skip") {
-                saveEpisode(severityAfter: nil)
+                saveEpisode(feeling: nil)
             }
             .font(.subheadline.weight(.semibold))
             .foregroundStyle(Theme.ink3)
@@ -236,7 +236,7 @@ struct WatchRemoteSessionView: View {
 
     private func feelingButton(_ label: String, symbol: String, tint: Color, feeling: ReliefFeeling) -> some View {
         Button {
-            saveEpisode(severityAfter: feeling.severityAfter(before: snapshot?.severityBefore ?? 3))
+            saveEpisode(feeling: feeling)
         } label: {
             HStack(spacing: 12) {
                 Image(systemName: symbol)
@@ -260,7 +260,8 @@ struct WatchRemoteSessionView: View {
     /// Upserts the episode by UUID. The watch sends its own (unrated) copy of
     /// the episode when it stops; whichever arrives first wins the insert and
     /// the other becomes an update, so no duplicates either way.
-    private func saveEpisode(severityAfter: Int?) {
+    private func saveEpisode(feeling: ReliefFeeling?) {
+        let severityAfter = feeling?.severityAfter(before: snapshot?.severityBefore ?? 3)
         defer {
             mirror.clear()
             close()
@@ -269,14 +270,12 @@ struct WatchRemoteSessionView: View {
         let context = DataService.sharedModelContainer.mainContext
         let uuid = snapshot.uuid
         let descriptor = FetchDescriptor<ReliefEpisode>(predicate: #Predicate { $0.uuid == uuid })
-        let episode: ReliefEpisode
         if let existing = try? context.fetch(descriptor).first {
             if let severityAfter {
                 existing.severityAfter = severityAfter
             }
-            episode = existing
         } else {
-            episode = ReliefEpisode(
+            let episode = ReliefEpisode(
                 uuid: uuid,
                 startedAt: snapshot.startedAt,
                 endedAt: .now,
@@ -299,9 +298,9 @@ struct WatchRemoteSessionView: View {
 
         guard severityAfter != nil else { return }
         settings.completedSessionCount += 1
-        if (episode.reliefDelta ?? 0) >= 0 {
-            // A finished session the user didn't rate as worse. RootTabView
-            // asks for a rating once this cover is gone.
+        if ReviewPromptTracker.isPositiveMoment(feeling: feeling) {
+            // A finished session the user rated as helping. RootTabView asks
+            // for a rating once this cover is gone.
             ReviewPromptCoordinator.shared.recordPositiveMoment()
         }
     }

@@ -100,9 +100,17 @@ enum ReviewPromptTracker {
 
     // MARK: - Eligibility
 
+    /// The good moment: a finished session the user rated as helping. "The
+    /// same", "Worse" and a skipped rating are not, and never ask.
+    static func isPositiveMoment(feeling: ReliefFeeling?) -> Bool {
+        feeling == .better
+    }
+
     static func passivePromptAllowed(now: Date = .now) -> Bool {
         guard outcome != .openedWriteReview else { return false }
-        guard let last = lastShownDate else { return true }
+        // A stamp from a clock that ran ahead is in the future: it is no
+        // evidence of an ask, and would hold the cooldown shut for as long.
+        guard let last = lastShownDate, last <= now else { return true }
         return now.timeIntervalSince(last) >= TimeInterval(cooldownDays) * 86_400
     }
 

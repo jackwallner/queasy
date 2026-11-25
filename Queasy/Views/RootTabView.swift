@@ -122,17 +122,20 @@ struct RootTabView: View {
         }
     }
 
-    /// The rating ask after a finished session: Apple's own prompt, no question
-    /// in front of it. Waits for the session cover to close, then asks only if
-    /// nothing is presented. A blocked ask keeps the moment pending.
+    /// The rating ask after a session the user rated as helping: Apple's own
+    /// prompt, no question in front of it. Waits for the session cover to
+    /// close, then asks only if nothing is presented. A blocked ask keeps the
+    /// moment pending. RevenueCat's `rating_prompt: off` pauses it.
     private func scheduleReviewRequestAfterPositiveMoment() {
         reviewTask?.cancel()
+        guard SubscriptionService.shared.isOn(.ratingPrompt) else { return }
         reviewTask = Task { @MainActor in
             try? await Task.sleep(for: .seconds(3))
-            guard !Task.isCancelled, isClear,
+            guard !Task.isCancelled, isClear, SubscriptionService.shared.isOn(.ratingPrompt),
                   ReviewPromptTracker.shouldRequestAfterPositiveMoment(hasCompletedSetup: settings.hasCompletedOnboarding)
             else { return }
             ReviewPromptTracker.markShown()
+            AnalyticsService.ratingAsked()
             requestReview()
         }
     }
@@ -144,9 +147,11 @@ struct RootTabView: View {
         .init(tag: 3, title: String(localized: "Settings"), systemImage: "gearshape"),
     ]
 
-    /// No paywall, cover, sheet or alert is up over the tabs.
+    /// No paywall, cover, sheet or alert is up over the tabs, and no session
+    /// or paywall has opened in the unfolded Duo's panes.
     private var isClear: Bool {
         guard !showUpgrade, upgradeCoordinator.pendingImpressionId == nil,
+              panel.paywall == nil, !panel.sessionIsUp,
               UIApplication.shared.applicationState == .active
         else { return false }
         return !UIApplication.shared.connectedScenes

@@ -245,6 +245,9 @@ final class SubscriptionService: NSObject {
 
     private(set) var isProSubscriber: Bool = false
     private(set) var isConfigured: Bool = false
+    /// The current offering's metadata (see `RemoteConfig`), nil until the
+    /// offerings load. Nil reads as the control for every key.
+    private(set) var remoteMetadata: [String: Any]?
 
     #if HAS_REVENUECAT
     private(set) var products: [Package] = []
@@ -339,6 +342,8 @@ final class SubscriptionService: NSObject {
             let offerings = try await Purchases.shared.offerings()
             let offering = offerings.offering(identifier: "default") ?? offerings.current
             products = offering?.queasySortedPackages ?? []
+            // The current offering, so a running Experiment's variant is read.
+            remoteMetadata = offerings.current?.metadata ?? [:]
             lastError = nil
             await refreshIntroEligibility()
         } catch {
@@ -380,7 +385,12 @@ final class SubscriptionService: NSObject {
     /// has to background the app before reading anything back.
     func syncConversionAttributes() {
         guard isConfigured else { return }
-        let attributes = ConversionDiagnostics.subscriberAttributes
+        var attributes = ConversionDiagnostics.subscriberAttributes
+        // The trial button arm, once the offering that picks it has loaded, so
+        // a wording test can be read by attribute too.
+        if remoteMetadata != nil {
+            attributes[TrialCTA.metadataKey] = trialCTA.rawValue
+        }
         guard !attributes.isEmpty else { return }
         Purchases.shared.attribution.setAttributes(attributes)
     }
@@ -459,6 +469,13 @@ final class SubscriptionService: NSObject {
         case notConfigured
     }
     #endif
+
+    /// The paywall's trial button wording for this customer.
+    var trialCTA: TrialCTA { TrialCTA.from(metadata: remoteMetadata) }
+
+    func isOn(_ remoteSwitch: RemoteSwitch) -> Bool {
+        RemoteConfig.isOn(remoteSwitch, in: remoteMetadata)
+    }
 
     /// Debug/testing hook — flips the entitlement locally without RevenueCat.
     func setLocalOverride(isPro: Bool) {

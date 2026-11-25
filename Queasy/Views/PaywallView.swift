@@ -75,6 +75,8 @@ struct PaywallView: View {
                 await subscriptions.fetchProducts()
             }
             selectDefaultPackageIfNeeded()
+            // The trial button arm, now that the offering that picks it is in.
+            subscriptions.syncConversionAttributes()
             #else
             AnalyticsService.paywallShown()
             #endif
@@ -519,7 +521,7 @@ struct PaywallView: View {
                         .font(.caption.weight(.semibold))
                         .foregroundStyle(Theme.ink)
                 }
-                Text("Start My 7-Day Free Trial")
+                Text(subscriptions.trialCTA.paywallTitle(controlTitle: String(localized: "Start My 7-Day Free Trial")))
                     .font(.system(.headline, design: .rounded))
                     .foregroundStyle(.white)
                     .frame(maxWidth: .infinity)
@@ -608,11 +610,11 @@ struct PaywallView: View {
     private var ctaTitle: String {
         #if HAS_REVENUECAT
         guard let package = selectedPackage else { return String(localized: "Continue") }
-        if package.queasyPackageKind == .lifetime { return String(localized: "Unlock Lifetime") }
-        if subscriptions.isEligibleForIntroOffer(package), let title = package.queasyStartMyTrialTitle {
-            return title
-        }
-        return String(localized: "Start Queasy Pro")
+        let trialTitle = subscriptions.isEligibleForIntroOffer(package) ? package.queasyStartMyTrialTitle : nil
+        return subscriptions.trialCTA.paywallButtonTitle(
+            isLifetime: package.queasyPackageKind == .lifetime,
+            trialTitle: trialTitle
+        )
         #else
         return String(localized: "Continue")
         #endif

@@ -111,6 +111,11 @@ their full protocol; the check-in and live intensity control are free too. Pro
 buys length, full history, a custom rhythm, and Press reminders, and the paywall
 bullets render from `ProFeature` so they cannot drift from the gates.
 
+Paywall wording tests go through offering metadata `trial_cta` (`seven_day`
+control, `my`, `your`; `Shared/Services/RemoteConfig.swift`), and
+`rating_prompt: off` pauses the star prompt; a key a switch reads must be set
+the same on every offering.
+
 RevenueCat API key
 lives in `SubscriptionService.apiKey`; DEBUG builds can use
 `SubscriptionService.setLocalOverride(isPro:)`. Pricing, intro offers and PPP run

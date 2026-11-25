@@ -126,8 +126,9 @@ app-specific script here is `scripts/generate-icon.py`
 ## Ratings
 
 No in-app rating question (App Review 5.6.1). The one automatic moment is a
-finished session the user rated "Better" (phone or watch-remote) that did not
-offer Pro; "The same", "Worse" and Skip never ask. Once the session cover
+finished session not rated "Worse" (Better, The same or Skip; phone or
+watch-remote) that did not offer Pro. Only "Worse" never asks: the goal is the
+number of ratings, so a typical user is asked in their 2nd or 3rd session. Once the session cover
 closes, `RootTabView` calls the system `requestReview()` about 3s later if
 nothing is presented (from the 2nd launch, 30-day cooldown;
 `ReviewPromptTracker`). A blocked ask stays pending. Settings has separate

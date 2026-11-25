@@ -101,11 +101,11 @@ struct ReviewPromptTrackerTests {
 
     /// The good moment is a session the user rated as helping. A neutral, bad
     /// or skipped rating never asks.
-    @Test func onlyASessionRatedBetterIsAGoodMoment() {
+    @Test func anySessionNotRatedWorseIsAGoodMoment() {
         #expect(ReviewPromptTracker.isPositiveMoment(feeling: .better))
-        #expect(!ReviewPromptTracker.isPositiveMoment(feeling: .same))
+        #expect(ReviewPromptTracker.isPositiveMoment(feeling: .same))
+        #expect(ReviewPromptTracker.isPositiveMoment(feeling: nil))
         #expect(!ReviewPromptTracker.isPositiveMoment(feeling: .worse))
-        #expect(!ReviewPromptTracker.isPositiveMoment(feeling: nil))
     }
 
     @Test func firstLaunchMomentIsBlockedAndSecondLaunchMomentAsks() {

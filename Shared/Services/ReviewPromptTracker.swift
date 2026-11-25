@@ -100,10 +100,11 @@ enum ReviewPromptTracker {
 
     // MARK: - Eligibility
 
-    /// The good moment: a finished session the user rated as helping. "The
-    /// same", "Worse" and a skipped rating are not, and never ask.
+    /// The good moment: a finished session not rated "Worse". "Better", "The
+    /// same" and a skipped rating all count, so a typical user is asked in
+    /// their second or third session; only "Worse" never asks.
     static func isPositiveMoment(feeling: ReliefFeeling?) -> Bool {
-        feeling == .better
+        feeling != .worse
     }
 
     static func passivePromptAllowed(now: Date = .now) -> Bool {

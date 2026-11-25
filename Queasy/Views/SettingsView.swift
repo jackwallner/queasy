@@ -159,11 +159,8 @@ struct SettingsView: View {
             .task {
                 // Reminders are a Pro feature, so a lapsed subscription stops
                 // them; the stored preference stays so resubscribing restores it.
-                if subscriptions.isProSubscriber {
-                    await reminders.refresh()
-                } else {
-                    reminders.suspendForNonSubscriber()
-                }
+                // `RootView` also reconciles on launch and on every Pro change.
+                await reminders.reconcile(isPro: subscriptions.isProSubscriber)
             }
         }
     }

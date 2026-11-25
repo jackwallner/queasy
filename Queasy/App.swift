@@ -130,6 +130,12 @@ struct RootView: View {
         .task {
             subscriptions.configure()
             QueasySyncService.shared.activate()
+            await PressReminderService.shared.reconcile(isPro: subscriptions.isProSubscriber)
+        }
+        // Press reminders are Pro: a lapse while the app runs stops them, and
+        // a purchase or restore brings back the ones the user turned on.
+        .onChange(of: subscriptions.isProSubscriber) { _, isPro in
+            Task { await PressReminderService.shared.reconcile(isPro: isPro) }
         }
         .alert(
             "Not saved",

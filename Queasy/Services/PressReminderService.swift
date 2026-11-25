@@ -30,6 +30,13 @@ final class PressReminderService {
     private(set) var isEnabled: Bool
     private(set) var authorizationDenied = false
 
+    /// Removes pending requests by identifier. A seam for tests: a simulator
+    /// without notification permission cannot hold the real requests.
+    @ObservationIgnored
+    var removeRequests: ([String]) -> Void = { ids in
+        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ids)
+    }
+
     /// Turns reminders on (asking for permission the first time) or off.
     /// Returns the state it ended up in, which is not always the one asked for:
     /// permission can be refused.
@@ -52,8 +59,9 @@ final class PressReminderService {
         return true
     }
 
-    /// Re-lays the schedule. Called on launch so a reinstall or a system-level
-    /// cleanup does not silently leave someone with reminders they enabled.
+    /// Re-lays the schedule. Called on launch (through `reconcile`) so a
+    /// system-level cleanup does not silently leave someone without reminders
+    /// they enabled.
     func refresh() async {
         guard isEnabled else { return }
         let settings = await UNUserNotificationCenter.current().notificationSettings()
@@ -69,6 +77,17 @@ final class PressReminderService {
     /// preference stays so resubscribing brings them back.
     func suspendForNonSubscriber() {
         cancelAll()
+    }
+
+    /// Lays or suspends the schedule for the current Pro state. `RootView`
+    /// calls it on launch and whenever Pro changes, so a lapse stops the
+    /// reminders and a resubscribe brings them back without a visit to Settings.
+    func reconcile(isPro: Bool) async {
+        if isPro {
+            await refresh()
+        } else {
+            suspendForNonSubscriber()
+        }
     }
 
     private func store(_ enabled: Bool) {
@@ -112,8 +131,7 @@ final class PressReminderService {
     }
 
     private func cancelAll() {
-        let ids = Self.hours.map { Self.identifierPrefix + String($0) }
-        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ids)
+        removeRequests(Self.hours.map { Self.identifierPrefix + String($0) })
     }
 
     var scheduleLabel: String {
